@@ -1,0 +1,98 @@
+
+@-ms-viewport{width:device-width;}
+
+/* Desktop 1024 */ 
+@media only screen and (max-width:1024px) {
+.ContactArea .Right img{width:100px;height:100px;}
+.ContactArea .Left img{width:100px;height:100px;}
+.ContactArea .Right .info{height:100px;line-height:100px;}
+.ContactArea .Left .info{height:100px;line-height:100px;}
+.ContactArea .Center{margin-left:-75px;}
+
+}
+
+/* Desktop 980 */ 
+@media only screen and (max-width:980px) {
+.Rocket-Block{width:25%!important;position:static!important;top:auto;left:auto;bottom:auto;right:auto;float:right;margin:auto!important;margin-bottom:35px!important;}
+.Rocket-Block p{display:block;}
+}
+
+/* Tablet 768 - 800 */ 
+@media only screen and (max-width:800px) {
+header .Grid1k > .primary-menu{display:none;}
+.menu-sm{display:block;}
+.Rocket-Block{width:33.333%!important;position:static!important;top:auto;left:auto;bottom:auto;right:auto;float:right;margin:auto!important;margin-bottom:35px!important;}
+.Rocket-Block .Circles,.cn-box{display:none!important;}
+.Section02 .Grid1k .info{max-width:none;padding:0 25px;}
+.Section02 .Grid1k {background:none;text-align:center;}
+.Section02 .Grid1k .info h3{font-size:35px;}
+.Section04 .Grid1k .info h3{font-size:30px;}
+.Section04 .Grid1k .info h5{font-size:24px;}
+.Section04 .Grid1k{height:250px;line-height:250px;}
+.Section04 .Grid1k:before{width:400px;height:250px;}
+.Offer-Block .info{width:100%;text-align:center;padding-top:30px;padding-bottom:30px;}
+.Offer-Block .image{width:100%;text-align:center;}
+.Section06 .Grid1k:before{display:none;}
+.Section06 .Grid1k .info{width:100%;text-align:center;}
+.Elnoor-Block:before{display:none!important;}
+.Elnoor-I .Center-Block{margin-top:0px;top:0px;}
+.Elnoor-I{padding-top:210px;}
+.Elnoor-Block{width:100%;}
+.Elnoor-I .Right-Blocks,.Elnoor-I .Left-Blocks{width:47%;}
+.Elnoor-I > .Elnoor-Block:last-child{margin-top:0px;}
+.ContactArea .Center{position:static;margin:auto;text-align:center;}
+.ContactArea .Right{margin-top:35px;}
+.ContactArea .Left{margin-top:35px;}
+.ContactArea .Right:after{display:none;}
+.ContactArea .Left:after{display:none;}
+}
+
+/* iPhone 4 */
+@media only screen and (max-width:640px) {
+.Rocket-Block{width:50%!important;}
+.Section04 .Grid1k .info{width:100%;text-align:center;}
+.Section04 .Grid1k:before{width:350px;height:250px;display:none;}
+.tabs01 > ul li{width:33.333%;border-bottom:1px solid rgba(0,0,0,.15);}
+.tabs01 > ul li:last-child{border-bottom:1px solid rgba(0,0,0,.15);border-left:1px solid rgba(0,0,0,.15);}
+.tabs01 > ul li:after{display:none;}
+.ContactArea .Right{display:block;max-width:320px;margin:auto;margin-top:35px;float:none;}
+.ContactArea .Left{display:block;max-width:320px;margin:auto;margin-top:35px;float:none;}
+.ContactArea .Right:after{display:none;}
+.ContactArea .Left:after{display:none;}
+footer .News-Slider .Title{width:auto;float:none;margin:0 -15px;display:block;}
+footer .News-Slider .Title:after{display:none;}
+footer .News-Slider .TheSlider{width:100%;}
+footer .News-Slider .Control{width:100%;}
+footer .News-Slider .TheSlider .item a{padding:0px;}
+}
+
+/* Extra Smart Phones */ 
+@media only screen and (max-width:480px) {
+.top-nav {text-align:center;}
+.top-nav .Social{width:100%;text-align:center;float:none;}
+header{text-align:center;}
+header .logo{float:right;}
+header .OpenTicket{float:none;margin:19.5px;}
+.menu-sm{float:left;}
+.tabs01 > ul li{width:50%;}
+.tabs01 > ul li:last-child{width:100%;}
+.Elnoor-I .Right-Blocks,.Elnoor-I .Left-Blocks{width:180px;float:none;margin:auto;}
+.Elnoor-Block{text-align:center;height:auto;line-height:normal;margin:auto!important;margin-top:35px!important;}
+.Elnoor-Block img{float:none!important;display:inline-block!important;}
+.Elnoor-Block h3{width:100%!important;float:none!important;display:block!important;margin-top:12px!important;}
+.ContactArea .Right img{float:none;display:block;margin:auto;margin-bottom:15px;}
+.ContactArea .Left img{float:none;display:block;margin:auto;margin-bottom:15px;}
+.ContactArea .Right .info{float:none;max-width:none;height:70px;line-height:70px;}
+.ContactArea .Left .info{max-width:none;width:100%;text-align:center;height:50px;line-height:50px;}
+.Copyright{text-align:center;}
+.Copyright ul{display:none;}
+}
+
+/* Smart Phone + iPhone Retina 320 - 360 */ 
+@media only screen and (max-width:360px) {
+.Rocket-Block{width:100%!important;}
+.WorkSlider-Control button{width:45px;}
+.WorkSlider-Control a{width:190px;font-size:15px}
+footer .SiteInfo{width:100%;}
+footer .SendMail{width:100%;}
+}
