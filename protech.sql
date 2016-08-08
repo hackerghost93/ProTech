@@ -1,18 +1,25 @@
+
 --
 -- Database: `protech`
 --
-
+drop database protech ;
+create database protech ;
+use protech ;
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `partners`
 --
-
+CREATE TABLE families (
+  family_id int(11) unsigned not null AUTO_INCREMENT primary key,
+  family_name varchar(32) not null UNIQUE,
+  family_description varchar(255) 
+);
 CREATE TABLE `partners` (
   `partner_id` int(11) NOT NULL,
   `partner_name` varchar(200) NOT NULL,
   `partner_image` varchar(200) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ;
 
 -- --------------------------------------------------------
 
@@ -22,14 +29,15 @@ CREATE TABLE `partners` (
 
 CREATE TABLE `parts` (
   `part_id` int(11) NOT NULL,
-  `family_id` int(11) DEFAULT NULL,
+  `family_id` int(11) unsigned ,
   `name` varchar(200) NOT NULL,
   `description` varchar(200) DEFAULT NULL,
   `warranty` varchar(200) DEFAULT NULL,
   `general_description` varchar(200) DEFAULT NULL,
   `pdf` varchar(200) DEFAULT NULL,
-  `driver` varchar(200) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `driver` varchar(200) DEFAULT NULL,
+  FOREIGN KEY (family_id) REFERENCES families(family_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 DEFAULT COLLATE= utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -62,14 +70,15 @@ CREATE TABLE `part_tag` (
 
 CREATE TABLE `printers` (
   `printer_id` int(11) NOT NULL,
-  `family_id` int(11) DEFAULT NULL,
+  `family_id` int(11) unsigned ,
   `name` varchar(200) NOT NULL,
   `description` text,
   `warranty` varchar(200) DEFAULT NULL,
   `general_description` text,
   `pdf` varchar(200) DEFAULT NULL,
-  `driver` varchar(200) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `driver` varchar(200) DEFAULT NULL ,
+  FOREIGN KEY (family_id) REFERENCES families(family_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 DEFAULT COLLATE= utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -100,7 +109,7 @@ CREATE TABLE `printer_tags` (
 -- Table structure for table `subscribes`
 --
 
-CREATE TABLE `subscribes` (
+CREATE TABLE `subscribers` (
   `email` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -112,7 +121,7 @@ CREATE TABLE `subscribes` (
 
 CREATE TABLE `tags` (
   `tag_name` varchar(32) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 DEFAULT COLLATE= utf8_general_ci;
 
 --
 -- Indexes for dumped tables
@@ -170,7 +179,7 @@ ALTER TABLE `printer_tags`
 --
 -- Indexes for table `subscribes`
 --
-ALTER TABLE `subscribes`
+ALTER TABLE `subscribers`
   ADD PRIMARY KEY (`email`),
   ADD UNIQUE KEY `Email` (`email`);
 
@@ -216,41 +225,38 @@ ALTER TABLE `printer_image`
 --
 -- Constraints for table `parts`
 --
-ALTER TABLE `parts`
-  ADD CONSTRAINT `parts_ibfk_1` FOREIGN KEY (`family_id`) REFERENCES `family` (`family_id`) ON DELETE SET NULL ON UPDATE CASCADE;
+-- ALTER TABLE `parts`
+--   ADD CONSTRAINT `parts_ibfk_1` FOREIGN KEY (`family_id`) REFERENCES `family` (`family_id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
 -- Constraints for table `part_image`
 --
 ALTER TABLE `part_image`
-  ADD CONSTRAINT `part_image_ibfk_1` FOREIGN KEY (`part_id`) REFERENCES `parts` (`Part_ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `part_image_ibfk_1` FOREIGN KEY (`part_id`) REFERENCES `parts` (`part_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `part_tag`
 --
 ALTER TABLE `part_tag`
-  ADD CONSTRAINT `part_tag_ibfk_1` FOREIGN KEY (`part_id`) REFERENCES `parts` (`Part_ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `part_tag_ibfk_1` FOREIGN KEY (`part_id`) REFERENCES `parts` (`part_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `part_tag_ibfk_2` FOREIGN KEY (`tag_name`) REFERENCES `tags` (`tag_name`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `printers`
 --
-ALTER TABLE `printers`
-  ADD CONSTRAINT `printers_ibfk_1` FOREIGN KEY (`family_id`) REFERENCES `family` (`family_id`) ON DELETE SET NULL ON UPDATE CASCADE;
+-- ALTER TABLE `printers`
+--   ADD CONSTRAINT `printers_ibfk_1` FOREIGN KEY (`family_id`) REFERENCES `family` (`family_id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
 -- Constraints for table `printer_image`
 --
 ALTER TABLE `printer_image`
-  ADD CONSTRAINT `printer_image_ibfk_1` FOREIGN KEY (`printer_id`) REFERENCES `printers` (`Printer_ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `printer_image_ibfk_1` FOREIGN KEY (`printer_id`) REFERENCES `printers` (`printer_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `printer_tags`
 --
 ALTER TABLE `printer_tags`
-  ADD CONSTRAINT `printer_tags_ibfk_1` FOREIGN KEY (`printer_id`) REFERENCES `printers` (`Printer_ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `printer_tags_ibfk_1` FOREIGN KEY (`printer_id`) REFERENCES `printers` (`printer_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `printer_tags_ibfk_2` FOREIGN KEY (`tag_name`) REFERENCES `tags` (`tag_name`) ON DELETE CASCADE ON UPDATE CASCADE;
 
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
