@@ -1,21 +1,3 @@
--- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
---
--- Host: 127.0.0.1
--- Generation Time: Aug 08, 2016 at 02:56 PM
--- Server version: 10.1.9-MariaDB
--- PHP Version: 5.6.15
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
 --
 -- Database: `protech`
 --
@@ -40,6 +22,7 @@ CREATE TABLE `partners` (
 
 CREATE TABLE `parts` (
   `part_id` int(11) NOT NULL,
+  `family_id` int(11) DEFAULT NULL,
   `name` varchar(200) NOT NULL,
   `description` varchar(200) DEFAULT NULL,
   `warranty` varchar(200) DEFAULT NULL,
@@ -79,6 +62,7 @@ CREATE TABLE `part_tag` (
 
 CREATE TABLE `printers` (
   `printer_id` int(11) NOT NULL,
+  `family_id` int(11) DEFAULT NULL,
   `name` varchar(200) NOT NULL,
   `description` text,
   `warranty` varchar(200) DEFAULT NULL,
@@ -145,7 +129,8 @@ ALTER TABLE `partners`
 -- Indexes for table `parts`
 --
 ALTER TABLE `parts`
-  ADD PRIMARY KEY (`part_id`);
+  ADD PRIMARY KEY (`part_id`),
+  ADD KEY `family_id` (`family_id`);
 
 --
 -- Indexes for table `part_image`
@@ -165,7 +150,8 @@ ALTER TABLE `part_tag`
 -- Indexes for table `printers`
 --
 ALTER TABLE `printers`
-  ADD PRIMARY KEY (`printer_id`);
+  ADD PRIMARY KEY (`printer_id`),
+  ADD KEY `family_id` (`family_id`);
 
 --
 -- Indexes for table `printer_image`
@@ -228,6 +214,12 @@ ALTER TABLE `printer_image`
 --
 
 --
+-- Constraints for table `parts`
+--
+ALTER TABLE `parts`
+  ADD CONSTRAINT `parts_ibfk_1` FOREIGN KEY (`family_id`) REFERENCES `family` (`family_id`) ON DELETE SET NULL ON UPDATE CASCADE;
+
+--
 -- Constraints for table `part_image`
 --
 ALTER TABLE `part_image`
@@ -239,6 +231,12 @@ ALTER TABLE `part_image`
 ALTER TABLE `part_tag`
   ADD CONSTRAINT `part_tag_ibfk_1` FOREIGN KEY (`part_id`) REFERENCES `parts` (`Part_ID`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `part_tag_ibfk_2` FOREIGN KEY (`tag_name`) REFERENCES `tags` (`tag_name`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `printers`
+--
+ALTER TABLE `printers`
+  ADD CONSTRAINT `printers_ibfk_1` FOREIGN KEY (`family_id`) REFERENCES `family` (`family_id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
 -- Constraints for table `printer_image`
