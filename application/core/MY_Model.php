@@ -16,6 +16,8 @@ class MY_Model extends CI_Model
 	{
 		return $this->db->get($this->table_name)->result_array();
 	}
+
+	function 
 }
 
  ?>

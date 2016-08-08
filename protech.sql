@@ -7,19 +7,21 @@ create database protech ;
 use protech ;
 -- --------------------------------------------------------
 
+CREATE TABLE families (
+  family_id int(11) unsigned not null AUTO_INCREMENT primary key,
+  family_name varchar(32) not null UNIQUE  COLLATE utf8_general_ci,
+  family_description varchar(255) 
+);
+
 --
 -- Table structure for table `partners`
 --
-CREATE TABLE families (
-  family_id int(11) unsigned not null AUTO_INCREMENT primary key,
-  family_name varchar(32) not null UNIQUE,
-  family_description varchar(255) 
-);
+
 CREATE TABLE `partners` (
   `partner_id` int(11) NOT NULL,
-  `partner_name` varchar(200) NOT NULL,
+  `partner_name` varchar(200) NOT NULL  COLLATE utf8_general_ci,
   `partner_image` varchar(200) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 DEFAULT COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -30,10 +32,10 @@ CREATE TABLE `partners` (
 CREATE TABLE `parts` (
   `part_id` int(11) NOT NULL,
   `family_id` int(11) unsigned ,
-  `name` varchar(200) NOT NULL,
-  `description` varchar(200) DEFAULT NULL,
-  `warranty` varchar(200) DEFAULT NULL,
-  `general_description` varchar(200) DEFAULT NULL,
+  `name` varchar(200) NOT NULL  COLLATE utf8_general_ci,
+  `description` varchar(200) DEFAULT NULL  COLLATE utf8_general_ci,
+  `warranty` varchar(200) DEFAULT NULL COLLATE utf8_general_ci,
+  `general_description` varchar(200) DEFAULT NULL  COLLATE utf8_general_ci,
   `pdf` varchar(200) DEFAULT NULL,
   `driver` varchar(200) DEFAULT NULL,
   FOREIGN KEY (family_id) REFERENCES families(family_id)
@@ -53,25 +55,26 @@ CREATE TABLE `part_image` (
 
 -- --------------------------------------------------------
 --
--- Table structure for table `planes`
+-- Table structure for table `plans`
 --
 
-CREATE TABLE `planes` (
-  `plane_id` int(11) NOT NULL,
-  `plane_name` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE `plans` (
+  `plan_id` int(11) unsigned NOT NULL AUTO_INCREMENT primary key,
+  `plan_name` varchar(200) NOT NULL COLLATE utf8_general_ci
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 DEFAULT COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `plane_item`
+-- Table structure for table `plan_item`
 --
 
-CREATE TABLE `plane_item` (
+CREATE TABLE `plan_item` (
   `item_id` int(11) NOT NULL,
-  `plane_id` int(11) NOT NULL,
-  `plane_text` text
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `plan_id` int(11) NOT NULL,
+  `plan_text` text NOT NULL COLLATE utf8_general_ci ,
+  FOREIGN key (plan_id) REFERENCES plans(plan_id) 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 DEFAULT COLLATE = utf8_general_ci;
 
 --
 -- Table structure for table `part_tag`
@@ -79,8 +82,8 @@ CREATE TABLE `plane_item` (
 
 CREATE TABLE `part_tag` (
   `part_id` int(11) NOT NULL,
-  `tag_name` varchar(32) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `tag_name` varchar(32) NOT NULL COLLATE utf8_general_ci
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 DEFAULT COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -91,10 +94,10 @@ CREATE TABLE `part_tag` (
 CREATE TABLE `printers` (
   `printer_id` int(11) NOT NULL,
   `family_id` int(11) unsigned ,
-  `name` varchar(200) NOT NULL,
-  `description` text,
-  `warranty` varchar(200) DEFAULT NULL,
-  `general_description` text,
+  `name` varchar(200) NOT NULL  COLLATE utf8_general_ci,
+  `description` text  COLLATE utf8_general_ci,
+  `warranty` varchar(200) DEFAULT NULL  COLLATE utf8_general_ci,
+  `general_description` text  COLLATE utf8_general_ci,
   `pdf` varchar(200) DEFAULT NULL,
   `driver` varchar(200) DEFAULT NULL ,
   FOREIGN KEY (family_id) REFERENCES families(family_id)
@@ -140,7 +143,7 @@ CREATE TABLE `subscribers` (
 --
 
 CREATE TABLE `tags` (
-  `tag_name` varchar(32) NOT NULL
+  `tag_name` varchar(32) NOT NULL  COLLATE utf8_general_ci
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 DEFAULT COLLATE= utf8_general_ci;
 
 --
@@ -260,10 +263,8 @@ ALTER TABLE `part_image`
 ALTER TABLE `part_tag`
   ADD CONSTRAINT `part_tag_ibfk_1` FOREIGN KEY (`part_id`) REFERENCES `parts` (`part_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `part_tag_ibfk_2` FOREIGN KEY (`tag_name`) REFERENCES `tags` (`tag_name`) ON DELETE CASCADE ON UPDATE CASCADE;
--- Constraints for table `plane_item`
+-- Constraints for table `plan_item`
 --
-ALTER TABLE `plane_item`
-  ADD CONSTRAINT `plane_item_ibfk_1` FOREIGN KEY (`plane_id`) REFERENCES `planes` (`plane_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 --
 -- Constraints for table `printers`
 --
@@ -283,3 +284,5 @@ ALTER TABLE `printer_tags`
   ADD CONSTRAINT `printer_tags_ibfk_1` FOREIGN KEY (`printer_id`) REFERENCES `printers` (`printer_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `printer_tags_ibfk_2` FOREIGN KEY (`tag_name`) REFERENCES `tags` (`tag_name`) ON DELETE CASCADE ON UPDATE CASCADE;
 
+-- ALTER TABLE `plan_item`
+--   ADD CONSTRAINT `plan_item_ibfk_1` FOREIGN KEY (`plan_id`) REFERENCES `plans` (`plan_id`) ON DELETE CASCADE ON UPDATE CASCADE;
