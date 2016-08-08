@@ -52,6 +52,26 @@ CREATE TABLE `part_image` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
+--
+-- Table structure for table `planes`
+--
+
+CREATE TABLE `planes` (
+  `plane_id` int(11) NOT NULL,
+  `plane_name` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `plane_item`
+--
+
+CREATE TABLE `plane_item` (
+  `item_id` int(11) NOT NULL,
+  `plane_id` int(11) NOT NULL,
+  `plane_text` text
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Table structure for table `part_tag`
@@ -240,7 +260,10 @@ ALTER TABLE `part_image`
 ALTER TABLE `part_tag`
   ADD CONSTRAINT `part_tag_ibfk_1` FOREIGN KEY (`part_id`) REFERENCES `parts` (`part_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `part_tag_ibfk_2` FOREIGN KEY (`tag_name`) REFERENCES `tags` (`tag_name`) ON DELETE CASCADE ON UPDATE CASCADE;
-
+-- Constraints for table `plane_item`
+--
+ALTER TABLE `plane_item`
+  ADD CONSTRAINT `plane_item_ibfk_1` FOREIGN KEY (`plane_id`) REFERENCES `planes` (`plane_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 --
 -- Constraints for table `printers`
 --
