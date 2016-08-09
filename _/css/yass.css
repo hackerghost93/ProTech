@@ -1,0 +1,61 @@
+ button.btn.btn-md.AddNewSpecificationsbtn {
+    position: absolute;
+    right: 23px;
+	top: 105px;
+    background: #2D3446;
+    color: #fff;
+} 
+a.removespecification {
+    float: right;
+    margin-top: -42px;
+    padding-right: 18px;
+}
+/* button.btn.btn-md.AddNewSpecificationsbtn {
+    background: #2D3446;
+    color: #fff;
+    float: right;
+    margin-right: 45%;
+    margin-top: -54px;
+} */
+ input.overlayproduct.form-control {
+    width: 83% !important;
+} 
+img.prodimg {
+    width: 60px;
+}
+input.InputProduct.form-control{
+	width:85% !important;
+}
+label.offer {
+    color: rgba(51, 51, 51, 0.62);
+}
+.mask .fa {
+    display: none;
+    position: absolute;
+    top: -20px;
+    transition: all 0.35s ease-in-out;
+    left: 40px;
+}
+img.editimgproduct {
+    width: 100px;
+}
+.mask:hover .fa {
+    display: block;
+    position: absolute;
+    top: 41px;
+    transition: all 1s ease-in-out;
+    left: 40px;
+    color: #fff;
+    font-size: 17px;
+}
+.mask {
+    position: absolute;
+    z-index: 2;
+    width: 100px;
+    height: 100px;
+    background: rgba(51, 51, 51, 0.25);
+    transition: all 0.35s ease-in-out;
+}
+.prodImages {
+    position: relative;
+}
