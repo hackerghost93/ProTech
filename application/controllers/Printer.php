@@ -8,15 +8,22 @@ class Printer extends MY_Controller
 	
 	function __construct()
 	{
-		parent::__construct();
-		$this->load->model('printer_model' , 'model');
-		$this->model->getAll();
+		parent::__construct('printer_model');
 	}
 
 	function index()
 	{
-
+		$this->load->model('partner_model');
+		$data['printers'] = $this->getImages($this->getAll());
+		$data['partners'] = $this->partner_model->getAll();
+		$this->load->view('index' , $data);	
 	}
+
+
+
+
+
+
 }
  
  ?>

@@ -88,6 +88,11 @@ if ( ! function_exists('base_url'))
 	}
 }
 
+	function image_url()
+	{
+		return base_url().'imgs/' ;
+	}
+
 // ------------------------------------------------------------------------
 
 if ( ! function_exists('current_url'))
