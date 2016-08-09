@@ -24,10 +24,6 @@ class MY_Model extends CI_Model
 		return $this->db->get($this->table_image , $product_id)->result_array();
 	}
 
-
-
-
-
 }
 
  ?>

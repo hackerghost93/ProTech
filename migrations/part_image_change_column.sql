@@ -1,0 +1,1 @@
+ALTER TABLE part_image CHANGE image_url image_path varchar(255);

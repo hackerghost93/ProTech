@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="shortcut icon" href="imgs/PT.png" />
+<link rel="shortcut icon" href="<?=base_url()?>imgs/PT.png" />
 
 <!-- Calling Css & Js Files -->
-<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
-<link rel="stylesheet" type="text/css" href="css/style.css">
-<link rel="stylesheet" type="text/css" href="css/responsive.css">
+<link rel="stylesheet" type="text/css" href="<?=base_url()?>css/stylesheet.css">
+<link rel="stylesheet" type="text/css" href="<?=base_url()?>css/style.css">
+<link rel="stylesheet" type="text/css" href="<?=base_url()?>css/responsive.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/theme.css">
+    <link rel="stylesheet" type="text/css" href="<?=base_url()?>css/theme.css">
 
 
 
@@ -37,7 +37,7 @@
 <!-- / Yoast SEO plugin. -->
 
 		<script type="text/javascript">
-			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"js/emoji.js"}};
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"<?=base_url()?>js/emoji.js"}};
 			!function(a,b,c){function d(a){var c,d,e,f=b.createElement("canvas"),g=f.getContext&&f.getContext("2d"),h=String.fromCharCode;if(!g||!g.fillText)return!1;switch(g.textBaseline="top",g.font="600 32px Arial",a){case"flag":return g.fillText(h(55356,56806,55356,56826),0,0),f.toDataURL().length>3e3;case"diversity":return g.fillText(h(55356,57221),0,0),c=g.getImageData(16,16,1,1).data,d=c[0]+","+c[1]+","+c[2]+","+c[3],g.fillText(h(55356,57221,55356,57343),0,0),c=g.getImageData(16,16,1,1).data,e=c[0]+","+c[1]+","+c[2]+","+c[3],d!==e;case"simple":return g.fillText(h(55357,56835),0,0),0!==g.getImageData(16,16,1,1).data[0];case"unicode8":return g.fillText(h(55356,57135),0,0),0!==g.getImageData(16,16,1,1).data[0]}return!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i;for(i=Array("simple","flag","unicode8","diversity"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
 		</script>
 		<style type="text/css">
@@ -54,17 +54,17 @@ img.emoji {
 	padding: 0 !important;
 }
 </style>
-<link rel='stylesheet' id='contact-form-7-css'  href='css/styles.css' type='text/css' media='all' />
-<link rel='stylesheet' id='contact-form-7-rtl-css'  href='css/rtl.css' type='text/css' media='all' />
-<link rel='stylesheet' id='wdc-main-styles-css'  href='css/custom.css' type='text/css' media='all' />
-<link rel='stylesheet' id='wdc-styles-extras-css'  href='css/bootstrap-flat-extras.css' type='text/css' media='all' />
-<link rel='stylesheet' id='wdc-styles-flat-css'  href='css/bootstrap-flat.css' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='<?=base_url()?>css/styles.css' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-rtl-css'  href='<?=base_url()?>css/rtl.css' type='text/css' media='all' />
+<link rel='stylesheet' id='wdc-main-styles-css'  href='<?=base_url()?>css/custom.css' type='text/css' media='all' />
+<link rel='stylesheet' id='wdc-styles-extras-css'  href='<?=base_url()?>css/bootstrap-flat-extras.css' type='text/css' media='all' />
+<link rel='stylesheet' id='wdc-styles-flat-css'  href='<?=base_url()?>css/bootstrap-flat.css' type='text/css' media='all' />
     
 
     
-<script type='text/javascript' src='js/jquery.js'></script>
-<script type='text/javascript' src='js/jquery-migrate-min.js'></script>
-<link rel='https://api.w.org/' href='js/wp.json' />
+<script type='text/javascript' src='<?=base_url()?>js/jquery.js'></script>
+<script type='text/javascript' src='<?=base_url()?>js/jquery-migrate-min.js'></script>
+<link rel='https://api.w.org/' href='<?=base_url()?>js/wp.json' />
     
     
 <script>
@@ -211,7 +211,7 @@ img.emoji {
          <div class="page_nav work-in-page">
         <div class="Grid1k">
             <div class="page_title">
-                               <h2> طابعات زيروكس - طابعة زيروكس فازر 6500</h2>
+                               <h2><?=$product['name']?></h2>
             </div>
             <span class="clear"><!--  --></span>
         </div>
@@ -222,12 +222,12 @@ img.emoji {
         <div class="work-block clfx">
             <div class="work-bgr">
 
-    <img width="404" height="440" src="imgs/hero-640x440.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="موقع برمجة خاصة ووردبريس" srcset="imgs/hero-640x440.png 404w, imgs/hero-640x440.png 300w" sizes="(max-width: 404px) 100vw, 404px" style="height: 440px;" />
+    <img width="404" height="440" src="<?=image_url().$product['image'][0]['image_path']?>" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="<?=$product['name']?>" sizes="(max-width: 404px) 100vw, 404px" style="height: 440px;" />
     </div>
             <div class="work-dtls">
-                <strong> طابعات زيروكس - طابعة زيروكس فازر 6500</strong>
+                <strong><?=$product['name']?></strong>
               
-            <p> لورم ایپسوم أبجد هوز هو مجرد دمية النص من التنضيد والطباعة والصناعة من مصممي الغرافيك. الطابعات والنصوص، ولكن أيضا أعمدة الصحف والمجلات و ما هو ضروري للحال .لورم ایپسوم أبجد هوز هو مجرد دمية النص من التنضيد والطباعة والصناعة من مصممي الغرافيك. الطابعات والنصوص، ولكن أيضا أعمدة الصحف والمجلات و ما هو ضروري للحالة </p>
+            <p><?=$product['general_description']?></p>
                 <ul class="dtls-butt">
 
          
@@ -568,7 +568,7 @@ img.emoji {
 if (typeof newsletter_check !== "function") {
 window.newsletter_check = function (f) {
     var re = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-]{1,})+\.)+([a-zA-Z0-9]{2,})+$/;
-    if (!re.test(f.elements["ne"].value)) {
+    if (!re.test(f.elements["email"].value)) {
         alert("The email is not correct");
         return false;
     }
@@ -589,9 +589,9 @@ window.newsletter_check = function (f) {
 </script>
 
 <div class="newsletter newsletter-subscription">
-<form class="clear-after" method="post" action="" onsubmit="return newsletter_check(this)">
+<form class="clear-after" id="subscribeMail" method="post" action="" onsubmit="return newsletter_check(this)">
 
-<input class="newsletter-email" type="email" name="ne" size="30" placeholder="البريد الإلكتروني" required>
+<input class="newsletter-email" type="email" name="email" size="30" placeholder="البريد الإلكتروني" required>
 
 <input class="newsletter-submit" type="submit" value="اشترك"/>
 
@@ -629,20 +629,20 @@ window.newsletter_check = function (f) {
 </div>
 </div>
 <div class="big-menu-overly"></div>
-<script type='text/javascript' src='js/form-jquery.js'></script>
+<script type='text/javascript' src='<?=base_url()?>js/form-jquery.js'></script>
 <script type='text/javascript'>
 /* <![CDATA[ */
-var _wpcf7 = {"loaderUrl":"imgs/ajax-loader.gif","sending":"\u062c\u0627\u0631\u064a \u0627\u0644\u0625\u0631\u0633\u0627\u0644 ..."};
+var _wpcf7 = {"loaderUrl":"<?=base_url()?>imgs/ajax-loader.gif","sending":"\u062c\u0627\u0631\u064a \u0627\u0644\u0625\u0631\u0633\u0627\u0644 ..."};
 /* ]]> */
 </script>
-<script type='text/javascript' src='js/newscripta.js'></script>
+<script type='text/javascript' src='<?=base_url()?>js/newscripta.js'></script>
 
-<script type='text/javascript' src='js/assest.js'></script>
+<script type='text/javascript' src='<?=base_url()?>js/assest.js'></script>
 <script type='text/javascript' src='//www.google.com/recaptcha/api.js?onload=onloadCallback&#038;render=explicit&#038;ver=1'></script>
-<script type='text/javascript' src='js/embed.js'></script>
-<script src="js/jquery.min.js"></script>
-<script src="js/scripts.js"></script>
-<script src="js/ea-scripts.js"></script>
+<script type='text/javascript' src='<?=base_url()?>js/embed.js'></script>
+<script src="<?=base_url()?>js/jquery.min.js"></script>
+<script src="<?=base_url()?>js/scripts.js"></script>
+<script src="<?=base_url()?>js/ea-scripts.js"></script>
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -654,5 +654,15 @@ var _wpcf7 = {"loaderUrl":"imgs/ajax-loader.gif","sending":"\u062c\u0627\u0631\u
   ga('send', 'pageview');
 
 </script>
+
+<script type="text/javascript">
+    var MyUrl = "<?=base_url()?>" ;
+    // console.log('here');
+    // $(document).ready(function(){
+    //     $('#tab0').addClass('activeTab');
+    // });
+</script>
+
+<script type="text/javascript" src="<?=base_url()?>js/subscribe.js"></script>
 </body>
 </html>

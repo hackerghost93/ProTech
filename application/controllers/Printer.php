@@ -19,10 +19,14 @@ class Printer extends MY_Controller
 		$this->load->view('index' , $data);	
 	}
 
-
-
-
-
+	function showAll()
+	{
+		$data['type'] = 'printer';
+		$this->load->model('partner_model');
+		$data['products'] = $this->getImages($this->getAll());
+		$data['partners'] = $this->partner_model->getAll();
+		$this->load->view('products.php' , $data);
+	}
 
 }
  

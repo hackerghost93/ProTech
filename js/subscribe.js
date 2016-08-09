@@ -1,4 +1,3 @@
-
 $('#subscribeMail').submit(function(event)
 {
 	event.preventDefault();

@@ -55,18 +55,20 @@ class MY_Controller extends CI_Controller
 
 	function delete($id)
 	{
-		return ( validateID($id) == TRUE ? $this->model->delete($id) : FALSE); 
+		return ($this->validateID($id) == TRUE ? $this->model->delete($id) : FALSE); 
 	}
 
-	function get($id)
+	function show($id)
 	{
-		return (validateID($id) == TRUE ? $this->model->get($id) : FALSE );
+		$data['product'] =  ($this->validateID($id) == TRUE ? $this->model->get($id) : FALSE );
+		$this->load->view('productdetails', $data);
 	}
 
 	function getImages($arr)
 	{
 		return (count($arr) == 0 ?  FALSE : $this->model->getImages($arr) ) ;
 	}
+
 }
 
 

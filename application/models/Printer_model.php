@@ -24,6 +24,14 @@ class printer_model extends MY_Model
 		return $arr ;
 	}
 
+	function get($id)
+	{
+		$this->db->where('printer_id =' , $id );
+		$ret =  $this->db->get($this->table_name)->row_array();
+		$ret['image'] = $this->images($ret['printer_id']);
+		return $ret ;
+	}
+
 	
 
 

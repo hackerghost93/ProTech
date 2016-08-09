@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="shortcut icon" href="imgs/PT.png" />
+<link rel="shortcut icon" href="<?=base_url()?>imgs/PT.png" />
 
 <!-- Calling Css & Js Files -->
-<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
-<link rel="stylesheet" type="text/css" href="css/style.css">
-<link rel="stylesheet" type="text/css" href="css/responsive.css">
+<link rel="stylesheet" type="text/css" href="<?=base_url()?>css/stylesheet.css">
+<link rel="stylesheet" type="text/css" href="<?=base_url()?>css/style.css">
+<link rel="stylesheet" type="text/css" href="<?=base_url()?>css/responsive.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/theme.css">
+    <link rel="stylesheet" type="text/css" href="<?=base_url()?>css/theme.css">
 
 
 
@@ -37,7 +37,7 @@
 <!-- / Yoast SEO plugin. -->
 
 		<script type="text/javascript">
-			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"js/emoji.js"}};
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"<?=base_url()?>js/emoji.js"}};
 			!function(a,b,c){function d(a){var c,d,e,f=b.createElement("canvas"),g=f.getContext&&f.getContext("2d"),h=String.fromCharCode;if(!g||!g.fillText)return!1;switch(g.textBaseline="top",g.font="600 32px Arial",a){case"flag":return g.fillText(h(55356,56806,55356,56826),0,0),f.toDataURL().length>3e3;case"diversity":return g.fillText(h(55356,57221),0,0),c=g.getImageData(16,16,1,1).data,d=c[0]+","+c[1]+","+c[2]+","+c[3],g.fillText(h(55356,57221,55356,57343),0,0),c=g.getImageData(16,16,1,1).data,e=c[0]+","+c[1]+","+c[2]+","+c[3],d!==e;case"simple":return g.fillText(h(55357,56835),0,0),0!==g.getImageData(16,16,1,1).data[0];case"unicode8":return g.fillText(h(55356,57135),0,0),0!==g.getImageData(16,16,1,1).data[0]}return!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i;for(i=Array("simple","flag","unicode8","diversity"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
 		</script>
 		<style type="text/css">
@@ -54,17 +54,17 @@ img.emoji {
 	padding: 0 !important;
 }
 </style>
-<link rel='stylesheet' id='contact-form-7-css'  href='css/styles.css' type='text/css' media='all' />
-<link rel='stylesheet' id='contact-form-7-rtl-css'  href='css/rtl.css' type='text/css' media='all' />
-<link rel='stylesheet' id='wdc-main-styles-css'  href='css/custom.css' type='text/css' media='all' />
-<link rel='stylesheet' id='wdc-styles-extras-css'  href='css/bootstrap-flat-extras.css' type='text/css' media='all' />
-<link rel='stylesheet' id='wdc-styles-flat-css'  href='css/bootstrap-flat.css' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='<?=base_url()?>css/styles.css' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-rtl-css'  href='<?=base_url()?>css/rtl.css' type='text/css' media='all' />
+<link rel='stylesheet' id='wdc-main-styles-css'  href='<?=base_url()?>css/custom.css' type='text/css' media='all' />
+<link rel='stylesheet' id='wdc-styles-extras-css'  href='<?=base_url()?>css/bootstrap-flat-extras.css' type='text/css' media='all' />
+<link rel='stylesheet' id='wdc-styles-flat-css'  href='<?=base_url()?>css/bootstrap-flat.css' type='text/css' media='all' />
     
     
     
-<script type='text/javascript' src='js/jquery.js'></script>
-<script type='text/javascript' src='js/jquery-migrate-min.js'></script>
-<link rel='https://api.w.org/' href='js/wp.json' />
+<script type='text/javascript' src='<?=base_url()?>js/jquery.js'></script>
+<script type='text/javascript' src='<?=base_url()?>js/jquery-migrate-min.js'></script>
+<link rel='https://api.w.org/' href='<?=base_url()?>js/wp.json' />
     
    
 <script>
@@ -123,7 +123,7 @@ img.emoji {
     <a href="#"> التحميلات</a>
         </li>
 <li id="menu-item-2508" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2508">
-    <a href="index.html#sec7">عملائنا</a>
+    <a href="<?=base_url()?>#sec7">عملائنا</a>
         </li>
         <li id="#" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2508">
     <a href="about.html">عن الشركه</a>
@@ -142,19 +142,19 @@ img.emoji {
         <ul>
             <li>
                 <a href="service.html">
-                    <i><img src="imgs/tech-support-grey.png" alt=""></i>
+                    <i><img src="<?=base_url()?>imgs/tech-support-grey.png" alt=""></i>
                     <span>الدعم الفني</span>
                 </a>
             </li>
             <li>
                 <a href="service.html">
-                    <i><img src="imgs/shopping-card-512.png" alt=""></i>
+                    <i><img src="<?=base_url()?>imgs/shopping-card-512.png" alt=""></i>
                     <span> بيع و استبدال </span>
                 </a>
             </li>
             <li>
                 <a href="service.html">
-                    <i><img src="imgs/Icon_49-512.png" alt=""></i>
+                    <i><img src="<?=base_url()?>imgs/Icon_49-512.png" alt=""></i>
                     <span>قطع غيار </span>
                 </a>
             </li>
@@ -170,13 +170,13 @@ img.emoji {
         <ul>
             <li>
                 <a href="downloads.html">
-                    <i><img src="imgs/datasheet.png" alt=""></i>
+                    <i><img src="<?=base_url()?>imgs/datasheet.png" alt=""></i>
                     <span>داتا شيت </span>
                 </a>
             </li>
             <li>
                 <a href="downloads.html">
-                    <i><img src="imgs/1287710488_folder_black_download512.png" alt=""></i>
+                    <i><img src="<?=base_url()?>imgs/1287710488_folder_black_download512.png" alt=""></i>
                     <span>سوفتوير</span>
                 </a>
             </li>
@@ -188,13 +188,13 @@ img.emoji {
         <ul>
             <li>
                 <a href="products.html">
-                    <i><img src="imgs/printer.png" alt=""></i>
+                    <i><img src="<?=base_url()?>imgs/printer.png" alt=""></i>
                     <span> الطابعات </span>
                 </a>
             </li>
             <li>
                 <a href="products.html">
-                    <i><img src="imgs/supp-title.png" alt=""></i>
+                    <i><img src="<?=base_url()?>imgs/supp-title.png" alt=""></i>
                     <span>قطع الغيار</span>
                 </a>
             </li>
@@ -210,7 +210,7 @@ img.emoji {
         <div class="page_nav works-cat-page">
         <div class="Grid1k">
             <i class="page_left-icon2">
-<img width="318" height="200" src="imgs/xerox%20logo%20fixed.png" class="attachment-full size-full" alt="tq-title copy" srcset="imgs/xerox%20logo%20fixed.png 318w, imgs/xerox%20logo%20fixed.png 300w" sizes="(max-width: 318px) 100vw, 318px" style="position: relative; top: 50px;" /></i>
+<img width="318" height="200" src="<?=base_url()?>imgs/xerox%20logo%20fixed.png" class="attachment-full size-full" alt="tq-title copy" srcset="<?=base_url()?>imgs/xerox%20logo%20fixed.png 318w, <?=base_url()?>imgs/xerox%20logo%20fixed.png 300w" sizes="(max-width: 318px) 100vw, 318px" style="position: relative; top: 50px;" /></i>
             <div class="page_title">
                <h2>تعرف على احدث منتجات زيروكس لدينا </h2>
                
@@ -226,128 +226,23 @@ img.emoji {
         <div class="Grid1k clfx">
             <ul class="work-items">
                 <!-- Work Block -->
-                <li>
-                    <div class="Work-Block">
-                        <div class="img-fill">
-                            <img width="404" height="316" src="imgs/thumbnail1-300x300.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="موقع برمجة خاصة ووردبريس" srcset="imgs/thumbnail1-300x300.png 404w, imgs/thumbnail1-300x300.png 300w" sizes="(max-width: 404px) 100vw, 404px" />                            <a href="productdetails.html" class="info">
-                                <h3>طابعة زيروكس فازر 6500</h3></a>
+                <?php foreach( $products as $key => $product): ?> 
+                    <li>
+                        <div class="Work-Block">
+                            <div class="img-fill">
+                                <img width="404" height="316" src="<?=image_url().$product['images'][0]['image_path']?>" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="<?=$product['name']?>" sizes="(max-width: 404px) 100vw, 404px" />
+                                <?php if($type == 'printer'):?>                         
+                                    <a href="<?=base_url().'index.php/printer/show/'.$key?>" class="info"><h3><?=$product['name']?></h3></a>
+                                <?php else:?>
+                                    <a href="<?=base_url().'index.php/part/show/'.$key?>" class="info"><h3><?=$product['name']?></h3></a>
+                                <?php endif; ?>
+                                    
+                            </div>
                         </div>
-                    </div>
-                </li>
-                <!-- // Work Block -->
-                                
-                 <!-- Work Block -->
-                <li>
-                    <div class="Work-Block">
-                        <div class="img-fill">
-                            <img width="404" height="316" src="imgs/thumbnail1-300x300.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="موقع برمجة خاصة ووردبريس" srcset="imgs/thumbnail1-300x300.png 404w, imgs/thumbnail1-300x300.png 300w" sizes="(max-width: 404px) 100vw, 404px" />                            <a href="productdetails.html" class="info">
-                                <h3>طابعة زيروكس فازر 6500</h3></a>
-                        </div>
-                    </div>
-                </li>
-                <!-- // Work Block -->
-                 <!-- Work Block -->
-                <li>
-                    <div class="Work-Block">
-                        <div class="img-fill">
-                            <img width="404" height="316" src="imgs/thumbnail1-300x300.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="موقع برمجة خاصة ووردبريس" srcset="imgs/thumbnail1-300x300.png 404w, imgs/thumbnail1-300x300.png 300w" sizes="(max-width: 404px) 100vw, 404px" />                            <a href="productdetails.html" class="info">
-                                <h3>طابعة زيروكس فازر 6500</h3></a>
-                        </div>
-                    </div>
-                </li>
-                <!-- // Work Block -->
-                 <!-- Work Block -->
-                <li>
-                    <div class="Work-Block">
-                        <div class="img-fill">
-                            <img width="404" height="316" src="imgs/thumbnail1-300x300.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="موقع برمجة خاصة ووردبريس" srcset="imgs/thumbnail1-300x300.png 404w, imgs/thumbnail1-300x300.png 300w" sizes="(max-width: 404px) 100vw, 404px" />                            <a href="productdetails.html" class="info">
-                                <h3>طابعة زيروكس فازر 6500</h3></a>
-                        </div>
-                    </div>
-                </li>
-                <!-- // Work Block -->
-                 <!-- Work Block -->
-                <li>
-                    <div class="Work-Block">
-                        <div class="img-fill">
-                            <img width="404" height="316" src="imgs/thumbnail1-300x300.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="موقع برمجة خاصة ووردبريس" srcset="imgs/thumbnail1-300x300.png 404w, imgs/thumbnail1-300x300.png 300w" sizes="(max-width: 404px) 100vw, 404px" />                            <a href="productdetails.html" class="info">
-                                <h3>طابعة زيروكس فازر 6500</h3></a>
-                        </div>
-                    </div>
-                </li>
-                <!-- // Work Block -->
-                 <!-- Work Block -->
-                <li>
-                    <div class="Work-Block">
-                        <div class="img-fill">
-                            <img width="404" height="316" src="imgs/thumbnail1-300x300.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="موقع برمجة خاصة ووردبريس" srcset="imgs/thumbnail1-300x300.png 404w, imgs/thumbnail1-300x300.png 300w" sizes="(max-width: 404px) 100vw, 404px" />                            <a href="productdetails.html" class="info">
-                                <h3>طابعة زيروكس فازر 6500</h3></a>
-                        </div>
-                    </div>
-                </li>
-                <!-- // Work Block -->
-                 <!-- Work Block -->
-                <li>
-                    <div class="Work-Block">
-                        <div class="img-fill">
-                            <img width="404" height="316" src="imgs/thumbnail1-300x300.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="موقع برمجة خاصة ووردبريس" srcset="imgs/thumbnail1-300x300.png 404w, imgs/thumbnail1-300x300.png 300w" sizes="(max-width: 404px) 100vw, 404px" />                            <a href="productdetails.html" class="info">
-                                <h3>طابعة زيروكس فازر 6500</h3></a>
-                        </div>
-                    </div>
-                </li>
-                <!-- // Work Block -->
-                 <!-- Work Block -->
-                <li>
-                    <div class="Work-Block">
-                        <div class="img-fill">
-                            <img width="404" height="316" src="imgs/thumbnail1-300x300.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="موقع برمجة خاصة ووردبريس" srcset="imgs/thumbnail1-300x300.png 404w, imgs/thumbnail1-300x300.png 300w" sizes="(max-width: 404px) 100vw, 404px" />                            <a href="productdetails.html" class="info">
-                                <h3>طابعة زيروكس فازر 6500</h3></a>
-                        </div>
-                    </div>
-                </li>
-                <!-- // Work Block -->
-                 <!-- Work Block -->
-                <li>
-                    <div class="Work-Block">
-                        <div class="img-fill">
-                            <img width="404" height="316" src="imgs/thumbnail1-300x300.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="موقع برمجة خاصة ووردبريس" srcset="imgs/thumbnail1-300x300.png 404w, imgs/thumbnail1-300x300.png 300w" sizes="(max-width: 404px) 100vw, 404px" />                            <a href="productdetails.html" class="info">
-                                <h3>طابعة زيروكس فازر 6500</h3></a>
-                        </div>
-                    </div>
-                </li>
-                <!-- // Work Block -->
-                 <!-- Work Block -->
-                <li>
-                    <div class="Work-Block">
-                        <div class="img-fill">
-                            <img width="404" height="316" src="imgs/thumbnail1-300x300.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="موقع برمجة خاصة ووردبريس" srcset="imgs/thumbnail1-300x300.png 404w, imgs/thumbnail1-300x300.png 300w" sizes="(max-width: 404px) 100vw, 404px" />                            <a href="productdetails.html" class="info">
-                                <h3>طابعة زيروكس فازر 6500</h3></a>
-                        </div>
-                    </div>
-                </li>
-                <!-- // Work Block -->
-                 <!-- Work Block -->
-                <li>
-                    <div class="Work-Block">
-                        <div class="img-fill">
-                            <img width="404" height="316" src="imgs/thumbnail1-300x300.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="موقع برمجة خاصة ووردبريس" srcset="imgs/thumbnail1-300x300.png 404w, imgs/thumbnail1-300x300.png 300w" sizes="(max-width: 404px) 100vw, 404px" />                            <a href="productdetails.html" class="info">
-                                <h3>طابعة زيروكس فازر 6500</h3></a>
-                        </div>
-                    </div>
-                </li>
-                <!-- // Work Block -->
-                 <!-- Work Block -->
-                <li>
-                    <div class="Work-Block">
-                        <div class="img-fill">
-                            <img width="404" height="316" src="imgs/thumbnail1-300x300.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="موقع برمجة خاصة ووردبريس" srcset="imgs/thumbnail1-300x300.png 404w, imgs/thumbnail1-300x300.png 300w" sizes="(max-width: 404px) 100vw, 404px" />                            <a href="productdetails.html" class="info">
-                                <h3>طابعة زيروكس فازر 6500</h3></a>
-                        </div>
-                    </div>
-                </li>
-                <!-- // Work Block -->
-                
-                                            </ul>
+                    </li>
+
+                <?php endforeach; ?>
+                </ul>
                <span class="clear clr"><!--  --></span>
                 <br>
                 <ul class="navigation">
@@ -360,7 +255,6 @@ img.emoji {
 
                 <br>
         </div>
-
     </section>
 
         
@@ -370,16 +264,16 @@ img.emoji {
     <div class="Grid1k">
         <!-- Contact Area -->
         <div class="ContactArea clear-after ViewPort">
-            <div class="Center"><img src="imgs/icon26.png" alt=""></div>
+            <div class="Center"><img src="<?=base_url()?>imgs/icon26.png" alt=""></div>
             <div class="Right clear-after">
-                <img src="imgs/icon24.png" alt="">
+                <img src="<?=base_url()?>imgs/icon24.png" alt="">
                 <div class="info">
                     <div><h3>002-00000000000</h3>
                     <h5>متاح واتس اب - فايبر - لاين</h5></div>
                 </div>
             </div>
             <div class="Left clear-after">
-                <img src="imgs/icon25.png" alt="">
+                <img src="<?=base_url()?>imgs/icon25.png" alt="">
                 <div class="info"><h3>info@AgedSystems.com</h3></div>
             </div>
         </div>
@@ -480,21 +374,20 @@ window.newsletter_check = function (f) {
 </div>
 </div>
 <div class="big-menu-overly"></div>
-<script type='text/javascript' src='js/form-jquery.js'></script>
+<script type='text/javascript' src='<?=base_url()?>js/form-jquery.js'></script>
 <script type='text/javascript'>
 /* <![CDATA[ */
-var _wpcf7 = {"loaderUrl":"imgs/ajax-loader.gif","sending":"\u062c\u0627\u0631\u064a \u0627\u0644\u0625\u0631\u0633\u0627\u0644 ..."};
+var _wpcf7 = {"loaderUrl":"<?=base_url()?>imgs/ajax-loader.gif","sending":"\u062c\u0627\u0631\u064a \u0627\u0644\u0625\u0631\u0633\u0627\u0644 ..."};
 /* ]]> */
 </script>
-<script type='text/javascript' src='js/newscripta.js'></script>
+<script type='text/javascript' src='<?=base_url()?>js/newscripta.js'></script>
 
-<script type='text/javascript' src='js/assest.js'></script>
+<script type='text/javascript' src='<?=base_url()?>js/assest.js'></script>
 <script type='text/javascript' src='//www.google.com/recaptcha/api.js?onload=onloadCallback&#038;render=explicit&#038;ver=1'></script>
-<script type='text/javascript' src='js/embed.js'></script>
-<script src="js/jquery.min.js"></script>
-<script src="js/scripts.js"></script>
-<script src="js/ea-scripts.js"></script>
-
+<script type='text/javascript' src='<?=base_url()?>js/embed.js'></script>
+<script src="<?=base_url()?>js/jquery.min.js"></script>
+<script src="<?=base_url()?>js/scripts.js"></script>
+<script src="<?=base_url()?>js/ea-scripts.js"></script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -503,7 +396,6 @@ var _wpcf7 = {"loaderUrl":"imgs/ajax-loader.gif","sending":"\u062c\u0627\u0631\u
 
   ga('create', 'UA-62646818-2', 'auto');
   ga('send', 'pageview');
-
 </script>
 </body>
 </html>
