@@ -19,13 +19,13 @@ class Family extends CI_Controller
       $data=array('family_name'=>  $this->input->post('FamilyTitle'));
       $this->Family_model->add_family( $data);
       $this->index();
-                 // header('location:'.$this->config->base_url().'index.php/Family/');
+                  header('location:'.$this->config->base_url().'index.php/Family/');
     } 
     public function DeleteFamily()
     {
      $id = $this->input->post('RecoredId');
      $this->Family_model->delete_family($id);
-                    // header('location:'.$this->config->base_url().'index.php/Family/'); 
+                     header('location:'.$this->config->base_url().'index.php/Family/'); 
 
    } 
    public function UpdateFamily()
@@ -33,7 +33,7 @@ class Family extends CI_Controller
     $data=array('family_name'=>  $this->input->post('FamilyTitle'));
     $family_id =  $this->input->post('edit_id');
     $this->Family_model->edit_family($family_id,$data);
-                      //header('location:'.$this->config->base_url().'index.php/Family/'); 
+                      header('location:'.$this->config->base_url().'index.php/Family/'); 
   }   
   public function SearchFamily()
   {

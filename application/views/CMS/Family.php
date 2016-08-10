@@ -211,7 +211,7 @@
               <div class="container-fluid OverLayFormFooter">
                    <div class="row CustomRow">
                        <div class="OverLayFormFooterItem right">
-                            <button type="button"class="btn btn-md OverLayFormBtn"> Creat</button>
+                            <button type="submit"class="btn btn-md OverLayFormBtn"> Creat</button>
                        </div>
                        <div class="OverLayFormFooterItem left">
                        
