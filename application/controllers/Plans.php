@@ -1,12 +1,12 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class plans extends CI_Controller {
+class Plans extends CI_Controller {
 
 public function index()
 	{
 		$data['results'] = $this->Awd_Model->GetData('plans');
-		$this->load->view('cms/Services',$data);
+		$this->load->view('CMS/Services',$data);
 	}
 public function AddPlan()
 {
@@ -38,6 +38,8 @@ public function EditPlan()
 }
 public function test()
 {
+	echo 'here' ; 
+	die();
 	$data['plane_name']="test";
 	$this->Awd_Model->AddToDB('plans',$data);
 }
