@@ -58,19 +58,17 @@
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                    <?php
-                                                    if(isset($results))
-                                                    {
-                                                    foreach ($results as $object) {
-                                                        echo "<tr>
-                                                          <td>$object->plane_id</td>
-                                                          <td>$object->plane_name</td>
-                                                          <td class='check-col tableAdmin'><a href='#' class='editeBtn' id='EditStageOverlayFormShow' data-placement='right'><span class='fa fa-gear'></span></a></td>
-                                                          <td class='check-col tableAdmin'><a href='#' class='deleteBtn'  data-target='#DeleteStageModal' data-toggle='modal' title='delete' data-placement='right'><span class='fa fa-trash'></span></a></td>
-                                                        </tr> ";
-                                                      }
-                                                    }
-                                                      ?>
+        <?php  
+          if(isset($results))
+          {
+            foreach ($results as $object) {
+              echo "<tr><td>$object->plane_id</td><td>$object->plane_name</td>
+              <td class='check-col tableAdmin'>
+              <a  class='editeBtn' id='EditStageOverlayFormShow' data-placement='right'><span class='fa fa-gear'></span></a></td>
+            <td class='check-col tableAdmin'><a href='#' onclick='SetPlanID($object->plane_id)' class='deleteBtn'  data-target='#DeleteStageModal' data-toggle='modal' title='delete' data-placement='right'><span class='fa fa-trash'></span></a></td></tr> ";
+           }
+          }
+        ?>
                                                     </tbody>
                                              </table>
                                       </div>
@@ -122,7 +120,7 @@
                    </div>
                </div>
           </div>
-          <form method="POST" action="<?=base_url()?>index.php/Plans/test">
+          <form method="POST" action="<?=base_url()?>index.php/Plans/AddPlan">
               <div class="container-fluid OverLayFormContent">
 				<div class="FormSection row">
 						<div class="col-md-4 ">
@@ -133,12 +131,12 @@
 								<div id="AddStageOne">
 								<div class="form-group formLayout">
 									<label for="PlaneName" class="control-label ">Plane Name : </label>
-									<input type="text" name="PlaneName" class="form-control InputProduct" placeholder="Plane Name" />
+									<input type="text" name="plane_name" class="form-control InputProduct" placeholder="Plane Name" />
 								</div>
 								<h3>Plane Details</h3>
 									<div class="form-group formLayout">
 										<!--<label for="ProductSpecifications" class="control-label ">Contact Specifications : </label>-->
-										<input type="text" name="StageOne[]" class="form-control overlayproduct" placeholder="Plane Details ..." />
+										<input type="text" name="plane_item[]" class="form-control overlayproduct" placeholder="Plane Details ..." />
 									</div>
 									 <button type="button"class="btn btn-md AddNewStepserbtn" onclick="add_StageOne();"> 
 										<i class="fa fa-plus"></i></button>
@@ -251,12 +249,12 @@
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
               </div>
-              <form id="ForgotPassForm" method="post">
+              <form id="ForgotPassForm" method="post" action="<?=base_url()?>index.php/Plans/DeletePlan">
                   <div class="modal-body">
                         <h1>Delete Product</h1>
-                        <p>Are you sure that you need to delete this Data ?</p>
-                        <div class="form-group formLayout" hidden>
-		        			 <input type="text" name="RecoredId" class="form-control" placeholder="RecoredId"/>
+                        <p>Are you sure that you need to delete this ID ?</p>
+                        <div class="form-group formLayout">
+		        		<input type="text" name="RecoredId" id="RecoredId" class="form-control" value="RecoredId" readonly />
 	       				</div>
                   </div>
                   <div class="modal-footer">
@@ -301,21 +299,26 @@
 	 
 		</script>
 	  		<script>
-			function add_StageThree() {
-			var newspan = document.createElement('div');
-			newspan.innerHTML = '<div class="form-group formLayout"><input type="text" name="StageThree[]" class="form-control overlayproduct" placeholder="" /></div>';
-			document.getElementById('Addstagethree').appendChild(newspan);
-		}	
-		function add_StageTwo() {
-			var newspan = document.createElement('div');
-			newspan.innerHTML = '<div class="form-group formLayout"><input type="text" name="StageTwoSteps[]" class="form-control overlayproduct" placeholder="" /></div>';
-			document.getElementById('AddStagetwo').appendChild(newspan);
-		}	
+		// 	function add_StageThree() {
+		// 	var newspan = document.createElement('div');
+		// 	newspan.innerHTML = '<div class="form-group formLayout"><input type="text" name="StageThree[]" class="form-control overlayproduct" placeholder="" /></div>';
+		// 	document.getElementById('Addstagethree').appendChild(newspan);
+		// }	
+		// function add_StageTwo() {
+		// 	var newspan = document.createElement('div');
+		// 	newspan.innerHTML = '<div class="form-group formLayout"><input type="text" name="StageTwoSteps[]" class="form-control overlayproduct" placeholder="" /></div>';
+		// 	document.getElementById('AddStagetwo').appendChild(newspan);
+		// }	
 		function add_StageOne(){
 			var newspan = document.createElement('div');
-			newspan.innerHTML = '<div class="form-group formLayout"><input type="text" name="StageOne[]" class="form-control overlayproduct" placeholder="" /></div>';
+			newspan.innerHTML = '<div class="form-group formLayout"><input type="text" name="plane_item[]" class="form-control overlayproduct" placeholder="" /></div>';
 			document.getElementById('AddStageOne').appendChild(newspan);
 		}
+    function SetPlanID(id)
+    {
+      var ID=id;
+      document.getElementById("RecoredId").value=ID;
+    }
 		</script>
 
     </body>
