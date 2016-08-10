@@ -149,7 +149,7 @@
                    </div>
                </div>
           </div>
-          <form action="Family/AddFamily" method="post">
+          <form action="<?=base_url()?>index.php/Family/AddFamily" method="post">
               <div class="container-fluid OverLayFormContent">
                    <div class="FormSection">
                        <div class="SectionHeader">
@@ -168,7 +168,7 @@
               <div class="container-fluid OverLayFormFooter">
                    <div class="row CustomRow">
                        <div class="OverLayFormFooterItem right">
-                            <button type="button"class="btn btn-md OverLayFormBtn"> Creat</button>
+                            <button type="submit"class="btn btn-md OverLayFormBtn"> Creat</button>
                        </div>
                        <div class="OverLayFormFooterItem left">
                        
