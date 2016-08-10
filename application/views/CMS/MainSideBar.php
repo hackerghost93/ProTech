@@ -37,14 +37,14 @@
                 </li>		
 
                 <!--li class="sideMenuItem">
-                    <a href="SendEmail.php" data-toggle="tooltip" data-placement="right" class="SMenuItem " title="Compose Email"  id="SMI-SendEmail">
+                    <a href="Blog.php" data-toggle="tooltip" data-placement="right" class="SMenuItem " title="Compose Email"  id="SMI-SendEmail">
 					<span class="fa fa-envelope-o" aria-hidden="true"></span></a>
-                </li>
+                </li-->
                 <li class="sideMenuItem">
-                    <a href="Offers.php" data-toggle="tooltip" data-placement="right" class="SMenuItem " title="Store" id="SMI-Store"><span class="fa fa-shopping-basket"></span></a>
+                    <a href="Tags.php" data-toggle="tooltip" data-placement="right" class="SMenuItem " title="Tags" id="SMI-Tags"><span class="fa fa-tags"></span></a>
                 </li>
 
-                <li class="sideMenuItem">
+                <!--li class="sideMenuItem">
                     <a href="Chat.php" data-toggle="tooltip" data-placement="right" class="SMenuItem" title="Chat" id="SMI-Chat"><span class="fa fa-commenting"></span></a>
                 </li>
                 <li class="sideMenuItem">

@@ -40,12 +40,17 @@ $(document).ready(function ()
     {
         $("#AddNewTagOverlayForm").removeClass("closed");
         $("#AddNewTagOverlayForm").addClass("show");
+    }); 
+	$(document).on("click", "#AddNewSpareTagShow", function ()
+    {
+        $("#AddNewSpareTagOverlayForm").removeClass("closed");
+        $("#AddNewSpareTagOverlayForm").addClass("show");
     });
-    $(document).on("click", "#EditDTagOverlayFormShow", function ()
+/*     $(document).on("click", "#EditDTagOverlayFormShow", function ()
     {
         $("#EditTagOverlayForm").removeClass("closed");
         $("#EditTagOverlayForm").addClass("show");
-    });
+    }); */
 
     //-------------------------------------------Posts-------------
     $(document).on("click", "#AddNewPostShow", function ()
