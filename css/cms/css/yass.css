@@ -149,3 +149,12 @@ button.btn.btn-md.OverLayFormBtn.submitReply {
     background: #2D3446;
     color: #fff;
 }
+input.Contact.form-control {
+    border: 1px solid rgba(230, 230, 230, 0.7);
+    border-radius: 0px;
+    padding: 10px;
+    min-height: 50px;
+    box-shadow: none;
+    background: none;
+    width: 50%;
+}
