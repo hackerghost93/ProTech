@@ -16,7 +16,7 @@ class Printer extends MY_Controller
 		$this->load->model('partner_model');
 		$data['printers'] = $this->getImages($this->getAll());
 		$data['partners'] = $this->partner_model->getAll();
-		$this->load->view('index' , $data);	
+		$this->load->view('hackerindex' , $data);	
 	}
 
 	function showAll()

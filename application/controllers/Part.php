@@ -19,6 +19,8 @@ class Part extends MY_Controller
 		$this->load->view('products.php' , $data);
 	}
 
+	
+
 
 }
  ?>

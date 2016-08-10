@@ -28,7 +28,10 @@ class MY_Controller extends CI_Controller
 
 	private function validateID($id)
 	{
-		return TRUE ;
+		if(is_numeric($id) && $id > 0)
+			return TRUE;
+		else
+			return FALSE ;
 	}
 
 	function create()
@@ -60,8 +63,13 @@ class MY_Controller extends CI_Controller
 
 	function show($id)
 	{
-		$data['product'] =  ($this->validateID($id) == TRUE ? $this->model->get($id) : FALSE );
-		$this->load->view('productdetails', $data);
+		if($this->validateID($id))
+		{
+			$data['product'] =  ($this->validateID($id) == TRUE ? $this->model->get($id) : FALSE );
+			$this->load->view('productdetails', $data);
+		}
+		else
+			show_404();
 	}
 
 	function getImages($arr)
