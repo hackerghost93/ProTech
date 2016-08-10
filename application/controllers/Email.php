@@ -70,5 +70,44 @@ class Email extends CI_Controller
            
             }
         }
+    }
+
+    public function Usermail()
+    {
+      $from_name=$this->input->post('your-name');
+      $from_email = $this->input->post('your-email');
+      $subject = $this->input->post('your-subject');
+      $message = $this->input->post('your-message');
+     $config['protocol'] = 'smtp';
+               $config['smtp_host'] = 'ssl://smtp.gmail.com'; //smtp host name
+               $config['smtp_port'] = '465'; //smtp port number
+               $config['smtp_user'] = $from_email;
+               $config['smtp_pass'] = 'ner123456'; //$from_email password
+               $config['mailtype'] = 'html';
+               $config['charset'] = 'iso-8859-1';
+               $config['wordwrap'] = TRUE;
+               $config['newline'] = "\r\n"; //use double quotes
+               $this->email->initialize($config);
+            
+
+               $this->email->from($from_email, $from_name);
+               $this->email->to('nermeen_kelila@hotmail.com');
+               $this->email->subject($subject);
+               $this->email->message($message);
+              if($this->email->send())
+              {
+                echo 'send';
+              }
+               $this->email->clear();
+
+                /*$this->load->helper('email');
+                if(valid_email($from_email)){
+                  send_email('nermeen_kelila@hotmail.com',$subject,$message);
+                }*/
+                $this->load->view('contact.php');
+
+
+
+               
     } 
 }
