@@ -1,6 +1,12 @@
 <?php
 class Awd_Model extends CI_Model{
 
+    public function AddToDBKey($Tname,$data)
+    {
+        $this->db->insert($Tname,$data);
+        $insert_id = $this->db->insert_id();
+        return $insert_id;
+    }
     public function AddToDB($Tname,$data)
     {
         $this->db->insert($Tname,$data);
@@ -84,6 +90,16 @@ class Awd_Model extends CI_Model{
             return False;
         }
     }
+    public function DelData($Tname,$var,$col)
+    {
+        $this->db->where($col,$var);
+        $this->db->delete($Tname);
+    }
+     public function update($Tname,$data,$var,$col)
+     {
+        $this->db->where($col,$var);
+        $this->db->update($Tname,$data);
+     }
 
 }
 
