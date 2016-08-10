@@ -149,7 +149,7 @@
                    </div>
                </div>
           </div>
-          <form action="<?php echo base_url();?>index.php/Family/AddFamily" method="post">
+          <form action="Family/AddFamily" method="post">
               <div class="container-fluid OverLayFormContent">
                    <div class="FormSection">
                        <div class="SectionHeader">
