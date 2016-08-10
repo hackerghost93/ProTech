@@ -34,12 +34,12 @@
     <body>
         <!-- ---------------------------------sideBarLeft------ -->
         <div class="sideBarLeft">
-            <?php //require_once("MainSideBar.php"); ?>
+            <?php require_once("MainSideBar.php"); ?>
         </div>
         
         <!-- --------------------------------------Header----- -->
         <header>
-            <?php //require_once("MainHeader.php"); ?>
+            <?php require_once("MainHeader.php"); ?>
         </header>
         <!------------------------------------dataSection------>
         <div class="dataSection">

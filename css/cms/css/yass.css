@@ -15,7 +15,7 @@ button.btn.btn-md.AddNewStepbtn {
  button.btn.btn-md.AddNewStepserbtn {
     position: absolute;
     right: 23px;
-	top: 80px;
+	top: 230px;
     background: #2D3446;
     color: #fff;
 } 
@@ -97,7 +97,7 @@ p.inboxdetails {
     width: 97%;
     text-align: right;
 }
-nav.subSideBar2 {
+.subSideBar.tt {
     width: 230px;
     padding: 25px;
     padding-top: 10px;
@@ -122,4 +122,30 @@ nav.subSideBar2 {
     font-size: 20px;
     padding-left: 20px;
     padding-top: 10px;
+}
+.FromOne span {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 18px;
+}
+.ToOne span {
+    padding-left: 38px;
+    padding-right: 3px;
+    font-size: 18px;
+}
+.Time span {
+    padding-left: 23px;
+    padding-right: 21px;
+    font-size: 18px;
+}
+.TitleMessage span {
+    padding-left: 25px;
+    padding-right: 24px;
+    font-size: 18px;
+}
+button.btn.btn-md.OverLayFormBtn.submitReply {
+    margin-top: 8px;
+    margin-bottom: 34px;
+    background: #2D3446;
+    color: #fff;
 }

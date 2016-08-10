@@ -53,7 +53,6 @@
                                                         <tr>
                                                           <th>ID</th>
                                                           <th>Stage</th>
-                                                          <th>Services</th>
                                                           <th>Edit</th>
                                                           <th>Delete</th>
                                                         </tr>
@@ -62,7 +61,6 @@
                                                         <tr>
                                                           <td>1</td>
                                                           <td>Stage 1</td>
-                                                          <td>نقوم بالزيارة خلال 3 أيام</td>
                                                           <td class='check-col tableAdmin'><a href='#' class='editeBtn' id="EditStageOverlayFormShow" data-placement='right'><span class='fa fa-gear'></span></a></td>
                                                           <td class='check-col tableAdmin'><a href='#' class='deleteBtn'  data-target='#DeleteStageModal' data-toggle='modal' title='delete' data-placement='right'><span class='fa fa-trash'></span></a></td>
                                                         </tr> 
@@ -122,20 +120,25 @@
 				<div class="FormSection row">
 						<div class="col-md-4 ">
 							<div class="SectionHeader">
-								<h3>Stage 1 </h3>
+								<h3>Plane Name</h3>
 							</div>
 							<div class="SectionContent Specifications">
 								<div id="AddStageOne">
+								<div class="form-group formLayout">
+									<label for="PlaneName" class="control-label ">Plane Name : </label>
+									<input type="text" name="PlaneName" class="form-control InputProduct" placeholder="Plane Name" />
+								</div>
+								<h3>Plane Details</h3>
 									<div class="form-group formLayout">
 										<!--<label for="ProductSpecifications" class="control-label ">Contact Specifications : </label>-->
-										<input type="text" name="StageOne" class="form-control overlayproduct" placeholder="" />
+										<input type="text" name="StageOne[]" class="form-control overlayproduct" placeholder="Plane Details ..." />
 									</div>
 									 <button type="button"class="btn btn-md AddNewStepserbtn" onclick="add_StageOne();"> 
 										<i class="fa fa-plus"></i></button>
 								</div>
 							</div>
 						</div>
-						<div class="col-md-4">
+						<!--div class="col-md-4">
 							<div class="SectionHeader">
 								<h3>Stage 2 </h3>
 							</div>
@@ -143,7 +146,7 @@
 								<div id="AddStagetwo">
 									<div class="form-group formLayout">
 										<!--<label for="PrintingSpecifications" class="control-label "> : </label>-->
-										<input type="text" name="StageTwoSteps" class="form-control overlayproduct" placeholder="" />
+										<!--input type="text" name="StageTwoSteps[]" class="form-control overlayproduct" placeholder="" />
 									</div>
 									 <button type="button"class="btn btn-md AddNewStepserbtn" onclick="add_StageTwo();"> 
 										<i class="fa fa-plus"></i></button>
@@ -158,13 +161,13 @@
 								<div id="Addstagethree">
 									<div class="form-group formLayout">
 										<!--<label for="ProductGuarantee" class="control-label ">Contact Guarantee : </label>-->
-										<input type="text" name="StageThree" class="form-control overlayproduct" placeholder="" />
+										<!--input type="text" name="StageThree" class="form-control overlayproduct" placeholder="" />
 									</div>
 									 <button type="button"class="btn btn-md AddNewStepserbtn" onclick="add_StageThree();"> 
 										<i class="fa fa-plus"></i></button>
 								</div>
 							</div>
-						</div>
+						</div-->
 				  </div>   
 				  
               </div>
@@ -196,24 +199,26 @@
           <form>
 			<div class="container-fluid OverLayFormContent">
           <div class="FormSection row">
-						<div class="col-md-4 ">
+						<div class="col-md-8">
 							<div class="SectionHeader">
-								<h3>Stage 1 </h3>
+								<h3>Plane Name</h3>
 							</div>
 							<div class="SectionContent Specifications">
 								<div id="RemoveSpecifications">
+								<div class="form-group formLayout">
+									<label for="PlaneName" class="control-label ">Plane Name : </label>
+									<input type="text" name="PlaneName" class="form-control InputProduct" placeholder="Plane Name" />
+								</div>
+									<h3>Plane Details</h3>
 									<div class="form-group formLayout">
-										<p><input type="text" name="Stage1Specifications" id="p_scents" class="form-control overlaystagesservices" placeholder="stage One" />
+										<p><input type="text" name="Stage1Specifications[]" id="p_scents" class="form-control overlaystagesservices" placeholder="Plane Details" />
 										<a href="#" id="remScnt" class="removespecification  CloseBtn" ><i class="fa fa-close"></i></a></p>
-										<p><input type="text" name="Stage1Specifications" id="p_scents" class="form-control overlaystagesservices" placeholder="stage One" />
-										<a href="#" id="remScnt" class="removespecification CloseBtn"><i class="fa fa-close"></i></a></p>	
-										<p><input type="text" name="Stage1Specifications" id="p_scents" class="form-control overlaystagesservices" placeholder="stage One" />
-										<a href="#" id="remScnt" class="removespecification CloseBtn" ><i class="fa fa-close"></i></a></p>	
+								
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="col-md-4">
+						<!--div class="col-md-4">
 							<div class="SectionHeader">
 								<h3>Stage 2</h3>
 							</div>
@@ -246,7 +251,7 @@
 									</div>
 								</div>
 							</div>
-						</div>
+						</div-->
 				  </div>			  
               </div>
               <div class="container-fluid OverLayFormFooter">
@@ -321,17 +326,17 @@
 	  		<script>
 			function add_StageThree() {
 			var newspan = document.createElement('div');
-			newspan.innerHTML = '<div class="form-group formLayout"><input type="text" name="StageThree" class="form-control overlayproduct" placeholder="" /></div>';
+			newspan.innerHTML = '<div class="form-group formLayout"><input type="text" name="StageThree[]" class="form-control overlayproduct" placeholder="" /></div>';
 			document.getElementById('Addstagethree').appendChild(newspan);
 		}	
 		function add_StageTwo() {
 			var newspan = document.createElement('div');
-			newspan.innerHTML = '<div class="form-group formLayout"><input type="text" name="StageTwoSteps" class="form-control overlayproduct" placeholder="" /></div>';
+			newspan.innerHTML = '<div class="form-group formLayout"><input type="text" name="StageTwoSteps[]" class="form-control overlayproduct" placeholder="" /></div>';
 			document.getElementById('AddStagetwo').appendChild(newspan);
 		}	
 		function add_StageOne(){
 			var newspan = document.createElement('div');
-			newspan.innerHTML = '<div class="form-group formLayout"><input type="text" name="StageOne" class="form-control overlayproduct" placeholder="" /></div>';
+			newspan.innerHTML = '<div class="form-group formLayout"><input type="text" name="StageOne[]" class="form-control overlayproduct" placeholder="" /></div>';
 			document.getElementById('AddStageOne').appendChild(newspan);
 		}
 		</script>
