@@ -1,0 +1,1 @@
+ALTER TABLE `contact`  ADD `adress` VARCHAR(200) NOT NULL  AFTER `id`;
