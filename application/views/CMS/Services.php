@@ -58,12 +58,19 @@
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        <tr>
-                                                          <td>1</td>
-                                                          <td>Stage 1</td>
-                                                          <td class='check-col tableAdmin'><a href='#' class='editeBtn' id="EditStageOverlayFormShow" data-placement='right'><span class='fa fa-gear'></span></a></td>
+                                                    <?php
+                                                    if(isset($results))
+                                                    {
+                                                    foreach ($results as $object) {
+                                                        echo "<tr>
+                                                          <td>$object->plane_id</td>
+                                                          <td>$object->plane_name</td>
+                                                          <td class='check-col tableAdmin'><a href='#' class='editeBtn' id='EditStageOverlayFormShow' data-placement='right'><span class='fa fa-gear'></span></a></td>
                                                           <td class='check-col tableAdmin'><a href='#' class='deleteBtn'  data-target='#DeleteStageModal' data-toggle='modal' title='delete' data-placement='right'><span class='fa fa-trash'></span></a></td>
-                                                        </tr> 
+                                                        </tr> ";
+                                                      }
+                                                    }
+                                                      ?>
                                                     </tbody>
                                              </table>
                                       </div>
@@ -115,7 +122,7 @@
                    </div>
                </div>
           </div>
-          <form>
+          <form method="post" action"<?=base_url()?>index.php/plans/test">
               <div class="container-fluid OverLayFormContent">
 				<div class="FormSection row">
 						<div class="col-md-4 ">
@@ -138,43 +145,13 @@
 								</div>
 							</div>
 						</div>
-						<!--div class="col-md-4">
-							<div class="SectionHeader">
-								<h3>Stage 2 </h3>
-							</div>
-							<div class="SectionContent Specifications">
-								<div id="AddStagetwo">
-									<div class="form-group formLayout">
-										<!--<label for="PrintingSpecifications" class="control-label "> : </label>-->
-										<!--input type="text" name="StageTwoSteps[]" class="form-control overlayproduct" placeholder="" />
-									</div>
-									 <button type="button"class="btn btn-md AddNewStepserbtn" onclick="add_StageTwo();"> 
-										<i class="fa fa-plus"></i></button>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 ">
-							<div class="SectionHeader">
-								<h3>Stage 3</h3>
-							</div>
-							<div class="SectionContent Specifications">
-								<div id="Addstagethree">
-									<div class="form-group formLayout">
-										<!--<label for="ProductGuarantee" class="control-label ">Contact Guarantee : </label>-->
-										<!--input type="text" name="StageThree" class="form-control overlayproduct" placeholder="" />
-									</div>
-									 <button type="button"class="btn btn-md AddNewStepserbtn" onclick="add_StageThree();"> 
-										<i class="fa fa-plus"></i></button>
-								</div>
-							</div>
-						</div-->
 				  </div>   
 				  
               </div>
               <div class="container-fluid OverLayFormFooter">
                    <div class="row CustomRow">
                        <div class="OverLayFormFooterItem right">
-                            <button type="button"class="btn btn-md OverLayFormBtn"> Creat</button>
+                            <button type="submit" value="Add" class="btn btn-md OverLayFormBtn">ADD</button>
                        </div>
                        <div class="OverLayFormFooterItem left">
                        

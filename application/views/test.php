@@ -7,15 +7,6 @@
 <script src="../js/plans.js"></script>
 
 <table border="1">
-<th>ID</th><th>name</th>
-<?php 
-	foreach ($results as $object) {
-			echo "<tr>
-			<td>$object->plane_id</td>
-			<td>$object->plane_name</td>
-			 </tr>";
-		}
-  ?>
 </table>
 
 <form method="post" id="AddPlan">
@@ -38,6 +29,10 @@ username:<input type="text" name="username[]"><br>
 password:<input type="password" name="passsword[]"><br>
 phone number:<input type="number" name="phone[]"><br>
 <input type="submit" value="insert">
+</form>
+<form method="post" action="plans/test">
+username:<input type="text" name="lol">
+<button type="submit" value="go">here</button>
 </form>
 </body>
 </html>

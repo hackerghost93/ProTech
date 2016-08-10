@@ -36,5 +36,9 @@ public function EditPlan()
 {
 
 }
-
+public function test()
+{
+	$data['plane_name']="test";
+	$this->Awd_Model->AddToDB('plans',$data);
+}
 }
