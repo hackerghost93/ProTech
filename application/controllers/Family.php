@@ -11,7 +11,7 @@ class Family extends CI_Controller
      public function index() //Show all branches 
               {
                         $data['Families'] = $this->Family_model->select_all_families();
-                        $this->load->view('Family',$data);          
+                        $this->load->view('CMS/Family',$data);          
               } 
                                       
     public function AddFamily()
@@ -26,5 +26,41 @@ class Family extends CI_Controller
                      $this->Family_model->delete_family($id);
                      header('location:'.$this->config->base_url().'index.php/Family/'); 
                    
-              }  
+              } 
+    public function UpdateFamily()
+              {
+                      $family_name =  $this->input->post('FamilyTitle');
+                      $family_id =  $this->input->post('edit_id');
+                      $this->Family_model->edit_family($family_id,$family_name);
+                      header('location:'.$this->config->base_url().'index.php/Family/'); 
+              }   
+    public function SearchFamily()
+              {
+                $familyName = $_GET['q'];
+                $Families = $this->Family_model->search_family($familyName);
+
+                echo"<table class='table table-hover table-condensed'>
+                                                   <thead>
+                                                        <tr>
+                                                          <th>ID</th>
+                                                          <th>Title</th>
+                                                          <th>Edit</th>
+                                                          <th>Delete</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>";
+                                                  
+                                                    foreach($Families as $row){
+                                                       echo "<tr>";
+                                                         echo "<td>".$row['family_id']."</td>";
+                                                          echo"<td>".$row['family_name']."</td>";
+                                                          echo"<td class='check-col tableAdmin'><a href='#' class='editeBtn' id='EditNewFamilyShow' data-placement='right' data-id='".$row['family_id']."' data-editname='".$row['family_name']."'><span class='fa fa-gear'></span></a></td>";
+                                                          echo"<td class='check-col tableAdmin'><a href='#' class='deleteBtn'  data-target='#DeleteFamilyModal' data-toggle='modal' title='delete' data-placement='right' data-id='".$row['family_id']."'><span class='fa fa-trash'></span></a></td>";
+                                                       echo"</tr>"; 
+                                                  } 
+                                                  echo"</tbody>";
+                                             echo"</table>";
+                                             
+
+              }          
 }

@@ -3,19 +3,43 @@
     <head>
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <title>Protech CMS : Family</title> 
-     		 <?php require_once("Links.php"); ?>
+        <?php $this->load->view('CMS/Links');  ?>
 
+
+        <script>  //search script
+            function showHint(str) {
+    if (str == "") {
+        document.getElementById("txtHint").innerHTML = "";
+        return;
+    } else { 
+        if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            // code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function() {
+            if (true) {
+                document.getElementById("txtHint").innerHTML = xmlhttp.responseText;
+            }
+        }
+        xmlhttp.open("GET","<?php echo $this->config->base_url(); ?>index.php/Family/SearchFamily?q="+str,true);
+        xmlhttp.send();
+    }
+}
+        </script>
         
     </head>
     <body>
         <!-- ---------------------------------sideBarLeft------ -->
         <div class="sideBarLeft">
-            <?php require_once("MainSideBar.php"); ?>
+            <?php //require_once("MainSideBar.php"); ?>
         </div>
         
         <!-- --------------------------------------Header----- -->
         <header>
-            <?php require_once("MainHeader.php"); ?>
+            <?php //require_once("MainHeader.php"); ?>
         </header>
         <!------------------------------------dataSection------>
         <div class="dataSection">
@@ -27,13 +51,17 @@
                       <li>
                           <form class="TopBarForm">
                                 <div class="form-group">
-                                     <input type="search" class="form-control" name="Search" placeholder="Search By Family Name"/>
+                                     <input type="search" onkeyup="showHint(this.value)" class="form-control" name="Search" placeholder="Search By Family Name"/>
                                       <a href="#" type="submit" role="button"><span class="fa fa-search"></span></a>
                                 </div>
                           </form>    
                       </li>
                    </ul>
              </nav>
+              <div class="box-wider-text">
+                <div class="box-body">
+                                 <div class="table-responsive">  <span id="txtHint"></span> </div>
+                        <div class="table-responsive" id="UserTable">s
               <div class="DataDiv Wide">
                           <div class="DataDiv">
                                <div class="box-wider-text">
@@ -48,7 +76,8 @@
                                     </div>
                                     <div class="box-body">
                                        <div class="table-responsive" id="UserTable">
-                                            <table class='table table-hover table-condensed'>
+                                         <?php 
+                                            echo"<table class='table table-hover table-condensed'>
                                                    <thead>
                                                         <tr>
                                                           <th>ID</th>
@@ -57,15 +86,19 @@
                                                           <th>Delete</th>
                                                         </tr>
                                                     </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                          <td>1</td>
-                                                          <td>Cloudy</td>
-                                                          <td class='check-col tableAdmin'><a href='#' class='editeBtn' id="EditNewFamilyShow" data-placement='right'><span class='fa fa-gear'></span></a></td>
-                                                          <td class='check-col tableAdmin'><a href='#' class='deleteBtn'  data-target='#DeleteFamilyModal' data-toggle='modal' title='delete' data-placement='right'><span class='fa fa-trash'></span></a></td>
-                                                        </tr> 
-                                                    </tbody>
-                                             </table>
+                                                    <tbody>";
+                                                  if(isset($Families))
+                                                    foreach($Families as $row){
+                                                       echo "<tr>";
+                                                         echo "<td>".$row['family_id']."</td>";
+                                                          echo"<td>".$row['family_name']."</td>";
+                                                          echo"<td class='check-col tableAdmin'><a href='#' class='editeBtn' id='EditNewFamilyShow' data-placement='right' data-id='".$row['family_id']."' data-editname='".$row['family_name']."'><span class='fa fa-gear'></span></a></td>";
+                                                          echo"<td class='check-col tableAdmin'><a href='#' class='deleteBtn'  data-target='#DeleteFamilyModal' data-toggle='modal' title='delete' data-placement='right' data-id='".$row['family_id']."'><span class='fa fa-trash'></span></a></td>";
+                                                       echo"</tr>"; 
+                                                  } 
+                                                  echo"</tbody>";
+                                             echo"</table>";
+                                             ?>
                                       </div>
                                     </div>
                                     <div class="box-footer">
@@ -116,7 +149,7 @@
                    </div>
                </div>
           </div>
-          <form>
+          <form action="<?php echo base_url();?>index.php/Family/AddFamily" method="post">
               <div class="container-fluid OverLayFormContent">
                    <div class="FormSection">
                        <div class="SectionHeader">
@@ -157,7 +190,7 @@
                    </div>
                </div>
           </div>
-          <form>
+          <form method="post" action="<?php echo base_url();?>index.php/Family/UpdateFamily">
 			<div class="container-fluid OverLayFormContent">
                    <div class="FormSection">
                        <div class="SectionHeader">
@@ -165,8 +198,9 @@
                        </div>
                        <div class="SectionContent ">
 								<div class="form-group formLayout">
+                  <input type="hidden" name="edit_id" id="edit_id" class="form-control" />
 									<label for="FamilyTitle" class="control-label ">Family Title : </label>
-									<input type="text" name="FamilyTitle" class="form-control" placeholder="Family Title" />
+									<input type="text" name="FamilyTitle" id="FamilyTitle" class="form-control" placeholder="Family Title" />
 								</div>
 				
                       </div>
@@ -195,12 +229,12 @@
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
               </div>
-              <form id="ForgotPassForm" method="post">
+              <form id="ForgotPassForm" method="post" action="<?php echo base_url();?>index.php/Family/DeleteFamily">
                   <div class="modal-body">
                         <h1>Delete Family</h1>
                         <p>Are you sure that you need to delete this Data ?</p>
                         <div class="form-group formLayout" hidden>
-		        			 <input type="text" name="RecoredId" class="form-control" placeholder="RecoredId"/>
+		        			 <input type="text" name="RecoredId" id="RecoredId" class="form-control" placeholder="RecoredId"/>
 	       				</div>
                   </div>
                   <div class="modal-footer">
@@ -212,7 +246,8 @@
         </div>
 
         <!----------------------------------------scripts------>
- 	<?php require_once("Scripts.php"); ?>
+       <?php $this->load->view('CMS/Scripts');  ?>
+
 		<script>
           $(document).on("click",".CloseBtn",function(){
 			  $(this).closest("p").css("display", "none");
@@ -261,6 +296,26 @@
 			document.getElementById('AddNewSpecifications').appendChild(newspan);
 		}
 		</script>
+    
+    <script> //delete script
+        $(document).on("click", ".deleteBtn", function () {
+     var Id = $(this).data('id');
+     $(".modal-body #RecoredId").val( Id );
+});
+</script>
+
+<script> //edit script
+    $(document).on("click", ".editeBtn", function () {     
+     var myId = $(this).data('id');
+     var myName = $(this).data('editname'); 
+     
+       
+     $(" #edit_id").val( myId);
+     $(" #FamilyTitle").val( myName );
+     
+     
+       });
+</script>
 
     </body>
 </html>
