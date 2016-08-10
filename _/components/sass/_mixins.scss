@@ -1,0 +1,30 @@
+
+@mixin SetShadowEffect ($opacity:0.5){
+
+    /*----------Animation : ShadowIn----------------*/
+    @-webkit-keyframes ShadowIn {
+        0% {opacity: 0 ;}
+        100% {opacity: $opacity;  }
+    }
+    @keyframes ShadowIn {
+        0% {opacity: 0;}
+        100% {opacity: $opacity }
+    }
+    .ShadowIn {
+        -webkit-animation-name: ShadowIn ;
+        animation-name: ShadowIn ;
+    } 
+    /*----------Animation : ShadowOut----------------*/
+    @-webkit-keyframes ShadowOut {
+        0% {opacity: $opacity;}
+        100% {opacity: 0 ;}
+    }
+    @keyframes ShadowOut{
+        0% {opacity: $opacity ;}
+        100% {opacity: 0;}
+    }
+    .ShadowOut {
+        -webkit-animation-name: ShadowOut ;
+        animation-name: ShadowOut ;
+    }
+}

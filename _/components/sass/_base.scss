@@ -1,0 +1,111 @@
+/*--------------Animation-------------------*/
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s ;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+/*----------Animation : ZoomIn----------------*/
+@-webkit-keyframes ZoomIn {
+    0% { 
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+       }
+    100% {
+        transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+    }
+}
+.ZoomIn {
+    -webkit-animation-name: ZoomIn;
+    animation-name: ZoomIn;
+}
+
+/*----------Animation : ZoomIn----------------*/
+@-webkit-keyframes ZoomOut {
+    0% { 
+        transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+       }
+    100% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+    }
+}
+.ZoomOut {
+    -webkit-animation-name: ZoomOut;
+    animation-name: ZoomOut;
+}
+
+/*----------Animation : ShowIn----------------*/
+@-webkit-keyframes ShowIn {
+    0% {opacity: 0 ;}
+    100% {opacity: 1 ;}
+}
+@keyframes ShowIn {
+    0% {opacity: 0 ;}
+    100% {opacity: 1 ;}
+}
+.ShowIn {
+    -webkit-animation-name: ShowIn;
+    animation-name: ShowIn;
+} 
+/*----------Animation : ShowOut----------------*/
+@-webkit-keyframes ShowOut {
+    0% {opacity: 1 ;}
+    100% {opacity: 0 ;}
+}
+@keyframes ShowOut{
+    0% {opacity: 1 ;}
+    100% {opacity: 0 ;}
+}
+.ShowOut {
+    -webkit-animation-name: ShowOut;
+    animation-name: ShowOut;
+}
+
+/*----------Animation : LadyBug----------------*/
+
+#ladybug{
+    width:243px;
+    height:179px;
+    margin: 2% auto;
+    background:url("/_/images/BugSprites.png") left center;
+    -webkit-animation : play 1s steps(12) infinite;
+}
+
+@keyframes play{
+    0% { background-position: -2916px;}
+    100% { background-position: 0;}
+}
+
+@-webkit-keyframes play{
+    0% { background-position: -2916px;}
+    100% { background-position: 0;}
+}
+
+/*----------Animation : CloudsSlide----------------*/
+
+@keyframes slide{
+  0%{
+    transform: translate3d(0, 0, 0);
+  }
+  100%{
+    transform: translate3d(-1692px, 0, 0);
+  }
+}
+
+/*
+
+@keyframes animatedBackground {
+	from { background-position: 0 0; }
+	to { background-position: 100% 0; }
+}
+*/

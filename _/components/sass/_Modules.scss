@@ -1,0 +1,672 @@
+.OverLayForm{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(255,255,255,0.98);
+    z-index: 1500;
+    padding: 70px;
+    padding-top: 35px;
+    padding-bottom: 35px;   
+    overflow: auto;
+    .OverLayFormHeader{
+        padding-bottom:15px;
+        border-bottom: 1px solid $BorderColor;
+        .OverLayFormHeaderLeft{
+            display:inline-block;
+            float:left;
+        }/*.OverLayFormHeaderLeft*/
+        .OverLayFormHeaderRight{
+            display:inline-block;
+            float:Right;
+            span{
+                margin-top: 25px;
+                font-size: 18px;
+                cursor: pointer;
+            }/*span*/
+        }/*.OverLayFormHeaderRight*/
+    }/*.OverLayFormHeader*/
+    .OverLayFormContent{
+        padding-left:35px;
+        padding-right:35px;
+        padding-bottom:35px;
+        .FormSection{
+            .checkbox{
+                label{
+                    line-height: 4;
+                    padding-left:0px;
+                }
+            }
+            .SectionHeader{
+                margin-bottom:15px;
+            }/*.SectionHeader*/
+            .SectionContent{
+                .TableDataDiv{
+                    min-width:75%;
+                    table{
+                        margin-bottom:5px;
+                    }/*table*/
+                }/*.TableDataDivr*/
+                .form-group{
+                    margin:0px;
+                    padding:10px;
+                    label{
+                        font-weight:100;
+                    }/*label*/
+                    select{
+                        border: 1px solid $BorderColor;
+                        border-radius:0px;
+                        padding:10px;
+                        min-height:50px;
+                        box-shadow:none;
+                        background:none; 
+                        width:50%;  
+                    }/*select*/
+                    input{
+                        border: 1px solid $BorderColor;
+                        border-radius:0px;
+                        padding:10px;
+                        min-height:50px;
+                        box-shadow:none;
+                        background:none; 
+                        width:50%;  
+                    }/*input*/
+                    textarea{
+                        border: 1px solid $BorderColor;
+                        border-radius:0px;
+                        padding:10px;
+                        min-height:100px;
+                        box-shadow:none;
+                        background:none; 
+                        width:100%;  
+                        max-width:100%;
+                        max-height:100px;
+                        min-width:100%;
+                    }/*textarea*/
+                }/*.form-group*/
+                .TotalData{
+                     .TotalItem{
+                        display:inline-block;
+                         h4{
+                           display:inline-block;
+                            margin-right:5px;
+                         }/*h4*/
+                      }/*.TotalItem*/
+                 }/*.TotalData*/
+            }/*.SectionContent*/
+        }/*.FormSection*/
+    }/*.OverLayFormContent*/
+    .OverLayFormFooter{
+        border-top:1px solid $BorderColor;
+        padding-top: 15px;
+        padding-bottom:15px;
+        .OverLayFormFooterItem{
+            button{
+                padding-right:20px;
+                padding-left:20px;
+                background:$MidBlue;
+                color:$ClearWhite;
+            }
+             button:hover{
+                background:$LightBlue;
+            }
+        }/*.OverLayFormFooterItem*/
+    }/*.OverLayFormFooter*/
+}/*.OverLayForm*/
+
+
+
+.CustomModal{
+    .modal-dialog{
+        margin-top: 80px;
+        .modal-content{
+            background: $MidBlue;
+            .modal-header{
+                border-bottom:none;
+            }/*.modal-header*/
+            .modal-body{
+                padding-top:0px;
+                padding-bottom:0px;
+                paddding-right:25px;
+                padding-left:25px;
+                h1{
+                    margin-top: 5px;
+                    color:$LightBlue;
+                    font-weight:100;
+                }/*h1*/
+                p{
+                    color:$ClearWhite;
+                }/*p*/
+            }/*.modal-body*/
+            .modal-footer{
+                border:none;
+                padding-top:0px;
+                button{
+                    color:$ClearWhite;
+                    background:$LightBlue;
+                }
+            }/*.modal-footer*/
+        }/*.modal-content*/
+    }/*.modal-content*/
+}/*.CustomModal*/
+
+
+
+
+.OverLayFormCustom{
+    overflow: auto;
+    padding-bottom:50px;
+    .OverLayFormHeader{
+        padding-bottom:15px;
+        border-bottom: 1px solid $BorderColor;
+        .OverLayFormHeaderLeft{
+            display:inline-block;
+            float:left;
+        }/*.OverLayFormHeaderLeft*/
+        .OverLayFormHeaderRight{
+            display:inline-block;
+            float:Right;
+            span{
+                margin-top: 25px;
+                font-size: 18px;
+                cursor: pointer;
+            }/*span*/
+        }/*.OverLayFormHeaderRight*/
+    }/*.OverLayFormHeader*/
+    .OverLayFormContent{
+        padding-left:35px;
+        padding-right:35px;
+        padding-bottom:35px;
+        .FormSection{
+            .checkbox{
+                label{
+                    line-height: 4;
+                    padding-left:0px;
+                }
+            }
+            .SectionHeader{
+                margin-bottom:15px;
+                input{
+                    display: inline-block;
+                    margin-top:20px;
+                border: none;
+                box-shadow: none;
+                border-bottom: 1px solid #f3f3f3;
+                width: 15%;
+                border-radius: 0 !important;
+                margin-left: 15px;
+                text-align: center;
+                font-size: 25px;
+                }/*input*/
+                h3{
+                    display:inline-block;
+                }
+                .InputWSign{
+                    display:inline-block;
+                    input{
+                        width: 45%;
+                    }
+                }
+            }/*.SectionHeader*/
+            .center{
+                    margin-right:auto;
+                    margin-left:auto;
+                    width:50%;
+                    margin-bottom:25px;
+                    .form-group{
+                    margin:0px;
+                    padding:10px;
+                    label{
+                        font-weight:100;
+                    }/*label*/
+                    select{
+                        width:100% !important;  
+                    }/*select*/
+                   }
+                }
+            .SectionContent{
+                .TableDataDiv{
+                    min-width:75%;
+                    table{
+                        margin-bottom:5px;
+                    }/*table*/
+                }/*.TableDataDivr*/
+                .form-group{
+                    margin:0px;
+                    padding:10px;
+                    label{
+                        font-weight:100;
+                    }/*label*/
+                    select{
+                        border: 1px solid $BorderColor;
+                        border-radius:0px;
+                        padding:10px;
+                        min-height:50px;
+                        box-shadow:none;
+                        background:none; 
+                        width:50%;  
+                    }/*select*/
+                    input{
+                        border: 1px solid $BorderColor;
+                        border-radius:0px;
+                        padding:10px;
+                        min-height:50px;
+                        box-shadow:none;
+                        background:none; 
+                        width:50%;  
+                    }/*input*/
+                    textarea{
+                        border: 1px solid $BorderColor;
+                        border-radius:0px;
+                        padding:10px;
+                        min-height:100px;
+                        box-shadow:none;
+                        background:none; 
+                        width:100%;  
+                        max-width:100%;
+                        max-height:100px;
+                        min-width:100%;
+                    }/*textarea*/
+                }/*.form-group*/
+                .TotalData{
+                     .TotalItem{
+                        display:inline-block;
+                         h4{
+                           display:inline-block;
+                            margin-right:5px;
+                         }/*h4*/
+                      }/*.TotalItem*/
+                 }/*.TotalData*/
+            }/*.SectionContent*/
+        }/*.FormSection*/
+    }/*.OverLayFormContent*/
+    .OverLayFormFooter{
+        border-top:1px solid $BorderColor;
+        padding-top: 15px;
+        padding-bottom:15px;
+        .OverLayFormFooterItem{
+            button{
+                padding-right:20px;
+                padding-left:20px;
+                background:$MidBlue;
+                color:$ClearWhite;
+            }
+             button:hover{
+                background:$LightBlue;
+            }
+        }/*.OverLayFormFooterItem*/
+    }/*.OverLayFormFooter*/
+}/*.OverLayFormCustom*/
+
+.SalaryInfo{
+    padding-top:0px;
+    padding-bottom:25px;
+    .box-header{
+        padding-bottom:0px !important;
+        h3{
+            margin-bottom:20px !important;
+        }/*h3*/
+    }/*.box-header*/
+}/*.SalaryInfo*/
+
+.InputWSign{
+    span{
+        display: inline-block;
+        margin-left: 15px;
+        font-size: 20px;
+    }/*span*/
+    input{
+        display : inline-block;
+    }/*input*/
+}/*.InputWSign*/
+
+
+
+.CustomeCheck{
+    label{
+        min-width: 10%;
+        width: 10% !important;
+    }/*label*/
+    input{
+        min-width: 10%;
+        width: 10% !important;
+        margin-left: 0px !important;
+    }/*input*/
+}/*.CustomeCheck*/
+
+.HotTagCheck{
+    input{
+        width: 15% !important;
+    }
+}/*.HotTagCheck*/
+
+.ChatDetails{
+    .box-footer{
+        padding:25px;
+    }/*.box-footer*/
+}/*.ChatDetails*/
+
+.TopBarForm{
+                display:inline-Block;
+                float:left;
+                margin-right:15px;
+                min-width:35%;
+                input{
+                    border-radius: 0px;
+                    background: $ClearWhite;
+                    color: $DarkBlue;
+                    font-weight: 100;
+                    border: 0;
+                    width: 100%;
+                    line-height: 37px;
+                    font-size: 14px;
+                    text-indent: 15px;
+                    height: 59px;
+                    box-shadow: none;
+                    }/*input*/
+                 .form-control::-moz-placeholder{
+                      color: $BorderColor !important;
+                      font-weight: 100;
+                 }/*.form-control*/
+                 a{
+                   color: $DarkBlue;
+                   font-size: 18px;
+                   float: right;
+                   margin-top: -40px;
+                   margin-right:20px;
+                   position: relative;
+                  }/*a*/
+                  .form-group{
+                    margin-bottom:0px;
+                    :focus{
+                           border:0px;
+                           box-shadow:none;
+                     }/*:focus*/
+                   }/*.form-group*/
+}/*.HeaderForm*/
+
+
+.Wide{
+   width: 95.5%;
+   padding: 15px;
+}
+
+.box-wider-text{
+                .box-header{
+                    border-bottom: 1px solid #f3f3f3;
+                    padding-bottom: 20px;
+                    .HeaderLeft{
+                        display: inline-block;
+                        width:60%;
+                        .SubHeader{
+                            display:inline-Block;
+                            float:left;
+                            margin-right:15px;
+                            width:100%;
+                            input{
+                                padding:0px;
+                                border-radius: 0px;
+                                background: $ClearWhite;
+                                color: $DarkBlue;
+                                font-weight: 100;
+                                border: 1px solid $BorderColor;
+                                width: 100%;
+                                line-height: 37px;
+                                font-size: 14px;
+                                text-indent: 15px;
+                                height: 35px;
+                                box-shadow: none;
+                                }/*input*/
+                             .form-control::-moz-placeholder{
+                                  color: $BorderColor !important;
+                                  font-weight: 100;
+                             }/*.form-control*/
+                             a{
+                               color: $DarkBlue;
+                               font-size: 18px;
+                               float: right;
+                               margin-top: -32px;
+                               margin-right:20px;
+                               position: relative;
+                              }/*a*/
+                              .form-group{
+                                margin-bottom:0px;
+                                :focus{
+                                       border:0px;
+                                       box-shadow:none;
+                                 }/*:focus*/
+
+                               }/*.form-group*/
+                        }/*.SubHeader*/
+                        .form-group{
+                    margin:0px;
+
+                    select{
+                        border: 1px solid $BorderColor;
+                        border-radius:0px;
+                        padding:10px;
+                        min-height:42px;
+                        box-shadow:none;
+                        background:none; 
+                        width:100%;  
+                    }/*select*/
+                }
+                    }/*.HeaderLef*/
+                    .HeaderRight{
+                        display: inline-block;
+                        float: right;
+                        padding-right: 25px;
+                        button{
+                            background: $MidBlue;
+                            color: $ClearWhite;
+                        }/*button*/
+                        button:hover{
+                            background: $LightBlue;
+                            color: $ClearWhite;
+                        }/*button:hover*/
+
+                    }/*.HeaderRight*/
+                }/*.box-header*/
+                .box-body{
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+                    table{
+                        thead{
+                            tr{
+                                th{
+                                    font-weight: 600;
+                                    border-bottom: none;
+                                    padding-bottom: 10px;
+                                    font-size:16px;
+                                }/*th*/
+                                .check-col{
+                                    text-align:center;
+                                    width: 45px;
+                                }/*.check-col*/
+                            }/*tr*/
+                        }/*thead*/
+                        tbody{
+                            tr{
+                               height:80px;
+                                td{
+                                   vertical-align :middle;
+                                   font-size:13px;
+                                   color: $FadeGray;
+                                }/*td*/
+                                .check-col{
+                                    text-align:center;
+                                    width: 45px;
+                                   a{
+                                    font-size: 15px;
+                                    color: $FadeGray;
+                                   }
+                                   a:hover{
+                                    font-size: 15px;
+                                    color: $LightBlue;
+                                   }
+                                }
+                            }/*tr*/
+                        }/*tbody*/
+                    }/*table*/
+                }/*.box-body*/
+                .box-footer{
+                    padding-bottom:0px;
+                    padding-top: 15px;
+                    .pagination{
+                        margin:0px;
+                        float:right;
+                        padding-right: 15px;
+                        padding-bottom: 5px;
+                    }/*.pagination*/
+                }/*.box-footer*/
+ }/*.box-wider-text*/
+
+
+ .IdWidth{
+    width: 50px !important;
+ }
+
+ .SubItem{
+    thead{
+        color:#000000 !important;
+    }
+ }
+
+.TableDataDiv{
+    ul{
+        list-style: none;
+        padding: 0px;
+        margin-right: 0px;
+    }
+}            
+
+.ServiceBox{
+            background-image: url(../_/images/h2.jpg);
+            margin-top:15px;
+            margin-bottom:15px;
+            .ServiceImg{
+                @include SetShadowEffect(0.3);
+                .ServiceFliterLayer{
+                    max-width: 95%;
+                    min-width: 92.3%;
+                    max-height: 265px;
+                    min-height: 265px;
+                    position: absolute;
+                    opacity: 0;
+                    
+                }/*.ServiceFliterLayer*/
+                .SFL1{
+                    background: $DarkFadeBlue;
+                }/*.SFL1*/
+                .SFL2{
+                    background: $DarkFadeYellow;
+                }/*.SFL2*/
+                .SFL3{
+                    background: $DarkFadeRed;
+                }/*.SFL3*/
+                .SFL4{
+                    background: $DarkFadeGreen;
+                }/*.SFL4*/
+                .SFL5{
+                    background: $DarkFadePurpel;
+                }/*.SFL5*/
+                .SFL6{
+                    background: $DarkFadePink;
+                }/*.SFL6*/
+                img{
+                    max-width:100%;
+                    max-height: 275px;
+                    min-height: 275px;
+                }/*img*/
+                .SImg1{
+                    border-color: $DarkFadeBlue;
+                }/*.SImg1*/
+                .SImg2{
+                    border-color: $DarkFadeYellow;
+                }/*.SImg2*/
+                .SImg3{
+                    border-color: $DarkFadeRed;
+                }/*.SImg3*/
+                .SImg4{
+                    border-color: $DarkFadeGreen;
+                }/*.SImg4*/
+                .SImg5{
+                    border-color: $DarkFadePurpel;
+                }/*.SImg5*/
+                .SImg6{
+                    border-color: $DarkFadePink;
+                }/*.SImg6*/
+                .subBorder{
+                    max-width: 60%;
+                    min-width: 60%;
+                    max-height: 275px;
+                    min-height: 275px;
+                    border-bottom: solid 10px;
+                    z-index: 150;
+                    position: absolute;
+                }/*.subBorder*/
+                .subBImg1{
+                    border-color: $MidFadeBlue;
+                }/*.subBImg1*/
+                .subBImg2{
+                    border-color: $MidFadeYellow;
+                }/*.subBImg2*/
+                .subBImg3{
+                    border-color: $MidFadeRed;
+                }/*.subBImg3*/
+                .subBImg4{
+                    border-color: $MidFadeGreen;
+                }/*.subBImg4*/
+                .subBImg5{
+                    border-color: $MidFadePurpel;
+                }/*.subBImg5*/
+                .subBImg6{
+                    border-color: $MidFadePink;
+                }/*.subBImg6*/
+                .subBorderLight{
+                    max-width: 30%;
+                    min-width: 30%;
+                    max-height: 275px;
+                    min-height: 275px;
+                    border-bottom: solid 10px;
+                    z-index: 150;
+                    position: absolute;
+                }/*.subBorderLight*/
+                .SBLight1{
+                    border-color: $LightFadeBlue; 
+                }/*.SBLight1*/
+                .SBLight2{
+                    border-color: $LightFadeYellow; 
+                }/*.SBLight2*/
+                .SBLight3{
+                    border-color: $LightFadeRed; 
+                }/*.SBLight3*/
+                .SBLight4{
+                   border-color: $LightFadeGreen; 
+                }/*.SBLight4*/
+                .SBLight5{
+                    border-color: $LightFadePurpel; 
+                }/*.SBLight5*/
+                .SBLight6{
+                    border-color: $LightFadePink; 
+                }/*.SBLight6*/
+            }/*.ServiceImg*/
+            .ServiceTitel{
+                position:absolute;
+                color:$White;
+                text-align: center;
+                width:100%;
+                bottom:0px;
+                margin-bottom:25px;
+                padding-right: 25px;
+                h3{
+                    font-size:28px;
+                    margin-bottom:0px;
+                    text-shadow:1px 1px #000000;
+                }/*h3*/
+                p{
+                    text-shadow:1px 1px #000000;
+                }/*p*/
+            }/*.ServiceTitel*/
+        }/*.ServiceBox*/
