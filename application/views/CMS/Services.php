@@ -64,7 +64,7 @@
             foreach ($results as $object) {
               echo "<tr><td>$object->plane_id</td><td>$object->plane_name</td>
               <td class='check-col tableAdmin'>
-              <a  class='editeBtn' id='EditStageOverlayFormShow' data-placement='right'><span class='fa fa-gear'></span></a></td>
+              <a  class='editeBtn' onclick='GetPlanData($object->plane_id)' id='EditStageOverlayFormShow' data-placement='right'><span class='fa fa-gear'></span></a></td>
             <td class='check-col tableAdmin'><a href='#' onclick='SetPlanID($object->plane_id)' class='deleteBtn'  data-target='#DeleteStageModal' data-toggle='modal' title='delete' data-placement='right'><span class='fa fa-trash'></span></a></td></tr> ";
            }
           }
@@ -319,6 +319,18 @@
       var ID=id;
       document.getElementById("RecoredId").value=ID;
     }
+      function GetPlanData(id)
+      {
+      var ID=id;
+      console.log(ID);
+      $.get('Plans/GetAllData',{ID:ID},function(data)
+      {
+        console.log(data.plan_items);
+        $.each($(data.plan_items), function(key, value) {
+         
+      });
+      },'json');
+      }
 		</script>
 
     </body>

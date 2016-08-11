@@ -36,6 +36,28 @@ public function AddPlan()
 	}
 	else{redirect('Plans');}
  }
+public function GetAllData()
+ {
+ 	if($this->input->get("ID") != null)
+ 	{
+ 		$ID = $this->input->get("ID");
+ 		$name = $this->Awd_Model->ChData('plans',$ID,'plane_id');
+ 		$plan_name = $name->plane_name;
+ 		$results = $this->Awd_Model->DataWhere('plan_item','plane_id',$ID,'item_id','ASC');
+ 		foreach ($results as $object) {
+ 			$items_text[] = $object->plane_text;
+ 		}
+ 		$data["state"]="success";
+ 		$data["name"] = $plan_name;
+ 		$data["plan_items"] = $items_text;
+ 		echo json_encode($data);
+ 	}
+ 	else
+ 	{
+ 		$data["state"]="failed";
+ 		echo json_encode($data);
+ 	}
+ }
 public function EditPlan()
  {
 
