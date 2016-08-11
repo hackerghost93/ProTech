@@ -60,14 +60,20 @@
                                                         </tr>
                                                     </thead>
                                                     <tbody>
+                                                      <?php foreach ($products as $product ):?>
                                                         <tr>
-                                                          <td>1</td>
-                                                          <td>Cloudy</td>
-                                                          <td><img src="_/images/3215.png" class="prodimg"></td>
-                                                          <td>زيروكس</td>
+                                                          <td><?=$product['printer_id']?></td>
+                                                          <td><?=$product['name']?></td>
+                                                          <td><img src="<?=image_url().$product['images'][0]['image_path']?>" class="prodimg"></td>
+                                                          <td>
+                                                          <?php if(isset($product['family_name'])): ?>
+                                                            <?=$product['family_name']?>
+                                                          <?php endif; ?>
+                                                          </td>
                                                           <td class='check-col tableAdmin'><a href='#' class='editeBtn' id="EditProductOverlayFormShow" data-placement='right'><span class='fa fa-gear'></span></a></td>
                                                           <td class='check-col tableAdmin'><a href='#' class='deleteBtn'  data-target='#DeleteProductModal' data-toggle='modal' title='delete' data-placement='right'><span class='fa fa-trash'></span></a></td>
                                                         </tr> 
+                                                      <?php endforeach; ?>
                                                     </tbody>
                                              </table>
                                       </div>
@@ -120,7 +126,7 @@
                    </div>
                </div>
           </div>
-          <form>
+          <form method="POST" action="<?=base_url()?>index.php/printer/create" enctype="multipart/form-data">
               <div class="container-fluid OverLayFormContent">
                    <div class="FormSection">
                        <div class="SectionHeader">
@@ -129,21 +135,24 @@
                        <div class="SectionContent row">
 							<div class="col-md-6">
 								<div class="form-group formLayout">
-									<label for="ProductTitle" class="control-label ">Product Title : </label>
-									<input type="text" name="ProductTitle" class="form-control InputProduct" placeholder="Product Title" />
+									<label for="printer_name" class="control-label ">Product Title : </label>
+									<input type="text" name="printer_name" class="form-control InputProduct" placeholder="Product Title" />
 								</div>
 								 <div class="form-group formLayout">
 									<label for="ProductImage" class="control-label ">Product Image: </label>
-									<input type="file" name="ProductImage" class="form-control InputProduct" />
+									<input type="file" name="image[]" class="form-control InputProduct" multiple=""/>
 								 </div>
 								 <div class="form-group formLayout">
-									<label for="ProductPdf" class="control-label ">Product Pdf: </label>
-									<input type="file" name="ProductPdf" class="form-control InputProduct" />
+									<label for="Pdf[]" class="control-label ">Product Pdf: </label>
+									<input type="file" name="PDF[]" class="form-control InputProduct"/>
 								 </div>	
 								<div class="form-group formLayout">
 									<label for="ProductFamily" class="control-label ">Product Product Family: </label>
-									<select name="ProductFamily" class="form-control InputProduct">
-										  <option class=""> Choose Product Family</option>
+									<select name="family" class="form-control InputProduct">
+										  <option class="" value=""> Choose Product Family</option>
+                      <?php foreach ($families as $family):?>
+                          <option value="<?=$family['family_id']?>"><?=$family['family_name']?></option>
+                      <?php endforeach;?>
 									</select>
 								</div>
 							</div>
@@ -154,7 +163,7 @@
 								 </div>
 								  <div class="form-group formLayout">
 									<label for="name" class="control-label ">Description: </label>
-									<textarea></textarea>
+									<textarea name="description"></textarea>
 								 </div>
 								<div class="checkbox-inline">
 									<label>
@@ -176,8 +185,8 @@
 							<div class="SectionContent Specifications">
 								<div id="AddNewSpecifications">
 									<div class="form-group formLayout">
-										<label for="ProductSpecifications" class="control-label ">Product Specifications : </label>
-										<input type="text" name="ProductSpecifications" class="form-control overlayproduct" placeholder="Product Specifications" />
+										<label for="General[]" class="control-label ">Product Specifications : </label>
+										<input type="text" name="General[]" class="form-control overlayproduct" placeholder="Product Specifications" />
 									</div>
 									 <button type="button"class="btn btn-md AddNewSpecificationsbtn" onclick="add_generalspecification();"> 
 										<i class="fa fa-plus"></i></button>
@@ -192,7 +201,7 @@
 								<div id="AddPrintingSpecifications">
 									<div class="form-group formLayout">
 										<label for="PrintingSpecifications" class="control-label ">Printing Specifications : </label>
-										<input type="text" name="PrintingSpecifications" class="form-control overlayproduct" placeholder="Printing Specifications" />
+										<input type="text" name="Printing[]" class="form-control overlayproduct" placeholder="Printing Specifications" />
 									</div>
 									 <button type="button"class="btn btn-md AddNewSpecificationsbtn" onclick="add_printingspecifications();"> 
 										<i class="fa fa-plus"></i></button>
@@ -207,7 +216,7 @@
 								<div id="AddGuarantee">
 									<div class="form-group formLayout">
 										<label for="ProductGuarantee" class="control-label ">Product Guarantee : </label>
-										<input type="text" name="ProductGuarantee" class="form-control overlayproduct" placeholder="Product Guarantee" />
+										<input type="text" name="Guarantee[]" class="form-control overlayproduct" placeholder="Product Guarantee" />
 									</div>
 									 <button type="button"class="btn btn-md AddNewSpecificationsbtn" onclick="add_Guarantee();"> 
 										<i class="fa fa-plus"></i></button>
@@ -219,7 +228,7 @@
               <div class="container-fluid OverLayFormFooter">
                    <div class="row CustomRow">
                        <div class="OverLayFormFooterItem right">
-                            <button type="button"class="btn btn-md OverLayFormBtn"> Creat</button>
+                            <button type="submit"class="btn btn-md OverLayFormBtn">ADD PRODUCT</button>
                        </div>
                        <div class="OverLayFormFooterItem left">
                        
@@ -267,12 +276,12 @@
 							</div>
 							<div class="col-md-6">
 								 <div class="form-group formLayout">
-									<label for="ProductDriverLink" class="control-label ">Product Driver Link: </label>
-									<input type="text" name="ProductDriverLink" class="form-control InputProduct" />
+									<label for="product_driver" class="control-label ">Product Driver Link: </label>
+									<input type="text" name="product_driver" class="form-control InputProduct" />
 								 </div>
 								 <div class="form-group formLayout">
-									<label for="name" class="control-label ">Description: </label>
-									<textarea></textarea>
+									<label for="description" class="control-label ">Description: </label>
+									<textarea name="description"></textarea>
 								 </div>
 								<div class="checkbox-inline">
 									<label>
@@ -417,12 +426,11 @@
           </div>
         </div>
         <!----------------------------------------scripts------>
-        <script src="_/js/jquery-1.12.1.min.js"></script>
-		<script src="_/js/tinymce/tinymce.min.js"></script>
-        <script src="_/js/bootstrap.min.js"></script>
-        <script src="_/js/ProjectScripts.js"></script>
-        <script src="_/js/test.js"></script>
-        <script src="http://localhost:35729/livereload.js"></script>
+        <script src="<?=base_url()?>js/cms/js/jquery-1.12.1.min.js"></script>
+		<script src="<?=base_url()?>js/cms/js/tinymce/tinymce.min.js"></script>
+        <script src="<?=base_url()?>js/cms/js/bootstrap.min.js"></script>
+        <script src="<?=base_url()?>js/cms/js/ProjectScripts.js"></script>
+        <script src="<?=base_url()?>js/cms/js/test.js"></script>
 		<script>
 		function MyFunction(){
 		 var e = document.getElementById("ReplyMessage");
@@ -466,17 +474,17 @@
 		<script>
 			function add_Guarantee() {
 			var newspan = document.createElement('div');
-			newspan.innerHTML = '<div class="form-group formLayout"><input type="text" name="ProductGuarantee" class="form-control overlayproduct" placeholder="Product Guarantee" /></div>';
+			newspan.innerHTML = '<div class="form-group formLayout"><input type="text" name="Guarantee[]" class="form-control overlayproduct" placeholder="Product Guarantee" /></div>';
 			document.getElementById('AddGuarantee').appendChild(newspan);
 		}	
 		function add_printingspecifications() {
 			var newspan = document.createElement('div');
-			newspan.innerHTML = '	<div class="form-group formLayout">	<input type="text" name="PrintingSpecifications" class="form-control overlayproduct" placeholder="Printing Specifications" /></div>';
+			newspan.innerHTML = '	<div class="form-group formLayout">	<input type="text" name="Printing[]" class="form-control overlayproduct" placeholder="Printing Specifications" /></div>';
 			document.getElementById('AddPrintingSpecifications').appendChild(newspan);
 		}	
 		function add_generalspecification(){
 			var newspan = document.createElement('div');
-			newspan.innerHTML = '	<div class="form-group formLayout"><input type="text" name="ProductSpecifications" class="form-control overlayproduct" placeholder="Product Specifications" /></div>';
+			newspan.innerHTML = '	<div class="form-group formLayout"><input type="text" name="General[]" class="form-control overlayproduct" placeholder="Product Specifications" /></div>';
 			document.getElementById('AddNewSpecifications').appendChild(newspan);
 		}
 		</script>

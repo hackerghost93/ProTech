@@ -481,7 +481,7 @@
              ?>
              <!-- Work Block -->
              <?php foreach($printers as $printer): ?>
-                <a href="<?=base_url()?>/printer/<?=$printer['printer_id']?>" class="i_1">
+                <a href="<?=base_url()?>index.php/printer/show/<?=$printer['printer_id']?>" class="i_1">
                     <div class="Work-Block">
                         <div class="img-fill">
                             <img width="404" height="316" src="<?=image_url().$printer['images'][0]['image_path']?>" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" 
@@ -560,7 +560,7 @@
                             <?php if($printer['general_description']):?>
                                 <p><?=$printer['general_description']?> </p>
                              <?php endif; ?>
-                                <a href="<?=base_url()?>printer/show/<?=$printer['printer_id']?>" class="more">تفاصيل العرض</a>
+                                <a href="<?=base_url()?>index.php/printer/show/<?=$printer['printer_id']?>" class="more">تفاصيل العرض</a>
                             </div>
                             <div class="image"><img src="<?=image_url().$printer['images'][0]['image_path']?>" alt="printer image"></div>
                         </div>

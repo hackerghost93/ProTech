@@ -18,7 +18,7 @@ class MY_Controller extends CI_Controller
 
 	function getAll()
 	{
-		return $this->model->getAll();
+		return $this->model->selectWithFamilies();
 	}
 
 	private function validate($data)
@@ -34,16 +34,49 @@ class MY_Controller extends CI_Controller
 			return FALSE ;
 	}
 
-	function create()
+	function upload($name)
 	{
-		$data = $this->input->post();
-		if(validate($data) == TRUE)
+		$ret = array();
+		if(isset($_FILES[$name]))
 		{
-			$this->model->insert($data);
-		}		
-		else
-			return FALSE ;
-	}	
+			for($i = 0  ; $i < count($_FILES[$name]['name']) ; $i++)
+			{
+				if(is_uploaded_file($_FILES[$name]['tmp_name'][$i]))
+				{
+					$temp = explode('.', $_FILES[$name]['name'][$i]);
+					$imageFileType = end($temp);	
+					$target_name ='image_' . date('Y-m-d-H-i-s') . '_' . uniqid().".".$imageFileType;
+					if(file_exists(image_url().$target_name)) {
+						chmod(image_url().$target_name,0755); //Change the file permissions if allowed
+					    	unlink(image_url().$target_name); //remove the file
+			    	}
+	 				$target_dir = "imgs/";
+			    	$target_file = $target_dir.$target_name;
+			    	$uploadok = 1 ;
+			    	$check = getimagesize($_FILES[$name]["tmp_name"][$i]);
+				    if ($_FILES[$name]['size'][$i] > 500000) {
+				    	echo "Sorry, your file is too large.";
+				    	$uploadok = 0 ;
+				    	die();
+				 	}
+			 		else
+			 		{		
+				 		if (move_uploaded_file($_FILES[$name]['tmp_name'][$i], $target_file)) {
+					 			echo "Upload Complete\n";
+					 			array_push($ret , $target_file) ;
+				 		}
+						else 
+			 			{
+				 			echo 'something went wrong';
+			 			}
+		 			}
+				}
+				
+			}
+		}
+		return $ret ;
+	}
+
 
 	function update($id)
 	{

@@ -19,7 +19,13 @@ class Part extends MY_Controller
 		$this->load->view('products.php' , $data);
 	}
 
-	
+	function add()
+	{
+		$data['products'] = $this->getImages($this->getAll());
+		$this->load->view('CMS/SpareParts' , $data);
+	}
+
+
 
 
 }

@@ -1,481 +1,401 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-        <title>Protech CMS : Products</title> 
-        <link rel="stylesheet" type="text/css" href="_/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="_/css/bootstrap-theme.min.css">
-        <link rel="stylesheet" type="text/css" href="_/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="_/css/BoxComponant.css">
-        <link rel="stylesheet" type="text/css" href="_/css/styles.css">
-        <link rel="stylesheet" type="text/css" href="_/css/yass.css">
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="shortcut icon" href="<?=base_url()?>imgs/PT.png" />
+
+<!-- Calling Css & Js Files -->
+<link rel="stylesheet" type="text/css" href="<?=base_url()?>css/stylesheet.css">
+<link rel="stylesheet" type="text/css" href="<?=base_url()?>css/style.css">
+<link rel="stylesheet" type="text/css" href="<?=base_url()?>css/responsive.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="<?=base_url()?>css/theme.css">
+
+
+
+<!-- //Calling Css & Js Files -->
+
+<!-- This site is optimized with the Yoast SEO plugin v2.3.5 - https://yoast.com/wordpress/plugins/seo/ -->
+<title> بروتك | لخدمات و حلول الطابعات و الماسحات الضوئيه </title>
+<link rel="canonical" href="#" />
+<meta property="og:locale" content="ar_AR" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="بروتك" />
+<meta property="og:url" content="#" />
+<meta property="og:site_name" content="بروتك" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="بروتك"/>
+<meta name="twitter:site" content="@ProTech"/>
+<meta name="twitter:domain" content="بروتك"/>
+<script type='application/ld+json'>{"@context":"http:\/\/schema.org","@type":"WebSite","url":"http:\/\/www.ProTech.com\/","name":"\u0627\u0644\u0646\u0648\u0631 \u0627\u0648\u0646 \u0644\u0627\u064a\u0646","alternateName":"\u0644\u062e\u062f\u0645\u0627\u062a \u0627\u0644\u0648\u064a\u0628 \u0627\u0644\u0645\u062a\u0643\u0627\u0645\u0644\u0629","potentialAction":{"@type":"SearchAction","target":"http:\/\/www.ProTech.com\/?s={search_term_string}","query-input":"required name=search_term_string"}}
+    </script>
+<script type='application/ld+json'>
+{"@context":"http:\/\/schema.org","@type":"Organization","url":"http:\/\/www.ProTech.com","sameAs":["https:\/\/www.facebook.com\/ProTech","https:\/\/www.instagram.com\/ProTech","https:\/\/eg.linkedin.com\/in\/ProTech","https:\/\/twitter.com\/ProTech"],"name":"\u0627\u0644\u0646\u0648\u0631 \u0627\u0648\u0646 \u0644\u0627\u064a\u0646","logo":"http:\/\/www.ProTech.com\/wp-content\/uploads\/2015\/05\/favicon3.png"}
+    </script>
+<!-- / Yoast SEO plugin. -->
+
+    <script type="text/javascript">
+      window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"<?=base_url()?>js/emoji.js"}};
+      !function(a,b,c){function d(a){var c,d,e,f=b.createElement("canvas"),g=f.getContext&&f.getContext("2d"),h=String.fromCharCode;if(!g||!g.fillText)return!1;switch(g.textBaseline="top",g.font="600 32px Arial",a){case"flag":return g.fillText(h(55356,56806,55356,56826),0,0),f.toDataURL().length>3e3;case"diversity":return g.fillText(h(55356,57221),0,0),c=g.getImageData(16,16,1,1).data,d=c[0]+","+c[1]+","+c[2]+","+c[3],g.fillText(h(55356,57221,55356,57343),0,0),c=g.getImageData(16,16,1,1).data,e=c[0]+","+c[1]+","+c[2]+","+c[3],d!==e;case"simple":return g.fillText(h(55357,56835),0,0),0!==g.getImageData(16,16,1,1).data[0];case"unicode8":return g.fillText(h(55356,57135),0,0),0!==g.getImageData(16,16,1,1).data[0]}return!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i;for(i=Array("simple","flag","unicode8","diversity"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+    </script>
+    <style type="text/css">
+img.wp-smiley,
+img.emoji {
+  display: inline !important;
+  border: none !important;
+  box-shadow: none !important;
+  height: 1em !important;
+  width: 1em !important;
+  margin: 0 .07em !important;
+  vertical-align: -0.1em !important;
+  background: none !important;
+  padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='contact-form-7-css'  href='<?=base_url()?>css/styles.css' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-rtl-css'  href='<?=base_url()?>css/rtl.css' type='text/css' media='all' />
+<link rel='stylesheet' id='wdc-main-styles-css'  href='<?=base_url()?>css/custom.css' type='text/css' media='all' />
+<link rel='stylesheet' id='wdc-styles-extras-css'  href='<?=base_url()?>css/bootstrap-flat-extras.css' type='text/css' media='all' />
+<link rel='stylesheet' id='wdc-styles-flat-css'  href='<?=base_url()?>css/bootstrap-flat.css' type='text/css' media='all' />
+    
+    
+    
+<script type='text/javascript' src='<?=base_url()?>js/jquery.js'></script>
+<script type='text/javascript' src='<?=base_url()?>js/jquery-migrate-min.js'></script>
+<link rel='https://api.w.org/' href='<?=base_url()?>js/wp.json' />
+    
+   
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-72527468-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body>
+<!-- Loader -->
+<div class="ea-loader loading38">
+<div class='shaft-load11'><div class='shaft1'></div><div class='shaft2'></div><div class='shaft3'></div>
+<div class='shaft4'></div><div class='shaft5'></div><div class='shaft6'></div><div class='shaft7'>
+</div><div class='shaft8'></div><div class='shaft9'></div><div class='shaft10'></div></div>
+</div>
+<!-- // Loader -->
+    <div class="wrapp">
+<!-- Top Nav -->
+<div class="top-nav_"><div class="top-nav ViewPort">
+    <div class="Grid1k clear-after">
+        <span class="text ViewPort">002-00000000000</span>
+        <a href="javascript:void(0)" class="MSG-Btn ViewPort"><span>info@AgedSystems.com</span></a>
+        <div class="Social">
+            <a target="_blank" href="#" class="tooltip-bottom Facebook ViewPort" data-tip="Follow Us On Facebook"><span></span></a>
+            <a target="_blank" href="#" class="tooltip-bottom Twitter ViewPort" data-tip="Follow Us On Twitter"><span></span></a>
+            <a target="_blank" href="#" class="tooltip-bottom Youtube ViewPort" data-tip="Follow Us On Youtube"><span></span></a>
+            <a target="_blank" href="#" class="tooltip-bottom LinkedIn ViewPort" data-tip="Follow Us On LinkedIn"><span></span></a>
+        </div>
+    </div>
+</div></div>
+<!-- // Top Nav -->
+    
+<!-- Header -->
+<header>
+    <div class="Grid1k clear-after">
+        <a href="#" class="logo ViewPort"><span>بروتك <span>لخدمات زيروكس المتكاملة</span></span> </a>
+        <a href="contact.html" class="OpenTicket">افتح تذكرة</a>
+
+<div class="primary-menu">
+    <ul id="menu-%d9%87%d9%8a%d8%af%d8%b1-%d9%81%d9%88%d9%82" class="menu">
+    <li id="menu-item-2473" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-2473"><a href="index.html">الرئيسية</a>
+    </li>
+<li id="menu-item-2476" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2476"><a href="#">خدماتنا</a>
+
+</li>
+        
+<li id="menu-item-2507" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2507 ea-SubMenu">
+    <a href="#"> المنتجات</a>
+        </li>
+<li id="menu-item-2479" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2479">
+    <a href="#"> التحميلات</a>
+        </li>
+<li id="menu-item-2508" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2508">
+    <a href="<?=base_url()?>#sec7">عملائنا</a>
+        </li>
+        <li id="#" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2508">
+    <a href="about.html">عن الشركه</a>
+        </li>
+
+<li id="menu-item-2474" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2474"><a href="contact.html">تواصل معنا</a></li>
+</ul></div>
+    </div>
+</header>
+
+
+
+
+<div class="Grid1k des-menu"><div class="big-menu big-menu1"><section class="w_items"><div class="Grid1k clfx">
+<a href="#" class="close-menu-2"><b class="fa fa-close"></b></a>
+        <ul>
+            <li>
+                <a href="service.html">
+                    <i><img src="<?=base_url()?>imgs/tech-support-grey.png" alt=""></i>
+                    <span>الدعم الفني</span>
+                </a>
+            </li>
+            <li>
+                <a href="service.html">
+                    <i><img src="<?=base_url()?>imgs/shopping-card-512.png" alt=""></i>
+                    <span> بيع و استبدال </span>
+                </a>
+            </li>
+            <li>
+                <a href="service.html">
+                    <i><img src="<?=base_url()?>imgs/Icon_49-512.png" alt=""></i>
+                    <span>قطع غيار </span>
+                </a>
+            </li>
+         
+        </ul>
+</div></section></div>
+
+
+
+
+<div class="big-menu big-menu2"><section class="w_items"><div class="Grid1k clfx">
+<a href="#" class="close-menu-2"><b class="fa fa-close"></b></a>
+        <ul>
+            <li>
+                <a href="downloads.html">
+                    <i><img src="<?=base_url()?>imgs/datasheet.png" alt=""></i>
+                    <span>داتا شيت </span>
+                </a>
+            </li>
+            <li>
+                <a href="downloads.html">
+                    <i><img src="<?=base_url()?>imgs/1287710488_folder_black_download512.png" alt=""></i>
+                    <span>سوفتوير</span>
+                </a>
+            </li>
+       
+        </ul>
+</div></section></div>
+      <div class="big-menu big-menu3"><section class="w_items"><div class="Grid1k clfx">
+<a href="#" class="close-menu-2"><b class="fa fa-close"></b></a>
+        <ul>
+            <li>
+                <a href="products.html">
+                    <i><img src="<?=base_url()?>imgs/printer.png" alt=""></i>
+                    <span> الطابعات </span>
+                </a>
+            </li>
+            <li>
+                <a href="products.html">
+                    <i><img src="<?=base_url()?>imgs/supp-title.png" alt=""></i>
+                    <span>قطع الغيار</span>
+                </a>
+            </li>
+       
+        </ul>
+</div></section></div>
+</div>
+
+<!-- // Header -->  
 
         
-    </head>
-    <body>
-        <!-- ---------------------------------sideBarLeft------ -->
-        <div class="sideBarLeft">
-            <?php require_once("MainSideBar.php"); ?>
-        </div>
         
-        <!-- --------------------------------------Header----- -->
-        <header>
-            <?php require_once("MainHeader.php"); ?>
-        </header>
-        <!------------------------------------dataSection------>
-        <div class="dataSection">
-              <nav class="subTopBar">
-                  <ul class="subTopBarList">
-                      <li class="subTopBarItem">
-                          <h1>Products</h1>
-                      </li>
-                      <li>
-                          <form class="TopBarForm">
-                                <div class="form-group">
-                                     <input type="search" class="form-control" name="Search" placeholder="Search By Product Name"/>
-                                      <a href="#" type="submit" role="button"><span class="fa fa-search"></span></a>
-                                </div>
-                          </form>    
-                      </li>
-                   </ul>
-             </nav>
-              <div class="DataDiv Wide">
-                          <div class="DataDiv">
-                               <div class="box-wider-text">
-                                    <div class="box-header">
-                                        <div class="row CustomRow">
-                                        <div class="HeaderLeft"> 
-                                        </div>
-                                        <div class="HeaderRight"> 
-                                             <button class="btn btn-sucess" id="AddNewProductShow"> Add New Product</button>
-                                        </div>
-                                        </div>
-                                    </div>
-                                    <div class="box-body">
-                                       <div class="table-responsive" id="UserTable">
-                                            <table class='table table-hover table-condensed'>
-                                                   <thead>
-                                                        <tr>
-                                                          <th>ID</th>
-                                                          <th>Title</th>
-                                                          <th>Img</th>
-                                                          <th>Family</th>
-                                                          <th>Edit</th>
-                                                          <th>Delete</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                          <td>1</td>
-                                                          <td>Cloudy</td>
-                                                          <td><img src="_/images/3215.png" class="prodimg"></td>
-                                                          <td>زيروكس</td>
-                                                          <td class='check-col tableAdmin'><a href='#' class='editeBtn' id="EditProductOverlayFormShow" data-placement='right'><span class='fa fa-gear'></span></a></td>
-                                                          <td class='check-col tableAdmin'><a href='#' class='deleteBtn'  data-target='#DeleteProductModal' data-toggle='modal' title='delete' data-placement='right'><span class='fa fa-trash'></span></a></td>
-                                                        </tr> 
-                                                    </tbody>
-                                             </table>
-                                      </div>
-                                    </div>
-                                    <div class="box-footer">
-                                         <div class="row CustomRow">
-                                              <nav>
-                                                <ul class="pagination">
-                                                  <li>
-                                                    <a href="#" aria-label="Previous">
-                                                      <span aria-hidden="true">&laquo;</span>
-                                                    </a>
-                                                  </li>
-                                                  <li><a href="#">1</a></li>
-                                                  <li><a href="#">2</a></li>
-                                                  <li><a href="#">3</a></li>
-                                                  <li><a href="#">4</a></li>
-                                                  <li><a href="#">5</a></li>
-                                                  <li>
-                                                    <a href="#" aria-label="Next">
-                                                      <span aria-hidden="true">&raquo;</span>
-                                                    </a>
-                                                  </li>
-                                                </ul>
-                                              </nav>
-                                         </div>
-                                    </div>
-                               </div>
-                          </div>
-              </div>
-        </div>
-
-        <!-----------------------------------sideBarRight------>
-        <nav class="sideBarRight"></nav>
-
-        <!-----------------------------------------footer------>
-        <footer></footer>
-
-        <!-----------------------------------OverLayForms---- -->
-
-        <!----AddNewOffer------------------- -->
-        <div class="OverLayForm closed" id="AddNewProductOverlayForm">
-          <div class="container-fluid OverLayFormHeader">
-               <div class="row CustomRow">
-                   <div class="OverLayFormHeaderLeft">
-                        <h2> Add New Product </h2>
-                   </div>
-                   <div class="OverLayFormHeaderRight">
-                        <span class="fa fa-close ExitBtn"></span>
-                   </div>
-               </div>
-          </div>
-          <form>
-              <div class="container-fluid OverLayFormContent">
-                   <div class="FormSection">
-                       <div class="SectionHeader">
-                            <h3>Product Information</h3>
-                       </div>
-                       <div class="SectionContent row">
-							<div class="col-md-6">
-								<div class="form-group formLayout">
-									<label for="ProductTitle" class="control-label ">Product Title : </label>
-									<input type="text" name="ProductTitle" class="form-control InputProduct" placeholder="Product Title" />
-								</div>
-								 <div class="form-group formLayout">
-									<label for="ProductImage" class="control-label ">Product Image: </label>
-									<input type="file" name="ProductImage" class="form-control InputProduct" />
-								 </div>
-								 <div class="form-group formLayout">
-									<label for="ProductPdf" class="control-label ">Product Pdf: </label>
-									<input type="file" name="ProductPdf" class="form-control InputProduct" />
-								 </div>	
-								<div class="form-group formLayout">
-									<label for="ProductFamily" class="control-label ">Product Product Family: </label>
-									<select name="ProductFamily" class="form-control InputProduct">
-										  <option class=""> Choose Product Family</option>
-									</select>
-								</div>
-							</div>
-							<div class="col-md-6">
-							 <div class="form-group formLayout">
-									<label for="ProductDriverLink" class="control-label ">Product Driver Link: </label>
-									<input type="text" name="ProductDriverLink" class="form-control InputProduct" />
-								 </div>
-								  <div class="form-group formLayout">
-									<label for="name" class="control-label ">Description: </label>
-									<textarea></textarea>
-								 </div>
-								<div class="checkbox-inline">
-									<label>
-									  <input type="checkbox" id="checkbox1"><label class="offer"> Offer</label>
-									</label>
-								</div>
-								<div class="form-group formLayout Description">
-									<label for="Description" class="control-label ">Description : </label>
-									<textarea placeholder="Description"></textarea>
-								</div>
-							</div>
-                      </div>
-                   </div>
-                   <div class="FormSection row">
-						<div class="col-md-4 ">
-							<div class="SectionHeader">
-								<h3>General Specifications </h3>
-							</div>
-							<div class="SectionContent Specifications">
-								<div id="AddNewSpecifications">
-									<div class="form-group formLayout">
-										<label for="ProductSpecifications" class="control-label ">Product Specifications : </label>
-										<input type="text" name="ProductSpecifications" class="form-control overlayproduct" placeholder="Product Specifications" />
-									</div>
-									 <button type="button"class="btn btn-md AddNewSpecificationsbtn" onclick="add_generalspecification();"> 
-										<i class="fa fa-plus"></i></button>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="SectionHeader">
-								<h3>Printing Specifications </h3>
-							</div>
-							<div class="SectionContent Specifications">
-								<div id="AddPrintingSpecifications">
-									<div class="form-group formLayout">
-										<label for="PrintingSpecifications" class="control-label ">Printing Specifications : </label>
-										<input type="text" name="PrintingSpecifications" class="form-control overlayproduct" placeholder="Printing Specifications" />
-									</div>
-									 <button type="button"class="btn btn-md AddNewSpecificationsbtn" onclick="add_printingspecifications();"> 
-										<i class="fa fa-plus"></i></button>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 ">
-							<div class="SectionHeader">
-								<h3>Guarantee</h3>
-							</div>
-							<div class="SectionContent Specifications">
-								<div id="AddGuarantee">
-									<div class="form-group formLayout">
-										<label for="ProductGuarantee" class="control-label ">Product Guarantee : </label>
-										<input type="text" name="ProductGuarantee" class="form-control overlayproduct" placeholder="Product Guarantee" />
-									</div>
-									 <button type="button"class="btn btn-md AddNewSpecificationsbtn" onclick="add_Guarantee();"> 
-										<i class="fa fa-plus"></i></button>
-								</div>
-							</div>
-						</div>
-				  </div>   
-              </div>
-              <div class="container-fluid OverLayFormFooter">
-                   <div class="row CustomRow">
-                       <div class="OverLayFormFooterItem right">
-                            <button type="button"class="btn btn-md OverLayFormBtn"> Creat</button>
-                       </div>
-                       <div class="OverLayFormFooterItem left">
-                       
-                       </div>
-                   </div>
-              </div>
-          </form>
-        </div>
-
-        <!----EditProduct------------------- -->
-        <div class="OverLayForm closed" id="EditProductOverlayForm">
-          <div class="container-fluid OverLayFormHeader">
-               <div class="row CustomRow">
-                   <div class="OverLayFormHeaderLeft">
-                        <h2> Edit Product </h2>
-                   </div>
-                   <div class="OverLayFormHeaderRight">
-                        <span class="fa fa-close ExitBtn"></span>
-                   </div>
-               </div>
-          </div>
-          <form>
-			<div class="container-fluid OverLayFormContent">
-                   <div class="FormSection">
-                       <div class="SectionHeader">
-                            <h3>Product Information</h3>
-                       </div>
-                       <div class="SectionContent row">
-							<div class="col-md-6">
-								<div class="form-group formLayout">
-									<label for="ProductTitle" class="control-label ">Product Title : </label>
-									<input type="text" name="ProductTitle" class="form-control InputProduct" placeholder="Product Title" />
-								</div>
-								 <div class="form-group formLayout">
-									<label for="ProductPdf" class="control-label ">Product Pdf: </label>
-									<input type="file" name="ProductPdf" class="form-control InputProduct" />
-								 </div> 
-							
-								<div class="form-group formLayout">
-									<label for="ProductFamily" class="control-label ">Product Product Family: </label>
-									<select name="ProductFamily" class="form-control InputProduct">
-										  <option class=""> Choose Product Family</option>
-									</select>
-								</div>
-							</div>
-							<div class="col-md-6">
-								 <div class="form-group formLayout">
-									<label for="ProductDriverLink" class="control-label ">Product Driver Link: </label>
-									<input type="text" name="ProductDriverLink" class="form-control InputProduct" />
-								 </div>
-								 <div class="form-group formLayout">
-									<label for="name" class="control-label ">Description: </label>
-									<textarea></textarea>
-								 </div>
-								<div class="checkbox-inline">
-									<label>
-									  <input type="checkbox" id="checkbox2"><label class="offer"> Offer</label>
-									</label>
-								</div>
-								<div class="form-group formLayout EditDescription">
-									<label for="Description" class="control-label ">Description : </label>
-									<textarea placeholder="Description"></textarea>
-								</div>
-							</div>
-                      </div>
-                   </div>
-				   <div class="FormSection">
-                       <div class="SectionHeader">
-                            <h3>Product Images</h3>
-                       </div>
-                       <div class="SectionContent row">
-							<div class="prodImages">
-								<div class="mask">
-									<i class="fa fa-close"></i>
-								</div>
-								<img src="_/images/3215.png" class="editimgproduct">
-							
-							</div>
-                      </div>
-                   </div>	
-                   <div class="FormSection row">
-						<div class="col-md-4 ">
-							<div class="SectionHeader">
-								<h3>General Specifications </h3>
-							</div>
-							<div class="SectionContent Specifications">
-								<div id="RemoveSpecifications">
-									<div class="form-group formLayout">
-										<p><input type="text" name="PrintingSpecifications" id="p_scents" class="form-control overlayproduct" placeholder="Printing Specifications1" />
-										<a href="#" id="remScnt" class="removespecification  CloseBtn" ><i class="fa fa-close"></i></a></p>
-										<p><input type="text" name="PrintingSpecifications" id="p_scents" class="form-control overlayproduct" placeholder="Printing Specifications2" />
-										<a href="#" id="remScnt" class="removespecification CloseBtn"><i class="fa fa-close"></i></a></p>	
-										<p><input type="text" name="PrintingSpecifications" id="p_scents" class="form-control overlayproduct" placeholder="Printing Specifications3" />
-										<a href="#" id="remScnt" class="removespecification CloseBtn" ><i class="fa fa-close"></i></a></p>	
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="SectionHeader">
-								<h3>Printing Specifications </h3>
-							</div>
-							<div class="SectionContent Specifications">
-								<div id="RemoveSpecifications">
-									<div class="form-group formLayout">
-										<p><input type="text" name="PrintingSpecifications" id="p_scents" class="form-control overlayproduct" placeholder="Printing Specifications1" />
-										<a href="#" id="remScnt" class="removespecification  CloseBtn" ><i class="fa fa-close"></i></a></p>
-										<p><input type="text" name="PrintingSpecifications" id="p_scents" class="form-control overlayproduct" placeholder="Printing Specifications2" />
-										<a href="#" id="remScnt" class="removespecification CloseBtn"><i class="fa fa-close"></i></a></p>	
-										<p><input type="text" name="PrintingSpecifications" id="p_scents" class="form-control overlayproduct" placeholder="Printing Specifications3" />
-										<a href="#" id="remScnt" class="removespecification CloseBtn" ><i class="fa fa-close"></i></a></p>	
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 ">
-							<div class="SectionHeader">
-								<h3>Guarantee</h3>
-							</div>
-							<div class="SectionContent Specifications">
-								<div id="RemoveSpecifications">
-									<div class="form-group formLayout">
-										<p><input type="text" name="PrintingSpecifications" id="p_scents" class="form-control overlayproduct" placeholder="Printing Specifications1" />
-										<a href="#" id="remScnt" class="removespecification  CloseBtn" ><i class="fa fa-close"></i></a></p>
-										<p><input type="text" name="PrintingSpecifications" id="p_scents" class="form-control overlayproduct" placeholder="Printing Specifications2" />
-										<a href="#" id="remScnt" class="removespecification CloseBtn"><i class="fa fa-close"></i></a></p>	
-										<p><input type="text" name="PrintingSpecifications" id="p_scents" class="form-control overlayproduct" placeholder="Printing Specifications3" />
-										<a href="#" id="remScnt" class="removespecification CloseBtn" ><i class="fa fa-close"></i></a></p>	
-									</div>
-								</div>
-							</div>
-						</div>
-				  </div> 
-								  
-              </div>
-              <div class="container-fluid OverLayFormFooter">
-                   <div class="row CustomRow">
-                       <div class="OverLayFormFooterItem right">
-                            <button type="button"class="btn btn-md OverLayFormBtn"> Creat</button>
-                       </div>
-                       <div class="OverLayFormFooterItem left">
-                       
-                       </div>
-                   </div>
-              </div>
-          </form>
-        </div>
-
-        <!------------------------------------DeleteModals---- -->
-        <!----DeleteProduct------------------------------>
-        <div class="modal fade CustomModal" id="DeleteProductModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              </div>
-              <form id="ForgotPassForm" method="post">
-                  <div class="modal-body">
-                        <h1>Delete Product</h1>
-                        <p>Are you sure that you need to delete this Data ?</p>
-                        <div class="form-group formLayout" hidden>
-		        			 <input type="text" name="RecoredId" class="form-control" placeholder="RecoredId"/>
-	       				</div>
-                  </div>
-                  <div class="modal-footer">
-                        <button class="btn customBtn"> Delete</button>
-                  </div>
-              </form>
+        <div class="page_nav works-cat-page">
+        <div class="Grid1k">
+            <i class="page_left-icon2">
+<img width="318" height="200" src="<?=base_url()?>imgs/xerox%20logo%20fixed.png" class="attachment-full size-full" alt="tq-title copy" srcset="<?=base_url()?>imgs/xerox%20logo%20fixed.png 318w, <?=base_url()?>imgs/xerox%20logo%20fixed.png 300w" sizes="(max-width: 318px) 100vw, 318px" style="position: relative; top: 50px;" /></i>
+            <div class="page_title">
+               <h2>تعرف على احدث منتجات زيروكس لدينا </h2>
+               
+           <p>لورم ایپسوم أبجد هوز هو مجرد دمية النص من التنضيد والطباعة والصناعة من مصممي الغرافيك. الطابعات والنصوص، ولكن أيضا أعمدة الصحف والمجلات و ما هو ضروري للحالة </p>
+                <u class="arrow_"></u>
             </div>
-          </div>
+            <span class="clear"><!--  --></span>
         </div>
-        <!----ProductTags------------------------------>
-        <div class="modal fade CustomModal" id="EditProductTagsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              </div>
-              <form id="ForgotPassForm" method="post">
-                  <div class="modal-body">
-                        <h1>Post Tags</h1>
-                        <div class="form-group formLayout" hidden>
-                       <input type="text" id='PostTag_post_id' class="form-control" placeholder="RecoredId"/>
-                     </div>  
-                      <div class="form-group">
-                              <div id='PostTagsModalContent' class="checkbox ModalCheck">
-                              </div>
-                      </div>  
-                  </div>
-                  <div class="modal-footer">
-                      <button class="btn customBtn" type="button" data-dismiss="modal">Close</button>
-                  </div>
-              </form>
+    </div>
+    <!-- // page nav -->
+
+    <section class="works-box">
+        <div class="Grid1k clfx">
+            <ul class="work-items">
+                <!-- Work Block -->
+                <?php foreach( $products as $key => $product): ?> 
+                    <li>
+                        <div class="Work-Block">
+                            <div class="img-fill">
+                                <img width="404" height="316" src="<?=image_url().$product['images'][0]['image_path']?>" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="<?=$product['name']?>" sizes="(max-width: 404px) 100vw, 404px" />
+                                <?php if($type == 'printer'):?>                         
+                                    <a href="<?=base_url().'index.php/printer/show/'.$product['printer_id']?>" class="info"><h3><?=$product['name']?></h3></a>
+                                <?php else:?>
+                                    <a href="<?=base_url().'index.php/part/show/'.$product['part_id']?>" class="info"><h3><?=$product['name']?></h3></a>
+                                <?php endif; ?>
+                                    
+                            </div>
+                        </div>
+                    </li>
+
+                <?php endforeach; ?>
+                </ul>
+               <span class="clear clr"><!--  --></span>
+                <br>
+                <ul class="navigation">
+<li><span class='page-numbers current'>1</span>
+<a class='page-numbers' href='#'>2</a>
+<a class='page-numbers' href='#'>3</a>
+<a class='page-numbers' href='#'>4</a>
+<a class="next page-numbers" href="#">></a></li>
+                </ul>
+
+                <br>
+        </div>
+    </section>
+
+        
+           
+<!-- Section 09 -->
+<div class="Section09">
+    <div class="Grid1k">
+        <!-- Contact Area -->
+        <div class="ContactArea clear-after ViewPort">
+            <div class="Center"><img src="<?=base_url()?>imgs/icon26.png" alt=""></div>
+            <div class="Right clear-after">
+                <img src="<?=base_url()?>imgs/icon24.png" alt="">
+                <div class="info">
+                    <div><h3>002-00000000000</h3>
+                    <h5>متاح واتس اب - فايبر - لاين</h5></div>
+                </div>
             </div>
-          </div>
+            <div class="Left clear-after">
+                <img src="<?=base_url()?>imgs/icon25.png" alt="">
+                <div class="info"><h3>info@AgedSystems.com</h3></div>
+            </div>
         </div>
-        <!----------------------------------------scripts------>
-        <script src="_/js/jquery-1.12.1.min.js"></script>
-        <script src="_/js/tinymce/tinymce.min.js"></script>
-		<script src="_/js/bootstrap.min.js"></script>
-        <script src="_/js/test.js"></script>
-        <script src="_/js/ProjectScripts.js"></script>
-        <script src="http://localhost:35729/livereload.js"></script>
-		<script>
-          $(document).on("click",".CloseBtn",function(){
-			  $(this).closest("p").css("display", "none");
-			  
-		  });
-		</script>
-		<script>
-		$(document).ready(function(){
+        <!-- // Contact Area -->
+    </div>
+</div>
+<!-- // Section 09 -->
 
-		//Hide div w/id extra
-		$(".Description").css("display","none");
+   <footer>
+    <div class="News-Slider">
+        <div class="Grid1k clear-after">
+            <div class="Title"> احدث العروض</div>
+            <div class="TheSlider">
+               
+                           </div>
+            <div class="Control clear-after">
+                <a href="products.html" class="more">المزيد من المنتجات</a>
+            </div>
+        </div>
+    </div>
+    <div class="Footer-Container Grid1k">
+        <div class="Contact-Info">
+            <h3>اتصل بنا</h3>
+            <h4>002-00000000</h4>
+            <h4>ProTech</h4>
+            <h4>002-00-0000000</h4>
+            <h4>002-0000000000</h4>
+        </div>
+        <div class="SendMail">
+            <h3>القائمة البريدية</h3>
+            <p>سجل بريدك الالكترونى لدينا للحصول على اخر العروض الخاصة المتاحة و اخر اخبار الشركة</p>
+           
+            
 
-		// Add onclick handler to checkbox w/id checkme
-	   $("#checkbox1").click(function(){
+<script type="text/javascript">
+//<![CDATA[
+if (typeof newsletter_check !== "function") {
+window.newsletter_check = function (f) {
+    var re = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-]{1,})+\.)+([a-zA-Z0-9]{2,})+$/;
+    if (!re.test(f.elements["ne"].value)) {
+        alert("The email is not correct");
+        return false;
+    }
+    for (var i=1; i<20; i++) {
+    if (f.elements["np" + i] && f.elements["np" + i].required && f.elements["np" + i].value == "") {
+        alert("");
+        return false;
+    }
+    }
+    if (f.elements["ny"] && !f.elements["ny"].checked) {
+        alert("You must accept the privacy statement");
+        return false;
+    }
+    return true;
+}
+}
+//]]>
+</script>
 
-		// If checked
-		if ($("#checkbox1").is(":checked"))
-		{
-			//show the hidden div
-			$(".Description").show(500);
-		}
-		else
-		{
-			//otherwise, hide it
-			$(".Description").hide(500);
-		}
-	  });
+<div class="newsletter newsletter-subscription">
+<form class="clear-after" method="post" action="" onsubmit="return newsletter_check(this)">
 
-	});
-	 
-		</script>
-		<script>
-			function add_Guarantee() {
-			var newspan = document.createElement('div');
-			newspan.innerHTML = '<div class="form-group formLayout"><input type="text" name="ProductGuarantee" class="form-control overlayproduct" placeholder="Product Guarantee" /></div>';
-			document.getElementById('AddGuarantee').appendChild(newspan);
-		}	
-		function add_printingspecifications() {
-			var newspan = document.createElement('div');
-			newspan.innerHTML = '	<div class="form-group formLayout">	<input type="text" name="PrintingSpecifications" class="form-control overlayproduct" placeholder="Printing Specifications" /></div>';
-			document.getElementById('AddPrintingSpecifications').appendChild(newspan);
-		}	
-		function add_generalspecification(){
-			var newspan = document.createElement('div');
-			newspan.innerHTML = '	<div class="form-group formLayout"><input type="text" name="ProductSpecifications" class="form-control overlayproduct" placeholder="Product Specifications" /></div>';
-			document.getElementById('AddNewSpecifications').appendChild(newspan);
-		}
-		</script>
+<input class="newsletter-email" type="email" name="ne" size="30" placeholder="البريد الإلكتروني" required>
 
-    </body>
+<input class="newsletter-submit" type="submit" value="اشترك"/>
+
+</form>
+</div>
+            
+            
+            
+            
+            
+        </div>
+        <div class="SiteInfo">
+            <a href="index.html" class="logo"><span>بروتك <span>لخدمات زيروكس المتكامله</span></span> </a>
+            <a href="contact.html" class="OpenTicket">فتح تذكرة</a>
+            <div class="Social">
+            <a target="_blank" href="#" class="Facebook"><span></span></a>
+            <a target="_blank" href="#" class="Twitter"><span></span></a>
+            <a target="_blank" href="#" class="Youtube"><span></span></a>
+            <a target="_blank" href="#" class="LinkedIn"><span></span></a>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="Copyright clfx">
+    <div class="Grid1k">
+        <span>جميع الحقوق محفوظة لشركة بروتك </span>
+        <ul>
+<div class="menu-%d8%a8%d8%a8%d8%a8-container"><ul id="menu-%d8%a8%d8%a8%d8%a8" class="menu"><li id="menu-item-2470" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2470"><a href="about.html">عن بروتك</a></li>
+
+<li id="menu-item-2472" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2472"><a href="contact.html"> اتصل بنا </a></li>
+</ul>
+            </div>  
+        </ul>
+    </div>
+</div>
+</div>
+<div class="big-menu-overly"></div>
+<script type='text/javascript' src='<?=base_url()?>js/form-jquery.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"<?=base_url()?>imgs/ajax-loader.gif","sending":"\u062c\u0627\u0631\u064a \u0627\u0644\u0625\u0631\u0633\u0627\u0644 ..."};
+/* ]]> */
+</script>
+<script type='text/javascript' src='<?=base_url()?>js/newscripta.js'></script>
+
+<script type='text/javascript' src='<?=base_url()?>js/assest.js'></script>
+<script type='text/javascript' src='//www.google.com/recaptcha/api.js?onload=onloadCallback&#038;render=explicit&#038;ver=1'></script>
+<script type='text/javascript' src='<?=base_url()?>js/embed.js'></script>
+<script src="<?=base_url()?>js/jquery.min.js"></script>
+<script src="<?=base_url()?>js/scripts.js"></script>
+<script src="<?=base_url()?>js/ea-scripts.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-62646818-2', 'auto');
+  ga('send', 'pageview');
+</script>
+</body>
 </html>

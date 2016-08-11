@@ -30,5 +30,13 @@ class Part_model extends MY_Model
 		$ret['image'] = $this->images($ret['printer_id']);
 		return $ret ;
 	}
+
+	function selectWithFamilies()
+	{
+		$this->db->select('*');
+		$this->db->from('parts');
+		$this->db->join('families','families.family_id = parts.family_id ' , "left");
+		return $this->db->get()->result_array();
+	}
 }
  ?>

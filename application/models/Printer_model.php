@@ -32,6 +32,34 @@ class printer_model extends MY_Model
 		return $ret ;
 	}
 
+	function selectWithFamilies()
+	{
+		$this->db->select('*');
+		$this->db->from('printers');
+		$this->db->join('families','families.family_id = printers.family_id' , "left");
+		return $this->db->get()->result_array();
+	}
+
+	function addImage($id , $target)
+	{
+		$this->db->insert('printer_image' , array('printer_id' => $id , 'image_path' => $target ));
+	}
+
+	function addGeneral($id , $desc)
+	{
+		$this->db->insert('printer_general_specification' , array('printer_id' => $id , 'general_text' => $desc ));
+	}
+
+	function addPrinting($id , $desc)
+	{
+		$this->db->insert('printer_typing_specification' , array('printer_id' => $id , 'typing_text' => $desc ));
+	}
+
+	function addGuarantee($id,$desc)
+	{	
+		$this->db->insert('guarantee' , array('printer_id' => $id , 'guarantee_text' => $desc));
+	}
+
 	
 
 
