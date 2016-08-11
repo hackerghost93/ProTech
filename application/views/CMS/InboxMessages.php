@@ -43,13 +43,14 @@
                      <?php $this->load->view('CMS/InboxSideBar.php'); ?>
                 </nav>   
 				<nav class="subSideBar tt">
-                     <?php$this->load->view('CMS/MessageSideBar.php'); ?>
+                     <?php $this->load->view('CMS/MessageSideBar.php'); ?>
                 </nav>
                 <div class="SideBarContent Inboxmessages">
                       <div class="DataDiv">
                            <div class="PageHaeder">
                               <h2>Inbox Messages</h2>
                            </div>
+                          <?php if(isset($show)):;?>
 								<div class="box-wider-text">
 								<div class="backread"></div>
                                 <div class="box-header">
@@ -58,19 +59,19 @@
                                          <div class="SubHeader">
                                                 <div class="form-group FromOne">
 													<label for="From">From </label><span>:</span>
-                                                    <label class="from">yass.aast@gmail.com</label>
+                                                    <label class="from"><?php echo $show->email; ?></label>
                                                 </div><br>
 												<div class="form-group ToOne">
-													<label for="To">To </label><span>:</span>
-                                                    <label class="To">Protech@gmail.com</label>
+													<label for="To">Name </label><span>:</span>
+                                                    <label class="To"><?php echo $show->name; ?></label>
                                                 </div><br>
 												<div class="form-group TitleMessage">
 													<label for="Title">Title </label><span>:</span>
-                                                    <label class="To">بروتك</label>
+                                                    <label class="To"><?php echo $show->subject; ?></label>
                                                 </div><br>
 												<div class="form-group Time">
 													<label for="Time">Time </label><span>:</span>
-                                                    <label class="Timeemail">10:00 AM</label>
+                                                    <label class="Timeemail"><?php echo $show->created_at; ?></label>
                                                 </div>
                                          </div> 
 										 <button class="btn btn-sucess reply" onclick="MyFunction();"id="Reply"> <span class="fa fa-reply" aria-hidden="true"></span>Reply </button>
@@ -81,7 +82,7 @@
                                     </div>
                                 </div>
                                 <div class="box-body">
-									<p class="inboxdetails">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+									<p class="inboxdetails"> <?php echo $show->message; ?></p>
                                 </div>
 								<div class="ReplyMessage section--purple wow fadeInDown" data-wow-delay="0.40s" id="ReplyMessage">
 									<form>
@@ -94,6 +95,7 @@
 										</div>
 									</form>
 								</div>
+              <?php endif; ?>
                                 <!--div class="box-footer">
                                      <div class="row CustomRow">
                                           <nav>

@@ -28,14 +28,14 @@
                            <div class="PageHaeder">
                               <h2>Send To all Subscribers</h2>
                            </div>
-							<form class="form-inline">
+							<form class="form-inline" method="post" action="<?php echo base_url();?>index.php/Email/send">
 								<div class="box-wider-text">
 									<div class="box-header">
                                     <div class="row CustomRow">
 										   <div class="HeaderLeft"> 
 										     <div class="form-group ToOneSubscribe ">
-													<label for="ToOneSubscribecompose" >To </label><span>:</span>
-													<input type="text" name="To" class="form-control " placeholder="example@domain.com"/>     
+													<label for="ToOneSubscribecompose" >BCC </label><span>:</span>
+													<input type="text" name="BCC" class="form-control " placeholder="example@domain.com"/>     
 												</div><br>
 												<div class="form-group SubjectSubscribe ">
 													<label for="Subject">Subject </label><span>:</span>
@@ -44,7 +44,7 @@
                                         </div>
                                         <div class="HeaderRight"> 
                                          		<div class="form-group formLayout ">
-													<button type="button" type="submit" class="btn btn-md OverLayFormBtn Sendus"> Send</button>
+													<button type="submit" class="btn btn-md OverLayFormBtn Sendus"> Send</button>
 												</div>
                                         </div>
                                          <div class="SubHeader ">

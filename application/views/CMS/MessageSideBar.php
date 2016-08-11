@@ -4,6 +4,8 @@
 			  <a href="#" type="submit" role="button"><span class="fa fa-search"></span></a>
 		</div>
 	</form> 
+	     <?php if(isset($mails))
+	     foreach ($mails as $row):;?>
 			<ul class="subSideBarMenu">
                      
 				<li>
@@ -12,13 +14,15 @@
 	
 					   <div class="checkbox">
 							<label>
-								<input type="checkbox"> yassmin abd el monsif
+								<input type="checkbox"> <?php echo $row['name']; ?>
 							</label>
 						</div>
 						<a href='#' class='deleteBtn'  data-target='#DeleteInboxMessageModal' data-toggle='modal' title='delete' data-placement='right'><span class='fa fa-trash'></span></a>
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-						<h4 class="TimeInbox">Tue 10:00 AM</h4>
+						<p><?php echo $row['subject'] ;?></p>
+						<h4 class="TimeInbox"> <?php echo $row['created_at'];?></h4>
+						<?php echo'<a href="'. base_url().'index.php/Email/show/'.$row['id'].'">show </a>'?>
 					</div>
 				</li> 
 					
 			 </ul>
+			<?php endforeach; ?>

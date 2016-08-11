@@ -70,32 +70,34 @@ class Email extends CI_Controller
             }
 
         }
-         $this->load->view('CMS/ComposeEmail.php');
+         //$this->load->view('CMS/ComposeEmail.php');
+         $this->load->view('CMS/InboxSubscribers.php');
     }
 
-     
-     public function send_mail() { 
-         $from_name=$this->input->post('your-name');
-         $from_email = $this->input->post('your-email');
-         $subject = $this->input->post('your-subject');
-         $message = $this->input->post('your-message');
-         
-   
-         //Load email library 
-         $this->load->library('email'); 
-   
-         $this->email->from($from_email, $from_name); 
-         $this->email->to('nermeen_kelila@hotmail.com');
-         $this->email->subject($subject); 
-         $this->email->message($message); 
-         
-         $config['protocol'] = 'smtp';
-               $config['smtp_host'] = 'ssl://smtp.gmail.com'; //smtp host name
-               $config['smtp_port'] = '465'; 
-               $this->email->initialize($config);
-         //Send mail 
-         $this->email->send(); 
-         $this->load->view('contact.php');
-      } 
+     public function addMsg()
+     {
+      $data=array('email'=>$this->input->post('your-email'),
+                  'name'=>$this->input->post('your-name'),
+                  'subject'=>$this->input->post('your-subject'),
+                  'message'=>$this->input->post('your-message')
+        );
+      $this->Email_model->addRecievedMsg($data);
+      $this->load->view('contact.php');
+     }
+
+     public function select_all()
+     {
+      $data['mails'] = $this->Email_model->getAll();
+
+      //$this->load->view('CMS/MessageSideBar.php'); 
+      $this->load->view('CMS/InboxMessages.php',$data);
+     }
+    public function show()
+    {
+      $id=$this->uri->segment(3);
+      $show['show'] = $this->Email_model->getById($id);
+      $this->load->view('CMS/InboxMessages.php',$show);
+    }
+      
    
 }
