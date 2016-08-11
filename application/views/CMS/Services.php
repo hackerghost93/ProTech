@@ -182,7 +182,7 @@
 								<div id="RemoveSpecifications">
 								<div class="form-group formLayout">
 									<label for="PlaneName" class="control-label ">Plane Name : </label>
-									<input type="text" name="PlaneName" class="form-control InputProduct" placeholder="Plane Name" />
+									<input type="text" name="PlaneName" id="PlaneName" class="form-control InputProduct" placeholder="Plane Name" />
 								</div>
 									<h3>Plane Details</h3>
 									<div class="form-group formLayout">
@@ -232,7 +232,7 @@
               <div class="container-fluid OverLayFormFooter">
                    <div class="row CustomRow">
                        <div class="OverLayFormFooterItem right">
-                            <button type="button"class="btn btn-md OverLayFormBtn"> Creat</button>
+                            <button type="button"class="btn btn-md OverLayFormBtn"> Update</button>
                        </div>
                        <div class="OverLayFormFooterItem left">
                        
@@ -325,6 +325,7 @@
       console.log(ID);
       $.get('Plans/GetAllData',{ID:ID},function(data)
       {
+        $('#PlaneName').val(data.name);
         console.log(data.plan_items);
         $.each($(data.plan_items), function(key, value) {
          
