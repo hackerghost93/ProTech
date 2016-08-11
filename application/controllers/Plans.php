@@ -60,6 +60,11 @@ public function GetAllData()
  }
 public function EditPlan()
  {
-
+ 	if($this->input->post('PlaneName') != null && $this->input->post('NewData_items') != null)
+ 	{
+ 		$New_Plan_Name = $this->input->post('PlaneName');
+ 		$New_Plan_items = $this->input->post('NewData_items');
+ 		$this->Awd_Model->DelData('plans',$New_Plan_Name,'plane_id');
+ 	}
  }
 }

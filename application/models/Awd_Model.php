@@ -100,6 +100,18 @@ class Awd_Model extends CI_Model{
         $this->db->where($col,$var);
         $this->db->update($Tname,$data);
      }
+     public function PrinterTagsData()
+     {
+        $query = $this->db->query("SELECT * FROM printer_tags,printers WHERE printers.printer_id = printer_tags.printer_id");
+        $res = $query->result();
+        return $res;
+     }
+     public function PartsTagsData()
+     {
+        $query = $this->db->query("SELECT * FROM part_tag,parts WHERE part_tag.part_id = parts.part_id");
+        $res = $query->result();
+        return $res;
+     }
 
 }
 

@@ -171,7 +171,7 @@
                    </div>
                </div>
           </div>
-          <form>
+          <form method="post" action="<?=base_url()?>index.php/Plans/EditPlan">
 			<div class="container-fluid OverLayFormContent">
           <div class="FormSection row">
 						<div class="col-md-8">
@@ -181,58 +181,24 @@
 							<div class="SectionContent Specifications">
 								<div id="RemoveSpecifications">
 								<div class="form-group formLayout">
-									<label for="PlaneName" class="control-label ">Plane Name : </label>
+									<label for="PlaneName" class="control-label ">Plan Name : </label>
 									<input type="text" name="PlaneName" id="PlaneName" class="form-control InputProduct" placeholder="Plane Name" />
 								</div>
-									<h3>Plane Details</h3>
-									<div class="form-group formLayout">
-										<p><input type="text" name="Stage1Specifications[]" id="p_scents" class="form-control overlaystagesservices" placeholder="Plane Details" />
+									<h3>Plan Details</h3>
+									<div class="form-group formLayout" id="SDiv">
+										<!-- <p><input type="text" name="Stage1Specifications[]" id="p_scents" class="form-control overlaystagesservices" placeholder="Plane Details" /> -->
 										<a href="#" id="remScnt" class="removespecification  CloseBtn" ><i class="fa fa-close"></i></a></p>
 								
 									</div>
 								</div>
 							</div>
 						</div>
-						<!--div class="col-md-4">
-							<div class="SectionHeader">
-								<h3>Stage 2</h3>
-							</div>
-							<div class="SectionContent Specifications">
-								<div id="RemoveSpecifications">
-									<div class="form-group formLayout">
-										<p><input type="text" name="Stage2Specifications" id="p_scents" class="form-control overlaystagesservices" placeholder="Stage Two" />
-										<a href="#" id="remScnt" class="removespecification  CloseBtn" ><i class="fa fa-close"></i></a></p>
-										<p><input type="text" name="Stage2Specifications" id="p_scents" class="form-control overlaystagesservices" placeholder="Stage Two" />
-										<a href="#" id="remScnt" class="removespecification CloseBtn"><i class="fa fa-close"></i></a></p>	
-										<p><input type="text" name="Stage2Specifications" id="p_scents" class="form-control overlaystagesservices" placeholder="Stage Two" />
-										<a href="#" id="remScnt" class="removespecification CloseBtn" ><i class="fa fa-close"></i></a></p>	
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 ">
-							<div class="SectionHeader">
-								<h3>Stage 3</h3>
-							</div>
-							<div class="SectionContent Specifications">
-								<div id="RemoveSpecifications">
-									<div class="form-group formLayout">
-										<p><input type="text" name="Stage3Specifications" id="p_scents" class="form-control overlaystagesservices" placeholder="Stage Three" />
-										<a href="#" id="remScnt" class="removespecification  CloseBtn" ><i class="fa fa-close"></i></a></p>
-										<p><input type="text" name="Stage3Specifications" id="p_scents" class="form-control overlaystagesservices" placeholder="Stage Three" />
-										<a href="#" id="remScnt" class="removespecification CloseBtn"><i class="fa fa-close"></i></a></p>	
-										<p><input type="text" name="Stage3Specifications" id="p_scents" class="form-control overlaystagesservices" placeholder="Stage Three" />
-										<a href="#" id="remScnt" class="removespecification CloseBtn" ><i class="fa fa-close"></i></a></p>	
-									</div>
-								</div>
-							</div>
-						</div-->
 				  </div>			  
               </div>
               <div class="container-fluid OverLayFormFooter">
                    <div class="row CustomRow">
                        <div class="OverLayFormFooterItem right">
-                            <button type="button"class="btn btn-md OverLayFormBtn"> Update</button>
+                            <button type="submit"class="btn btn-md OverLayFormBtn"> Update</button>
                        </div>
                        <div class="OverLayFormFooterItem left">
                        
@@ -328,7 +294,7 @@
         $('#PlaneName').val(data.name);
         console.log(data.plan_items);
         $.each($(data.plan_items), function(key, value) {
-         
+         $('#SDiv').append('<input type="text" name="NewData_items[]"" class="form-control overlayproduct" value='+value+' />');
       });
       },'json');
       }
