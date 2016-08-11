@@ -55,9 +55,9 @@
                 </li-->
                 <li class="sideMenuFooter">
                     <ul>
-                        <li class="sideMenuItem">
+                        <!--li class="sideMenuItem">
                             <a data-toggle="tooltip" data-placement="right" class="SMenuItem" title="Add New Module" id="SMI-AddNewModule"><span class="fa fa-plus"></span></a>
-                        </li>
+                        </li-->
                         <li class="sideMenuItem">
                             <a href="Login.php" data-toggle="tooltip" data-placement="right" class="SMenuItem" title="Sign out" id="SMI-SignOut"><span class="fa fa-sign-out"></span></a>
                         </li>

@@ -4,14 +4,16 @@
                             </li>
                             <li class="subSideBarMenuItem BlogMenuItem">
                                 <a href="InboxMessages.php" class="subSideBarPayrollMenuItemAnchor " id="SSMIBLog-Categories">
-                                    <h4><span class="fa fa-sitemap"></span></h4>
+                                    <h4><span class="fa fa-envelope" aria-hidden="true"></span></h4>
                                     <h4>Inbox Messages</h4>
+									<span class="notread">23</span>
                                 </a>
                             </li>
                              <li class="subSideBarMenuItem BlogMenuItem">
                                 <a href="InboxSubscribers.php" class="subSideBarPayrollMenuItemAnchor " id="SSMIBLog-Tags">
-                                    <h4><span class="fa fa-tags"></span></h4>
-                                    <h4>Inbox Subscribers</h4>
+                                     <h4><span class="fa fa-envelope" aria-hidden="true"></span></h4>
+                                    <h4>Send to Subscribers</h4>
+									<span class="notread1">23</span>
                                 </a>
                             </li>
                              <li  class="subSideBarMenuItem BlogMenuItem">
