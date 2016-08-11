@@ -4,7 +4,19 @@
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <title>Protech CMS : Services</title> 
 		 <?php require_once("Links.php"); ?>
-
+<style>
+.result{
+	margin-bottom:15px;
+}
+.resultadd{
+	margin-top:-10px;
+}
+button.btn.btn-md.AddNewStepserbtn.addnewresult {
+    position: absolute;
+    left: 164px;
+    top: 169px;
+}
+</style>
         
     </head>
     <body>
@@ -181,58 +193,26 @@
 							<div class="SectionContent Specifications">
 								<div id="RemoveSpecifications">
 								<div class="form-group formLayout">
-									<label for="PlaneName" class="control-label ">Plane Name : </label>
-									<input type="text" name="PlaneName" class="form-control InputProduct" placeholder="Plane Name" />
+									<label for="PlaneName" class="control-label ">Plan Name : </label>
+									<input type="text" name="PlaneName" id="PlaneName" class="form-control InputProduct" placeholder="Plane Name" />
 								</div>
-									<h3>Plane Details</h3>
-									<div class="form-group formLayout">
-										<p><input type="text" name="Stage1Specifications[]" id="p_scents" class="form-control overlaystagesservices" placeholder="Plane Details" />
-										<a href="#" id="remScnt" class="removespecification  CloseBtn" ><i class="fa fa-close"></i></a></p>
+									<h3>Plan Details</h3>
+									<div class="form-group formLayout" id="SDiv">
+										
+										<!-- <p><input type="text" name="Stage1Specifications[]" id="p_scents" class="form-control overlaystagesservices" placeholder="Plane Details" /> -->
 								
 									</div>
+									<button type="button"class="btn btn-md AddNewStepserbtn addnewresult" onclick="Edit_StageOne();"> 
+										<i class="fa fa-plus"></i></button>
 								</div>
 							</div>
 						</div>
-						<!--div class="col-md-4">
-							<div class="SectionHeader">
-								<h3>Stage 2</h3>
-							</div>
-							<div class="SectionContent Specifications">
-								<div id="RemoveSpecifications">
-									<div class="form-group formLayout">
-										<p><input type="text" name="Stage2Specifications" id="p_scents" class="form-control overlaystagesservices" placeholder="Stage Two" />
-										<a href="#" id="remScnt" class="removespecification  CloseBtn" ><i class="fa fa-close"></i></a></p>
-										<p><input type="text" name="Stage2Specifications" id="p_scents" class="form-control overlaystagesservices" placeholder="Stage Two" />
-										<a href="#" id="remScnt" class="removespecification CloseBtn"><i class="fa fa-close"></i></a></p>	
-										<p><input type="text" name="Stage2Specifications" id="p_scents" class="form-control overlaystagesservices" placeholder="Stage Two" />
-										<a href="#" id="remScnt" class="removespecification CloseBtn" ><i class="fa fa-close"></i></a></p>	
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 ">
-							<div class="SectionHeader">
-								<h3>Stage 3</h3>
-							</div>
-							<div class="SectionContent Specifications">
-								<div id="RemoveSpecifications">
-									<div class="form-group formLayout">
-										<p><input type="text" name="Stage3Specifications" id="p_scents" class="form-control overlaystagesservices" placeholder="Stage Three" />
-										<a href="#" id="remScnt" class="removespecification  CloseBtn" ><i class="fa fa-close"></i></a></p>
-										<p><input type="text" name="Stage3Specifications" id="p_scents" class="form-control overlaystagesservices" placeholder="Stage Three" />
-										<a href="#" id="remScnt" class="removespecification CloseBtn"><i class="fa fa-close"></i></a></p>	
-										<p><input type="text" name="Stage3Specifications" id="p_scents" class="form-control overlaystagesservices" placeholder="Stage Three" />
-										<a href="#" id="remScnt" class="removespecification CloseBtn" ><i class="fa fa-close"></i></a></p>	
-									</div>
-								</div>
-							</div>
-						</div-->
 				  </div>			  
               </div>
               <div class="container-fluid OverLayFormFooter">
                    <div class="row CustomRow">
                        <div class="OverLayFormFooterItem right">
-                            <button type="button"class="btn btn-md OverLayFormBtn"> Creat</button>
+                            <button type="button"class="btn btn-md OverLayFormBtn"> Update</button>
                        </div>
                        <div class="OverLayFormFooterItem left">
                        
@@ -270,7 +250,10 @@
 		<script>
           $(document).on("click",".CloseBtn",function(){
 			  $(this).closest("p").css("display", "none");
+			  console.log($(this).closest("p"));
+			  $(this).closest("p").find('input').val("");
 			  
+				
 		  });
 		</script>
 		<script>
@@ -313,6 +296,11 @@
 			var newspan = document.createElement('div');
 			newspan.innerHTML = '<div class="form-group formLayout"><input type="text" name="plane_item[]" class="form-control overlayproduct" placeholder="" /></div>';
 			document.getElementById('AddStageOne').appendChild(newspan);
+		}	
+		function Edit_StageOne(){
+			var newspan = document.createElement('div');
+			newspan.innerHTML = '<div class="form-group formLayout"><p><input type="text" name="NewData_items[]" class="form-control resultadd overlayproduct" placeholder="" /><a href="#" id="remScnt" class="removespecification  CloseBtn" ><i class="fa fa-close"></i></a></p></div>';
+			document.getElementById('RemoveSpecifications').appendChild(newspan);
 		}
     function SetPlanID(id)
     {
@@ -325,9 +313,10 @@
       console.log(ID);
       $.get('Plans/GetAllData',{ID:ID},function(data)
       {
+        $('#PlaneName').val(data.name);
         console.log(data.plan_items);
         $.each($(data.plan_items), function(key, value) {
-         
+         $('#SDiv').append('<p><input type="text" value='+value+' name="NewData_items[]" class="form-control overlayproduct result" /><a href="#" id="remScnt" class="removespecification  CloseBtn" ><i class="fa fa-close"></i></a></p>');
       });
       },'json');
       }
