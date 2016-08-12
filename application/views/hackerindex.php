@@ -484,7 +484,7 @@
                 <a href="<?=base_url()?>index.php/printer/show/<?=$printer['printer_id']?>" class="i_1">
                     <div class="Work-Block">
                         <div class="img-fill">
-                            <img width="404" height="316" src="<?=image_url().$printer['images'][0]['image_path']?>" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" 
+                            <img width="404" height="316" src="<?=base_url().$printer['images'][0]['image_path']?>" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" 
                             alt="printerImg" sizes="(max-width: 404px) 100vw, 404px" />                        
                             <div class="info"><h3><?=$printer['name']?></h3></div>
                         </div>
@@ -538,7 +538,7 @@
                  <?php foreach($printers as $key => $printer): ?>
                     <div class="item">
                         <div class="li" id="tab<?=$key?>">
-                            <span><img src="<?=image_url().$printer['images'][0]['image_path']?>" alt="">
+                            <span><img src="<?=base_url().$printer['images'][0]['image_path']?>" alt="">
                                 <span><?=$printer['name']?></span>
                             </span>
                         </div>
@@ -562,7 +562,7 @@
                              <?php endif; ?>
                                 <a href="<?=base_url()?>index.php/printer/show/<?=$printer['printer_id']?>" class="more">تفاصيل العرض</a>
                             </div>
-                            <div class="image"><img src="<?=image_url().$printer['images'][0]['image_path']?>" alt="printer image"></div>
+                            <div class="image"><img src="<?=base_url().$printer['images'][0]['image_path']?>" alt="printer image"></div>
                         </div>
                     </div>
                 <?php endforeach; ?>
@@ -604,7 +604,7 @@
                 <?php foreach ($partners as $partner): ?>
                     <div class="item">
                         <div class="theBlock">
-                            <img src="<?=image_url().$partner['partner_image']?>" alt="">
+                            <img src="<?=base_url().$partner['partner_image']?>" alt="">
                             <div class="info"><a href="#"><?=$partner['partner_name']?></a></div>
                         </div>
                     </div>

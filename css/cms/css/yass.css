@@ -85,9 +85,6 @@ img.editimgproduct {
 .Time {
     border-bottom: 1px solid rgba(204, 204, 204, 0.13);
 }
-.TitleMessage {
-    border-bottom: 1px solid rgba(204, 204, 204, 0.13);
-}
 button#Reply {
     margin-top: 25px;
     background: #FFC107;
@@ -101,36 +98,22 @@ p.inboxdetails {
     text-align: right;
 }
 .subSideBar.tt {
-    width: 300px;
+    width: 230px;
     padding: 25px;
     padding-top: 10px;
     background: #fff;
     height: 100%;
     position: fixed;
     left: 301px;
-    box-shadow: 8px 0px 12px 2px #ccc;
 }
 .SideBarContent.Inboxmessages {
-    width: 54%;
-    left: 592px;
+    width: 60%;
+    left: 520px;
     position: fixed;
     padding-left: 25px;
     padding-right: 25px;
     overflow-y: auto;
     height: 100%;
-}
-.SideBarContent#Replysubsccribe {
-    width: 54%;
-    left: 592px;
-    position: fixed;
-    padding-left: 25px;
-    padding-right: 25px;
-    overflow-y: auto;
-    height: 100%;
-	display:none;
-}
-form.InboxSearch {
-    width: 92% !important;
 }
 .ReplyMessage{
 	display:none;
@@ -150,32 +133,12 @@ form.InboxSearch {
     padding-right: 3px;
     font-size: 18px;
 }
-.ToOneSubscribe span{
-       padding-left: 47px;
-    padding-right: 25px;
-    font-size: 18px;
-}
-.ToOneSubscribe span {
-    padding-left: 61px;
-    padding-right: 25px;
-    font-size: 18px;
-}
-button.btn.btn-md.OverLayFormBtn.Sendus {
-    margin-right: 30% !important;
-    position: absolute;
-    right: 23%;
-}
 .Time span {
     padding-left: 23px;
     padding-right: 21px;
     font-size: 18px;
 }
 .TitleMessage span {
-    padding-left: 25px;
-    padding-right: 24px;
-    font-size: 18px;
-}
-.SubjectSubscribe span {
     padding-left: 25px;
     padding-right: 24px;
     font-size: 18px;
@@ -194,130 +157,4 @@ input.Contact.form-control {
     box-shadow: none;
     background: none;
     width: 50%;
-}
-span.notread {
-    background: #FF5722;
-    color: #fff;
-    padding: 3px;
-    font-size: 11px;
-    font-weight: bold;
-    text-decoration: none;
-    float: right;
-    margin-top: 10px;
-}
-span.notread1 {
-    background: #26D8EF;
-    color: #fff;
-    padding: 3px;
-    font-size: 11px;
-    font-weight: bold;
-    text-decoration: none;
-    float: right;
-    margin-top: 10px;
-}
-input.form-control.searchinbox {
-    width: 91%;
-    border: 1px solid rgba(204, 204, 204, 0.44);
-    height: 39px;
-}
-.form-group.searchone {
-    margin-top: 14px;
-    position: relative;
-}
-.form-group.searchone span {
-    padding-top: 0p;
-    float: right;
-    position: absolute;
-    right: -21px;
-    top: -2px;
-}
-.Inboxes h4 {
-    font-size: 15px;
-    text-align: left;
-    color: rgba(45, 52, 70, 0.52);
-    font-weight: bold;
-}
-nav.subSideBar.tt ul.subSideBarMenu li {
-    position: relative;
-}
-nav.subSideBar.tt ul.subSideBarMenu .Inboxes {
-     border-bottom: 1px solid rgba(174, 176, 182, 0.23); 
-    padding: 6px;
-    margin-top: 28px;
-}
-nav.subSideBar.tt ul.subSideBarMenu .Inboxes span {
-    float: right;
-    color: #ccc;
-    margin-top: -26px;
-    padding-right: 1%;
-}
-nav.subSideBar.tt ul.subSideBarMenu li {
-    position: relative;
-    top: 20px;
-}
-.Inboxes h4 {
-    font-size: 12px;
-    text-align: left;
-    color: rgba(45, 52, 70, 0.32);
-}
-.Inboxes .checkbox {
-    width: 97% !important;
-}
-.Inboxes:hover .mask1 {
-   display:block;
-    top: 22px;
-    width: 301px;
-    height: 100%;
-    background: rgba(45, 52, 70, 0.76);
-	z-index:-2;
-}
-button.btn.btn-sucess.replysubscribeer {
-    float: right;
-    background: #26D8EF;
-    margin-top: -29px;
-    font-size: 17px;
-    color: #fff;
-    width: 23px;
-    height: 24px;
-}
-button.btn.btn-sucess.replysubscribeer .fa {
-    position: absolute;
-    bottom: 13px;
-    color: #fff !important;
-    right: 9px;
-}
-button.btn.btn-md.OverLayFormBtn.SubmitSubscribeReply {
-    background: #2D3446;
-    color: #fff;
-    margin-top: -62px;
-    margin-left: 113px;
-}
-nav.subSideBar.tt ul.subSideBarMenu .Inboxes span {
-    float: right;
-    color: rgb(255, 87, 34);
-    margin-top: -26px;
-    padding-right: 1%;
-}
-input.form-control {
-    border: 1px solid rgba(230, 230, 230, 0.7);
-    border-radius: 0px;
-    padding: 10px;
-    min-height: 42px;
-    box-shadow: none;
-    background: none;
-    width: 89%;
-    height: 13px !important;
-    margin-bottom: 15px;
-}
-.Inboxes p {
-    color: rgba(45, 52, 70, 0.41);
-}
-.backread {
-    height: 127px;
-    background: url("../images/wallpape.jpg");
-    z-index: 8;
-    background-position-y: 24%;
-    background-size: cover;
-    margin-top: -20px;
-    margin-bottom: 28px;
 }

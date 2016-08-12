@@ -8,6 +8,7 @@ class Email_model extends CI_Model
     	return $query->result_array() ;
 	}
 
+
 	public function addRecievedMsg($data)
 	{
 		$this->db->insert('emails',$data);
@@ -38,4 +39,5 @@ class Email_model extends CI_Model
     	         WHERE name LIKE '%$search%'";
     	return $this->db->query($query)->result_array();       
     }
+
 }

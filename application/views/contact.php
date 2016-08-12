@@ -240,7 +240,7 @@ img.emoji {
        <h4>يمكنك ارسال رسالة</h4>
 <div role="form" class="wpcf7" id="wpcf7-f160-o1" dir="rtl">
 <div class="screen-reader-response"></div>
-<form action="<?php echo base_url()?>index.php/Email/addMsg" method="post" class="wpcf7-form" novalidate="novalidate">
+<form action="<?php echo base_url()?>index.php/Email/Usermail" method="post" class="wpcf7-form" novalidate="novalidate">
 <div style="display: none;">
 <input type="hidden" name="_wpcf7" value="160" />
 <input type="hidden" name="_wpcf7_version" value="4.3" />

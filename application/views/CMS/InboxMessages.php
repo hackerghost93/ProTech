@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <title>AGED CMS : Email</title> 
+
 		 <?php $this->load->view('CMS/Links');  ?>
       <script>  //search script
             function showHint(str) {
@@ -50,6 +51,7 @@
             </div>
           </div>
         </div>
+
         <!-- ---------------------------------sideBarLeft------ -->
         <div class="sideBarLeft">
             <?php $this->load->view('CMS/MainSideBar.php'); ?>
@@ -75,26 +77,27 @@
                            </div>
                           <?php if(isset($show)):;?>
 								<div class="box-wider-text">
-								<div class="backread"></div>
+                <div class="backread"></div>
                                 <div class="box-header">
                                     <div class="row CustomRow">
                                     <div class="HeaderLeft"> 
                                          <div class="SubHeader">
                                                 <div class="form-group FromOne">
 													<label for="From">From </label><span>:</span>
+                                                    
                                                     <label class="from"><?php echo $show->email; ?></label>
                                                 </div><br>
 												<div class="form-group ToOne">
-													<label for="To">Name </label><span>:</span>
-                                                    <label class="To"><?php echo $show->name; ?></label>
+													 <label for="To">Name </label><span>:</span>
+                                                  <label class="To"><?php echo $show->name; ?></label>
                                                 </div><br>
-												<div class="form-group TitleMessage">
-													<label for="Title">Title </label><span>:</span>
+                        <div class="form-group TitleMessage">
+                          <label for="Title">Title </label><span>:</span>
                                                     <label class="To"><?php echo $show->subject; ?></label>
                                                 </div><br>
 												<div class="form-group Time">
 													<label for="Time">Time </label><span>:</span>
-                                                    <label class="Timeemail"><?php echo $show->created_at; ?></label>
+                                                   <label class="Timeemail"><?php echo $show->created_at; ?></label>
                                                 </div>
                                          </div> 
 										 <button class="btn btn-sucess reply" onclick="MyFunction();"id="Reply"> <span class="fa fa-reply" aria-hidden="true"></span>Reply </button>
@@ -163,5 +166,6 @@
      $(".modal-body #RecoredId").val( Id );
 });
 </script>
+
     </body>
 </html>

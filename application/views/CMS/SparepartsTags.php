@@ -3,11 +3,11 @@
     <head>
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <title>AGED CMS : SpareParts Tags</title> 
-		<?php require_once("Links.php"); ?>
+		<?php $this->load->view('CMS/Links');  ?>
 
         
     </head>
-    <body>
+    <body onload="GetAllProducts()">
         <!-- ---------------------------------sideBarLeft------ -->
         <div class="sideBarLeft">
             <?php require_once("MainSideBar.php"); ?>
@@ -49,19 +49,21 @@
                                             <table class='table table-hover table-condensed'>
                                                    <thead>
                                                         <tr>
-                                                          <th>ID</th>
-                                                          <th>Name</th>
-                                                          <th>SparePart</th>
+                                                          <th>Tag Name</th>
+                                                          <th>SparePart Name</th>
                                                           <th>Delete</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        <tr>
-                                                          <td>1</td>
-                                                          <td>Cloudy</td>
-                                                          <td>Product</td>
-                                                          <td class='check-col tableAdmin'><a href='#' class='deleteBtn'  data-target='#DeleteSpareTagsModal' data-toggle='modal' title='delete' data-placement='right'><span class='fa fa-trash'></span></a></td>
-                                                        </tr> 
+                                                    <?php
+                                                    if(isset($results))
+                                                    {
+                                                      foreach ($results as $object) {
+          $x="/".$object->tag_name."/";
+  echo "<tr><td>$object->tag_name</td><td>$object->name</td><td class='check-col tableAdmin'><a href='#' class='deleteBtn' onclick='SetTagName($x)' data-target='#DeleteSpareTagsModal' data-toggle='modal' title='delete' data-placement='right'><span class='fa fa-trash'></span></a></td></tr> ";
+                                                      }
+                                                    }
+                                                    ?>
                                                     </tbody>
                                              </table>
                                       </div>
@@ -115,7 +117,7 @@
                    </div>
                </div>
           </div>
-          <form>
+          <form method="post" action="<?=base_url()?>index.php/Tags/AddPartTag">
               <div class="container-fluid OverLayFormContent">
                    <div class="FormSection">
                        <div class="SectionHeader">
@@ -124,7 +126,7 @@
                        <div class="SectionContent">
 					   	<div class="form-group formLayout">
 									<label for="ChooseSparePart" class="control-label ">SparePart : </label>
-									<select name="ChooseSparePart" class="form-control InputProduct">
+									<select name="ChooseSparePart" id="SelectorP" class="form-control InputProduct">
 										  <option class=""> Choose SparePart</option>
 									</select>
 								</div>
@@ -140,7 +142,7 @@
               <div class="container-fluid OverLayFormFooter">
                    <div class="row CustomRow">
                        <div class="OverLayFormFooterItem right">
-                            <button type="button"class="btn btn-md OverLayFormBtn"> Creat</button>
+                            <button type="submit"class="btn btn-md OverLayFormBtn"> Create</button>
                        </div>
                        <div class="OverLayFormFooterItem left">
                        
@@ -158,12 +160,12 @@
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
               </div>
-              <form id="ForgotPassForm" method="post">
+              <form id="ForgotPassForm" method="post" action="<?=base_url()?>index.php/Tags/DeleteTagParts">
                   <div class="modal-body">
                         <h1>Delete SpareParts Tag</h1>
                         <p>Are you sure that you need to delete this Data ?</p>
-                        <div class="form-group formLayout" hidden>
-		        			 <input type="text" name="RecoredId" class="form-control" placeholder="RecoredId"/>
+                        <div class="form-group formLayout">
+		  <input type="text" name="RecoredId" id="RecoredId" class="form-control" placeholder="RecoredId" readonly>
 	       				</div>
                   </div>
                   <div class="modal-footer">
@@ -175,8 +177,7 @@
         </div>
         
         <!----------------------------------------scripts------>
-        <script src="_/js/jquery-1.12.1.min.js"></script>
-        <script src="_/js/tinymce/tinymce.min.js"></script>
+        <?php $this->load->view('CMS/Scripts');  ?>
         <script type="text/javascript">
                 tinymce.init({
                   selector: 'textarea',
@@ -189,9 +190,30 @@
                   toolbar: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image'
                 });
         </script>
-        <script src="_/js/bootstrap.min.js"></script>
-        <script src="_/js/test.js"></script>
-        <script src="_/js/ProjectScripts.js"></script>
-        <script src="http://localhost:35729/livereload.js"></script>
+            <script type="text/javascript">
+        function GetAllProducts()
+        {
+          nothing="nothing";
+          $.get('PartGetter',{nothing:nothing},function(data)
+          {
+           $.each($(data.parts), function(key, value) {
+            console.log(value.name);
+            $('#SelectorP').append($("<option></option>")
+                   .attr("value",value.name)
+                   .text(value.name));
+  });
+    },'json');
+        }
+         function SetTagName(name)
+         {
+          var ID=name;
+          var find = '/';
+          var re = new RegExp(find, 'g');
+          ID = String(ID);
+          ID = ID.replace(re,"");
+          console.log(ID);
+          document.getElementById("RecoredId").value=ID;
+         }
+        </script>
     </body>
 </html>

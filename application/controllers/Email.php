@@ -19,8 +19,6 @@ class Email extends CI_Controller
     public function send()
 
     {
-              
-               
               $this->form_validation->set_rules('Subject', 'Subject', 'trim|required');
               $this->form_validation->set_rules('Send_Email', 'Message', 'trim|required');
               if ($this->form_validation->run() == FALSE) {
@@ -68,12 +66,10 @@ class Email extends CI_Controller
                 
            
             }
-
         }
-         //$this->load->view('CMS/ComposeEmail.php');
+        //$this->load->view('CMS/ComposeEmail.php');
          $this->load->view('CMS/InboxSubscribers.php');
     }
-
      public function addMsg()
      {
       $data=array('email'=>$this->input->post('your-email'),

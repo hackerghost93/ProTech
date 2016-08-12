@@ -230,7 +230,7 @@ img.emoji {
                     <li>
                         <div class="Work-Block">
                             <div class="img-fill">
-                                <img width="404" height="316" src="<?=image_url().$product['images'][0]['image_path']?>" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="<?=$product['name']?>" sizes="(max-width: 404px) 100vw, 404px" />
+                                <img width="404" height="316" src="<?=base_url().$product['images'][0]['image_path']?>" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="<?=$product['name']?>" sizes="(max-width: 404px) 100vw, 404px" />
                                 <?php if($type == 'printer'):?>                         
                                     <a href="<?=base_url().'index.php/printer/show/'.$product['printer_id']?>" class="info"><h3><?=$product['name']?></h3></a>
                                 <?php else:?>

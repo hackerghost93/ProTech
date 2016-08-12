@@ -248,12 +248,13 @@ button.btn.btn-md.AddNewStepserbtn.addnewresult {
         <!----------------------------------------scripts------>
    <?php require_once("Scripts.php"); ?>
 		<script>
-          $(document).on("click",".CloseBtn",function(){
+        $(document).on("click",".CloseBtn",function(){
 			  $(this).closest("p").css("display", "none");
-			  console.log($(this).closest("p"));
-			  $(this).closest("p").find('input').val("");
-			  
-				
+        console.log($(this).parent().find('input').val());
+        $(this).parent().find('input').remove();
+        // $(this).parent().find('input').val('');
+			  console.log($(this).parent().find('input').val());
+			  // $(this).closest("p").find('input').val("");
 		  });
 		</script>
 		<script>
@@ -310,11 +311,9 @@ button.btn.btn-md.AddNewStepserbtn.addnewresult {
       function GetPlanData(id)
       {
       var ID=id;
-      console.log(ID);
       $.get('Plans/GetAllData',{ID:ID},function(data)
       {
         $('#PlaneName').val(data.name);
-        console.log(data.plan_items);
         $.each($(data.plan_items), function(key, value) {
          $('#SDiv').append('<p><input type="text" value='+value+' name="NewData_items[]" class="form-control overlayproduct result" /><a href="#" id="remScnt" class="removespecification  CloseBtn" ><i class="fa fa-close"></i></a></p>');
       });

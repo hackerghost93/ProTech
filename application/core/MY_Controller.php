@@ -99,6 +99,7 @@ class MY_Controller extends CI_Controller
 		if($this->validateID($id))
 		{
 			$data['product'] =  ($this->validateID($id) == TRUE ? $this->model->get($id) : FALSE );
+			//var_dump($data['product']);
 			$this->load->view('productdetails', $data);
 		}
 		else
