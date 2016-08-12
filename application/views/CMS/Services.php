@@ -4,7 +4,19 @@
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <title>Protech CMS : Services</title> 
 		 <?php require_once("Links.php"); ?>
-
+<style>
+.result{
+	margin-bottom:15px;
+}
+.resultadd{
+	margin-top:-10px;
+}
+button.btn.btn-md.AddNewStepserbtn.addnewresult {
+    position: absolute;
+    left: 164px;
+    top: 169px;
+}
+</style>
         
     </head>
     <body>
@@ -171,7 +183,7 @@
                    </div>
                </div>
           </div>
-          <form method="post" action="<?=base_url()?>index.php/Plans/EditPlan">
+          <form>
 			<div class="container-fluid OverLayFormContent">
           <div class="FormSection row">
 						<div class="col-md-8">
@@ -186,10 +198,12 @@
 								</div>
 									<h3>Plan Details</h3>
 									<div class="form-group formLayout" id="SDiv">
+										
 										<!-- <p><input type="text" name="Stage1Specifications[]" id="p_scents" class="form-control overlaystagesservices" placeholder="Plane Details" /> -->
-										<a href="#" id="remScnt" class="removespecification  CloseBtn" ><i class="fa fa-close"></i></a></p>
 								
 									</div>
+									<button type="button"class="btn btn-md AddNewStepserbtn addnewresult" onclick="Edit_StageOne();"> 
+										<i class="fa fa-plus"></i></button>
 								</div>
 							</div>
 						</div>
@@ -198,7 +212,7 @@
               <div class="container-fluid OverLayFormFooter">
                    <div class="row CustomRow">
                        <div class="OverLayFormFooterItem right">
-                            <button type="submit"class="btn btn-md OverLayFormBtn"> Update</button>
+                            <button type="button"class="btn btn-md OverLayFormBtn"> Update</button>
                        </div>
                        <div class="OverLayFormFooterItem left">
                        
@@ -234,9 +248,12 @@
         <!----------------------------------------scripts------>
    <?php require_once("Scripts.php"); ?>
 		<script>
-          $(document).on("click",".CloseBtn",function(){
+        $(document).on("click",".CloseBtn",function(){
 			  $(this).closest("p").css("display", "none");
-			  
+        console.log($(this).parent().find('input').val());
+        $(this).parent().find('input').val('');
+			  console.log($(this).parent().find('input').val());
+			  // $(this).closest("p").find('input').val("");
 		  });
 		</script>
 		<script>
@@ -279,6 +296,11 @@
 			var newspan = document.createElement('div');
 			newspan.innerHTML = '<div class="form-group formLayout"><input type="text" name="plane_item[]" class="form-control overlayproduct" placeholder="" /></div>';
 			document.getElementById('AddStageOne').appendChild(newspan);
+		}	
+		function Edit_StageOne(){
+			var newspan = document.createElement('div');
+			newspan.innerHTML = '<div class="form-group formLayout"><p><input type="text" name="NewData_items[]" class="form-control resultadd overlayproduct" placeholder="" /><a href="#" id="remScnt" class="removespecification  CloseBtn" ><i class="fa fa-close"></i></a></p></div>';
+			document.getElementById('RemoveSpecifications').appendChild(newspan);
 		}
     function SetPlanID(id)
     {
@@ -288,19 +310,15 @@
       function GetPlanData(id)
       {
       var ID=id;
-      console.log(ID);
       $.get('Plans/GetAllData',{ID:ID},function(data)
       {
         $('#PlaneName').val(data.name);
-        console.log(data.plan_items);
         $.each($(data.plan_items), function(key, value) {
-         $('#SDiv').append('<input type="text" name="NewData_items[]"" class="form-control overlayproduct" value='+value+' />');
+         $('#SDiv').append('<p><input type="text" value='+value+' name="NewData_items[]" class="form-control overlayproduct result" /><a href="#" id="remScnt" class="removespecification  CloseBtn" ><i class="fa fa-close"></i></a></p>');
       });
       },'json');
       }
 		</script>
-    <script type="text/javascript">
-      
-    </script>
+
     </body>
 </html>
