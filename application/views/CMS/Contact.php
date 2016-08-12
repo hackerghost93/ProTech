@@ -62,6 +62,14 @@
 														<input type="text" name="ContactMobile" class="form-control Contact" placeholder="Mobile" />
 													</div>
 													<div class="form-group formLayout">
+														<label for="Email" class="control-label ">Email: </label>
+														<input type="text" name="Email" class="form-control Contact" placeholder="Email" />
+													</div>
+													<div class="form-group formLayout">
+														<label for="Email_Password" class="control-label ">Email Password: </label>
+														<input type="passowrd" name="Email_Password" class="form-control Contact" placeholder="" />
+													</div>
+													<div class="form-group formLayout">
 														<label for="ContactWhatsApp" class="control-label ">WhatsApp: </label>
 														<input type="text" name="ContactWhatsApp" class="form-control Contact" placeholder="WhatsApp" />
 													</div>	
@@ -90,7 +98,7 @@
 														<input type="text" name="ContactAddress" class="form-control Contact" placeholder="Address" />
 													</div>
 													<div class="form-group formLayout">
-														<button type="button" type="submit" class="btn btn-md OverLayFormBtn submitReply"> Submit</button>
+														<button type="button" type="submit" class="btn btn-md OverLayFormBtn submitReply"> Update</button>
 													</div>
 											</form>
 												</div>
@@ -167,7 +175,6 @@
 	});
 	 
 		</script>
-
 
     </body>
 </html>
