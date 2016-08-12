@@ -251,7 +251,8 @@ button.btn.btn-md.AddNewStepserbtn.addnewresult {
         $(document).on("click",".CloseBtn",function(){
 			  $(this).closest("p").css("display", "none");
         console.log($(this).parent().find('input').val());
-        $(this).parent().find('input').val('');
+        $(this).parent().find('input').remove();
+        // $(this).parent().find('input').val('');
 			  console.log($(this).parent().find('input').val());
 			  // $(this).closest("p").find('input').val("");
 		  });
