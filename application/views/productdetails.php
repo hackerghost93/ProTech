@@ -222,7 +222,7 @@ img.emoji {
         <div class="work-block clfx">
             <div class="work-bgr">
 
-    <img width="404" height="440" src="<?=image_url().$product['image'][0]['image_path']?>" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="<?=$product['name']?>" sizes="(max-width: 404px) 100vw, 404px" style="height: 440px;" />
+    <img width="404" height="440" src="<?=base_url().$product['image'][0]['image_path']?>" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="<?=$product['name']?>" sizes="(max-width: 404px) 100vw, 404px" style="height: 440px;" />
     </div>
             <div class="work-dtls">
                 <strong><?=$product['name']?></strong>
@@ -328,23 +328,7 @@ img.emoji {
                  </h5>
                     <div class="p-box">
                         <ul class="rw">
-   <li>لورم ایپسوم أبجد هوز هو مجرد دمية النص</li>
-
-	
-     <li>لورم ایپسوم أبجد هوز هو مجرد دمية النص</li>
-
-	
-    <li>لورم ایپسوم أبجد هوز هو مجرد دمية النص</li>
-
-	
-     <li>لورم ایپسوم أبجد هوز هو مجرد دمية النص</li>
-
-	
-     <li>لورم ایپسوم أبجد هوز هو مجرد دمية النص</li>
-
-	
-
-
+                            <li></li>
 	                        </ul>
                         <span class="buttons_ clfx">
                        <a href="#" class="dtls_ plan3-dt">التفاصيل</a>
