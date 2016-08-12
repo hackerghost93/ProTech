@@ -35,6 +35,12 @@ class Awd_Model extends CI_Model{
     	$res=$query->result();
     	return $res;
     }
+    public function GetOneRow($Tname)
+    {
+        $query=$this->db->get($Tname);
+        $res=$query->result();
+        return $res[0];
+    }
     //get one row from table
     public function ChData($Tname,$var,$col)
     {

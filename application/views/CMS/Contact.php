@@ -48,57 +48,56 @@
                                     </div-->
                                     <div class="box-body">
 										<div class="FormSection">
-											<form>
+								<form method="post" action="<?=base_url()?>index.php/Contacts/Edit">
 											   <div class="SectionHeader">
 													<h3>Contact Information</h3>
 											   </div>
 												<div class="SectionContent">
 													<div class="form-group formLayout">
 														<label for="ContactTelephone" class="control-label ">Telephone : </label>
-														<input type="text" name="ContactTelephone" class="Contact form-control " placeholder="Telephone" />
+<input type="number" id="Telephone" name="ContactTelephone" class="Contact form-control" placeholder="Telephone" />
 													</div>	
 													<div class="form-group formLayout">
 														<label for="ContactMobile" class="control-label ">Mobile: </label>
-														<input type="text" name="ContactMobile" class="form-control Contact" placeholder="Mobile" />
+<input type="number" id="Mobile" name="ContactMobile" class="form-control Contact" placeholder="Mobile" />
 													</div>
 													<div class="form-group formLayout">
 														<label for="Email" class="control-label ">Email: </label>
-														<input type="text" name="Email" class="form-control Contact" placeholder="Email" />
+<input type="email" id="Email" name="Email" class="form-control Contact" placeholder="Email" />
 													</div>
 													<div class="form-group formLayout">
 														<label for="Email_Password" class="control-label ">Email Password: </label>
-														<input type="passowrd" name="Email_Password" class="form-control Contact" placeholder="" />
 													</div>
 													<div class="form-group formLayout">
 														<label for="ContactWhatsApp" class="control-label ">WhatsApp: </label>
-														<input type="text" name="ContactWhatsApp" class="form-control Contact" placeholder="WhatsApp" />
+<input type="text" id="WhatsApp" name="ContactWhatsApp" class="form-control Contact" placeholder="WhatsApp" />
 													</div>	
 													<div class="form-group formLayout">
 														<label for="ContactSkypee" class="control-label ">Skypee: </label>
-														<input type="text" name="ContactSkypee" class="form-control Contact" placeholder="Skypee" />
+<input type="text" id="Skypee" name="ContactSkypee" class="form-control Contact" placeholder="Skypee" />
 													</div>		
 													<div class="form-group formLayout">
 														<label for="ContactYoutube" class="control-label ">Youtube: </label>
-														<input type="text" name="ContactYoutube" class="form-control Contact" placeholder="Youtube" />
+<input type="url" id="Youtube" name="ContactYoutube" class="form-control Contact" placeholder="Youtube" />
 													</div>	
 													<div class="form-group formLayout">
 														<label for="ContactTwitter" class="control-label ">Twitter: </label>
-														<input type="text" name="ContactTwitter" class="form-control Contact" placeholder="Twitter" />
+<input type="text" id="Twitter" name="ContactTwitter" class="form-control Contact" placeholder="Twitter" />
 													</div>
 													<div class="form-group formLayout">
 														<label for="ContactFacebook" class="control-label ">Facebook: </label>
-														<input type="text" name="ContactFacebook" class="form-control Contact" placeholder="Facebook" />
+<input type="url" id="Facebook" name="ContactFacebook" class="form-control Contact" placeholder="Facebook" />
 													</div>
 													<div class="form-group formLayout">
 														<label for="ContactLinkedin" class="control-label ">Linkedin: </label>
-														<input type="text" name="ContactLinkedin" class="form-control Contact" placeholder="Linkedin" />
+<input type="text" id="Linkedin" name="ContactLinkedin" class="form-control Contact" placeholder="Linkedin" />
 													</div>	
 													<div class="form-group formLayout">
 														<label for="ContactAddress" class="control-label ">Address: </label>
-														<input type="text" name="ContactAddress" class="form-control Contact" placeholder="Address" />
+<input type="text" id="Address" name="ContactAddress" class="form-control Contact" placeholder="Address" />
 													</div>
 													<div class="form-group formLayout">
-														<button type="button" type="submit" class="btn btn-md OverLayFormBtn submitReply"> Update</button>
+														<button type="submit" type="submit" class="btn btn-md OverLayFormBtn submitReply"> Update</button>
 													</div>
 											</form>
 												</div>
@@ -173,7 +172,27 @@
 	  });
 
 	});
-	 
+
+		</script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+			var nothing = "nothing";
+			$.post('Contacts/Get_Contact_Data',{nothing:nothing},function(data)
+      		{
+     //`adress``telephone``mobile``whatsapp``skybe``youtube``email``Email_Password``facebook``twitter``linkedin`
+				$('#Telephone').val(data.telephone);
+				$('#Mobile').val(data.mobile);
+				$('#Email').val(data.email);
+				$('#Email_Password').val(data.Email_Password);
+				$('#WhatsApp').val(data.whatsapp);
+				$('#Skypee').val(data.skybe);
+				$('#Youtube').val(data.youtube);
+				$('#Twitter').val(data.twitter);
+				$('#Facebook').val(data.facebook);
+				$('#Linkedin').val(data.linkedin);
+				$('#Address').val(data.adress);
+      		},'json');
+		});
 		</script>
 
     </body>
