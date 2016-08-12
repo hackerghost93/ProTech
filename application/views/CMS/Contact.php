@@ -67,6 +67,7 @@
 													</div>
 													<div class="form-group formLayout">
 														<label for="Email_Password" class="control-label ">Email Password: </label>
+<input type="password" id="Email_Password" name="Email_Password" class="form-control Contact" placeholder="" />
 													</div>
 													<div class="form-group formLayout">
 														<label for="ContactWhatsApp" class="control-label ">WhatsApp: </label>
