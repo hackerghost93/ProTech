@@ -14,7 +14,7 @@ class Email extends CI_Controller
     }
     public function index()
     {
-        $this->load->view('email_view');
+         $this->load->view('CMS/InboxSubscribers.php');
     }
     public function send()
 
@@ -89,7 +89,7 @@ class Email extends CI_Controller
      {
       $data['mails'] = $this->Email_model->getAll();
 
-      //$this->load->view('CMS/MessageSideBar.php'); 
+      //$this->load->view('CMS/MessageSideBar.php',$data); 
       $this->load->view('CMS/InboxMessages.php',$data);
      }
     public function show()
@@ -98,6 +98,38 @@ class Email extends CI_Controller
       $show['show'] = $this->Email_model->getById($id);
       $this->load->view('CMS/InboxMessages.php',$show);
     }
-      
+    public function deleteMessage()
+    {
+    $id = $this->input->post('RecoredId');
+     $this->Email_model->delete_message($id);
+                     header('location:'.$this->config->base_url().'index.php/Email/select_all/'); 
+    }                 
+
+  public function SearchEmail()
+  {
+    $email = $_GET['q'];
+    $mails = $this->Email_model->search_message($email); 
+    foreach ($mails as $row){
+     echo' <ul class="subSideBarMenu">
+                     
+        <li>
+        
+          <div class="Inboxes">
+  
+             <div class="checkbox">
+              <label>
+                <input type="checkbox">'. $row['name'].'
+              </label>
+            </div>';
+             echo"<a href='#' class='deleteBtn'  data-target='#DeleteInboxMessageModal' data-toggle='modal' title='delete' data-placement='right' data-id='".$row['id']."'><span class='fa fa-trash'></span></a>";
+            echo'<p>'.$row['subject'] .'</p>';
+           echo' <h4 class="TimeInbox"> '.$row['created_at'].'</h4>';
+          echo'<a href="'. base_url().'index.php/Email/show/'.$row['id'].'">show </a>';
+         echo' </div>
+        </li> 
+          
+       </ul>';
+      }
+  }  
    
 }

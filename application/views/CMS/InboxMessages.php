@@ -4,6 +4,29 @@
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <title>AGED CMS : Email</title> 
 		 <?php $this->load->view('CMS/Links');  ?>
+      <script>  //search script
+            function showHint(str) {
+    if (str == "") {
+        document.getElementById("txtHint").innerHTML = "";
+        return;
+    } else { 
+        if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            // code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function() {
+            if (true) {
+                document.getElementById("txtHint").innerHTML = xmlhttp.responseText;
+            }
+        }
+        xmlhttp.open("GET","<?php echo $this->config->base_url(); ?>index.php/Email/SearchEmail?q="+str,true);
+        xmlhttp.send();
+    }
+}
+        </script>
     </head>
     <body>
 	 <div class="modal fade CustomModal" id="DeleteInboxMessageModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -12,12 +35,12 @@
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
               </div>
-              <form id="ForgotPassForm" method="post">
+              <form id="ForgotPassForm" method="post" action="<?php echo base_url();?>index.php/Email/deleteMessage">
                   <div class="modal-body">
                         <h1>Delete Inbox Message</h1>
                         <p>Are you sure that you need to delete this Data ?</p>
                         <div class="form-group formLayout" hidden>
-		        			 <input type="text" name="RecoredId" class="form-control" placeholder="RecoredId"/>
+		        			 <input type="text" name="RecoredId" id="RecoredId" class="form-control" placeholder="RecoredId"/>
 	       				</div>
                   </div>
                   <div class="modal-footer">
@@ -133,5 +156,12 @@
 
         <!----------------------------------------scripts------>
           <?php $this->load->view('CMS/Scripts');  ?>
+
+          <script> //delete script
+        $(document).on("click", ".deleteBtn", function () {
+     var Id = $(this).data('id');
+     $(".modal-body #RecoredId").val( Id );
+});
+</script>
     </body>
 </html>

@@ -26,4 +26,16 @@ class Email_model extends CI_Model
 		if($query->num_rows()>=1)
 		return $query->row();
 	}
+	public function delete_message($id)
+    {
+    	$this->db->where('id',$id);
+    	$this->db->delete('emails');
+    }
+
+     public function search_message($search)
+    {
+    	$query="SELECT * FROM emails
+    	         WHERE name LIKE '%$search%'";
+    	return $this->db->query($query)->result_array();       
+    }
 }
