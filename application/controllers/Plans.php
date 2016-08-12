@@ -60,6 +60,7 @@ public function GetAllData()
  }
 public function EditPlan()
  {
+<<<<<<< HEAD
  if($this->input->post('PlaneName') != null && $this->input->post('NewData_items') != null && $this->input->post('PlaneID') != null)
  	{
  		$New_Plan_Data['plane_name'] = $this->input->post('PlaneName');
@@ -77,5 +78,8 @@ public function EditPlan()
 		redirect('Plans');
  	}
  	else{redirect('Plans');}
+=======
+
+>>>>>>> origin/master
  }
 }

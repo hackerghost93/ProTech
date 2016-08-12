@@ -3,21 +3,21 @@
                                 <h1>Inbox</h1>
                             </li>
                             <li class="subSideBarMenuItem BlogMenuItem">
-                                <a href="InboxMessages.php" class="subSideBarPayrollMenuItemAnchor " id="SSMIBLog-Categories">
+                                <a href="<?php echo base_url();?>index.php/Email/select_all" class="subSideBarPayrollMenuItemAnchor " id="SSMIBLog-Categories">
                                     <h4><span class="fa fa-envelope" aria-hidden="true"></span></h4>
                                     <h4>Inbox Messages</h4>
 									<span class="notread">23</span>
                                 </a>
                             </li>
                              <li class="subSideBarMenuItem BlogMenuItem">
-                                <a href="InboxSubscribers.php" class="subSideBarPayrollMenuItemAnchor " id="SSMIBLog-Tags">
+                                <a href="<?php echo base_url();?>index.php/Email/send" class="subSideBarPayrollMenuItemAnchor " id="SSMIBLog-Tags">
                                      <h4><span class="fa fa-envelope" aria-hidden="true"></span></h4>
                                     <h4>Send to Subscribers</h4>
 									<span class="notread1">23</span>
                                 </a>
                             </li>
                              <li  class="subSideBarMenuItem BlogMenuItem">
-                                <a href="ComposeEmail.php" class="subSideBarPayrollMenuItemAnchor" id="SSMIBlog-Posts">
+                                <a href="#" class="subSideBarPayrollMenuItemAnchor" id="SSMIBlog-Posts">
                                     <h4><span class="fa fa-newspaper-o"></span></h4>
                                     <h4>Compose Email</h4>
                                 </a>

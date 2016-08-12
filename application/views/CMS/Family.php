@@ -34,12 +34,12 @@
     <body>
         <!-- ---------------------------------sideBarLeft------ -->
         <div class="sideBarLeft">
-            <?php require_once("MainSideBar.php"); ?>
+            <?php $this->load->view('CMS/MainSideBar.php'); ?>
         </div>
         
         <!-- --------------------------------------Header----- -->
         <header>
-            <?php require_once("MainHeader.php"); ?>
+            <?php $this->load->view('CMS/MainHeader.php'); ?>
         </header>
         <!------------------------------------dataSection------>
         <div class="dataSection">
@@ -61,7 +61,7 @@
               <div class="box-wider-text">
                 <div class="box-body">
                                  <div class="table-responsive">  <span id="txtHint"></span> </div>
-                        <div class="table-responsive" id="UserTable">s
+                        <div class="table-responsive" id="UserTable">
               <div class="DataDiv Wide">
                           <div class="DataDiv">
                                <div class="box-wider-text">

@@ -3,14 +3,14 @@
     <head>
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <title>Protech CMS : SlideShow</title> 
-	 <?php require_once("Links.php"); ?>
+	 <?php $this->load->view('CMS/Links.php'); ?>
 
         
     </head>
     <body>
         <!-- ---------------------------------sideBarLeft------ -->
         <div class="sideBarLeft">
-            <?php require_once("MainSideBar.php"); ?>
+            <?php $this->load->view('CMS/MainSideBar.php'); ?>
         </div>
         
         <!-- --------------------------------------Header----- -->

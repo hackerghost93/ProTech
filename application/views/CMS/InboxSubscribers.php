@@ -3,24 +3,24 @@
     <head>
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <title>AGED CMS : Email</title> 
-		 <?php require_once("Links.php"); ?>
+		   <?php $this->load->view('CMS/Links');  ?>
     </head>
     <body>
 	
         <!-- ---------------------------------sideBarLeft------ -->
         <div class="sideBarLeft">
-            <?php require_once("MainSideBar.php"); ?>
+            <?php $this->load->view('CMS/MainSideBar.php'); ?>
         </div>
         
         <!-- --------------------------------------Header----- -->
         <header>
-            <?php require_once("MainHeader.php"); ?>
+            <?php $this->load->view('CMS/MainHeader.php'); ?>
         </header>
         <!------------------------------------dataSection------>
         <div class="dataSection">
              <div class="DataDiv">
                 <nav class="subSideBar">
-                     <?php require_once("InboxSideBar.php"); ?>
+                     <?php $this->load->view('CMS/InboxSideBar.php'); ?>
                 </nav>   
 		
                 <div class="SideBarContent ">
@@ -28,14 +28,14 @@
                            <div class="PageHaeder">
                               <h2>Send To all Subscribers</h2>
                            </div>
-							<form class="form-inline">
+                           <form class="form-inline" method="post" action="<?php echo base_url();?>index.php/Email/send">
 								<div class="box-wider-text">
 									<div class="box-header">
                                     <div class="row CustomRow">
 										   <div class="HeaderLeft"> 
 										     <div class="form-group ToOneSubscribe ">
-													<label for="ToOneSubscribecompose" >To </label><span>:</span>
-													<input type="text" name="To" class="form-control " placeholder="example@domain.com"/>     
+													<label for="ToOneSubscribecompose" >BCC </label><span>:</span>
+                          <input type="text" name="BCC" class="form-control " placeholder="example@domain.com"/>        
 												</div><br>
 												<div class="form-group SubjectSubscribe ">
 													<label for="Subject">Subject </label><span>:</span>
@@ -44,7 +44,7 @@
                                         </div>
                                         <div class="HeaderRight"> 
                                          		<div class="form-group formLayout ">
-													<button type="button" type="submit" class="btn btn-md OverLayFormBtn Sendus"> Send</button>
+													<button type="submit" class="btn btn-md OverLayFormBtn Sendus"> Send</button> 
 												</div>
                                         </div>
                                          <div class="SubHeader ">
@@ -78,7 +78,7 @@
         <footer></footer>
 
         <!----------------------------------------scripts------>
-          <?php require_once("Scripts.php"); ?>
+          <?php $this->load->view('CMS/Scripts.php'); ?>
 
     </body>
 </html>

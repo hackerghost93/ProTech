@@ -3,23 +3,23 @@
     <head>
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <title>AGED CMS : Email</title> 
-		 <?php require_once("Links.php"); ?>
+		 <?php $this->load->view('CMS/Links');  ?>
     </head>
     <body>
         <!-- ---------------------------------sideBarLeft------ -->
         <div class="sideBarLeft">
-            <?php require_once("MainSideBar.php"); ?>
+            <?php $this->load->view('CMS/MainSideBar.php'); ?>
         </div>
         
         <!-- --------------------------------------Header----- -->
         <header>
-            <?php require_once("MainHeader.php"); ?>
+            <?php $this->load->view('CMS/MainHeader.php'); ?>
         </header>
         <!------------------------------------dataSection------>
         <div class="dataSection">
              <div class="DataDiv">
                 <nav class="subSideBar">
-                     <?php require_once("InboxSideBar.php"); ?>
+                     <?php $this->load->view('CMS/InboxSideBar.php'); ?>
                 </nav>
                 <div class="SideBarContent">
                       <div class="DataDiv">
@@ -84,6 +84,6 @@
         <footer></footer>
 
         <!----------------------------------------scripts------>
-        	<?php require_once("Scripts.php"); ?>
+        	 <?php $this->load->view('CMS/Scripts');  ?>
     </body>
 </html>
