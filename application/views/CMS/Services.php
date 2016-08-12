@@ -183,7 +183,7 @@ button.btn.btn-md.AddNewStepserbtn.addnewresult {
                    </div>
                </div>
           </div>
-          <form>
+          <form method="post" action="<?=base_url()?>index.php/Plans/EditPlan">
 			<div class="container-fluid OverLayFormContent">
           <div class="FormSection row">
 						<div class="col-md-8">
@@ -192,10 +192,15 @@ button.btn.btn-md.AddNewStepserbtn.addnewresult {
 							</div>
 							<div class="SectionContent Specifications">
 								<div id="RemoveSpecifications">
+                  <div class="form-group formLayout">
+                  <label for="PlaneID" class="control-label ">Plan ID : </label>
+                  <input type="text" name="PlaneID" id="SPlan_ID" class="form-control InputProduct" placeholder="Plan ID" readonly />
+                </div>
 								<div class="form-group formLayout">
 									<label for="PlaneName" class="control-label ">Plan Name : </label>
 									<input type="text" name="PlaneName" id="PlaneName" class="form-control InputProduct" placeholder="Plane Name" />
 								</div>
+
 									<h3>Plan Details</h3>
 									<div class="form-group formLayout" id="SDiv">
 										
@@ -212,7 +217,7 @@ button.btn.btn-md.AddNewStepserbtn.addnewresult {
               <div class="container-fluid OverLayFormFooter">
                    <div class="row CustomRow">
                        <div class="OverLayFormFooterItem right">
-                            <button type="button"class="btn btn-md OverLayFormBtn"> Update</button>
+                            <button type="submit"class="btn btn-md OverLayFormBtn"> Update</button>
                        </div>
                        <div class="OverLayFormFooterItem left">
                        
@@ -311,6 +316,7 @@ button.btn.btn-md.AddNewStepserbtn.addnewresult {
       function GetPlanData(id)
       {
       var ID=id;
+      $('#SPlan_ID').val(ID);
       $.get('Plans/GetAllData',{ID:ID},function(data)
       {
         $('#PlaneName').val(data.name);

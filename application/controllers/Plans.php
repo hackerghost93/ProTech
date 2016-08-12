@@ -60,11 +60,22 @@ public function GetAllData()
  }
 public function EditPlan()
  {
- 	if($this->input->post('PlaneName') != null && $this->input->post('NewData_items') != null)
+ if($this->input->post('PlaneName') != null && $this->input->post('NewData_items') != null && $this->input->post('PlaneID') != null)
  	{
- 		$New_Plan_Name = $this->input->post('PlaneName');
+ 		$New_Plan_Data['plane_name'] = $this->input->post('PlaneName');
  		$New_Plan_items = $this->input->post('NewData_items');
- 		$this->Awd_Model->DelData('plans',$New_Plan_Name,'plane_id');
+ 		$New_Plan_Data['plane_id'] = $this->input->post('PlaneID');
+ 		$this->Awd_Model->DelData('plans',$New_Plan_Data['plane_id'],'plane_id');
+ 		$this->Awd_Model->AddToDB('plans',$New_Plan_Data);
+		foreach ($New_Plan_items as $key => $value) {
+		$New_items_data[]['plane_text'] = $value;
+		}
+		for ($i=0; $i <sizeof($New_items_data) ; $i++) {
+		$New_items_data[$i]['plane_id'] = $New_Plan_Data['plane_id'];
+		$this->Awd_Model->AddToDB('plan_item',$New_items_data[$i]);
+		}
+		redirect('Plans');
  	}
+ 	else{redirect('Plans');}
  }
 }
