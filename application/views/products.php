@@ -106,11 +106,11 @@ img.emoji {
 <header>
     <div class="Grid1k clear-after">
         <a href="#" class="logo ViewPort"><span>بروتك <span>لخدمات زيروكس المتكاملة</span></span> </a>
-        <a href="contact.html" class="OpenTicket">افتح تذكرة</a>
+        <a href="<?php echo base_url()?>index.php/Email/addMsg" class="OpenTicket">افتح تذكرة</a>
 
 <div class="primary-menu">
     <ul id="menu-%d9%87%d9%8a%d8%af%d8%b1-%d9%81%d9%88%d9%82" class="menu">
-    <li id="menu-item-2473" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-2473"><a href="index.html">الرئيسية</a>
+    <li id="menu-item-2473" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-2473"><a href="<?php echo base_url()?>">الرئيسية</a>
     </li>
 <li id="menu-item-2476" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2476"><a href="#">خدماتنا</a>
 
@@ -126,10 +126,10 @@ img.emoji {
     <a href="<?=base_url()?>#sec7">عملائنا</a>
         </li>
         <li id="#" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2508">
-    <a href="about.html">عن الشركه</a>
+    <a href="<?php echo base_url()?>index.php/About">عن الشركه</a>
         </li>
 
-<li id="menu-item-2474" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2474"><a href="contact.html">تواصل معنا</a></li>
+<li id="menu-item-2474" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2474"><a href="<?php echo base_url()?>index.php/Email/addMsg">تواصل معنا</a></li>
 </ul></div>
     </div>
 </header>
@@ -141,19 +141,19 @@ img.emoji {
 <a href="#" class="close-menu-2"><b class="fa fa-close"></b></a>
         <ul>
             <li>
-                <a href="service.html">
+                <a href="<?php echo base_url()?>index.php/Plan">
                     <i><img src="<?=base_url()?>imgs/tech-support-grey.png" alt=""></i>
                     <span>الدعم الفني</span>
                 </a>
             </li>
             <li>
-                <a href="service.html">
+                <a href="<?php echo base_url()?>index.php/Plan">
                     <i><img src="<?=base_url()?>imgs/shopping-card-512.png" alt=""></i>
                     <span> بيع و استبدال </span>
                 </a>
             </li>
             <li>
-                <a href="service.html">
+                <a href="<?php echo base_url()?>index.php/Plan">
                     <i><img src="<?=base_url()?>imgs/Icon_49-512.png" alt=""></i>
                     <span>قطع غيار </span>
                 </a>
@@ -187,13 +187,13 @@ img.emoji {
 <a href="#" class="close-menu-2"><b class="fa fa-close"></b></a>
         <ul>
             <li>
-                <a href="products.html">
+                <a href="<?php echo base_url()?>index.php/Printer/showAll">
                     <i><img src="<?=base_url()?>imgs/printer.png" alt=""></i>
                     <span> الطابعات </span>
                 </a>
             </li>
             <li>
-                <a href="products.html">
+                <a href="<?php echo base_url()?>index.php/Printer/showAll">
                     <i><img src="<?=base_url()?>imgs/supp-title.png" alt=""></i>
                     <span>قطع الغيار</span>
                 </a>
@@ -349,8 +349,8 @@ window.newsletter_check = function (f) {
             
         </div>
         <div class="SiteInfo">
-            <a href="index.html" class="logo"><span>بروتك <span>لخدمات زيروكس المتكامله</span></span> </a>
-            <a href="contact.html" class="OpenTicket">فتح تذكرة</a>
+            <a href="<?php echo base_url()?>" class="logo"><span>بروتك <span>لخدمات زيروكس المتكامله</span></span> </a>
+            <a href="<?php echo base_url()?>index.php/Email/addMsg" class="OpenTicket">فتح تذكرة</a>
             <div class="Social">
             <a target="_blank" href="#" class="Facebook"><span></span></a>
             <a target="_blank" href="#" class="Twitter"><span></span></a>
@@ -364,9 +364,9 @@ window.newsletter_check = function (f) {
     <div class="Grid1k">
         <span>جميع الحقوق محفوظة لشركة بروتك </span>
         <ul>
-<div class="menu-%d8%a8%d8%a8%d8%a8-container"><ul id="menu-%d8%a8%d8%a8%d8%a8" class="menu"><li id="menu-item-2470" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2470"><a href="about.html">عن بروتك</a></li>
+<div class="menu-%d8%a8%d8%a8%d8%a8-container"><ul id="menu-%d8%a8%d8%a8%d8%a8" class="menu"><li id="menu-item-2470" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2470"><a href="<?php echo base_url()?>index.php/About">عن بروتك</a></li>
 
-<li id="menu-item-2472" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2472"><a href="contact.html"> اتصل بنا </a></li>
+<li id="menu-item-2472" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2472"><a href="<?php echo base_url()?>index.php/Email/addMsg"> اتصل بنا </a></li>
 </ul>
             </div>  
         </ul>

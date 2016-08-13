@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="shortcut icon" href="imgs/PT.png" />
+<link rel="shortcut icon" href="<?php echo base_url()?>imgs/PT.png" />
 
 <!-- Calling Css & Js Files -->
-<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/stylesheet.css">
-<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/style.css">
-<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/responsive.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>css/stylesheet.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>css/style.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>css/responsive.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/theme.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>css/theme.css">
 
 
 
@@ -54,20 +54,18 @@ img.emoji {
 	padding: 0 !important;
 }
 </style>
-<link rel='stylesheet' id='contact-form-7-css'  href='<?php echo base_url();?>css/styles.css' type='text/css' media='all' />
-<link rel='stylesheet' id='contact-form-7-rtl-css'  href='<?php echo base_url();?>css/rtl.css' type='text/css' media='all' />
-<link rel='stylesheet' id='wdc-main-styles-css'  href='<?php echo base_url();?>css/custom.css' type='text/css' media='all' />
-<link rel='stylesheet' id='wdc-styles-extras-css'  href='<?php echo base_url();?>css/bootstrap-flat-extras.css' type='text/css' media='all' />
-<link rel='stylesheet' id='wdc-styles-flat-css'  href='<?php echo base_url();?>css/bootstrap-flat.css' type='text/css' media='all' />
-    
-  
+<link rel='stylesheet' id='contact-form-7-css'  href='<?php echo base_url()?>css/styles.css' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-rtl-css'  href='<?php echo base_url()?>css/rtl.css' type='text/css' media='all' />
+<link rel='stylesheet' id='wdc-main-styles-css'  href='<?php echo base_url()?>css/custom.css' type='text/css' media='all' />
+<link rel='stylesheet' id='wdc-styles-extras-css'  href='<?php echo base_url()?>css/bootstrap-flat-extras.css' type='text/css' media='all' />
+<link rel='stylesheet' id='wdc-styles-flat-css'  href='<?php echo base_url()?>css/bootstrap-flat.css' type='text/css' media='all' />
     
     
-<script type='text/javascript' src='<?php echo base_url();?>js/jquery.js'></script>
-<script type='text/javascript' src='<?php echo base_url();?>js/jquery-migrate-min.js'></script>
-<link rel='https://api.w.org/' href='<?php echo base_url();?>js/wp.json' />
+<script type='text/javascript' src='<?php echo base_url()?>js/jquery.js'></script>
+<script type='text/javascript' src='<?php echo base_url()?>js/jquery-migrate-min.js'></script>
+<link rel='https://api.w.org/' href='<?php echo base_url()?>js/wp.json' />
     
-
+    
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -124,7 +122,7 @@ img.emoji {
     <a href="#"> التحميلات</a>
         </li>
 <li id="menu-item-2508" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2508">
-    <a href="<?=base_url()?>#sec7">عملائنا</a>
+    <a href="<?php echo base_url()?>#sec7">عملائنا</a>
         </li>
         <li id="#" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2508">
     <a href="<?php echo base_url()?>index.php/About">عن الشركه</a>
@@ -143,19 +141,19 @@ img.emoji {
         <ul>
             <li>
                 <a href="<?php echo base_url()?>index.php/Plan">
-                    <i><img src="<?=base_url()?>imgs/tech-support-grey.png" alt=""></i>
+                    <i><img src="imgs/tech-support-grey.png" alt=""></i>
                     <span>الدعم الفني</span>
                 </a>
             </li>
             <li>
                 <a href="<?php echo base_url()?>index.php/Plan">
-                    <i><img src="<?=base_url()?>imgs/shopping-card-512.png" alt=""></i>
+                    <i><img src="imgs/shopping-card-512.png" alt=""></i>
                     <span> بيع و استبدال </span>
                 </a>
             </li>
             <li>
                 <a href="<?php echo base_url()?>index.php/Plan">
-                    <i><img src="<?=base_url()?>imgs/Icon_49-512.png" alt=""></i>
+                    <i><img src="imgs/Icon_49-512.png" alt=""></i>
                     <span>قطع غيار </span>
                 </a>
             </li>
@@ -171,13 +169,13 @@ img.emoji {
         <ul>
             <li>
                 <a href="downloads.html">
-                    <i><img src="<?=base_url()?>imgs/datasheet.png" alt=""></i>
+                    <i><img src="imgs/datasheet.png" alt=""></i>
                     <span>داتا شيت </span>
                 </a>
             </li>
             <li>
                 <a href="downloads.html">
-                    <i><img src="<?=base_url()?>imgs/1287710488_folder_black_download512.png" alt=""></i>
+                    <i><img src="imgs/1287710488_folder_black_download512.png" alt=""></i>
                     <span>سوفتوير</span>
                 </a>
             </li>
@@ -190,83 +188,198 @@ img.emoji {
         <ul>
             <li>
                 <a href="<?php echo base_url()?>index.php/Printer/showAll">
-                    <i><img src="<?=base_url()?>imgs/printer.png" alt=""></i>
+                    <i><img src="imgs/printer.png" alt=""></i>
                     <span> الطابعات </span>
                 </a>
             </li>
             <li>
                 <a href="<?php echo base_url()?>index.php/Printer/showAll">
-                    <i><img src="<?=base_url()?>imgs/supp-title.png" alt=""></i>
+                    <i><img src="imgs/supp-title.png" alt=""></i>
                     <span>قطع الغيار</span>
                 </a>
             </li>
        
         </ul>
 </div></section></div>
-    
 </div>
 
+<!-- // Header -->  
+
         
-        <!-- // Header -->   
-        
-        <div class="page_nav contact-page">
+         <div class="page_nav supp-page">
         <div class="Grid1k">
-            <i class="page_left-icon2">
-                <img width="414" height="289" src="imgs/contct.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="imgs/contct.png 414w, imgs/contct.png 300w" sizes="(max-width: 414px) 100vw, 414px" /></i>
+            <i class="page_left-icon2"><img width="291" height="293" src="imgs/supp-title.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="الدعم الفني" srcset="imgs/supp-title.png 291w, imgs/supp-title.png 150w, imgs/supp-title.png 53w" sizes="(max-width: 291px) 100vw, 291px" /></i>
             <div class="page_title">
-                <h2>تواصل معنا</h2>
+                <h2>الدعم الفني</h2>
               
-<p>تواصل معنا من خلال الايميل . سكايب .</p>
-<p>او من خلال ارقامنا المتوفرة &#8211; ومتوفر بها ( واتس اب &#8211; فايبر &#8211; لاين )</p>
-               
+<p class="text-center">الدعم الفني نقوم به رغبة منا في تقديم أفضل الخدمات لعملائنا الكرام وأفضل متابعة لطابعتهم نقدم لكم خطط خاصة للدعم الفني يقوم بالعمل عليها فريق دعم فني متميز</p>
+              
                 <u class="arrow_"></u>
             </div>
             <span class="clear"><!--  --></span>
         </div>
     </div>
     <!-- // page nav -->
-    
-    
-    <br><br>
 
-<div class="Grid1k">
-    <ul class="contact-it">
-        <li class="c_it1"><i></i>الجوال <span>002-0000000000000</span></li>
-        <li class="c_it2"><i></i>الايميل <span>info@ProTech.com</span></li>
-        <li class="c_it3"><i></i>سكايب <span>ProTech</span></li>
-        <li class="c_it4"><i></i>واتس اب <span>002-0000000000</span></li>
-    </ul>
-    <div class="contact-form_">
-       <h4>يمكنك ارسال رسالة</h4>
-<div role="form" class="wpcf7" id="wpcf7-f160-o1" dir="rtl">
-<div class="screen-reader-response"></div>
-<form action="<?php echo base_url()?>index.php/Email/addMsg" method="post" class="wpcf7-form" novalidate="novalidate">
-<div style="display: none;">
-<input type="hidden" name="_wpcf7" value="160" />
-<input type="hidden" name="_wpcf7_version" value="4.3" />
-<input type="hidden" name="_wpcf7_locale" value="" />
-<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f160-o1" />
-<input type="hidden" name="_wpnonce" value="f69db08be4" />
-</div>
-<p><span class="wpcf7-form-control-wrap your-name"><input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="الإسم" /></span></p>
-<p>    <span class="wpcf7-form-control-wrap your-email"><input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="البريد الالكتروني" /></span></p>
-<p>    <span class="wpcf7-form-control-wrap your-subject"><input type="text" name="your-subject" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false" placeholder="العنوان" /></span></p>
-<p>    <span class="wpcf7-form-control-wrap your-message"><textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="الرسالة"></textarea></span></p>
-<p><input type="submit" value="إرسال" class="wpcf7-form-control wpcf7-submit" /></p>
-<div class="wpcf7-response-output wpcf7-display-none">
-    </div>
-    </form>
-        </div>        
-    </div>
-    
-    
-    <span class="clear"><!--  --></span>
-</div>
-        
-        
-        
-        
-        
+
+    <br>
+    <br>
+    <section class="spprt">
+        <div class="Grid1k clfx">
+            <h2>نقدم لكم خدمة الدعم الفني لجميع طابعات زيروكس</h2>
+            <br>
+            <ul class="host-a clfx">
+                <li>
+                    <div>
+                        <i><img src="" alt=""></i>
+                        <h5>متابعه مستمرة من خلال الاشتراك</h5>
+                     
+           <p>لورم ایپسوم أبجد هوز هو مجرد دمية النص من التنضيد والطباعة والصناعة من مصممي الغرافيك. الطابعات والنصوص، ولكن أيضا أعمدة الصحف والمجلات و ما هو ضروري للحالة </p>
+                       
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <i><img src="" alt=""></i>
+                        <h5>امان تام</h5>
+                        
+           <p>لورم ایپسوم أبجد هوز هو مجرد دمية النص من التنضيد والطباعة والصناعة من مصممي الغرافيك. الطابعات والنصوص، ولكن أيضا أعمدة الصحف والمجلات و ما هو ضروري للحالة </p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <i><img src="" alt=""></i>
+                        <h5>الدقة</h5>
+                       
+           <p>لورم ایپسوم أبجد هوز هو مجرد دمية النص من التنضيد والطباعة والصناعة من مصممي الغرافيك. الطابعات والنصوص، ولكن أيضا أعمدة الصحف والمجلات و ما هو ضروري للحالة </p>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+
+    </section>
+    <section class="host-plan supp-plan">
+        <div class="Grid1k clfx">
+
+                        <ul class="plan clfx">
+                <li class="plan1">
+                    <h5>
+                     <b><i>الدعم الفني </i></b>
+                     <span>خطه 1</span>
+                 </h5>
+                    <div class="p-box">
+                        <ul class="rw">
+	
+   <li>لورم ایپسوم أبجد هوز هو مجرد دمية النص</li>
+
+	
+     <li>لورم ایپسوم أبجد هوز هو مجرد دمية النص</li>
+
+	
+    <li>لورم ایپسوم أبجد هوز هو مجرد دمية النص</li>
+
+	
+     <li>لورم ایپسوم أبجد هوز هو مجرد دمية النص</li>
+
+	
+     <li>لورم ایپسوم أبجد هوز هو مجرد دمية النص</li>
+
+	
+     <li>لورم ایپسوم أبجد هوز هو مجرد دمية النص</li>
+
+	
+    <li>لورم ایپسوم أبجد هوز هو مجرد دمية النص</li>
+
+	                        </ul>
+                        <span class="buttons_ clfx">
+                       <a href="#" class="dtls_ plan1-dt">التفاصيل</a>
+                       <a href="<?php echo base_url()?>index.php/Email/addMsg">اطلب الان</a>
+                       </span>
+                    </div>
+
+                </li>
+                <li class="plan2">
+                    <h5>
+                     <b><i>الدعم الفني </i></b>
+                     <span>خطه 2</span>
+                 </h5>
+                    <div class="p-box">
+                        <ul class="rw">
+	
+    <li>لورم ایپسوم أبجد هوز هو مجرد دمية النص</li>
+
+	
+     <li>لورم ایپسوم أبجد هوز هو مجرد دمية النص</li>
+
+	
+    <li>لورم ایپسوم أبجد هوز هو مجرد دمية النص</li>
+
+	
+     <li>لورم ایپسوم أبجد هوز هو مجرد دمية النص</li>
+
+	
+     <li>لورم ایپسوم أبجد هوز هو مجرد دمية النص</li>
+
+	
+     <li>لورم ایپسوم أبجد هوز هو مجرد دمية النص</li>
+
+	                        </ul>
+                        <span class="buttons_ clfx">
+                       <a href="#" class="dtls_ plan2-dt">التفاصيل</a>
+                       <a href="<?php echo base_url()?>index.php/Email/addMsg">اطلب الان</a>
+                       </span>
+                    </div>
+
+                </li>
+                <li class="plan3">
+                    <h5>
+                     <b><i>الدعم الفني </i></b>
+                    <span>خطه 3</span>
+                 </h5>
+                    <div class="p-box">
+                        <ul class="rw">
+   <li>لورم ایپسوم أبجد هوز هو مجرد دمية النص</li>
+
+	
+     <li>لورم ایپسوم أبجد هوز هو مجرد دمية النص</li>
+
+	
+    <li>لورم ایپسوم أبجد هوز هو مجرد دمية النص</li>
+
+	
+     <li>لورم ایپسوم أبجد هوز هو مجرد دمية النص</li>
+
+	
+     <li>لورم ایپسوم أبجد هوز هو مجرد دمية النص</li>
+
+	
+
+
+	                        </ul>
+                        <span class="buttons_ clfx">
+                       <a href="#" class="dtls_ plan3-dt">التفاصيل</a>
+                       <a href="<?php echo base_url()?>index.php/Email/addMsg">اطلب الان</a>
+                       </span>
+                    </div>
+
+                </li>
+            </ul>
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+
+
+     
         
           
 <!-- Section 09 -->
@@ -384,20 +497,20 @@ window.newsletter_check = function (f) {
 </div>
 </div>
 <div class="big-menu-overly"></div>
-<script type='text/javascript' src='<?php echo base_url();?>js/form-jquery.js'></script>
+<script type='text/javascript' src='<?php echo base_url()?>js/form-jquery.js'></script>
 <script type='text/javascript'>
 /* <![CDATA[ */
 var _wpcf7 = {"loaderUrl":"imgs/ajax-loader.gif","sending":"\u062c\u0627\u0631\u064a \u0627\u0644\u0625\u0631\u0633\u0627\u0644 ..."};
 /* ]]> */
 </script>
-<script type='text/javascript' src='<?php echo base_url();?>js/newscripta.js'></script>
+<script type='text/javascript' src='<?php echo base_url()?>js/newscripta.js'></script>
 
-<script type='text/javascript' src='<?php echo base_url();?>js/assest.js'></script>
+<script type='text/javascript' src='<?php echo base_url()?>js/assest.js'></script>
 <script type='text/javascript' src='//www.google.com/recaptcha/api.js?onload=onloadCallback&#038;render=explicit&#038;ver=1'></script>
-<script type='text/javascript' src='<?php echo base_url();?>js/embed.js'></script>
-<script src="<?php echo base_url();?>js/jquery.min.js"></script>
-<script src="<?php echo base_url();?>js/scripts.js"></script>
-<script src="<?php echo base_url();?>js/ea-scripts.js"></script>
+<script type='text/javascript' src='<?php echo base_url()?>js/embed.js'></script>
+<script src="<?php echo base_url()?>js/jquery.min.js"></script>
+<script src="<?php echo base_url()?>js/scripts.js"></script>
+<script src="<?php echo base_url()?>js/ea-scripts.js"></script>
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
