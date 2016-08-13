@@ -53,6 +53,10 @@
 													<h3>Contact Information</h3>
 											   </div>
 												<div class="SectionContent">
+															<div class="form-group formLayout" hidden>
+														<label for="ID" class="control-label ">ID : </label>
+<input type="number" id="ID" name="ID" class="Contact form-control" />
+													</div>
 													<div class="form-group formLayout">
 														<label for="ContactTelephone" class="control-label ">Telephone : </label>
 <input type="number" id="Telephone" name="ContactTelephone" class="Contact form-control" placeholder="Telephone" />
@@ -181,6 +185,7 @@
 			$.post('Contacts/Get_Contact_Data',{nothing:nothing},function(data)
       		{
      //`adress``telephone``mobile``whatsapp``skybe``youtube``email``Email_Password``facebook``twitter``linkedin`
+				$('#ID').val(data.id);
 				$('#Telephone').val(data.telephone);
 				$('#Mobile').val(data.mobile);
 				$('#Email').val(data.email);
