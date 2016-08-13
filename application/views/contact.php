@@ -212,7 +212,7 @@ img.emoji {
         <div class="page_nav contact-page">
         <div class="Grid1k">
             <i class="page_left-icon2">
-                <img width="414" height="289" src="imgs/contct.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="contct" srcset="imgs/contct.png 414w, imgs/contct.png 300w" sizes="(max-width: 414px) 100vw, 414px" /></i>
+                <img width="414" height="289" src="imgs/contct.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="imgs/contct.png 414w, imgs/contct.png 300w" sizes="(max-width: 414px) 100vw, 414px" /></i>
             <div class="page_title">
                 <h2>تواصل معنا</h2>
               
@@ -253,14 +253,14 @@ img.emoji {
 <p>    <span class="wpcf7-form-control-wrap your-subject"><input type="text" name="your-subject" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false" placeholder="العنوان" /></span></p>
 <p>    <span class="wpcf7-form-control-wrap your-message"><textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="الرسالة"></textarea></span></p>
 <p><input type="submit" value="إرسال" class="wpcf7-form-control wpcf7-submit" /></p>
-<!--div class="wpcf7-response-output wpcf7-display-none">
-    </div-->
+<div class="wpcf7-response-output wpcf7-display-none">
+    </div>
     </form>
         </div>        
     </div>
     
     
-    <!--span class="clear"><!--  --><!--/span-->
+    <span class="clear"><!--  --></span>
 </div>
         
         
@@ -387,7 +387,7 @@ window.newsletter_check = function (f) {
 <script type='text/javascript' src='<?php echo base_url();?>js/form-jquery.js'></script>
 <script type='text/javascript'>
 /* <![CDATA[ */
-//var _wpcf7 = {"loaderUrl":"imgs/ajax-loader.gif","sending":"\u062c\u0627\u0631\u064a \u0627\u0644\u0625\u0631\u0633\u0627\u0644 ..."};
+var _wpcf7 = {"loaderUrl":"imgs/ajax-loader.gif","sending":"\u062c\u0627\u0631\u064a \u0627\u0644\u0625\u0631\u0633\u0627\u0644 ..."};
 /* ]]> */
 </script>
 <script type='text/javascript' src='<?php echo base_url();?>js/newscripta.js'></script>

@@ -32,7 +32,7 @@
 					<span class="fa fa-users" aria-hidden="true"></span></a>
                 </li>
 				<li class="sideMenuItem">
-                    <a href="InboxMessages.php" data-toggle="tooltip" data-placement="right" class="SMenuItem " title="Inbox" id="SMI-Inbox">
+                    <a href="<?php echo base_url();?>index.php/Email/select_all" data-toggle="tooltip" data-placement="right" class="SMenuItem " title="Inbox" id="SMI-Inbox">
 					<span class="fa fa-envelope-o" aria-hidden="true"></span></a>
                 </li>		
 

@@ -7,7 +7,7 @@
                           <div class="HeaderLinks">
                           <a  class="btn" id="hi"><span class="fa fa-calendar"></span></a>
                           <a href="#" class="btn"><span class="fa fa-bell"></span></a>
-                          <a href="#" class="btn"><span class="fa fa-envelope"></span></a>
+                          <a href="<?php echo base_url() ?>index.php/Email" data-toggle="tooltip" title="Email and inbox" data-placement="right" class="btn"><span class="fa fa-envelope"></span></a>
                           </div>
                    <!--       <form class="HeaderForm">
                                 <div class="form-group">

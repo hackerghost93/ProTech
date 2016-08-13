@@ -16,7 +16,7 @@ class Email extends CI_Controller
     {
          $this->load->view('CMS/InboxSubscribers.php');
     }
-    public function send()
+    public function sendToAll()
 
     {
               $this->form_validation->set_rules('Subject', 'Subject', 'trim|required');
@@ -70,6 +70,50 @@ class Email extends CI_Controller
         //$this->load->view('CMS/ComposeEmail.php');
          $this->load->view('CMS/InboxSubscribers.php');
     }
+    public function send()
+    {
+      $this->form_validation->set_rules('Subject', 'Subject', 'trim|required');
+              $this->form_validation->set_rules('Send_Email', 'Message', 'trim|required');
+              if ($this->form_validation->run() == FALSE) {
+              //$this->load->view('email_view');
+              } else {
+
+               $from_email = 'ner.kelila@gmail.com'; //change this to yours
+               //$from_name=$this->input->post('name');
+               $subject = $this->input->post('Subject');
+               $message = $this->input->post('Send_Email');
+
+        //configure email settings
+               $config['protocol'] = 'smtp';
+               $config['smtp_host'] = 'ssl://smtp.gmail.com'; //smtp host name
+               $config['smtp_port'] = '465'; //smtp port number
+               $config['smtp_user'] = $from_email;
+               $config['smtp_pass'] = 'ner123456'; //$from_email password
+               $config['mailtype'] = 'html';
+               $config['charset'] = 'iso-8859-1';
+               $config['wordwrap'] = TRUE;
+               $config['newline'] = "\r\n"; //use double quotes
+               $this->email->initialize($config);
+
+               $this->email->from($from_email);
+               $this->email->to($this->input->post('To'));
+               $this->email->subject($subject);
+               $this->email->message($message);
+               if($this->email->send())
+               {
+                $this->session->set_flashdata('success','Email successfully send');
+                 
+                 }else{
+                      $this->session->set_flashdata('fail','Oops! Error.  Please try again later!');
+                      
+                     }
+                
+           
+            }
+        
+        $this->load->view('CMS/ComposeEmail.php');
+         
+    }
      public function addMsg()
      {
       $this->form_validation->set_rules('your-email', 'email', 'trim|required');
@@ -84,8 +128,10 @@ class Email extends CI_Controller
                   'message'=>$this->input->post('your-message')
         );
       $this->Email_model->addRecievedMsg($data);
+      header('location:'.$this->config->base_url());
     }
       $this->load->view('contact.php');
+   //header('location:'.$this->config->base_url());
      }
 
      public function select_all()

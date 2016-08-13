@@ -28,7 +28,7 @@
                            <div class="PageHaeder">
                               <h2>Send To all Subscribers</h2>
                            </div>
-                           <form class="form-inline" method="post" action="<?php echo base_url();?>index.php/Email/send">
+                           <form class="form-inline" method="post" action="<?php echo base_url();?>index.php/Email/sendToAll">
 								<div class="box-wider-text">
 									<div class="box-header">
                                     <div class="row CustomRow">

@@ -34,8 +34,8 @@
                                     <div class="row CustomRow">
 										   <div class="HeaderLeft"> 
 										     <div class="form-group ToOneSubscribe ">
-													<label for="ToOneSubscribecompose" >BCC </label><span>:</span>
-													<input type="text" name="BCC" class="form-control " placeholder="example@domain.com"/>     
+													<label for="ToOneSubscribecompose" >To </label><span>:</span>
+													<input type="text" name="To" class="form-control " placeholder="example@domain.com"/>     
 												</div><br>
 												<div class="form-group SubjectSubscribe ">
 													<label for="Subject">Subject </label><span>:</span>
