@@ -72,12 +72,19 @@ class Email extends CI_Controller
     }
      public function addMsg()
      {
+      $this->form_validation->set_rules('your-email', 'email', 'trim|required');
+              $this->form_validation->set_rules('your-name', 'name', 'trim|required');
+              $this->form_validation->set_rules('your-subject', 'subject', 'trim|required');
+              $this->form_validation->set_rules('your-message', 'message', 'trim|required');
+
+              if ($this->form_validation->run() == TRUE){ 
       $data=array('email'=>$this->input->post('your-email'),
                   'name'=>$this->input->post('your-name'),
                   'subject'=>$this->input->post('your-subject'),
                   'message'=>$this->input->post('your-message')
         );
       $this->Email_model->addRecievedMsg($data);
+    }
       $this->load->view('contact.php');
      }
 
