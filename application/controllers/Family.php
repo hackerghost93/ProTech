@@ -16,10 +16,14 @@ class Family extends CI_Controller
 
     public function AddFamily()
     {
+      $familyname=$this->input->post('FamilyTitle');
+       if(($this->Family_model->checkFamily($familyname)->num_rows())==0){
       $data=array('family_name'=>  $this->input->post('FamilyTitle'));
       $this->Family_model->add_family( $data);
       $this->index();
                   header('location:'.$this->config->base_url().'index.php/Family/');
+                }
+                else{ echo 'added before';}
     } 
     public function DeleteFamily()
     {

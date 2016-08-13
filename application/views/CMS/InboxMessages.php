@@ -166,6 +166,16 @@
      $(".modal-body #RecoredId").val( Id );
 });
 </script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    var base_url="<?php echo base_url(); ?>" ;
+    $('#show').click(function(){
+      $.post('<?php echo base_url();?>index.php/Email/show',
+          function(data){
+          });
+    });
+    });
+</script>
 
     </body>
 </html>

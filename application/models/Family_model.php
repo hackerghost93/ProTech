@@ -30,4 +30,14 @@ class Family_model extends CI_Model
     	         WHERE family_name LIKE '%$search%'";
     	return $this->db->query($query)->result_array();       
     }
+
+    public function checkFamily($familyname)
+    {
+        $query = $this->db->query("SELECT * FROM `families` 
+                                  WHERE  `family_name`='$familyname' 
+                                 ");
+        return $query;
+        
+            
+    }
 }
