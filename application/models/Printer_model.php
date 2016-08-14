@@ -66,6 +66,12 @@ class printer_model extends MY_Model
 		$this->db->insert('guarantee' , array('printer_id' => $id , 'guarantee_text' => $desc));
 	}
 
+	function delete($id)
+	{
+		$this->db->where('printer_id = ' , $id) ;
+		$this->db->delete($this->table_name);
+	}
+
 	
 
 

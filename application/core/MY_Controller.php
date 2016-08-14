@@ -89,9 +89,16 @@ class MY_Controller extends CI_Controller
 			return FALSE ;
 	}
 
-	function delete($id)
+	function delete()
 	{
-		return ($this->validateID($id) == TRUE ? $this->model->delete($id) : FALSE); 
+		$id = $this->input->post('id');
+		if($this->validateID($id) ==  TRUE)
+		{
+			$this->model->delete($id);
+			echo json_encode(array('state'=>'success'));
+		}
+		else
+			echo json_encode(array('state' => 'fail'));
 	}
 
 	function show($id)
@@ -108,7 +115,7 @@ class MY_Controller extends CI_Controller
 
 	function getImages($arr)
 	{
-		return (count($arr) == 0 ?  FALSE : $this->model->getImages($arr) ) ;
+		return (count($arr) == 0 ?  array() : $this->model->getImages($arr) ) ;
 	}
 
 }

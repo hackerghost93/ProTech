@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="shortcut icon" href="imgs/PT.png" />
+<link rel="shortcut icon" href="<?=image_url()?>PT.png" />
 
 <!-- Calling Css & Js Files -->
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/stylesheet.css">
@@ -36,22 +36,22 @@
     </script>
 <!-- / Yoast SEO plugin. -->
 
-		<script type="text/javascript">
-			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"js/emoji.js"}};
-			!function(a,b,c){function d(a){var c,d,e,f=b.createElement("canvas"),g=f.getContext&&f.getContext("2d"),h=String.fromCharCode;if(!g||!g.fillText)return!1;switch(g.textBaseline="top",g.font="600 32px Arial",a){case"flag":return g.fillText(h(55356,56806,55356,56826),0,0),f.toDataURL().length>3e3;case"diversity":return g.fillText(h(55356,57221),0,0),c=g.getImageData(16,16,1,1).data,d=c[0]+","+c[1]+","+c[2]+","+c[3],g.fillText(h(55356,57221,55356,57343),0,0),c=g.getImageData(16,16,1,1).data,e=c[0]+","+c[1]+","+c[2]+","+c[3],d!==e;case"simple":return g.fillText(h(55357,56835),0,0),0!==g.getImageData(16,16,1,1).data[0];case"unicode8":return g.fillText(h(55356,57135),0,0),0!==g.getImageData(16,16,1,1).data[0]}return!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i;for(i=Array("simple","flag","unicode8","diversity"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
-		</script>
-		<style type="text/css">
+        <script type="text/javascript">
+            window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"js/emoji.js"}};
+            !function(a,b,c){function d(a){var c,d,e,f=b.createElement("canvas"),g=f.getContext&&f.getContext("2d"),h=String.fromCharCode;if(!g||!g.fillText)return!1;switch(g.textBaseline="top",g.font="600 32px Arial",a){case"flag":return g.fillText(h(55356,56806,55356,56826),0,0),f.toDataURL().length>3e3;case"diversity":return g.fillText(h(55356,57221),0,0),c=g.getImageData(16,16,1,1).data,d=c[0]+","+c[1]+","+c[2]+","+c[3],g.fillText(h(55356,57221,55356,57343),0,0),c=g.getImageData(16,16,1,1).data,e=c[0]+","+c[1]+","+c[2]+","+c[3],d!==e;case"simple":return g.fillText(h(55357,56835),0,0),0!==g.getImageData(16,16,1,1).data[0];case"unicode8":return g.fillText(h(55356,57135),0,0),0!==g.getImageData(16,16,1,1).data[0]}return!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i;for(i=Array("simple","flag","unicode8","diversity"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+        </script>
+        <style type="text/css">
 img.wp-smiley,
 img.emoji {
-	display: inline !important;
-	border: none !important;
-	box-shadow: none !important;
-	height: 1em !important;
-	width: 1em !important;
-	margin: 0 .07em !important;
-	vertical-align: -0.1em !important;
-	background: none !important;
-	padding: 0 !important;
+    display: inline !important;
+    border: none !important;
+    box-shadow: none !important;
+    height: 1em !important;
+    width: 1em !important;
+    margin: 0 .07em !important;
+    vertical-align: -0.1em !important;
+    background: none !important;
+    padding: 0 !important;
 }
 </style>
 <link rel='stylesheet' id='contact-form-7-css'  href='<?php echo base_url();?>css/styles.css' type='text/css' media='all' />
@@ -143,19 +143,19 @@ img.emoji {
         <ul>
             <li>
                 <a href="<?php echo base_url()?>index.php/Plan">
-                    <i><img src="<?=base_url()?>imgs/tech-support-grey.png" alt=""></i>
+                    <i><img src="<?=base_url()?><?=image_url()?>tech-support-grey.png" alt=""></i>
                     <span>الدعم الفني</span>
                 </a>
             </li>
             <li>
                 <a href="<?php echo base_url()?>index.php/Plan">
-                    <i><img src="<?=base_url()?>imgs/shopping-card-512.png" alt=""></i>
+                    <i><img src="<?=base_url()?><?=image_url()?>shopping-card-512.png" alt=""></i>
                     <span> بيع و استبدال </span>
                 </a>
             </li>
             <li>
                 <a href="<?php echo base_url()?>index.php/Plan">
-                    <i><img src="<?=base_url()?>imgs/Icon_49-512.png" alt=""></i>
+                    <i><img src="<?=base_url()?><?=image_url()?>Icon_49-512.png" alt=""></i>
                     <span>قطع غيار </span>
                 </a>
             </li>
@@ -171,13 +171,13 @@ img.emoji {
         <ul>
             <li>
                 <a href="downloads.html">
-                    <i><img src="<?=base_url()?>imgs/datasheet.png" alt=""></i>
+                    <i><img src="<?=base_url()?><?=image_url()?>datasheet.png" alt=""></i>
                     <span>داتا شيت </span>
                 </a>
             </li>
             <li>
                 <a href="downloads.html">
-                    <i><img src="<?=base_url()?>imgs/1287710488_folder_black_download512.png" alt=""></i>
+                    <i><img src="<?=base_url()?><?=image_url()?>1287710488_folder_black_download512.png" alt=""></i>
                     <span>سوفتوير</span>
                 </a>
             </li>
@@ -190,13 +190,13 @@ img.emoji {
         <ul>
             <li>
                 <a href="<?php echo base_url()?>index.php/Printer/showAll">
-                    <i><img src="<?=base_url()?>imgs/printer.png" alt=""></i>
+                    <i><img src="<?=base_url()?><?=image_url()?>printer.png" alt=""></i>
                     <span> الطابعات </span>
                 </a>
             </li>
             <li>
-                <a href="<?php echo base_url()?>index.php/Printer/showAll">
-                    <i><img src="<?=base_url()?>imgs/supp-title.png" alt=""></i>
+                <a href="<?php echo base_url()?>index.php/Part/showAll">
+                    <i><img src="<?=base_url()?><?=image_url()?>supp-title.png" alt=""></i>
                     <span>قطع الغيار</span>
                 </a>
             </li>
@@ -212,7 +212,7 @@ img.emoji {
         <div class="page_nav contact-page">
         <div class="Grid1k">
             <i class="page_left-icon2">
-                <img width="414" height="289" src="imgs/contct.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="imgs/contct.png 414w, imgs/contct.png 300w" sizes="(max-width: 414px) 100vw, 414px" /></i>
+                <img width="414" height="289" src="<?=image_url()?>contct.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt=""  sizes="(max-width: 414px) 100vw, 414px" /></i>
             <div class="page_title">
                 <h2>تواصل معنا</h2>
               
@@ -274,16 +274,16 @@ img.emoji {
     <div class="Grid1k">
         <!-- Contact Area -->
         <div class="ContactArea clear-after ViewPort">
-            <div class="Center"><img src="imgs/icon26.png" alt=""></div>
+            <div class="Center"><img src="<?=image_url()?>icon26.png" alt=""></div>
             <div class="Right clear-after">
-                <img src="imgs/icon24.png" alt="">
+                <img src="<?=image_url()?>icon24.png" alt="">
                 <div class="info">
                     <div><h3>002-00000000000</h3>
                     <h5>متاح واتس اب - فايبر - لاين</h5></div>
                 </div>
             </div>
             <div class="Left clear-after">
-                <img src="imgs/icon25.png" alt="">
+                <img src="<?=image_url()?>icon25.png" alt="">
                 <div class="info"><h3>info@AgedSystems.com</h3></div>
             </div>
         </div>
@@ -387,7 +387,7 @@ window.newsletter_check = function (f) {
 <script type='text/javascript' src='<?php echo base_url();?>js/form-jquery.js'></script>
 <script type='text/javascript'>
 /* <![CDATA[ */
-var _wpcf7 = {"loaderUrl":"imgs/ajax-loader.gif","sending":"\u062c\u0627\u0631\u064a \u0627\u0644\u0625\u0631\u0633\u0627\u0644 ..."};
+var _wpcf7 = {"loaderUrl":"<?=image_url()?>ajax-loader.gif","sending":"\u062c\u0627\u0631\u064a \u0627\u0644\u0625\u0631\u0633\u0627\u0644 ..."};
 /* ]]> */
 </script>
 <script type='text/javascript' src='<?php echo base_url();?>js/newscripta.js'></script>

@@ -77,7 +77,7 @@ $db['default'] = array(
 	'dsn'	=> 'mysql:dbname=protech;host=localhost',
 	'hostname' => 'localhost',
 	'username' => 'root',
-	'password' => '',
+	'password' => '4@llmyfriends',
 	'database' => 'protech',
 	'dbdriver' => 'pdo',
 	'dbprefix' => '',
