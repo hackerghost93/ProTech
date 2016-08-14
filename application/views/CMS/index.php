@@ -4,247 +4,183 @@
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <title>AGED CMS</title></title> 
 		 <?php require_once("Links.php"); ?>
+		 	<style type="text/css">
+	
+		#calendar
+		{
+			width: 900px;
+			margin: 0 auto;
+		}
+	</style>
     </head>
     <body>
         <!-- ---------------------------------sideBarLeft------ -->
         <div class="sideBarLeft">
-            <?php $this->load->view("CMS/MainSideBar.php"); ?>
+            <?php require_once("MainSideBar.php"); ?>
         </div>
         
         <!-- --------------------------------------Header----- -->
         <header>
-<?php $this->load->view("CMS/MainHeader.php"); ?>
+            <?php require_once("MainHeader.php"); ?>
         </header>
         <!------------------------------------dataSection------>
         <div class="dataSection" id="DataSectionID">
-            <h1>Welcome in AGED CMS</h1>
+            <h1>Welcome in Protech</h1>
+			    <div class="DataDiv Wide">
+                    <div class="DataDiv">
+                        <div class="box-wider-text">
+								<div id='calendar'></div>
+						</div>
+					</div>
+				</div>
         </div>
 
         <!-----------------------------------sideBarRight------>
         <nav class="sideBarRight"></nav>
 
         <!-----------------------------------------footer------>
-        <footer></footer>
-
-        <!-----------------------------------OverLayForms---- -->
-        <!----AddNewCategory--------------------------- -->
-        <div class="OverLayForm closed" id="AddNewCategoryOverlayForm">
-          <div class="container-fluid OverLayFormHeader">
-               <div class="row CustomRow">
-                   <div class="OverLayFormHeaderLeft">
-                        <h2> Add New Category </h2>
-                   </div>
-                   <div class="OverLayFormHeaderRight">
-                        <span class="fa fa-close ExitBtn"></span>
-                   </div>
-               </div>
-          </div>
-          <form>
-              <div class="container-fluid OverLayFormContent">
-                   <div class="FormSection">
-                       <div class="SectionHeader">
-                            <h3>Category Information</h3>
-                       </div>
-                       <div class="SectionContent">
-                            <div class="form-group formLayout">
-	        	                <label for="CategoryName" class="control-label ">Category Name : </label>
-                            <input type="text" name="CategoryName" class="form-control" placeholder="Category Name" />
-	                        </div>
-                            <div class="form-group formLayout">
-	        	                <label for="CategoryParent" class="control-label ">Parent : </label>
-		                        <select name="CategoryParent" class="form-control">
-                                   <option value="none">None</option>
-                            </select>
-	                        </div>
-                        </div>
-                   </div>
-              </div>
-              <div class="container-fluid OverLayFormFooter">
-                   <div class="row CustomRow">
-                       <div class="OverLayFormFooterItem right">
-                            <button type="button"class="btn btn-md OverLayFormBtn"> Save</button>
-                       </div>
-                       <div class="OverLayFormFooterItem left">
-                       
-                       </div>
-                   </div>
-              </div>
-          </form>
-        </div>
-
-        <!----EditCategory--------------------------- -->
-        <div class="OverLayForm closed" id="EditCategoryOverlayForm">
-          <div class="container-fluid OverLayFormHeader">
-               <div class="row CustomRow">
-                   <div class="OverLayFormHeaderLeft">
-                        <h2> Edit Category Payslip </h2>
-                   </div>
-                   <div class="OverLayFormHeaderRight">
-                        <span class="fa fa-close ExitBtn"></span>
-                   </div>
-               </div>
-          </div>
-          <form>
-              <div class="container-fluid OverLayFormContent">
-                   <div class="FormSection">
-                       <div class="SectionHeader">
-                            <h3>Category Information</h3>
-                       </div>
-                       <div class="SectionContent">
-                            <div class="SectionContent">
-                            <div class="form-group formLayout">
-                            <label for="Edit_CategoryName" class="control-label ">Category Name : </label>
-                            <input type="text" name="Edit_CategoryName" class="form-control" placeholder="Category Name" />
-                          </div>
-                            <div class="form-group formLayout">
-                            <label for="Edit_CategoryParent" class="control-label ">Parent : </label>
-                            <select name="Edit_CategoryParent" class="form-control">
-                                   <option value="none">None</option>
-                            </select>
-                          </div>
-                        </div>
-                        </div>
-                   </div>
-              </div>
-              <div class="container-fluid OverLayFormFooter">
-                   <div class="row CustomRow">
-                       <div class="OverLayFormFooterItem right">
-                            <button type="button"class="btn btn-md OverLayFormBtn"> Save</button>
-                       </div>
-                       <div class="OverLayFormFooterItem left">
-                       
-                       </div>
-                   </div>
-              </div>
-          </form>
-        </div>
-
-        <!----AddNewTag------------------- -->
-        <div class="OverLayForm closed" id="AddNewTagOverlayForm">
-          <div class="container-fluid OverLayFormHeader">
-               <div class="row CustomRow">
-                   <div class="OverLayFormHeaderLeft">
-                        <h2> Add Tags </h2>
-                   </div>
-                   <div class="OverLayFormHeaderRight">
-                        <span class="fa fa-close ExitBtn"></span>
-                   </div>
-               </div>
-          </div>
-          <form>
-              <div class="container-fluid OverLayFormContent">
-                   <div class="FormSection">
-                       <div class="SectionHeader">
-                            <h3>Tag Information</h3>
-                       </div>
-                       <div class="SectionContent">
-                            <div class="form-group formLayout">
-	        	                <label for="TagName" class="control-label ">Tag Name : </label>
-		                        <input type="text" name="TagName" class="form-control" placeholder="Tag Name" />
-	                        </div>
-                        </div>
-                   </div>
-              </div>
-              <div class="container-fluid OverLayFormFooter">
-                   <div class="row CustomRow">
-                       <div class="OverLayFormFooterItem right">
-                            <button type="button"class="btn btn-md OverLayFormBtn"> Creat</button>
-                       </div>
-                       <div class="OverLayFormFooterItem left">
-                       
-                       </div>
-                   </div>
-              </div>
-          </form>
-        </div>
-
-        <!----EditTag------------------- -->
-        <div class="OverLayForm closed" id="EditTagOverlayForm">
-          <div class="container-fluid OverLayFormHeader">
-               <div class="row CustomRow">
-                   <div class="OverLayFormHeaderLeft">
-                        <h2> Edit Tags </h2>
-                   </div>
-                   <div class="OverLayFormHeaderRight">
-                        <span class="fa fa-close ExitBtn"></span>
-                   </div>
-               </div>
-          </div>
-          <form>
-              <div class="container-fluid OverLayFormContent">
-                   <div class="FormSection">
-                       <div class="SectionHeader">
-                            <h3>Tag Information</h3>
-                       </div>
-                       <div class="SectionContent">
-                            <div class="form-group formLayout">
-                            <label for="Edit_TagName" class="control-label ">Tag Name : </label>
-                            <input type="text" name="Edit_TagName" class="form-control" placeholder="Tag Name" />
-                          </div>
-                        </div>
-                   </div>
-              </div>
-              <div class="container-fluid OverLayFormFooter">
-                   <div class="row CustomRow">
-                       <div class="OverLayFormFooterItem right">
-                            <button type="button"class="btn btn-md OverLayFormBtn"> Creat</button>
-                       </div>
-                       <div class="OverLayFormFooterItem left">
-                       
-                       </div>
-                   </div>
-              </div>
-          </form>
-        </div>
-
-
-        <!------------------------------------DeleteModals---- -->
-        <!----DeleteCategory---------------------------- -->
-        <div class="modal fade CustomModal" id="DeleteCategoryModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              </div>
-              <form id="ForgotPassForm" method="post">
-                  <div class="modal-body">
-                        <h1>Delete Category</h1>
-                        <p>Are you sure that you need to delete this Data ?</p>
-                        <div class="form-group formLayout" hidden>
-		        			 <input type="text" name="RecoredId" class="form-control" placeholder="RecoredId"/>
-	       				</div>
-                  </div>
-                  <div class="modal-footer">
-                        <button class="btn customBtn"> Delete</button>
-                  </div>
-              </form>
-            </div>
-          </div>
-        </div>
-        <!----DeleteTag------------------------------>
-        <div class="modal fade CustomModal" id="DeleteTagModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              </div>
-              <form id="ForgotPassForm" method="post">
-                  <div class="modal-body">
-                        <h1>Delete Tag</h1>
-                        <p>Are you sure that you need to delete this Data ?</p>
-                        <div class="form-group formLayout" hidden>
-		        			 <input type="text" name="RecoredId" class="form-control" placeholder="RecoredId"/>
-	       				</div>
-                  </div>
-                  <div class="modal-footer">
-                        <button class="btn customBtn"> Delete</button>
-                  </div>
-              </form>
-            </div>
-          </div>
-        </div>
-        
+        <footer></footer>  
         <!----------------------------------------scripts------>
-  <?php $this->load->view('CMS/Scripts');  ?>
+   <?php require_once("Scripts.php"); ?>
+   	<script type="text/javascript">
+		
+		/*
+			jQuery document ready
+		*/
+		
+		$(document).ready(function()
+		{
+			/*
+				date store today date.
+				d store today date.
+				m store current month.
+				y store current year.
+			*/
+			var date = new Date();
+			var d = date.getDate();
+			var m = date.getMonth();
+			var y = date.getFullYear();
+			
+			/*
+				Initialize fullCalendar and store into variable.
+				Why in variable?
+				Because doing so we can use it inside other function.
+				In order to modify its option later.
+			*/
+			
+			var calendar = $('#calendar').fullCalendar(
+			{
+				/*
+					header option will define our calendar header.
+					left define what will be at left position in calendar
+					center define what will be at center position in calendar
+					right define what will be at right position in calendar
+				*/
+				header:
+				{
+					left: 'prev,next today',
+					center: 'title',
+					right: 'month,agendaWeek,agendaDay'
+				},
+				/*
+					defaultView option used to define which view to show by default,
+					for example we have used agendaWeek.
+				*/
+				defaultView: 'agendaWeek',
+				/*
+					selectable:true will enable user to select datetime slot
+					selectHelper will add helpers for selectable.
+				*/
+				selectable: true,
+				selectHelper: true,
+				/*
+					when user select timeslot this option code will execute.
+					It has three arguments. Start,end and allDay.
+					Start means starting time of event.
+					End means ending time of event.
+					allDay means if events is for entire day or not.
+				*/
+				select: function(start, end, allDay)
+				{
+					/*
+						after selection user will be promted for enter title for event.
+					*/
+					var title = prompt('Event Title:');
+					/*
+						if title is enterd calendar will add title and event into fullCalendar.
+					*/
+					if (title)
+					{
+						calendar.fullCalendar('renderEvent',
+							{
+								title: title,
+								start: start,
+								end: end,
+								allDay: allDay
+							},
+							true // make the event "stick"
+						);
+					}
+					calendar.fullCalendar('unselect');
+				},
+				/*
+					editable: true allow user to edit events.
+				*/
+				editable: true,
+				/*
+					events is the main option for calendar.
+					for demo we have added predefined events in json object.
+				*/
+				events: [
+					{
+						title: 'All Day Event',
+						start: new Date(y, m, 1)
+					},
+					{
+						title: 'Long Event',
+						start: new Date(y, m, d-5),
+						end: new Date(y, m, d-2)
+					},
+					{
+						id: 999,
+						title: 'Repeating Event',
+						start: new Date(y, m, d-3, 16, 0),
+						allDay: false
+					},
+					{
+						id: 999,
+						title: 'Repeating Event',
+						start: new Date(y, m, d+4, 16, 0),
+						allDay: false
+					},
+					{
+						title: 'Meeting',
+						start: new Date(y, m, d, 10, 30),
+						allDay: false
+					},
+					{
+						title: 'Lunch',
+						start: new Date(y, m, d, 12, 0),
+						end: new Date(y, m, d, 14, 0),
+						allDay: false
+					},
+					{
+						title: 'Birthday Party',
+						start: new Date(y, m, d+1, 19, 0),
+						end: new Date(y, m, d+1, 22, 30),
+						allDay: false
+					},
+					{
+						title: 'Click for Google',
+						start: new Date(y, m, 28),
+						end: new Date(y, m, 29),
+						url: 'http://google.com/'
+					}
+				]
+			});
+			
+		});
+
+	</script>
     </body>
 </html>

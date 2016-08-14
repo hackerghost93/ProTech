@@ -2,7 +2,9 @@
                 <li class="sideMenuHeader">
                     <a><span class="fa fa-user-secret"></span></a>
                 </li>
-            
+                <li class="sideMenuItem">
+                    <a href="<?php echo base_url()?>index.php/CMSHome" data-toggle="tooltip" data-placement="right" class="SMenuItem " title="Home" id="SMI-Home"><span class="fa fa-home"></span></a>
+                </li>            
                 <li class="sideMenuItem">
                     <a href="<?php echo base_url()?>index.php/Family" data-toggle="tooltip" data-placement="right" class="SMenuItem " title="Family" id="SMI-Family">
                 <span class="fa fa-sitemap" aria-hidden="true"></span></a>
