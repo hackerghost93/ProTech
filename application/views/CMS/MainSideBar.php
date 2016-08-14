@@ -28,7 +28,7 @@
                     <span class="fa fa-flag" aria-hidden="true"></span></a>
                 </li>   
                 <li class="sideMenuItem">
-                    <a href="Customers.php" data-toggle="tooltip" data-placement="right" class="SMenuItem " title="Customers" id="SMI-Customers">
+                    <a href="<?php echo base_url()?>index.php/Customers" data-toggle="tooltip" data-placement="right" class="SMenuItem " title="Customers" id="SMI-Customers">
                     <span class="fa fa-users" aria-hidden="true"></span></a>
                 </li>
                 <li class="sideMenuItem">

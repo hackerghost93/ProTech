@@ -59,13 +59,18 @@
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        <tr>
-                                                          <td>1</td>
-                                                          <td>Cloudy</td>
-                                                          <td><img src="_/images/3215.png" class="prodimg"></td>
-                                                          <td class='check-col tableAdmin'><a href='#' class='editeBtn' id="EditNewCustomersShow" data-placement='right'><span class='fa fa-gear'></span></a></td>
-                                                          <td class='check-col tableAdmin'><a href='#' class='deleteBtn'  data-target='#DeleteCustomerModal' data-toggle='modal' title='delete' data-placement='right'><span class='fa fa-trash'></span></a></td>
-                                                        </tr> 
+<?php
+if(isset($results))
+{
+   foreach ($results as $object) {
+   echo "<tr><td>$object->partner_id</td><td>$object->partner_name</td><td><img src='object->partner_image' class='prodimg'>
+   </td><td class='check-col tableAdmin'><a href='#' onclick='SetEditData($object->partner_id)
+'class='editeBtn' id='EditNewCustomersShow' data-placement='right'><span class='fa fa-gear'></span></a></td>
+   <td class='check-col tableAdmin'><a href='#' onclick='SetCustomerID($object->partner_id)' class='deleteBtn'  data-target='#DeleteCustomerModal' data-toggle='modal' title='delete' data-placement='right'><span class='fa fa-trash'></span></a></td></tr>";
+ }
+}
+ ?>
+                                                
                                                     </tbody>
                                              </table>
                                       </div>
@@ -118,7 +123,7 @@
                    </div>
                </div>
           </div>
-          <form>
+          <form method="POST" action="<?=base_url()?>index.php/Customers/ADD">
               <div class="container-fluid OverLayFormContent">
                    <div class="FormSection">
                        <div class="SectionHeader">
@@ -141,7 +146,7 @@
               <div class="container-fluid OverLayFormFooter">
                    <div class="row CustomRow">
                        <div class="OverLayFormFooterItem right">
-                            <button type="button"class="btn btn-md OverLayFormBtn"> Creat</button>
+                            <button type="submit"class="btn btn-md OverLayFormBtn"> Create</button>
                        </div>
                        <div class="OverLayFormFooterItem left">
                        
@@ -163,20 +168,24 @@
                    </div>
                </div>
           </div>
-          <form>
+          <form method="post" action="<?=base_url()?>index.php/Customers/edit">
 			<div class="container-fluid OverLayFormContent">
                    <div class="FormSection">
                        <div class="SectionHeader">
                             <h3>Customers Information</h3>
                        </div>
                         <div class="SectionContent ">
+              <div class="form-group formLayout">
+                <label for="EditCutomerID" class="control-label ">Customers ID : </label>
+                <input type="text" name="EditCutomerID" id="EditCutomerID" class="form-control" readonly />
+              </div>
 							<div class="form-group formLayout">
 								<label for="EditCutomerTitle" class="control-label ">Customers Title : </label>
-								<input type="text" name="EditCutomerTitle" class="form-control" placeholder="Customers Title" />
+								<input type="text" name="EditCutomerTitle" id="EditCutomerTitle" class="form-control" placeholder="Customers Title" />
 							</div>
 							 <div class="form-group formLayout">
-								<label for="EditCutomerLogo" class="control-label ">Upload Cutomer Logo: </label>
-								<input type="file" name="EditCutomerLogo" class="form-control " />
+								<label for="EditCutomerLogo" class="control-label " >Upload Cutomer Logo: </label>
+								<input type="file" name="EditCutomerLogo" id="EditCutomerLogo" class="form-control " required />
 							 </div>	
 						</div>
                    </div>
@@ -186,7 +195,7 @@
               <div class="container-fluid OverLayFormFooter">
                    <div class="row CustomRow">
                        <div class="OverLayFormFooterItem right">
-                            <button type="button"class="btn btn-md OverLayFormBtn"> Creat</button>
+                            <button type="submit"class="btn btn-md OverLayFormBtn"> Update </button>
                        </div>
                        <div class="OverLayFormFooterItem left">
                        
@@ -204,16 +213,16 @@
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
               </div>
-              <form id="ForgotPassForm" method="post">
+              <form id="ForgotPassForm" method="POST" action="<?=base_url()?>index.php/Customers/Delete">
                   <div class="modal-body">
                         <h1>Delete Customers</h1>
                         <p>Are you sure that you need to delete this Data ?</p>
-                        <div class="form-group formLayout" hidden>
-		        			 <input type="text" name="RecoredId" class="form-control" placeholder="RecoredId"/>
+                        <div class="form-group formLayout" >
+		        			 <input type="text" name="RecoredId" id="RecoredId" class="form-control" placeholder="RecoredId" readonly />
 	       				</div>
                   </div>
                   <div class="modal-footer">
-                        <button class="btn customBtn"> Delete</button>
+                        <button type="submit"class="btn customBtn"> Delete</button>
                   </div>
               </form>
             </div>
@@ -222,5 +231,22 @@
 
         <!----------------------------------------scripts------>
  	<?php $this->load->view('CMS/Scripts');  ?>
+  <script type="text/javascript">
+   function SetCustomerID(id)
+    {
+      var ID=id;
+      document.getElementById("RecoredId").value=ID;
+    }
+    function SetEditData(id)
+    {
+      var ID=id;
+      $.post('Customers/GetEditedData',{ID:ID},function(data)
+          {
+            $("#EditCutomerID").val(data.partner_id);
+            $("#EditCutomerTitle").val(data.partner_name);
+            $("#EditCutomerLogo").val(data.partner_image);
+          },'json');
+    }
+  </script>
     </body>
 </html>

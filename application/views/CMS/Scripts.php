@@ -30,4 +30,3 @@
           e.style.display = 'block';
     }
     </script>
-  fullcalendar.min
