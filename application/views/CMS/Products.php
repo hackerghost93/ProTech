@@ -10,12 +10,12 @@
     <body>
         <!-- ---------------------------------sideBarLeft------ -->
         <div class="sideBarLeft">
-            <?php require_once("MainSideBar.php"); ?>
+            <?php $this->load->view("CMS/MainSideBar.php"); ?>
         </div>
         
         <!-- --------------------------------------Header----- -->
         <header>
-            <?php require_once("MainHeader.php"); ?>
+           <?php $this->load->view("CMS/MainHeader.php"); ?>
         </header>
         <!------------------------------------dataSection------>
         <div class="dataSection">
@@ -426,11 +426,7 @@
           </div>
         </div>
         <!----------------------------------------scripts------>
-        <script src="<?=base_url()?>js/cms/js/jquery-1.12.1.min.js"></script>
-		<script src="<?=base_url()?>js/cms/js/tinymce/tinymce.min.js"></script>
-        <script src="<?=base_url()?>js/cms/js/bootstrap.min.js"></script>
-        <script src="<?=base_url()?>js/cms/js/ProjectScripts.js"></script>
-        <script src="<?=base_url()?>js/cms/js/test.js"></script>
+        <?php $this->load->view('CMS/Scripts');  ?>
 		<script>
 		function MyFunction(){
 		 var e = document.getElementById("ReplyMessage");

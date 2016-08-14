@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <title>Protech CMS : Login</title> 
-		 <?php require_once("Links.php"); ?>
+		 <?php $this->load->view('CMS/Links');  ?>
 	<style>
 
 	</style>
@@ -20,19 +20,22 @@
 		    <div class="col-md-2 border2"></div>
 
 		</div>
+		<form method="post" action="<?=base_url()?>index.php/Login/log">
 		<div class="login">
 			<div class="form-group formLayout">
-				<label for="Email" class="control-label loginform">Email: </label>
-				<input type="text" name="Email" class="form-control" placeholder="Email">
+				<label for="Email" class="control-label loginform">User Name: </label>
+				<input type="text" name="user_name" class="form-control" placeholder="user name">
 			</div>
 			<div class="form-group formLayout">
 				<label for="Password" class="control-label loginform">Password : </label>
-				<input type="text" name="Password" class="form-control" placeholder="Password">
+				<input type="password" name="Password" class="form-control" placeholder="Password">
 			</div>
 			<div class="form-group formLayout">
 				<button type="submit" class="loginsubmit">Submit</button>
 			</div>
 		 </div>
+		 </form>
+		 <?php if(isset($state)){ echo "<h3 style='color:black'> $state </h3>"; } ?>
     </div>
 	
 
@@ -40,7 +43,7 @@
         <!------------------------------------DeleteModals---- -->
 
         <!----------------------------------------scripts------>
-	<?php require_once("Scripts.php"); ?>
+	 <?php $this->load->view('CMS/Scripts');  ?>
 
 </div>
   <script>

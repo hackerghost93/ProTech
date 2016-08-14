@@ -9,26 +9,21 @@ class Login extends CI_Controller {
 	}
 	public function log()
 	{
-		if($this->input->post("username") == null || $this->input->post("username") == "")
+		if($this->input->post("user_name") == null || $this->input->post("user_name") == "")
 		{
-			//	redirect("Login");
+				redirect("Login");
 		}
-		if($this->input->post("password") == null || $this->input->post("password") == "")
+		if($this->input->post("Password") == null || $this->input->post("Password") == "")
 		{
-			//	redirect("Login");
+				redirect("Login");
 		}
-		$username = $this->input->post("username");
+		$username = $this->input->post("user_name");
 		$password = md5($this->input->post("password"));
 		$result = $this->Awd_Model->Login($username,$password);
 		if($result == false )
 		{
 			$data["state"] = "wrong username or password";
-			echo json_encode($data);
-		}
-		else if($result->active == 0)
-		{
-			$data["state"] = "not activated";
-			echo json_encode($data);
+			$this->load->view('CMS/login',$data);
 		}
 		else{
 			$data["statue"]="success";

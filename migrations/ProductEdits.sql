@@ -1,0 +1,2 @@
+ALTER TABLE `printers` DROP FOREIGN KEY `printers_ibfk_1`; ALTER TABLE `printers` ADD CONSTRAINT `printers_ibfk_1` FOREIGN KEY (`family_id`) REFERENCES `protech`.`families`(`family_id`) ON DELETE SET NULL ON UPDATE CASCADE;
+ALTER TABLE `parts` DROP FOREIGN KEY `parts_ibfk_1`; ALTER TABLE `parts` ADD CONSTRAINT `parts_ibfk_1` FOREIGN KEY (`family_id`) REFERENCES `protech`.`families`(`family_id`) ON DELETE SET NULL ON UPDATE CASCADE;

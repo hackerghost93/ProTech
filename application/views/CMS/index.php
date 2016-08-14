@@ -8,12 +8,12 @@
     <body>
         <!-- ---------------------------------sideBarLeft------ -->
         <div class="sideBarLeft">
-            <?php require_once("MainSideBar.php"); ?>
+            <?php $this->load->view("CMS/MainSideBar.php"); ?>
         </div>
         
         <!-- --------------------------------------Header----- -->
         <header>
-            <?php require_once("MainHeader.php"); ?>
+<?php $this->load->view("CMS/MainHeader.php"); ?>
         </header>
         <!------------------------------------dataSection------>
         <div class="dataSection" id="DataSectionID">
@@ -245,6 +245,6 @@
         </div>
         
         <!----------------------------------------scripts------>
-   <?php require_once("Scripts.php"); ?>
+  <?php $this->load->view('CMS/Scripts');  ?>
     </body>
 </html>

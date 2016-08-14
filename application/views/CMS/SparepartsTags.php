@@ -10,12 +10,12 @@
     <body onload="GetAllProducts()">
         <!-- ---------------------------------sideBarLeft------ -->
         <div class="sideBarLeft">
-            <?php require_once("MainSideBar.php"); ?>
+            <?php $this->load->view("CMS/MainSideBar.php"); ?>
         </div>
         
         <!-- --------------------------------------Header----- -->
         <header>
-            <?php require_once("MainHeader.php"); ?>
+           <?php $this->load->view("CMS/MainHeader.php"); ?>
         </header>
         <!------------------------------------dataSection------>
         <div class="dataSection">
@@ -177,7 +177,7 @@
         </div>
         
         <!----------------------------------------scripts------>
-        <?php $this->load->view('CMS/Scripts');  ?>
+       <?php $this->load->view('CMS/Scripts');  ?>
         <script type="text/javascript">
                 tinymce.init({
                   selector: 'textarea',

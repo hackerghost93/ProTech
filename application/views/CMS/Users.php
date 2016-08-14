@@ -12,12 +12,12 @@
     <body>
         <!-- ---------------------------------sideBarLeft------ -->
         <div class="sideBarLeft">
-            <?php require_once("MainSideBar.php"); ?>
+           <?php $this->load->view("CMS/MainSideBar.php"); ?>
         </div>
         
         <!-- --------------------------------------Header----- -->
         <header>
-            <?php require_once("MainHeader.php"); ?>
+            <?php $this->load->view("CMS/MainHeader.php"); ?>
         </header>
         <!------------------------------------dataSection------>
         <div class="dataSection">
@@ -220,10 +220,6 @@
         </div>
 
         <!----------------------------------------scripts------>
-        <script src="_/js/jquery-1.12.1.min.js"></script>
-        <script src="_/js/bootstrap.min.js"></script>
-        <script src="_/js/ProjectScripts.min.js"></script>
-        <script src="_/js/test.js"></script>
-        <script src="http://localhost:35729/livereload.js"></script>
+        <?php $this->load->view('CMS/Scripts');  ?>
     </body>
 </html>
