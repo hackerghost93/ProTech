@@ -1,5 +1,3 @@
-
-
 <!doctype html>
 <html>
 <head>
@@ -39,22 +37,22 @@
     <!-- / Yoast SEO plugin. -->
 
     <script type="text/javascript">
-     window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"<?=base_url()?>js/emoji.js"}};
-     !function(a,b,c){function d(a){var c,d,e,f=b.createElement("canvas"),g=f.getContext&&f.getContext("2d"),h=String.fromCharCode;if(!g||!g.fillText)return!1;switch(g.textBaseline="top",g.font="600 32px Arial",a){case"flag":return g.fillText(h(55356,56806,55356,56826),0,0),f.toDataURL().length>3e3;case"diversity":return g.fillText(h(55356,57221),0,0),c=g.getImageData(16,16,1,1).data,d=c[0]+","+c[1]+","+c[2]+","+c[3],g.fillText(h(55356,57221,55356,57343),0,0),c=g.getImageData(16,16,1,1).data,e=c[0]+","+c[1]+","+c[2]+","+c[3],d!==e;case"simple":return g.fillText(h(55357,56835),0,0),0!==g.getImageData(16,16,1,1).data[0];case"unicode8":return g.fillText(h(55356,57135),0,0),0!==g.getImageData(16,16,1,1).data[0]}return!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i;for(i=Array("simple","flag","unicode8","diversity"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
- </script>
- <style type="text/css">
+       window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"<?=base_url()?>js/emoji.js"}};
+       !function(a,b,c){function d(a){var c,d,e,f=b.createElement("canvas"),g=f.getContext&&f.getContext("2d"),h=String.fromCharCode;if(!g||!g.fillText)return!1;switch(g.textBaseline="top",g.font="600 32px Arial",a){case"flag":return g.fillText(h(55356,56806,55356,56826),0,0),f.toDataURL().length>3e3;case"diversity":return g.fillText(h(55356,57221),0,0),c=g.getImageData(16,16,1,1).data,d=c[0]+","+c[1]+","+c[2]+","+c[3],g.fillText(h(55356,57221,55356,57343),0,0),c=g.getImageData(16,16,1,1).data,e=c[0]+","+c[1]+","+c[2]+","+c[3],d!==e;case"simple":return g.fillText(h(55357,56835),0,0),0!==g.getImageData(16,16,1,1).data[0];case"unicode8":return g.fillText(h(55356,57135),0,0),0!==g.getImageData(16,16,1,1).data[0]}return!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i;for(i=Array("simple","flag","unicode8","diversity"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+   </script>
+   <style type="text/css">
     img.wp-smiley,
     img.emoji {
-       display: inline !important;
-       border: none !important;
-       box-shadow: none !important;
-       height: 1em !important;
-       width: 1em !important;
-       margin: 0 .07em !important;
-       vertical-align: -0.1em !important;
-       background: none !important;
-       padding: 0 !important;
-   }
+     display: inline !important;
+     border: none !important;
+     box-shadow: none !important;
+     height: 1em !important;
+     width: 1em !important;
+     margin: 0 .07em !important;
+     vertical-align: -0.1em !important;
+     background: none !important;
+     padding: 0 !important;
+ }
 </style>
 <link rel='stylesheet' id='contact-form-7-css'  href='<?=base_url()?>css/styles.css' type='text/css' media='all' />
 <link rel='stylesheet' id='contact-form-7-rtl-css'  href='<?=base_url()?>css/rtl.css' type='text/css' media='all' />
@@ -150,19 +148,19 @@
             <ul>
                 <li>
                     <a href="<?php echo base_url()?>index.php/Plan">
-                        <i><img src="imgs/tech-support-grey.png" alt=""></i>
+                        <i><img src="<?=base_url()?>imgs/tech-support-grey.png" alt=""></i>
                         <span>الدعم الفني</span>
                     </a>
                 </li>
                 <li>
                     <a href="<?php echo base_url()?>index.php/Plan">
-                        <i><img src="imgs/shopping-card-512.png" alt=""></i>
+                        <i><img src="<?=base_url()?>imgs/shopping-card-512.png" alt=""></i>
                         <span> بيع و استبدال </span>
                     </a>
                 </li>
                 <li>
                     <a href="<?php echo base_url()?>index.php/Plan">
-                        <i><img src="imgs/Icon_49-512.png" alt=""></i>
+                        <i><img src="<?=base_url()?>imgs/Icon_49-512.png" alt=""></i>
                         <span>قطع غيار </span>
                     </a>
                 </li>
@@ -178,13 +176,13 @@
             <ul>
                 <li>
                     <a href="downloads.html">
-                        <i><img src="imgs/datasheet.png" alt=""></i>
+                        <i><img src="<?=base_url()?>imgs/datasheet.png" alt=""></i>
                         <span>داتا شيت </span>
                     </a>
                 </li>
                 <li>
                     <a href="downloads.html">
-                        <i><img src="imgs/1287710488_folder_black_download512.png" alt=""></i>
+                        <i><img src="<?=base_url()?>imgs/1287710488_folder_black_download512.png" alt=""></i>
                         <span>سوفتوير</span>
                     </a>
                 </li>
@@ -197,13 +195,13 @@
             <ul>
                 <li>
                     <a href="<?php echo base_url()?>index.php/Printer/showAll">
-                        <i><img src="imgs/printer.png" alt=""></i>
+                        <i><img src="<?=base_url()?>imgs/printer.png" alt=""></i>
                         <span> الطابعات </span>
                     </a>
                 </li>
                 <li>
-                    <a href="<?php echo base_url()?>index.php/Printer/showAll">
-                        <i><img src="imgs/supp-title.png" alt=""></i>
+                    <a href="<?php echo base_url()?>index.php/Part/showAll">
+                        <i><img src="<?=base_url()?>imgs/supp-title.png" alt=""></i>
                         <span>قطع الغيار</span>
                     </a>
                 </li>
@@ -224,31 +222,31 @@
 
                 <div id="slider1" class="royalSlider rsDefault js-content">
 
-                   <div>
+                 <div>
                     <a href="products.html">
-                        <img class="rsImg" data-rstmb="imgs/4375e42c-d6c7-4d7b-909c-5b5900a08344_A.jpeg" src="imgs/3748e53f-d175-4da1-9b58-ae631f81336c_A.jpeg" alt="Weekend Deals" data-mobile-src="imgs/c7440a0a-dc63-4b96-a721-6192d40b85c6_A.jpg" />
+                        <img class="rsImg" data-rstmb="<?=base_url()?>imgs/4375e42c-d6c7-4d7b-909c-5b5900a08344_A.jpeg" src="<?=base_url()?>imgs/3748e53f-d175-4da1-9b58-ae631f81336c_A.jpeg" alt="Weekend Deals" data-mobile-src="imgs/c7440a0a-dc63-4b96-a721-6192d40b85c6_A.jpg" />
                     </a>
                 </div>
                 <div>
                     <a href="products.html">
-                        <img class="rsImg" data-rstmb="imgs/4375e42c-d6c7-4d7b-909c-5b5900a08344_A.jpeg" src="imgs/20150326015737.jpg" alt="Weekend Deals" data-mobile-src="imgs/c7440a0a-dc63-4b96-a721-6192d40b85c6_A.jpg" />
-                    </a>
-                </div>
-
-                <div>
-                    <a href="products.html">
-                        <img class="rsImg" data-rstmb="imgs/4375e42c-d6c7-4d7b-909c-5b5900a08344_A.jpeg" src="imgs/B1-L2PrintersScanners-desktop.jpg" alt="Weekend Deals" data-mobile-src="imgs/c7440a0a-dc63-4b96-a721-6192d40b85c6_A.jpg" />
+                        <img class="rsImg" data-rstmb="<?=base_url()?>imgs/4375e42c-d6c7-4d7b-909c-5b5900a08344_A.jpeg" src="<?=base_url()?>imgs/20150326015737.jpg" alt="Weekend Deals" data-mobile-src="imgs/c7440a0a-dc63-4b96-a721-6192d40b85c6_A.jpg" />
                     </a>
                 </div>
 
                 <div>
                     <a href="products.html">
-                        <img class="rsImg" data-rstmb="imgs/4375e42c-d6c7-4d7b-909c-5b5900a08344_A.jpeg" src="imgs/3748e53f-d175-4da1-9b58-ae631f81336c_A.jpeg" alt="Weekend Deals" data-mobile-src="imgs/c7440a0a-dc63-4b96-a721-6192d40b85c6_A.jpg" />
+                        <img class="rsImg" data-rstmb="<?=base_url()?>imgs/4375e42c-d6c7-4d7b-909c-5b5900a08344_A.jpeg" src="<?=base_url()?>imgs/B1-L2PrintersScanners-desktop.jpg" alt="Weekend Deals" data-mobile-src="imgs/c7440a0a-dc63-4b96-a721-6192d40b85c6_A.jpg" />
+                    </a>
+                </div>
+
+                <div>
+                    <a href="products.html">
+                        <img class="rsImg" data-rstmb="<?=base_url()?>imgs/4375e42c-d6c7-4d7b-909c-5b5900a08344_A.jpeg" src="<?=base_url()?>imgs/3748e53f-d175-4da1-9b58-ae631f81336c_A.jpeg" alt="Weekend Deals" data-mobile-src="imgs/c7440a0a-dc63-4b96-a721-6192d40b85c6_A.jpg" />
                     </a>
                 </div>
                 <div>
                     <a href="products.html">
-                        <img class="rsImg" data-rstmb="imgs/4375e42c-d6c7-4d7b-909c-5b5900a08344_A.jpeg" src="imgs/20150326015737.jpg" alt="Weekend Deals" data-mobile-src="imgs/c7440a0a-dc63-4b96-a721-6192d40b85c6_A.jpg" />
+                        <img class="rsImg" data-rstmb="<?=base_url()?>imgs/4375e42c-d6c7-4d7b-909c-5b5900a08344_A.jpeg" src="<?=base_url()?>imgs/20150326015737.jpg" alt="Weekend Deals" data-mobile-src="imgs/c7440a0a-dc63-4b96-a721-6192d40b85c6_A.jpg" />
                     </a>
                 </div>
             </div>
@@ -257,30 +255,30 @@
 
                 <div id="slider1" class="royalSlider rsDefault js-content">
 
-                   <div>
+                 <div>
                     <a href="products.html">
-                        <img class="rsImg" data-rstmb="imgs/4375e42c-d6c7-4d7b-909c-5b5900a08344_A.jpeg" src="imgs/3748e53f-d175-4da1-9b58-ae631f81336c_A.jpeg" alt="Weekend Deals" data-mobile-src="imgs/c7440a0a-dc63-4b96-a721-6192d40b85c6_A.jpg" />
+                        <img class="rsImg" data-rstmb="<?=base_url()?>imgs/4375e42c-d6c7-4d7b-909c-5b5900a08344_A.jpeg" src="<?=base_url()?>imgs/3748e53f-d175-4da1-9b58-ae631f81336c_A.jpeg" alt="Weekend Deals" data-mobile-src="imgs/c7440a0a-dc63-4b96-a721-6192d40b85c6_A.jpg" />
                     </a>
                 </div>
                 <div>
                     <a href="products.html">
-                        <img class="rsImg" data-rstmb="imgs/4375e42c-d6c7-4d7b-909c-5b5900a08344_A.jpeg" src="imgs/20150326015737.jpg" alt="Weekend Deals" data-mobile-src="imgs/c7440a0a-dc63-4b96-a721-6192d40b85c6_A.jpg" />
+                        <img class="rsImg" data-rstmb="<?=base_url()?>imgs/4375e42c-d6c7-4d7b-909c-5b5900a08344_A.jpeg" src="<?=base_url()?>imgs/20150326015737.jpg" alt="Weekend Deals" data-mobile-src="imgs/c7440a0a-dc63-4b96-a721-6192d40b85c6_A.jpg" />
                     </a>
                 </div>
                 <div>
                     <a href="products.html">
-                        <img class="rsImg" data-rstmb="imgs/4375e42c-d6c7-4d7b-909c-5b5900a08344_A.jpeg" src="imgs/B1-L2PrintersScanners-desktop.jpg" alt="Weekend Deals" data-mobile-src="imgs/c7440a0a-dc63-4b96-a721-6192d40b85c6_A.jpg" />
+                        <img class="rsImg" data-rstmb="<?=base_url()?>imgs/4375e42c-d6c7-4d7b-909c-5b5900a08344_A.jpeg" src="<?=base_url()?>imgs/B1-L2PrintersScanners-desktop.jpg" alt="Weekend Deals" data-mobile-src="imgs/c7440a0a-dc63-4b96-a721-6192d40b85c6_A.jpg" />
                     </a>
                 </div>
 
                 <div>
                     <a href="products.html">
-                        <img class="rsImg" data-rstmb="imgs/4375e42c-d6c7-4d7b-909c-5b5900a08344_A.jpeg" src="imgs/3748e53f-d175-4da1-9b58-ae631f81336c_A.jpeg" alt="Weekend Deals" data-mobile-src="imgs/c7440a0a-dc63-4b96-a721-6192d40b85c6_A.jpg" />
+                        <img class="rsImg" data-rstmb="<?=base_url()?>imgs/4375e42c-d6c7-4d7b-909c-5b5900a08344_A.jpeg" src="imgs/3748e53f-d175-4da1-9b58-ae631f81336c_A.jpeg" alt="Weekend Deals" data-mobile-src="<?=base_url()?>imgs/c7440a0a-dc63-4b96-a721-6192d40b85c6_A.jpg" />
                     </a>
                 </div>
                 <div>
                     <a href="products.html">
-                        <img class="rsImg" data-rstmb="imgs/4375e42c-d6c7-4d7b-909c-5b5900a08344_A.jpeg" src="imgs/20150326015737.jpg" alt="Weekend Deals" data-mobile-src="imgs/c7440a0a-dc63-4b96-a721-6192d40b85c6_A.jpg" />
+                        <img class="rsImg" data-rstmb="<?=base_url()?>imgs/4375e42c-d6c7-4d7b-909c-5b5900a08344_A.jpeg" src="<?=base_url()?>imgs/20150326015737.jpg" alt="Weekend Deals" data-mobile-src="imgs/c7440a0a-dc63-4b96-a721-6192d40b85c6_A.jpg" />
                     </a>
                 </div>
 
@@ -288,7 +286,7 @@
 
         </noscript>
 
-        <script src='js/p13n.js'></script>
+        <script src='<?=base_url()?>js/p13n.js'></script>
 
 
 <!-- <script>
@@ -462,47 +460,49 @@
 <!-- // Section 02 -->
 
 <!-- Section 03 -->
-<div class="Section03" id="OurWorks">
-    <div class="Grid1k">
-        <!-- Section Head -->
-        <div class="Section-Head ViewPort">
-            <img src="imgs/printer.png" alt="">
-            <h3>الطابعات الاحدث و صولا</h3>
-            <p>شاهد مجموعة من احدث الطابعات لدينا </p>
-        </div>
-        <!-- // Section Head -->
-        
-        <!-- Works -->
-        <div class="WorksSlider">
-         <div class="item">
+<?php if(isset($printers) && count($printers) > 0):?>
+    <div class="Section03" id="OurWorks">
+        <div class="Grid1k">
+            <!-- Section Head -->
+            <div class="Section-Head ViewPort">
+                <img src="<?=base_url()?>imgs/printer.png" alt="">
+                <h3>الطابعات الاحدث و صولا</h3>
+                <p>شاهد مجموعة من احدث الطابعات لدينا </p>
+            </div>
+            <!-- // Section Head -->
 
-             <?php
-            //var_dump($printers);
-             ?>
-             <!-- Work Block -->
-             <?php foreach($printers as $printer): ?>
-                <a href="<?=base_url()?>index.php/printer/show/<?=$printer['printer_id']?>" class="i_1">
-                    <div class="Work-Block">
-                        <div class="img-fill">
-                            <img width="404" height="316" src="<?=base_url().$printer['images'][0]['image_path']?>" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" 
-                            alt="printerImg" sizes="(max-width: 404px) 100vw, 404px" />                        
-                            <div class="info"><h3><?=$printer['name']?></h3></div>
+            <!-- Works -->
+            <div class="WorksSlider">
+               <div class="item">
+
+                   <?php
+                // var_dump($printers);
+                   ?>
+                   <!-- Work Block -->
+                   <?php foreach($printers as $printer): ?>
+                    <a href="<?=base_url()?>index.php/printer/show/<?=$printer['printer_id']?>" class="i_1">
+                        <div class="Work-Block">
+                            <div class="img-fill">
+                                <img width="404" height="316" src="<?=base_url().$printer['images'][0]['image_path']?>" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" 
+                                alt="printerImg" sizes="(max-width: 404px) 100vw, 404px" />                        
+                                <div class="info"><h3><?=$printer['name']?></h3></div>
+                            </div>
                         </div>
+                    </a>
+                <?php endforeach; ?>  
+
+                <div class="item" style=" border-right: 10px black !important;">
+
+                    <div class="WorkSlider-Control">
+                        <a href="products.html">مشاهدة المزيد من الطابعات</a>
                     </div>
-                </a>
-            <?php endforeach; ?>   
-
-            <div class="item" style=" border-right: 10px black !important;">
-
-                <div class="WorkSlider-Control">
-                    <a href="products.html">مشاهدة المزيد من الطابعات</a>
+                    <!-- // Works -->
                 </div>
-                <!-- // Works -->
             </div>
         </div>
     </div>
 </div>
-</div>
+<?php endif;?> 
 <!-- // Section 03 -->
 
 <!-- Section 04 -->
@@ -519,225 +519,229 @@
 <!-- // Section 04 -->
 
 <!-- Section 05 -->
-<div class="Section05" id="OurWorks">
-    <div class="Grid1k">
-        <!-- Section Head -->
-        <div class="Section-Head ViewPort">
-            <img src="imgs/icon9.png" alt="">
-            <h3>عروض خاصة</h3>
-            <p></p>
-        </div>
-        <!-- // Section Head -->
-
-        <!-- Tabs Container -->
-        <div class="tabs01">
-            <!-- Tabs Buttons -->
-            <div class="ul-out">
-                <div class="ViewPort ul">
-                    <!-- activeTab -->
-                 <?php foreach($printers as $key => $printer): ?>
-                    <div class="item">
-                        <div class="li" id="tab<?=$key?>">
-                            <span><img src="<?=base_url().$printer['images'][0]['image_path']?>" alt="">
-                                <span><?=$printer['name']?></span>
-                            </span>
-                        </div>
-                    </div>
-                    <?php endforeach; ?>
-                </div>
-
-                <div class="tabs-Control"></div>
+<?php if(isset($printers) && count($printers) > 0):?>
+    <div class="Section05" id="OurWorks">
+        <div class="Grid1k">
+            <!-- Section Head -->
+            <div class="Section-Head ViewPort">
+                <img src="<?=base_url()?>imgs/icon9.png" alt="">
+                <h3>عروض خاصة</h3>
+                <p></p>
             </div>
-            <!-- // Tabs Buttons -->
-            
-            <!-- Tabs Content's -->
-            <div class="tab_blocks_">
-            <?php foreach($printers as $key => $printer): ?>
-                <div class="tabs-content" id="tab<?=$key?>-content">
-                    <div class="Offer-Block clear-after ViewPort">
-                        <div class="info">
-                            <h2><?=$printer['name']?></h2>
-                            <?php if($printer['general_description']):?>
-                                <p><?=$printer['general_description']?> </p>
-                             <?php endif; ?>
-                                <a href="<?=base_url()?>index.php/printer/show/<?=$printer['printer_id']?>" class="more">تفاصيل العرض</a>
+            <!-- // Section Head -->
+
+            <!-- Tabs Container -->
+            <div class="tabs01">
+                <!-- Tabs Buttons -->
+                <div class="ul-out">
+                    <div class="ViewPort ul">
+                        <!-- activeTab -->
+                        <?php foreach($printers as $key => $printer): ?>
+                            <div class="item">
+                                <div class="li" id="tab<?=$key?>">
+                                    <span><img src="<?=base_url().$printer['images'][0]['image_path']?>" alt="">
+                                        <span><?=$printer['name']?></span>
+                                    </span>
+                                </div>
                             </div>
-                            <div class="image"><img src="<?=base_url().$printer['images'][0]['image_path']?>" alt="printer image"></div>
-                        </div>
+                        <?php endforeach; ?>
                     </div>
-                <?php endforeach; ?>
+
+                    <div class="tabs-Control"></div>
+                </div>
+                <!-- // Tabs Buttons -->
+
+                <!-- Tabs Content's -->
+                <div class="tab_blocks_">
+                    <?php foreach($printers as $key => $printer): ?>
+                        <div class="tabs-content" id="tab<?=$key?>-content">
+                            <div class="Offer-Block clear-after ViewPort">
+                                <div class="info">
+                                    <h2><?=$printer['name']?></h2>
+                                    <?php if($printer['general_description']):?>
+                                        <p><?=$printer['general_description']?> </p>
+                                    <?php endif; ?>
+                                    <a href="<?=base_url()?>index.php/printer/show/<?=$printer['printer_id']?>" class="more">تفاصيل العرض</a>
+                                </div>
+                                <div class="image"><img src="<?=base_url().$printer['images'][0]['image_path']?>" alt="printer image"></div>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
                 </div>
                 <!-- // Tabs Content's -->
             </div>
             <!-- // Tabs Container -->
         </div>
     </div>
-    <!-- // Section 05 -->
+<?php endif;?>
+<!-- // Section 05 -->
 
-    <!-- Section 06 -->
-    <div class="Section06 ViewPort">
-        <div class="Grid1k">
-            <div class="info">
-                <h3>فى بروتك نحرص على توفير خدمة ما بعد البيع</h3>
-                <h4>بطريقة تتيح لنا فتح جسر للتواصل بيننا وبين عملائنا بهدف كسب المزيد من الثقة في شركتنا</h4>
-                <h5>وهذه مجموعه من اراء العملاء فى خدمتنا قدمناها لكم للتأكد من مصداقيتنا</h5>
-                <a href="#">شاهد اراء العملاء</a>
-            </div>
+<!-- Section 06 -->
+<div class="Section06 ViewPort">
+    <div class="Grid1k">
+        <div class="info">
+            <h3>فى بروتك نحرص على توفير خدمة ما بعد البيع</h3>
+            <h4>بطريقة تتيح لنا فتح جسر للتواصل بيننا وبين عملائنا بهدف كسب المزيد من الثقة في شركتنا</h4>
+            <h5>وهذه مجموعه من اراء العملاء فى خدمتنا قدمناها لكم للتأكد من مصداقيتنا</h5>
+            <a href="#">شاهد اراء العملاء</a>
         </div>
     </div>
-    <!-- // Section 06 -->
+</div>
+<!-- // Section 06 -->
 
-    <!-- Section 07 -->
-    <div class="Section07" id="sec7">
-        <div class="Grid1k">
-            <!-- Section Head -->
-            <div class="Section-Head ViewPort">
-                <img src="imgs/icon15.png" alt="">
-                <h3>عملاء نفتخر بخدمتهم</h3>
-                <p>لورم ایپسوم أبجد هوز هو مجرد دمية النص من التنضيد والطباعة والصناعة من مصممي الغرافيك. الطابعات والنصوص، ولكن أيضا أعمدة الصحف والمجلات و ما هو ضروري للحالة </p>
-            </div>
-            <!-- // Section Head -->
+<!-- Section 07 -->
+<?php if(count($partners) > 0):?>
+<div class="Section07" id="sec7">
+    <div class="Grid1k">
+        <!-- Section Head -->
+        <div class="Section-Head ViewPort">
+            <img src="<?=base_url()?>imgs/icon15.png" alt="">
+            <h3>عملاء نفتخر بخدمتهم</h3>
+            <p>لورم ایپسوم أبجد هوز هو مجرد دمية النص من التنضيد والطباعة والصناعة من مصممي الغرافيك. الطابعات والنصوص، ولكن أيضا أعمدة الصحف والمجلات و ما هو ضروري للحالة </p>
+        </div>
+        <!-- // Section Head -->
 
-            <!-- Clinte's Slider -->
-            <div class="Clinte-Slider">
-                <!-- Item -->
-                <?php foreach ($partners as $partner): ?>
-                    <div class="item">
-                        <div class="theBlock">
-                            <img src="<?=base_url().$partner['partner_image']?>" alt="">
-                            <div class="info"><a href="#"><?=$partner['partner_name']?></a></div>
-                        </div>
+        <!-- Clinte's Slider -->
+        <div class="Clinte-Slider">
+            <!-- Item -->
+            <?php foreach ($partners as $partner): ?>
+                <div class="item">
+                    <div class="theBlock">
+                        <img src="<?=base_url().$partner['partner_image']?>" alt="">
+                        <div class="info"><a href="#"><?=$partner['partner_name']?></a></div>
                     </div>
-                <?php endforeach; ?>
-                <!-- // Item -->
+                </div>
+            <?php endforeach; ?>
+            <!-- // Item -->
 
-            </div>
-            <!-- // Clinte's Slider -->
         </div>
+        <!-- // Clinte's Slider -->
     </div>
-    <!-- // Section 07 -->
+</div>
+<?php endif;?>
+<!-- // Section 07 -->
 
-    <!-- Section 08 -->
-    <div class="Section08">
-        <div class="Grid1k">
-            <!-- Section Head -->
-            <div class="Section-Head ViewPort">
-                <img src="imgs/icon16.png" alt="">
-                <h3>بروتك فى سطور</h3>
+<!-- Section 08 -->
+<div class="Section08">
+    <div class="Grid1k">
+        <!-- Section Head -->
+        <div class="Section-Head ViewPort">
+            <img src="<?=base_url()?>imgs/icon16.png" alt="">
+            <h3>بروتك فى سطور</h3>
 
-                <p>
-                  لورم ایپسوم أبجد هوز هو مجرد دمية النص من التنضيد والطباعة والصناعة من مصممي الغرافيك. الطابعات والنصوص، ولكن أيضا أعمدة الصحف والمجلات و ما هو ضروري للحال لورم ایپسوم أبجد هوز هو مجرد دمية النص من التنضيد والطباعة والصناعة من مصممي الغرافيك. الطابعات والنصوص، ولكن أيضا أعمدة الصحف والمجلات و ما هو ضروري للحالة </p>
-              </div>
-              <!-- // Section Head -->
+            <p>
+              لورم ایپسوم أبجد هوز هو مجرد دمية النص من التنضيد والطباعة والصناعة من مصممي الغرافيك. الطابعات والنصوص، ولكن أيضا أعمدة الصحف والمجلات و ما هو ضروري للحال لورم ایپسوم أبجد هوز هو مجرد دمية النص من التنضيد والطباعة والصناعة من مصممي الغرافيك. الطابعات والنصوص، ولكن أيضا أعمدة الصحف والمجلات و ما هو ضروري للحالة </p>
+          </div>
+          <!-- // Section Head -->
 
-              <!-- Elnoor Online -->
-              <div class="Elnoor-I clear-after ViewPort">
+          <!-- Elnoor Online -->
+          <div class="Elnoor-I clear-after ViewPort">
+            <!-- Item -->
+            <div class="Elnoor-Block">
+                <img src="<?=base_url()?>imgs/icon19.png" alt="">
+                <h3>لورم ایپسوم أبجد هوز هو مجرد دمية النص من التنضيد والطباعة والصناعة من مصممي الغرافيك.</h3>
+            </div>
+            <!-- // Item -->
+            <!-- Right -->
+            <div class="Right-Blocks">
                 <!-- Item -->
                 <div class="Elnoor-Block">
-                    <img src="imgs/icon19.png" alt="">
+                    <img src="<?=base_url()?>imgs/icon19.png" alt="">
                     <h3>لورم ایپسوم أبجد هوز هو مجرد دمية النص من التنضيد والطباعة والصناعة من مصممي الغرافيك.</h3>
                 </div>
                 <!-- // Item -->
-                <!-- Right -->
-                <div class="Right-Blocks">
-                    <!-- Item -->
-                    <div class="Elnoor-Block">
-                        <img src="imgs/icon19.png" alt="">
-                        <h3>لورم ایپسوم أبجد هوز هو مجرد دمية النص من التنضيد والطباعة والصناعة من مصممي الغرافيك.</h3>
-                    </div>
-                    <!-- // Item -->
-                    <!-- Item -->
-                    <div class="Elnoor-Block">
-                        <img src="imgs/icon19.png" alt="">
-                        <h3>لورم ایپسوم أبجد هوز هو مجرد دمية النص من التنضيد والطباعة والصناعة من مصممي الغرافيك.</h3>
-                    </div>
-                    <!-- // Item -->
-                </div>
-                <!-- // Right -->
-
-                <!-- Center -->
-                <div class="Center-Block"></div>
-                <!-- // Center -->
-
-                <!-- Left -->
-                <div class="Left-Blocks">
-                    <!-- Item -->
-                    <div class="Elnoor-Block">
-                        <img src="imgs/icon19.png" alt="">
-                        <h3>لورم ایپسوم أبجد هوز هو مجرد دمية النص من التنضيد والطباعة والصناعة من مصممي الغرافيك.</h3>
-                    </div>
-                    <!-- // Item -->
-                    <!-- Item -->
-                    <div class="Elnoor-Block">
-                        <img src="imgs/icon19.png" alt="">
-                        <h3>لورم ایپسوم أبجد هوز هو مجرد دمية النص من التنضيد والطباعة والصناعة من مصممي الغرافيك.</h3>
-                    </div>
-                    <!-- // Item -->
-                </div>
-                <!-- // Left -->
-                <span class="clear"></span>
                 <!-- Item -->
                 <div class="Elnoor-Block">
-                    <img src="imgs/icon19.png" alt="">
+                    <img src="<?=base_url()?>imgs/icon19.png" alt="">
                     <h3>لورم ایپسوم أبجد هوز هو مجرد دمية النص من التنضيد والطباعة والصناعة من مصممي الغرافيك.</h3>
                 </div>
                 <!-- // Item -->
             </div>
-            <!-- // Elnoor Online -->
+            <!-- // Right -->
+
+            <!-- Center -->
+            <div class="Center-Block"></div>
+            <!-- // Center -->
+
+            <!-- Left -->
+            <div class="Left-Blocks">
+                <!-- Item -->
+                <div class="Elnoor-Block">
+                    <img src="<?=base_url()?>imgs/icon19.png" alt="">
+                    <h3>لورم ایپسوم أبجد هوز هو مجرد دمية النص من التنضيد والطباعة والصناعة من مصممي الغرافيك.</h3>
+                </div>
+                <!-- // Item -->
+                <!-- Item -->
+                <div class="Elnoor-Block">
+                    <img src="<?=base_url()?>imgs/icon19.png" alt="">
+                    <h3>لورم ایپسوم أبجد هوز هو مجرد دمية النص من التنضيد والطباعة والصناعة من مصممي الغرافيك.</h3>
+                </div>
+                <!-- // Item -->
+            </div>
+            <!-- // Left -->
+            <span class="clear"></span>
+            <!-- Item -->
+            <div class="Elnoor-Block">
+                <img src="<?=base_url()?>imgs/icon19.png" alt="">
+                <h3>لورم ایپسوم أبجد هوز هو مجرد دمية النص من التنضيد والطباعة والصناعة من مصممي الغرافيك.</h3>
+            </div>
+            <!-- // Item -->
+        </div>
+        <!-- // Elnoor Online -->
+    </div>
+</div>
+<!-- // Section 08 -->
+
+<!-- Section 09 -->
+<div class="Section09">
+    <div class="Grid1k">
+        <!-- Contact Area -->
+        <div class="ContactArea clear-after ViewPort">
+            <div class="Center"><img src="<?=base_url()?>imgs/icon26.png" alt=""></div>
+            <div class="Right clear-after">
+                <img src="<?=base_url()?>imgs/icon24.png" alt="">
+                <div class="info">
+                    <div><h3>002-00000000000</h3>
+                        <h5>متاح واتس اب - فايبر - لاين</h5></div>
+                    </div>
+                </div>
+                <div class="Left clear-after">
+                    <img src="<?=base_url()?>imgs/icon25.png" alt="">
+                    <div class="info"><h3>info@AgedSystems.com</h3></div>
+                </div>
+            </div>
+            <!-- // Contact Area -->
         </div>
     </div>
-    <!-- // Section 08 -->
+    <!-- // Section 09 -->
 
-    <!-- Section 09 -->
-    <div class="Section09">
-        <div class="Grid1k">
-            <!-- Contact Area -->
-            <div class="ContactArea clear-after ViewPort">
-                <div class="Center"><img src="imgs/icon26.png" alt=""></div>
-                <div class="Right clear-after">
-                    <img src="imgs/icon24.png" alt="">
-                    <div class="info">
-                        <div><h3>002-00000000000</h3>
-                            <h5>متاح واتس اب - فايبر - لاين</h5></div>
-                        </div>
-                    </div>
-                    <div class="Left clear-after">
-                        <img src="imgs/icon25.png" alt="">
-                        <div class="info"><h3>info@AgedSystems.com</h3></div>
-                    </div>
+    <footer>
+        <div class="News-Slider">
+            <div class="Grid1k clear-after">
+                <div class="Title"> احدث العروض</div>
+                <div class="TheSlider">
+
                 </div>
-                <!-- // Contact Area -->
+                <div class="Control clear-after">
+                    <a href="products.html" class="more">المزيد من المنتجات</a>
+                </div>
             </div>
         </div>
-        <!-- // Section 09 -->
-
-        <footer>
-            <div class="News-Slider">
-                <div class="Grid1k clear-after">
-                    <div class="Title"> احدث العروض</div>
-                    <div class="TheSlider">
-
-                    </div>
-                    <div class="Control clear-after">
-                        <a href="products.html" class="more">المزيد من المنتجات</a>
-                    </div>
-                </div>
+        <div class="Footer-Container Grid1k">
+            <div class="Contact-Info">
+                <h3>اتصل بنا</h3>
+                <h4>002-00000000</h4>
+                <h4>ProTech</h4>
+                <h4>002-00-0000000</h4>
+                <h4>002-0000000000</h4>
             </div>
-            <div class="Footer-Container Grid1k">
-                <div class="Contact-Info">
-                    <h3>اتصل بنا</h3>
-                    <h4>002-00000000</h4>
-                    <h4>ProTech</h4>
-                    <h4>002-00-0000000</h4>
-                    <h4>002-0000000000</h4>
-                </div>
-                <div class="SendMail">
-                    <h3>القائمة البريدية</h3>
-                    <p>سجل بريدك الالكترونى لدينا للحصول على اخر العروض الخاصة المتاحة و اخر اخبار الشركة</p>
+            <div class="SendMail">
+                <h3>القائمة البريدية</h3>
+                <p>سجل بريدك الالكترونى لدينا للحصول على اخر العروض الخاصة المتاحة و اخر اخبار الشركة</p>
 
 
 
-                    <script type="text/javascript">
+                <script type="text/javascript">
 //<![CDATA[
 if (typeof newsletter_check !== "function") {
     window.newsletter_check = function (f) {
@@ -803,20 +807,20 @@ if (typeof newsletter_check !== "function") {
 </div>
 </div>
 <div class="big-menu-overly"></div>
-<script type='text/javascript' src='js/form-jquery.js'></script>
+<script type='text/javascript' src='<?=base_url()?>js/form-jquery.js'></script>
 <script type='text/javascript'>
     /* <![CDATA[ */
-    var _wpcf7 = {"loaderUrl":"imgs/ajax-loader.gif","sending":"\u062c\u0627\u0631\u064a \u0627\u0644\u0625\u0631\u0633\u0627\u0644 ..."};
+    var _wpcf7 = {"loaderUrl":"<?=base_url()?>imgs/ajax-loader.gif","sending":"\u062c\u0627\u0631\u064a \u0627\u0644\u0625\u0631\u0633\u0627\u0644 ..."};
     /* ]]> */
 </script>
-<script type='text/javascript' src='js/newscripta.js'></script>
+<script type='text/javascript' src='<?=base_url()?>js/newscripta.js'></script>
 
-<script type='text/javascript' src='js/assest.js'></script>
+<script type='text/javascript' src='<?=base_url()?>js/assest.js'></script>
 <script type='text/javascript' src='//www.google.com/recaptcha/api.js?onload=onloadCallback&#038;render=explicit&#038;ver=1'></script>
-<script type='text/javascript' src='js/embed.js'></script>
-<script src="js/jquery.min.js"></script>
-<script src="js/scripts.js"></script>
-<script src="js/ea-scripts.js"></script>
+<script type='text/javascript' src='<?=base_url()?>js/embed.js'></script>
+<script src="<?=base_url()?>js/jquery.min.js"></script>
+<script src="<?=base_url()?>js/scripts.js"></script>
+<script src="<?=base_url()?>js/ea-scripts.js"></script>
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -837,6 +841,6 @@ if (typeof newsletter_check !== "function") {
     });
 </script>
 
-<script type="text/javascript" src="js/subscribe.js"></script>
+<script type="text/javascript" src="<?=base_url()?>js/subscribe.js"></script>
 </body>
 </html>

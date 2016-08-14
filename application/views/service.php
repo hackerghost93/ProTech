@@ -193,7 +193,7 @@ img.emoji {
                 </a>
             </li>
             <li>
-                <a href="<?php echo base_url()?>index.php/Printer/showAll">
+                <a href="<?php echo base_url()?>index.php/Part/showAll">
                     <i><img src="imgs/supp-title.png" alt=""></i>
                     <span>قطع الغيار</span>
                 </a>

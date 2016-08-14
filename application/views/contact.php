@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="shortcut icon" href="imgs/PT.png" />
+<link rel="shortcut icon" href="<?=image_url()?>PT.png" />
 
 <!-- Calling Css & Js Files -->
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/stylesheet.css">
@@ -143,19 +143,19 @@ img.emoji {
         <ul>
             <li>
                 <a href="<?php echo base_url()?>index.php/Plan">
-                    <i><img src="<?=base_url()?>imgs/tech-support-grey.png" alt=""></i>
+                    <i><img src="<?=base_url()?><?=image_url()?>tech-support-grey.png" alt=""></i>
                     <span>الدعم الفني</span>
                 </a>
             </li>
             <li>
                 <a href="<?php echo base_url()?>index.php/Plan">
-                    <i><img src="<?=base_url()?>imgs/shopping-card-512.png" alt=""></i>
+                    <i><img src="<?=base_url()?><?=image_url()?>shopping-card-512.png" alt=""></i>
                     <span> بيع و استبدال </span>
                 </a>
             </li>
             <li>
                 <a href="<?php echo base_url()?>index.php/Plan">
-                    <i><img src="<?=base_url()?>imgs/Icon_49-512.png" alt=""></i>
+                    <i><img src="<?=base_url()?><?=image_url()?>Icon_49-512.png" alt=""></i>
                     <span>قطع غيار </span>
                 </a>
             </li>
@@ -171,13 +171,13 @@ img.emoji {
         <ul>
             <li>
                 <a href="downloads.html">
-                    <i><img src="<?=base_url()?>imgs/datasheet.png" alt=""></i>
+                    <i><img src="<?=base_url()?><?=image_url()?>datasheet.png" alt=""></i>
                     <span>داتا شيت </span>
                 </a>
             </li>
             <li>
                 <a href="downloads.html">
-                    <i><img src="<?=base_url()?>imgs/1287710488_folder_black_download512.png" alt=""></i>
+                    <i><img src="<?=base_url()?><?=image_url()?>1287710488_folder_black_download512.png" alt=""></i>
                     <span>سوفتوير</span>
                 </a>
             </li>
@@ -190,13 +190,13 @@ img.emoji {
         <ul>
             <li>
                 <a href="<?php echo base_url()?>index.php/Printer/showAll">
-                    <i><img src="<?=base_url()?>imgs/printer.png" alt=""></i>
+                    <i><img src="<?=base_url()?><?=image_url()?>printer.png" alt=""></i>
                     <span> الطابعات </span>
                 </a>
             </li>
             <li>
-                <a href="<?php echo base_url()?>index.php/Printer/showAll">
-                    <i><img src="<?=base_url()?>imgs/supp-title.png" alt=""></i>
+                <a href="<?php echo base_url()?>index.php/Part/showAll">
+                    <i><img src="<?=base_url()?><?=image_url()?>supp-title.png" alt=""></i>
                     <span>قطع الغيار</span>
                 </a>
             </li>
@@ -212,7 +212,7 @@ img.emoji {
         <div class="page_nav contact-page">
         <div class="Grid1k">
             <i class="page_left-icon2">
-                <img width="414" height="289" src="imgs/contct.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="imgs/contct.png 414w, imgs/contct.png 300w" sizes="(max-width: 414px) 100vw, 414px" /></i>
+                <img width="414" height="289" src="<?=image_url()?>contct.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt=""  sizes="(max-width: 414px) 100vw, 414px" /></i>
             <div class="page_title">
                 <h2>تواصل معنا</h2>
               
@@ -274,16 +274,16 @@ img.emoji {
     <div class="Grid1k">
         <!-- Contact Area -->
         <div class="ContactArea clear-after ViewPort">
-            <div class="Center"><img src="imgs/icon26.png" alt=""></div>
+            <div class="Center"><img src="<?=image_url()?>icon26.png" alt=""></div>
             <div class="Right clear-after">
-                <img src="imgs/icon24.png" alt="">
+                <img src="<?=image_url()?>icon24.png" alt="">
                 <div class="info">
                     <div><h3>002-00000000000</h3>
                     <h5>متاح واتس اب - فايبر - لاين</h5></div>
                 </div>
             </div>
             <div class="Left clear-after">
-                <img src="imgs/icon25.png" alt="">
+                <img src="<?=image_url()?>icon25.png" alt="">
                 <div class="info"><h3>info@AgedSystems.com</h3></div>
             </div>
         </div>
@@ -387,7 +387,7 @@ window.newsletter_check = function (f) {
 <script type='text/javascript' src='<?php echo base_url();?>js/form-jquery.js'></script>
 <script type='text/javascript'>
 /* <![CDATA[ */
-var _wpcf7 = {"loaderUrl":"imgs/ajax-loader.gif","sending":"\u062c\u0627\u0631\u064a \u0627\u0644\u0625\u0631\u0633\u0627\u0644 ..."};
+var _wpcf7 = {"loaderUrl":"<?=image_url()?>ajax-loader.gif","sending":"\u062c\u0627\u0631\u064a \u0627\u0644\u0625\u0631\u0633\u0627\u0644 ..."};
 /* ]]> */
 </script>
 <script type='text/javascript' src='<?php echo base_url();?>js/newscripta.js'></script>
