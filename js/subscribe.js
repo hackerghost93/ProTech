@@ -9,6 +9,7 @@ $('#subscribeMail').submit(function(event)
 		if(data.state == 'success')
 		{
 			console.log('successfuly subscribed');
+			$target.find('.newsletter-email').val("successfuly subscribed");
 		}
 		else
 		{

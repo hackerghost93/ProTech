@@ -20,7 +20,7 @@ class MY_Model extends CI_Model
 		return $this->db->get($this->table_name)->result_array();
 	}
 
-	protected function images($product_id,$condition)
+	function images($product_id,$condition)
 	{
 		$this->db->select('image_path');
 		$this->db->where($condition);

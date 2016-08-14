@@ -9,6 +9,7 @@ class Printer extends MY_Controller
 	function __construct()
 	{
 		parent::__construct('printer_model');
+		$this->condition = "printer_id" ;
 	}
 
 	function index()
@@ -18,12 +19,6 @@ class Printer extends MY_Controller
 		$data['printers'] = $this->getImages($this->getAll());
 		$data['partners'] = $this->partner_model->getAll();
 		$this->load->view('hackerindex' , $data);	
-	}
-
-	function selectAll()
-	{
-		$data['type'] = 'printer';
-		$data['products'] = $this->getImages($this->getAll());
 	}
 
 	function showAll()
@@ -37,6 +32,7 @@ class Printer extends MY_Controller
 
 	function add()
 	{
+		$data['type'] = 'printer' ;
 		$this->load->model('family_model');
 		$data['families'] = $this->family_model->select_all_families();
 		$data['products'] = $this->getImages($this->getAll());
@@ -89,6 +85,8 @@ class Printer extends MY_Controller
 				$this->model->addGuarantee($id,$key);
 			}
 		}
+
+		header("Location: ".base_url()."index.php/printer/add");
 
 	}
 

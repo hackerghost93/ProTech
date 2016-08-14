@@ -28,7 +28,7 @@ class Part_model extends MY_Model
 	{
 		$this->db->where('part_id =' , $id );
 		$ret = $this->db->get($this->table_name)->row_array();
-		$ret['image'] = $this->images($ret['printer_id']);
+		$ret['image'] = $this->images($ret['part_id'],'part_id = '.$ret['part_id']);
 		return $ret ;
 	}
 

@@ -3,112 +3,7 @@
 <head>
   <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title>Protech CMS : Products</title> 
-  <?php require_once("Links.php"); ?>
-
-<<<<<<< HEAD
-        
-    </head>
-    <body>
-        <!-- ---------------------------------sideBarLeft------ -->
-        <div class="sideBarLeft">
-            <?php $this->load->view("CMS/MainSideBar.php"); ?>
-        </div>
-        
-        <!-- --------------------------------------Header----- -->
-        <header>
-           <?php $this->load->view("CMS/MainHeader.php"); ?>
-        </header>
-        <!------------------------------------dataSection------>
-        <div class="dataSection">
-              <nav class="subTopBar">
-                  <ul class="subTopBarList">
-                      <li class="subTopBarItem">
-                          <h1>Products</h1>
-                      </li>
-                      <li>
-                          <form class="TopBarForm">
-                                <div class="form-group">
-                                     <input type="search" class="form-control" name="Search" placeholder="Search By Product Name"/>
-                                      <a href="#" type="submit" role="button"><span class="fa fa-search"></span></a>
-                                </div>
-                          </form>    
-                      </li>
-                   </ul>
-             </nav>
-              <div class="DataDiv Wide">
-                          <div class="DataDiv">
-                               <div class="box-wider-text">
-                                    <div class="box-header">
-                                        <div class="row CustomRow">
-                                        <div class="HeaderLeft"> 
-                                        </div>
-                                        <div class="HeaderRight"> 
-                                             <button class="btn btn-sucess" id="AddNewProductShow"> Add New Product</button>
-                                        </div>
-                                        </div>
-                                    </div>
-                                    <div class="box-body">
-                                       <div class="table-responsive" id="UserTable">
-                                            <table class='table table-hover table-condensed'>
-                                                   <thead>
-                                                        <tr>
-                                                          <th>ID</th>
-                                                          <th>Title</th>
-                                                          <th>Img</th>
-                                                          <th>Family</th>
-                                                          <th>Edit</th>
-                                                          <th>Delete</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                      <?php foreach ($products as $product ):?>
-                                                        <tr>
-                                                          <td><?=$product['printer_id']?></td>
-                                                          <td><?=$product['name']?></td>
-                                                          <td><img src="<?=image_url().$product['images'][0]['image_path']?>" class="prodimg"></td>
-                                                          <td>
-                                                          <?php if(isset($product['family_name'])): ?>
-                                                            <?=$product['family_name']?>
-                                                          <?php endif; ?>
-                                                          </td>
-                                                          <td class='check-col tableAdmin'><a href='#' class='editeBtn' id="EditProductOverlayFormShow" data-placement='right'><span class='fa fa-gear'></span></a></td>
-                                                          <td class='check-col tableAdmin'><a href='#' class='deleteBtn'  data-target='#DeleteProductModal' data-toggle='modal' title='delete' data-placement='right'><span class='fa fa-trash'></span></a></td>
-                                                        </tr> 
-                                                      <?php endforeach; ?>
-                                                    </tbody>
-                                             </table>
-                                      </div>
-                                    </div>
-                                    <div class="box-footer">
-                                         <div class="row CustomRow">
-                                              <nav>
-                                                <ul class="pagination">
-                                                  <li>
-                                                    <a href="#" aria-label="Previous">
-                                                      <span aria-hidden="true">&laquo;</span>
-                                                    </a>
-                                                  </li>
-                                                  <li><a href="#">1</a></li>
-                                                  <li><a href="#">2</a></li>
-                                                  <li><a href="#">3</a></li>
-                                                  <li><a href="#">4</a></li>
-                                                  <li><a href="#">5</a></li>
-                                                  <li>
-                                                    <a href="#" aria-label="Next">
-                                                      <span aria-hidden="true">&raquo;</span>
-                                                    </a>
-                                                  </li>
-                                                </ul>
-                                              </nav>
-                                         </div>
-                                    </div>
-                               </div>
-                          </div>
-              </div>
-        </div>
-=======
->>>>>>> origin/master
-
+  <?php $this->load->view("CMS/Links"); ?>
 </head>
 <body>
   <!-- ---------------------------------sideBarLeft------ -->
@@ -164,17 +59,23 @@
         </thead>
         <tbody>
           <?php foreach ($products as $product ):?>
+            <?php if($type == 'printer'): ?>
             <tr data-id="<?=$product['printer_id']?>">
               <td><?=$product['printer_id']?></td>
+            <?php else: ?>
+            <tr data-id="<?=$product['part_id']?>">
+              <td><?=$product['part_id']?></td>
+            <?php endif; ?>
+            <?php  $the_id = ($type == 'printer' ?  'printer_id' : 'part_id') ?>;
               <td><?=$product['name']?></td>
-              <td><img src="<?=image_url().$product['images'][0]['image_path']?>" class="prodimg"></td>
+              <td><img src="<?=base_url().$product['images'][0]['image_path']?>" class="prodimg"></td>
               <td>
                 <?php if(isset($product['family_name'])): ?>
                   <?=$product['family_name']?>
                 <?php endif; ?>
               </td>
-              <td class='check-col tableAdmin'><a href='#' class='editeBtn' id="EditProductOverlayFormShow" data-placement='right' data-id="<?=$product['printer_id']?>"><span class='fa fa-gear'></span></a></td>
-              <td class='check-col tableAdmin'><a href='#' class='deleteBtn'  data-target='#DeleteProductModal' data-toggle='modal' title='delete' data-id="<?=$product['printer_id']?>" data-placement='right'><span class='fa fa-trash'></span></a></td>
+              <td class='check-col tableAdmin'><a href='#' class='editeBtn' id="EditProductOverlayFormShow" data-placement='right' data-id="<?=$product[$the_id]?>"><span class='fa fa-gear'></span></a></td>
+              <td class='check-col tableAdmin'><a href='#' class='deleteBtn'  data-target='#DeleteProductModal' data-toggle='modal' title='delete' data-id="<?=$product[$the_id]?>" data-placement='right'><span class='fa fa-trash'></span></a></td>
             </tr> 
           <?php endforeach; ?>
         </tbody>
@@ -407,8 +308,7 @@
   <div class="mask">
    <i class="fa fa-close"></i>
  </div>
- <img src="_/images/3215.png" class="editimgproduct">
-
+  <!-- <img class="editimgproduct" src=""> -->
 </div>
 </div>
 </div>	
@@ -464,7 +364,6 @@
             </div>
           </div>
         </div>
-<<<<<<< HEAD
         <!----------------------------------------scripts------>
         <?php $this->load->view('CMS/Scripts');  ?>
 		<script>
@@ -482,9 +381,6 @@
 			  
 		  });
 		</script>
-		<script>
-		$(document).ready(function(){
-=======
       </div> 
 
     </div>
@@ -518,7 +414,7 @@
           </div>
         </div>
         <div class="modal-footer">
-          <button class="btn customBtn" type="submit"> Delete</button>
+          <button class="btn customBtn" type="submit" data-dismiss="modal"> Delete</button>
         </div>
       </form>
     </div>
@@ -567,13 +463,24 @@
 </script>
 <script>
   $(document).on("click",".CloseBtn",function(){
-       // console.log($(this).parent().parent().find('td')[0].val());
+        
      });
 
   $('.deleteBtn').click(function(event){
     var $target = $(this);
     $('#deleteConfirm').val($target.attr('data-id'));
-  })
+  });
+
+  $('.editeBtn').click(function(event)
+  {
+    var $target = $(this);
+    var value  = $target.attr('data-id');
+    var path = "<?=base_url()?>index.php/<?=$type?>/get/"+value ;
+    /// adjust edit form 
+    $.get(path,function(data){
+      console.log(JSON.stringify(data,null,2));
+    },'json');
+  });
 
   $('#deleteConfirmed').submit(function(event){
     event.preventDefault();
@@ -593,11 +500,10 @@
         console.log('something went wrong');
       }
     } , 'json');
-  })
+  });
 </script>
 <script>
   $(document).ready(function(){
->>>>>>> origin/master
 
 		//Hide div w/id extra
 		$(".Description").css("display","none");

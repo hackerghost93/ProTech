@@ -7,6 +7,7 @@ class MY_Controller extends CI_Controller
 {
 
 	public $model ;
+	protected $condition ;
 	
 	function __construct($mod)
 	{
@@ -116,6 +117,20 @@ class MY_Controller extends CI_Controller
 	function getImages($arr)
 	{
 		return (count($arr) == 0 ?  array() : $this->model->getImages($arr) ) ;
+	}
+
+	function get($id)
+	{
+		if($this->validateID($id))
+		{
+			$response['state'] = 'success';
+			$response['data'] = $this->model->get($id);
+			$response['images'] = $this->model->images($response['data'][$this->condition]
+				,$this->condition."=".$response['data'][$this->condition]);
+			echo json_encode($response);
+		}
+		else 
+			echo json_encode(array('state' => 'fail'));
 	}
 
 }
