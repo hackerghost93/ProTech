@@ -16,7 +16,7 @@
 	
 					   <div class="checkbox">
 							<label>
-								<input type="checkbox"> <?php echo $row['name']; ?>
+								<p onclick="ShowMail(<?php echo $row['id'] ?>)"><?php echo $row['name']; ?></p>
 							</label>
 						</div>
 						<?php echo"<a href='#' class='deleteBtn'  data-target='#DeleteInboxMessageModal' data-toggle='modal' title='delete' data-placement='right' data-id='".$row['id']."'><span class='fa fa-trash'></span></a>" ?>

@@ -75,7 +75,7 @@
                            <div class="PageHaeder">
                               <h2>Inbox Messages</h2>
                            </div>
-                          <?php if(isset($show)):;?>
+                          <?php //if(isset($show)):;?>
 								<div class="box-wider-text">
                 <div class="backread"></div>
                                 <div class="box-header">
@@ -85,19 +85,19 @@
                                                 <div class="form-group FromOne">
 													<label for="From">From </label><span>:</span>
                                                     
-                                                    <label class="from"><?php echo $show->email; ?></label>
+                                                    <label class="from" id="email"><?php //echo $show->email; ?></label>
                                                 </div><br>
 												<div class="form-group ToOne">
 													 <label for="To">Name </label><span>:</span>
-                                                  <label class="To"><?php echo $show->name; ?></label>
+                                                  <label class="To" id="name"><?php //echo $show->name; ?></label>
                                                 </div><br>
                         <div class="form-group TitleMessage">
                           <label for="Title">Title </label><span>:</span>
-                                                    <label class="To"><?php echo $show->subject; ?></label>
+                                                    <label class="To" id="subject"><?php //echo $show->subject; ?></label>
                                                 </div><br>
 												<div class="form-group Time">
 													<label for="Time">Time </label><span>:</span>
-                                                   <label class="Timeemail"><?php echo $show->created_at; ?></label>
+                                                   <label class="Timeemail" id="created_at"><?php //echo $show->created_at; ?></label>
                                                 </div>
                                          </div> 
 										 <button class="btn btn-sucess reply" onclick="MyFunction();"id="Reply"> <span class="fa fa-reply" aria-hidden="true"></span>Reply </button>
@@ -108,7 +108,7 @@
                                     </div>
                                 </div>
                                 <div class="box-body">
-									<p class="inboxdetails"> <?php echo $show->message; ?></p>
+									<p class="inboxdetails" id="message"> <?php //echo $show->message; ?></p>
                                 </div>
 								<div class="ReplyMessage section--purple wow fadeInDown" data-wow-delay="0.40s" id="ReplyMessage">
 									<form>
@@ -121,7 +121,7 @@
 										</div>
 									</form>
 								</div>
-              <?php endif; ?>
+              <?php //endif; ?>
                                 <!--div class="box-footer">
                                      <div class="row CustomRow">
                                           <nav>
@@ -167,14 +167,20 @@
 });
 </script>
 <script type="text/javascript">
-  $(document).ready(function(){
-    var base_url="<?php echo base_url(); ?>" ;
-    $('#show').click(function(){
-      $.post('<?php echo base_url();?>index.php/Email/show',
+function ShowMail(id)
+{
+  var ID = id;
+  console.log("reached function");
+  console.log(ID);
+      $.post('<?php echo base_url();?>index.php/Email/show',{ID:ID},
           function(data){
+            console.log(data);
+            $("#email").val(data.email);
+            $("#name").val(data.name);
+            $("#subject").text(data.subject);
+            $("#created_at").text(data.created_at);
           });
-    });
-    });
+}
 </script>
 
     </body>

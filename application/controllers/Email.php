@@ -143,9 +143,17 @@ class Email extends CI_Controller
      }
     public function show()
     {
-      $id=$this->uri->segment(3);
-      $show['show'] = $this->Email_model->getById($id);
-      $this->load->view('CMS/InboxMessages.php',$show);
+      if($this->input->post("ID") != null )
+      {
+      $id=$this->input->post("ID");
+      $show = $this->Email_model->getById($id);
+      $data['email']=$show->email;
+      $data['name'] = $show->name;
+      $data['subject']=$show->subject;
+      $data['created_at']=$show->created_at;
+      $data['message']=$show->message;
+      echo json_encode($data);
+      }
     }
     public function deleteMessage()
     {
