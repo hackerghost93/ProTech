@@ -55,7 +55,7 @@
                                                 <th>id</th>
                                                 <th>Email</th>
                                                 <th>Password</th>
-                                                <th class="check-col">Edit</th>
+                                       
                                                 <th class="check-col">Delete</th>
                                               </tr>
                                           </thead>
@@ -64,7 +64,7 @@
                                                  <td>1</td>
                                                  <td>sdasd@dfsfsdf.com</td>
                                                  <td>MK89</td>
-                                                 <td class='check-col tableAdmin'><a href='#' class='editeBtn' id="EditUserOverlayFormShow" data-placement='right'><span class='fa fa-gear'></span></a></td>
+                                       
                                                  <td class='check-col tableAdmin'><a href='#' class='deleteBtn'  data-target='#DeleteUserModal' data-toggle='modal' title='delete' data-placement='right'><span class='fa fa-trash'></span></a></td>
                                               </tr> 
                                            </tbody>
@@ -151,49 +151,7 @@
         </div>
 
         <!----EditUser--------------------------- -->
-        <div class="OverLayForm closed" id="EditUserOverlayForm">
-          <div class="container-fluid OverLayFormHeader">
-               <div class="row CustomRow">
-                   <div class="OverLayFormHeaderLeft">
-                        <h2> Edit User </h2>
-                   </div>
-                   <div class="OverLayFormHeaderRight">
-                        <span class="fa fa-close ExitBtn"></span>
-                   </div>
-               </div>
-          </div>
-          <form>
-              <div class="container-fluid OverLayFormContent">
-                   <div class="FormSection">
-                       <div class="SectionHeader">
-                            <h3>User Information</h3>
-                       </div>
-                       <div class="SectionContent">
-
-                            <div class="form-group formLayout">
-                                <label for="UserEmail" class="control-label "> Email : </label>
-                                <input type="text" name="UserEmail" class="form-control" placeholder="Phone" />
-                            </div>
-
-                            <div class="form-group formLayout">
-                                <label for="UserPassword" class="control-label "> Password : </label>
-                                <input type="password" name="UserPassword" class="form-control" placeholder="Password" />
-                            </div>
-                      </div>
-                   </div>
-              </div>
-              <div class="container-fluid OverLayFormFooter">
-                   <div class="row CustomRow">
-                       <div class="OverLayFormFooterItem right">
-                            <button type="button"class="btn btn-md OverLayFormBtn"> Save</button>
-                       </div>
-                       <div class="OverLayFormFooterItem left">
-                       
-                       </div>
-                   </div>
-              </div>
-          </form>
-        </div>
+       
 
         <!------------------------------------DeleteModals---- -->
         <!----DeleteUser---------------------------- -->
