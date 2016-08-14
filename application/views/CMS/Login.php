@@ -16,7 +16,7 @@
     <div class="container section--purple wow flipInX" data-wow-delay="1s">
 		<div class="logologin row">
 			<div class="col-md-2 border1"></div>
-			<div class="col-md-8"><h3>بـــروتــك</h3><span>لخدمات  زيروكس المتكاملة</span><img src="_/images/logo.jpg"></div>
+			<div class="col-md-8"><h3>بـــروتــك</h3><span>لخدمات  زيروكس المتكاملة</span><img src="<?php echo base_url(); ?>imgs/logo.jpg"></div>
 		    <div class="col-md-2 border2"></div>
 
 		</div>
@@ -48,8 +48,9 @@
 </div>
   <script>
         $.backstretch([
-          "_/images/bg.jpg",
-          "_/images/sunset.jpg"
+          "<?php echo base_url(); ?>imgs/bg2.jpg",
+          "<?php echo base_url(); ?>imgs/sunset.jpg",
+          "<?php echo base_url(); ?>imgs/bg.jpg"
          // "_/images/img3.jpg"
         ], {
             fade: 750,

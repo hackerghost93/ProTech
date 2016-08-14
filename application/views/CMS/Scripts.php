@@ -15,6 +15,9 @@
         <script src="<?php echo base_url();?>js/cms/js/bootstrap.min.js"></script>
         <script src="<?php echo base_url();?>js/cms/js/ProjectScripts.js"></script>
         <script src="<?php echo base_url();?>js/cms/js/test.js"></script>
+        <script src="<?php echo base_url();?>js/cms/js/wow.js"></script>
+        <script src="<?php echo base_url();?>js/cms/js/wow.min.js"></script>
+        <script src="<?php echo base_url();?>js/cms/js/jquery.backstretch.min.js"></script>
         <script src="http://localhost:35729/livereload.js"></script>
     <script>
     function MyFunction(){

@@ -33,7 +33,7 @@ class Login extends CI_Controller {
                'Email' =>$result->email,
                'loggedIn' => true );
             $this->session->set_userdata($UserData);
-            redirect('')
+            redirect('CMSHome');
 			}
 		}
 		public function Add()
