@@ -33,7 +33,7 @@ class Login extends CI_Controller {
                'Email' =>$result->email,
                'loggedIn' => true );
             $this->session->set_userdata($UserData);
-            echo json_encode($data);
+            redirect('')
 			}
 		}
 		public function Add()
