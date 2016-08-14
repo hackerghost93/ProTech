@@ -22,7 +22,7 @@
 						<?php echo"<a href='#' class='deleteBtn'  data-target='#DeleteInboxMessageModal' data-toggle='modal' title='delete' data-placement='right' data-id='".$row['id']."'><span class='fa fa-trash'></span></a>" ?>
 						<p><?php echo $row['subject'] ;?></p>
 						<h4 class="TimeInbox"> <?php echo $row['created_at'];?></h4>
-						<?php echo'<a href="'. base_url().'index.php/Email/show/'.$row['id'].'">show </a>'?>
+						<?php //echo'<a href="'. base_url().'index.php/Email/show/'.$row['id'].'">show </a>'?>
 					</div>
 				</li> 
 					

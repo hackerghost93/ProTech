@@ -147,12 +147,12 @@ class Email extends CI_Controller
       {
       $id=$this->input->post("ID");
       $show = $this->Email_model->getById($id);
-      $data['email']=$show->email;
-      $data['name'] = $show->name;
-      $data['subject']=$show->subject;
-      $data['created_at']=$show->created_at;
-      $data['message']=$show->message;
-      echo json_encode($data);
+      //$data['email']=$show->email;
+      //$data['name'] = $show->name;
+      //$data['subject']=$show->subject;
+      //$data['created_at']=$show->created_at;
+      //$data['message']=$show->message;
+      echo json_encode($show);
       }
     }
     public function deleteMessage()

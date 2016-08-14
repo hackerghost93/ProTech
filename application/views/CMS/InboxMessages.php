@@ -175,11 +175,12 @@ function ShowMail(id)
       $.post('<?php echo base_url();?>index.php/Email/show',{ID:ID},
           function(data){
             console.log(data);
-            $("#email").val(data.email);
-            $("#name").val(data.name);
+            $("#email").text(data.email);
+            $("#name").text(data.name);
             $("#subject").text(data.subject);
             $("#created_at").text(data.created_at);
-          });
+            $("#message").text(data.message);
+          },'json');
 }
 </script>
 
