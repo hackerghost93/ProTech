@@ -24,18 +24,18 @@
 		<div class="login">
 			<div class="form-group formLayout">
 				<label for="Email" class="control-label loginform">User Name: </label>
-				<input type="text" name="user_name" class="form-control" placeholder="user name">
+				<input type="text" name="user_name" class="form-control" placeholder="user name" style="color:#fff;">
 			</div>
 			<div class="form-group formLayout">
 				<label for="Password" class="control-label loginform">Password : </label>
-				<input type="password" name="Password" class="form-control" placeholder="Password">
+				<input type="password" name="Password" class="form-control" placeholder="Password" style="color:#fff;>
 			</div>
 			<div class="form-group formLayout">
 				<button type="submit" class="loginsubmit">Submit</button>
 			</div>
 		 </div>
 		 </form>
-		 <?php if(isset($state)){ echo "<h3 style='color:black'> $state </h3>"; } ?>
+		 <?php if(isset($state)){ echo "<h3 style='color: #f2cd0d; font-size: 12px;'> $state </h3>"; } ?>
     </div>
 	
 
@@ -49,8 +49,7 @@
   <script>
         $.backstretch([
           "<?php echo base_url(); ?>imgs/bg2.jpg",
-          "<?php echo base_url(); ?>imgs/sunset.jpg",
-          "<?php echo base_url(); ?>imgs/bg.jpg"
+          "<?php echo base_url(); ?>imgs/sunset.jpg"
          // "_/images/img3.jpg"
         ], {
             fade: 750,
