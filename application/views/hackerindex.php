@@ -488,13 +488,13 @@
             <div class="Right clear-after">
                 <img src="<?=base_url()?>imgs/icon24.png" alt="">
                 <div class="info">
-                    <div><h3>002-00000000000</h3>
+                    <div><h3 class="Mobile"></h3>
                         <h5>متاح واتس اب - فايبر - لاين</h5></div>
                     </div>
                 </div>
                 <div class="Left clear-after">
                     <img src="<?=base_url()?>imgs/icon25.png" alt="">
-                    <div class="info"><h3>info@AgedSystems.com</h3></div>
+                    <div class="info"><h3 class="Email"></h3></div>
                 </div>
             </div>
             <!-- // Contact Area -->
@@ -516,11 +516,11 @@
         </div>
         <div class="Footer-Container Grid1k">
             <div class="Contact-Info">
-                <h3>اتصل بنا</h3>
-                <h4>002-00000000</h4>
-                <h4>ProTech</h4>
-                <h4>002-00-0000000</h4>
-                <h4>002-0000000000</h4>
+                 <h3>اتصل بنا</h3>
+            <h4 class="Mobile"></h4>
+            <h4 class="Skypee"></h4>
+            <h4 class="WhatsApp"></h4>
+            <h4 class="Telephone"></h4>
             </div>
             <div class="SendMail">
                 <h3>القائمة البريدية</h3>
@@ -572,10 +572,10 @@ if (typeof newsletter_check !== "function") {
     <a href="<?=base_url()?>" class="logo"><span>بروتك <span>لخدمات زيروكس المتكامله</span></span> </a>
     <a href="<?php echo base_url()?>index.php/Email/addMsg" class="OpenTicket">فتح تذكرة</a>
     <div class="Social">
-        <a target="_blank" href="#" class="Facebook"><span></span></a>
-        <a target="_blank" href="#" class="Twitter"><span></span></a>
-        <a target="_blank" href="#" class="Youtube"><span></span></a>
-        <a target="_blank" href="#" class="LinkedIn"><span></span></a>
+        <a target="_blank" href="#" class="Facebook" id="Facebook"><span></span></a>
+        <a target="_blank" href="#" class="Twitter" id="Twitter"><span></span></a>
+        <a target="_blank" href="#" class="Youtube" id="Youtube"><span></span></a>
+        <a target="_blank" href="#" class="LinkedIn" id="Linkedin"><span></span></a>
     </div>
 </div>
 </div>
@@ -586,7 +586,7 @@ if (typeof newsletter_check !== "function") {
         <ul>
             <div class="menu-%d8%a8%d8%a8%d8%a8-container"><ul id="menu-%d8%a8%d8%a8%d8%a8" class="menu"><li id="menu-item-2470" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2470"><a href="<?php echo base_url()?>index.php/About">عن بروتك</a></li>
 
-                <li id="menu-item-2472" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2472"><a href="contact.html"> اتصل بنا </a></li>
+                <li id="menu-item-2472" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2472"><a href="<?php echo base_url()?>index.php/Email/addMsg"> اتصل بنا </a></li>
             </ul>
         </div>  
     </ul>

@@ -33,5 +33,24 @@
 </script>
 
 <script type="text/javascript" src="<?=base_url()?>js/subscribe.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+            var nothing = "nothing";
+            $.post('<?php echo base_url();?>index.php/Contacts/Get_Contact_Data',{nothing:nothing},function(data)
+            {
+     //`adress``telephone``mobile``whatsapp``skybe``youtube``email``Email_Password``facebook``twitter``linkedin`
+                
+                $('.Telephone').text(data.telephone);
+                $('.Mobile').text(data.mobile);
+                $('.Email').text(data.email);
+                $('.WhatsApp').text(data.whatsapp);
+                $('.Skypee').text(data.skybe);
+                $(".Youtube").attr("href", data.youtube);
+                $(".Twitter").attr("href", data.twitter);
+                $(".Facebook").attr("href", data.facebook);
+                $(".Linkedin").attr("href", data.linkedin);
+            },'json');
+        });
+</script>
 </body>
 </html>
