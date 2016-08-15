@@ -59,13 +59,24 @@
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        <tr>
+<?php
+if(isset($results))
+{
+  //`Slide_ID``Slide_Title``Slide_image`
+   foreach ($results as $object) {
+   echo "<tr><td>$object->Slide_ID</td><td>$object->Slide_Title</td><td><img src='object->Slide_image' class='prodimg'></td>
+   <td class='check-col tableAdmin'><a href='#' onclick='SetEditData($object->Slide_ID)' class='editeBtn' id='EditSlideShow' data-placement='right'><span class='fa fa-gear'></span></a></td>
+   <td class='check-col tableAdmin'><a href='#' onclick='SetSlideID($object->Slide_ID)' class='deleteBtn'  data-target='#DeleteSildeShowModal' data-toggle='modal' title='delete' data-placement='right'><span class='fa fa-trash'></span></a></td></tr>";
+ }
+}
+ ?>
+                                                        <!-- <tr>
                                                           <td>1</td>
                                                           <td>Cloudy</td>
                                                           <td><img src="_/images/3215.png" class="prodimg"></td>
                                                           <td class='check-col tableAdmin'><a href='#' class='editeBtn' id="EditSlideShow" data-placement='right'><span class='fa fa-gear'></span></a></td>
                                                           <td class='check-col tableAdmin'><a href='#' class='deleteBtn'  data-target='#DeleteSildeShowModal' data-toggle='modal' title='delete' data-placement='right'><span class='fa fa-trash'></span></a></td>
-                                                        </tr> 
+                                                        </tr>  -->
                                                     </tbody>
                                              </table>
                                       </div>
@@ -118,7 +129,7 @@
                    </div>
                </div>
           </div>
-          <form>
+          <form method="POST" action="<?=base_url()?>index.php/SlideShow/ADD">
               <div class="container-fluid OverLayFormContent">
                    <div class="FormSection">
                        <div class="SectionHeader">
@@ -142,7 +153,7 @@
               <div class="container-fluid OverLayFormFooter">
                    <div class="row CustomRow">
                        <div class="OverLayFormFooterItem right">
-                            <button type="button"class="btn btn-md OverLayFormBtn"> Creat</button>
+                            <button type="submit"class="btn btn-md OverLayFormBtn"> Create</button>
                        </div>
                        <div class="OverLayFormFooterItem left">
                        
@@ -164,20 +175,24 @@
                    </div>
                </div>
           </div>
-          <form>
+          <form method="post" action="<?=base_url()?>index.php/SlideShow/edit">
 			<div class="container-fluid OverLayFormContent">
                    <div class="FormSection">
                        <div class="SectionHeader">
                             <h3>SlideShow Information</h3>
                        </div>
                        <div class="SectionContent ">
+              <div class="form-group formLayout">
+              <label for="ID" class="control-label ">ID : </label>
+              <input type="number" name="edited_ID" id="edited_ID" class="form-control" readonly />
+              </div>
 					   	<div class="form-group formLayout">
-							<label for="Title" class="control-label ">Title : </label>
-							<input type="text" name="Title" class="form-control" placeholder=" Title" />
+							<label for="Title" class="control-label ">Slide Title : </label>
+							<input type="text" name="EditTitle" id="EditTitle" class="form-control" placeholder=" Title" />
 							</div>
 						 <div class="form-group formLayout">
 							<label for="EditSlideShowImg" class="control-label ">Upload SlideShow Img: </label>
-							<input type="file" name="EditSlideShowImg" class="form-control InputProduct" />
+							<input type="file" name="EditSlideShowImg" class="form-control InputProduct" required />
 						 </div>
 				
                       </div>
@@ -188,7 +203,7 @@
               <div class="container-fluid OverLayFormFooter">
                    <div class="row CustomRow">
                        <div class="OverLayFormFooterItem right">
-                            <button type="button"class="btn btn-md OverLayFormBtn"> Creat</button>
+                            <button type="submit"class="btn btn-md OverLayFormBtn"> Edit</button>
                        </div>
                        <div class="OverLayFormFooterItem left">
                        
@@ -206,16 +221,16 @@
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
               </div>
-              <form id="ForgotPassForm" method="post">
+              <form id="ForgotPassForm" method="post" action="<?=base_url()?>index.php/SlideShow/Delete" >
                   <div class="modal-body">
                         <h1>Delete SlideShow</h1>
                         <p>Are you sure that you need to delete this Data ?</p>
-                        <div class="form-group formLayout" hidden>
-		        			 <input type="text" name="RecoredId" class="form-control" placeholder="RecoredId"/>
+                        <div class="form-group formLayout">
+		        			 <input type="text" name="RecoredId" id="RecoredId" class="form-control"  readonly />
 	       				</div>
                   </div>
                   <div class="modal-footer">
-                        <button class="btn customBtn"> Delete</button>
+                        <button type="submit" class="btn customBtn"> Delete</button>
                   </div>
               </form>
             </div>
@@ -272,6 +287,22 @@
 			document.getElementById('AddNewSpecifications').appendChild(newspan);
 		}
 		</script>
-
+    <script type="text/javascript">
+   function SetSlideID(id)
+    {
+      var ID=id;
+      document.getElementById("RecoredId").value=ID;
+    }
+    function SetEditData(id)
+    {
+      var ID=id;
+      $.post('SlideShow/GetEditedData',{ID:ID},function(data)
+          {
+            console.log(data);
+            $("#edited_ID").val(data.Slide_ID);
+            $("#EditTitle").val(data.Slide_Title);
+          },'json');
+    }
+    </script>
     </body>
 </html>
