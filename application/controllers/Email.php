@@ -147,11 +147,8 @@ class Email extends CI_Controller
       {
       $id=$this->input->post("ID");
       $show = $this->Email_model->getById($id);
-      //$data['email']=$show->email;
-      //$data['name'] = $show->name;
-      //$data['subject']=$show->subject;
-      //$data['created_at']=$show->created_at;
-      //$data['message']=$show->message;
+      $data["Seen"] = "Seen";
+      $this->Awd_Model->update('emails',$data,$id,'id');
       echo json_encode($show);
       }
     }
