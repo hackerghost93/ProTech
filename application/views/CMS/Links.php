@@ -7,5 +7,3 @@
         <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/cms/css/fullcalendar.print.css">
         <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/cms/css/yass.css">
 
-
-        fullcalendar

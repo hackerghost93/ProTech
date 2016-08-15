@@ -45,7 +45,7 @@
                 <li class="sideMenuFooter">
                     <ul>
                         <li class="sideMenuItem">
-                            <a href="Login.php" data-toggle="tooltip" data-placement="right" class="SMenuItem" title="Sign out" id="SMI-SignOut"><span class="fa fa-sign-out"></span></a>
+                            <a href="<?php echo base_url()?>index.php/Login/" data-toggle="tooltip" data-placement="right" class="SMenuItem" title="Sign out" id="SMI-SignOut"><span class="fa fa-sign-out"></span></a>
                         </li>
                     </ul>
                 </li>
