@@ -1,9 +1,15 @@
 <nav class=" clearfix navbar navbar-default navbar-static-top">
                  <div class="container-fluid">
                       <div class="navbar-left">
+<<<<<<< HEAD
                           <div class="HeaderLogo">
                             <img src="<?php echo base_url(); ?>imgs/logo.png"></img>
                           </div>
+=======
+                          <!--div class="HeaderLogo">
+                            <img src="../_/images/logo.png"></img>
+                          </div-->
+>>>>>>> origin/master
                           <div class="HeaderLinks">
                           <a  class="btn" id="hi"><span class="fa fa-calendar"></span></a>
                           <a href="#" class="btn"><span class="fa fa-bell"></span></a>
@@ -23,11 +29,16 @@
                           <div class="dropdown ProfileHeader">
                               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
                                 <div class="ProfileHeaderAnchor">
+<<<<<<< HEAD
                                     <h4><?php if($this->session->userdata('loggedIn') == true)
                                     {
                                       echo $this->session->userdata('username');
                                     }     ?></h4>
                                     <img src="<?php echo base_url(); ?>imgs/profile.jpg" alt="user"> 
+=======
+                                    <h4>Admin</h4>
+                                    <img src="../_/images/profile.jpg" alt="user"> 
+>>>>>>> origin/master
                                 </div>
                               </a>
                               <ul class="dropdown-menu">
