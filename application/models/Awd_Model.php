@@ -118,7 +118,19 @@ class Awd_Model extends CI_Model{
         $res = $query->result();
         return $res;
      }
-
+         public function CheckOldPW($username, $password)
+    {       
+        $this->db->where('username',$username);
+        $this->db->where('password',$password);  
+        $result=$this->db->get('admins');
+        if($result->num_rows()==1){
+            $Res = $result->row(0);
+            return true;
+        }
+        else{
+            return False;
+        }
+    }
 }
 
 ?>

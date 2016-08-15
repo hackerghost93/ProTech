@@ -1,7 +1,5 @@
 <ul class="sideMenu">
-                <li class="sideMenuHeader">
-                    <a><span class="fa fa-user-secret"></span></a>
-                </li>
+          
                 <li class="sideMenuItem">
                     <a href="<?php echo base_url()?>index.php/CMSHome" data-toggle="tooltip" data-placement="right" class="SMenuItem " title="Home" id="SMI-Home"><span class="fa fa-home"></span></a>
                 </li>            
@@ -40,6 +38,10 @@
                 </li>
                 <li class="sideMenuItem">
                     <a href="<?php echo base_url()?>index.php/Login/Reg_index" data-toggle="tooltip" data-placement="right" class="SMenuItem" title="Users" id="SMI-Users"><span class="fa fa-user-plus" aria-hidden="true"></span>
+</a>
+                </li>
+                    <li class="sideMenuItem">
+                    <a href="<?php echo base_url()?>index.php/AccountSettings" data-toggle="tooltip" data-placement="right" class="Settings" title="Settings" id="SMI-Users"><span class="fa fa-gear" aria-hidden="true"></span>
 </a>
                 </li>
                 <li class="sideMenuFooter">
