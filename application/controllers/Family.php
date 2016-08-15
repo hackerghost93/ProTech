@@ -43,7 +43,8 @@ class Family extends CI_Controller
   {
     $familyName = $_GET['q'];
     $Families = $this->Family_model->search_family($familyName);
-
+    echo'<div class="DataDiv Wide"><div class="box-body">
+    <div class="table-responsive" id="UserTable">';
     echo"<table class='table table-hover table-condensed'>
     <thead>
       <tr>
@@ -65,6 +66,8 @@ class Family extends CI_Controller
      } 
      echo"</tbody>";
      echo"</table>";
+     echo'</div>
+     </div></div>';
 
 
    }          
