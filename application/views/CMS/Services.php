@@ -17,7 +17,7 @@ button.btn.btn-md.AddNewStepserbtn.addnewresult {
     top: 169px;
 }
 </style>
-        
+<?php  if($this->session->userdata('loggedIn') != true){redirect('Login');}   ?>
     </head>
     <body>
         <!-- ---------------------------------sideBarLeft------ -->

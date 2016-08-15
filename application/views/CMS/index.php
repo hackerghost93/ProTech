@@ -13,6 +13,7 @@
 		}
 	</style>
     </head>
+    <?php  if($this->session->userdata('loggedIn') != true){redirect('Login');}   ?>
     <body>
         <!-- ---------------------------------sideBarLeft------ -->
         <div class="sideBarLeft">

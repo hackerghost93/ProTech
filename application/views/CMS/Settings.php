@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <title>Protech CMS : Settings</title> 
-     		 <?php require_once("Links.php"); ?>
+     		 <?php $this->load->view('CMS/Links');  ?>
 <style>
 button.btn.btn-md.changePassword {
     background: #272B35;
@@ -25,8 +25,9 @@ span.Invalidpassword {
     color: red;
 }
 </style>
-        
+  
     </head>
+<?php  if($this->session->userdata('loggedIn') != true){redirect('Login');}   ?>
     <body onload="SetMail()">
         <!-- ---------------------------------sideBarLeft------ -->
         <div class="sideBarLeft">

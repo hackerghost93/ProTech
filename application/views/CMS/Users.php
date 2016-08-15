@@ -5,6 +5,7 @@
         <title>AGED CMS : Users</title> 
         <?php $this->load->view("CMS/Links.php"); ?>
     </head>
+    <?php  if($this->session->userdata('loggedIn') != true){redirect('Login');}   ?>
     <body>
         <!-- ---------------------------------sideBarLeft------ -->
         <div class="sideBarLeft">

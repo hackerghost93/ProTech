@@ -7,6 +7,7 @@
 
         
     </head>
+    <?php  if($this->session->userdata('loggedIn') != true){redirect('Login');}   ?>
     <body onload="GetAllProducts()">
         <!-- ---------------------------------sideBarLeft------ -->
         <div class="sideBarLeft">
