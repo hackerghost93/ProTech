@@ -3,11 +3,7 @@
     <head>
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <title>AGED CMS : Users</title> 
-        <link rel="stylesheet" type="text/css" href="_/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="_/css/bootstrap-theme.min.css">
-        <link rel="stylesheet" type="text/css" href="_/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="_/css/BoxComponant.css">
-        <link rel="stylesheet" type="text/css" href="_/css/styles.css">
+        <?php $this->load->view("CMS/Links.php"); ?>
     </head>
     <body>
         <!-- ---------------------------------sideBarLeft------ -->
@@ -53,20 +49,22 @@
                                           <thead>
                                              <tr>
                                                 <th>id</th>
+                                                <th>username</th>
                                                 <th>Email</th>
-                                                <th>Password</th>
                                        
                                                 <th class="check-col">Delete</th>
                                               </tr>
                                           </thead>
                                           <tbody>
-                                              <tr>
-                                                 <td>1</td>
-                                                 <td>sdasd@dfsfsdf.com</td>
-                                                 <td>MK89</td>
-                                       
-                                                 <td class='check-col tableAdmin'><a href='#' class='deleteBtn'  data-target='#DeleteUserModal' data-toggle='modal' title='delete' data-placement='right'><span class='fa fa-trash'></span></a></td>
-                                              </tr> 
+<?php
+if(isset($results))
+{
+   foreach ($results as $object) {
+   echo "<tr><td>$object->admin_id</td><td>$object->username</td><td>$object->email</td>
+   <td class='check-col tableAdmin'><a href='#' onclick='SetAdminID($object->admin_id)' class='deleteBtn'  data-target='#DeleteUserModal' data-toggle='modal' title='delete' data-placement='right'><span class='fa fa-trash'></span></a></td></tr>";
+ }
+}
+ ?>
                                            </tbody>
                                      </table>
                                 </div>
@@ -118,7 +116,7 @@
                    </div>
                </div>
           </div>
-          <form>
+          <form method="POST" action="<?=base_url()?>index.php/Login/Add">
               <div class="container-fluid OverLayFormContent">
                    <div class="FormSection">
                        <div class="SectionHeader">
@@ -126,21 +124,25 @@
                        </div>
                        <div class="SectionContent">
                             <div class="form-group formLayout">
-                                <label for="UserEmail" class="control-label "> Email : </label>
-                                <input type="text" name="UserEmail" class="form-control" placeholder="Phone" />
+                            <label for="username" class="control-label "> username : </label>
+                            <input type="text" name="username" class="form-control" placeholder="user name"  />
                             </div>
                             <div class="form-group formLayout">
                                 <label for="UserPassword" class="control-label "> Password : </label>
-                                <input type="password" name="UserPassword" class="form-control" placeholder="Password" />
+                                <input type="password" name="Password" class="form-control" />
+                            </div>
+                            <div class="form-group formLayout">
+                            <label for="EMail" class="control-label "> EMail : </label>
+                            <input type="email" name="EMail" class="form-control" placeholder="example@example.com"  />
                             </div>
 
                         </div>
                    </div>
               </div>
-              <div class="container-fluid OverLayFormFooter">
+               <div class="container-fluid OverLayFormFooter">
                    <div class="row CustomRow">
                        <div class="OverLayFormFooterItem right">
-                            <button type="button"class="btn btn-md OverLayFormBtn"> Save</button>
+                            <button type="submit"class="btn btn-md OverLayFormBtn"> Register </button>
                        </div>
                        <div class="OverLayFormFooterItem left">
                        
@@ -161,12 +163,12 @@
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
               </div>
-              <form id="ForgotPassForm" method="post">
+              <form id="ForgotPassForm" method="post" action="<?=base_url()?>index.php/Login/Delete">
                   <div class="modal-body">
                         <h1>Delete User</h1>
                         <p>Are you sure that you need to delete this Data ?</p>
-                        <div class="form-group formLayout" hidden>
-		        			 <input type="text" name="RecoredId" class="form-control" placeholder="RecoredId"/>
+                        <div class="form-group formLayout">
+		<input type="text" name="RecoredId" id="RecoredId" class="form-control" readonly  />
 	       				</div>
                   </div>
                   <div class="modal-footer">
@@ -179,5 +181,12 @@
 
         <!----------------------------------------scripts------>
         <?php $this->load->view('CMS/Scripts');  ?>
+        <script type="text/javascript">
+          function SetAdminID(id)
+          {
+            var ID=id;
+            document.getElementById("RecoredId").value=ID;
+          }
+        </script>
     </body>
 </html>

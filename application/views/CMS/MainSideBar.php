@@ -17,7 +17,7 @@
                     <a href="SpareParts.php" data-toggle="tooltip" data-placement="right" class="SMenuItem " title="Spareparts" id="SMI-SpareParts">    <span class="fa fa-database" aria-hidden="true"></span></a>
                 </li>   
                 <li class="sideMenuItem">
-                    <a href="SlideShow.php" data-toggle="tooltip" data-placement="right" class="SMenuItem " title="SlideShow" id="SMI-SlideShow">   <span class="fa fa-film" aria-hidden="true"></span></a>
+                    <a href="<?php echo base_url()?>index.php/SlideShow" data-toggle="tooltip" data-placement="right" class="SMenuItem " title="SlideShow" id="SMI-SlideShow">   <span class="fa fa-film" aria-hidden="true"></span></a>
                 </li>   
                 <li class="sideMenuItem">
                     <a href="<?php echo base_url()?>index.php/Contacts" data-toggle="tooltip" data-placement="right" class="SMenuItem " title="Contact" id="SMI-Contact">
@@ -39,13 +39,13 @@
                     <a href="<?php echo base_url()?>index.php/Tags" data-toggle="tooltip" data-placement="right" class="SMenuItem " title="Tags" id="SMI-Tags"><span class="fa fa-tags"></span></a>
                 </li>
                 <li class="sideMenuItem">
-                    <a href="Users.php" data-toggle="tooltip" data-placement="right" class="SMenuItem" title="Users" id="SMI-Users"><span class="fa fa-user-plus" aria-hidden="true"></span>
+                    <a href="<?php echo base_url()?>index.php/Login/Reg_index" data-toggle="tooltip" data-placement="right" class="SMenuItem" title="Users" id="SMI-Users"><span class="fa fa-user-plus" aria-hidden="true"></span>
 </a>
                 </li>
                 <li class="sideMenuFooter">
                     <ul>
                         <li class="sideMenuItem">
-                            <a href="<?php echo base_url()?>index.php/Login/" data-toggle="tooltip" data-placement="right" class="SMenuItem" title="Sign out" id="SMI-SignOut"><span class="fa fa-sign-out"></span></a>
+                            <a href="<?php echo base_url()?>index.php/Login/logout" data-toggle="tooltip" data-placement="right" class="SMenuItem" title="Sign out" id="SMI-SignOut"><span class="fa fa-sign-out"></span></a>
                         </li>
                     </ul>
                 </li>

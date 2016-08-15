@@ -28,7 +28,7 @@
 			</div>
 			<div class="form-group formLayout">
 				<label for="Password" class="control-label loginform">Password : </label>
-				<input type="password" name="Password" class="form-control" placeholder="Password" style="color:#fff;>
+				<input type="password" name="Password" class="form-control" placeholder="Password" style="color:#fff;">
 			</div>
 			<div class="form-group formLayout">
 				<button type="submit" class="loginsubmit">Submit</button>

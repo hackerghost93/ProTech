@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <title>Protech CMS : Customers</title> 
-	 <?php require_once("Links.php"); ?>
+	  <?php $this->load->view("CMS/Links.php"); ?>
 
         
     </head>
@@ -213,7 +213,7 @@ if(isset($results))
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
               </div>
-              <form id="ForgotPassForm" method="POST" action="<?=base_url()?>index.php/Customers/Delete">
+              <form id="ForgotPassForm" method="post" action="<?=base_url()?>index.php/Customers/Delete">
                   <div class="modal-body">
                         <h1>Delete Customers</h1>
                         <p>Are you sure that you need to delete this Data ?</p>

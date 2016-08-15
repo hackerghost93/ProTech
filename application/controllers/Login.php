@@ -7,6 +7,11 @@ class Login extends CI_Controller {
 	{
 		$this->load->view('CMS/login');
 	}
+	public function Reg_index()
+	{
+		$data['results'] = $this->Awd_Model->GetData('admins');
+		$this->load->view('CMS/Users',$data);
+	}
 	public function log()
 	{
 		if($this->input->post("user_name") == null || $this->input->post("user_name") == "")
@@ -18,7 +23,7 @@ class Login extends CI_Controller {
 				redirect("Login");
 		}
 		$username = $this->input->post("user_name");
-		$password = md5($this->input->post("password"));
+		$password = md5($this->input->post("Password"));
 		$result = $this->Awd_Model->Login($username,$password);
 		if($result == false )
 		{
@@ -40,28 +45,37 @@ class Login extends CI_Controller {
 		{
 		if($this->input->post("username") == null || $this->input->post("username") == "")
 		{
-			redirect("Register");
+			redirect("Login/Reg_index");
 		}
-		if($this->input->post("password") == null || $this->input->post("username") == "")
+		if($this->input->post("Password") == null || $this->input->post("Password") == "")
 		{
-			redirect("Register");
+			redirect("Login/Reg_index");
 		}
-		if($this->input->post("email") == null || $this->input->post("username") == "")
+		if($this->input->post("EMail") == null || $this->input->post("EMail") == "")
 		{
-			redirect("Register");
+			redirect("Login/Reg_index");
 		}
 		$data["username"] = $this->input->post("username");
-		$data["password"] = md5($this->input->post("password"));
-		$data["email"] = $this->input->post("email");
-		$data["active"] = 0;
+		$data["password"] = md5($this->input->post("Password"));
+		$data["email"] = $this->input->post("EMail");
 		if($this->Awd_Model->CheckDub('admins',$data["username"],'username')){$Final["state"]="username exist";}
 		else if($this->Awd_Model->CheckDub('admins',$data["email"],'email')){$Final["state"]="email exist";}
 		else{
 		$this->Awd_Model->AddToDB('admins',$data);
 		$Final["state"]="Add success";
 		}
-		echo json_encode($Final);
+		redirect("Login/Reg_index");
 	}
+	public function Delete()
+  {
+	if($this->input->post('RecoredId') != null)
+	{
+	$Admin_id=$this->input->post('RecoredId');
+	$this->Awd_Model->DelData('admins',$Admin_id,'admin_id');
+	redirect('Login/Reg_index');
+	}
+	else{redirect('Login/Reg_index');}
+  }
 		public function logout()
 		{
 			$this->session->sess_destroy();

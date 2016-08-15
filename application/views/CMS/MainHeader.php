@@ -2,7 +2,7 @@
                  <div class="container-fluid">
                       <div class="navbar-left">
                           <div class="HeaderLogo">
-                            <img src="../_/images/logo.png"></img>
+                            <img src="<?php echo base_url(); ?>imgs/logo.png"></img>
                           </div>
                           <div class="HeaderLinks">
                           <a  class="btn" id="hi"><span class="fa fa-calendar"></span></a>
@@ -23,8 +23,11 @@
                           <div class="dropdown ProfileHeader">
                               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
                                 <div class="ProfileHeaderAnchor">
-                                    <h4>Mohamed Khalifa</h4>
-                                    <img src="../_/images/profile.jpg" alt="user"> 
+                                    <h4><?php if($this->session->userdata('loggedIn') == true)
+                                    {
+                                      echo $this->session->userdata('username');
+                                    }     ?></h4>
+                                    <img src="<?php echo base_url(); ?>imgs/profile.jpg" alt="user"> 
                                 </div>
                               </a>
                               <ul class="dropdown-menu">
