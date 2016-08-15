@@ -10,29 +10,29 @@
                 <div id="slider1" class="royalSlider rsDefault js-content">
 
                  <div>
-                    <a href="products.html">
+                    <a href="<?=base_url()?>index.php/printer/showAll">
                         <img class="rsImg" data-rstmb="<?=base_url()?>imgs/4375e42c-d6c7-4d7b-909c-5b5900a08344_A.jpeg" src="<?=base_url()?>imgs/3748e53f-d175-4da1-9b58-ae631f81336c_A.jpeg" alt="Weekend Deals" data-mobile-src="imgs/c7440a0a-dc63-4b96-a721-6192d40b85c6_A.jpg" />
                     </a>
                 </div>
                 <div>
-                    <a href="products.html">
+                    <a href="<?=base_url()?>index.php/printer/showAll">
                         <img class="rsImg" data-rstmb="<?=base_url()?>imgs/4375e42c-d6c7-4d7b-909c-5b5900a08344_A.jpeg" src="<?=base_url()?>imgs/20150326015737.jpg" alt="Weekend Deals" data-mobile-src="imgs/c7440a0a-dc63-4b96-a721-6192d40b85c6_A.jpg" />
                     </a>
                 </div>
 
                 <div>
-                    <a href="products.html">
+                    <a href="<?=base_url()?>index.php/printer/showAll">
                         <img class="rsImg" data-rstmb="<?=base_url()?>imgs/4375e42c-d6c7-4d7b-909c-5b5900a08344_A.jpeg" src="<?=base_url()?>imgs/B1-L2PrintersScanners-desktop.jpg" alt="Weekend Deals" data-mobile-src="imgs/c7440a0a-dc63-4b96-a721-6192d40b85c6_A.jpg" />
                     </a>
                 </div>
 
                 <div>
-                    <a href="products.html">
+                    <a href="<?=base_url()?>index.php/printer/showAll">
                         <img class="rsImg" data-rstmb="<?=base_url()?>imgs/4375e42c-d6c7-4d7b-909c-5b5900a08344_A.jpeg" src="<?=base_url()?>imgs/3748e53f-d175-4da1-9b58-ae631f81336c_A.jpeg" alt="Weekend Deals" data-mobile-src="imgs/c7440a0a-dc63-4b96-a721-6192d40b85c6_A.jpg" />
                     </a>
                 </div>
                 <div>
-                    <a href="products.html">
+                    <a href="<?=base_url()?>index.php/printer/showAll">
                         <img class="rsImg" data-rstmb="<?=base_url()?>imgs/4375e42c-d6c7-4d7b-909c-5b5900a08344_A.jpeg" src="<?=base_url()?>imgs/20150326015737.jpg" alt="Weekend Deals" data-mobile-src="imgs/c7440a0a-dc63-4b96-a721-6192d40b85c6_A.jpg" />
                     </a>
                 </div>
@@ -43,28 +43,28 @@
                 <div id="slider1" class="royalSlider rsDefault js-content">
 
                  <div>
-                    <a href="products.html">
+                    <a href="<?=base_url()?>index.php/printer/showAll">
                         <img class="rsImg" data-rstmb="<?=base_url()?>imgs/4375e42c-d6c7-4d7b-909c-5b5900a08344_A.jpeg" src="<?=base_url()?>imgs/3748e53f-d175-4da1-9b58-ae631f81336c_A.jpeg" alt="Weekend Deals" data-mobile-src="imgs/c7440a0a-dc63-4b96-a721-6192d40b85c6_A.jpg" />
                     </a>
                 </div>
                 <div>
-                    <a href="products.html">
+                    <a href="<?=base_url()?>index.php/printer/showAll">
                         <img class="rsImg" data-rstmb="<?=base_url()?>imgs/4375e42c-d6c7-4d7b-909c-5b5900a08344_A.jpeg" src="<?=base_url()?>imgs/20150326015737.jpg" alt="Weekend Deals" data-mobile-src="imgs/c7440a0a-dc63-4b96-a721-6192d40b85c6_A.jpg" />
                     </a>
                 </div>
                 <div>
-                    <a href="products.html">
+                    <a href="<?=base_url()?>index.php/printer/showAll">
                         <img class="rsImg" data-rstmb="<?=base_url()?>imgs/4375e42c-d6c7-4d7b-909c-5b5900a08344_A.jpeg" src="<?=base_url()?>imgs/B1-L2PrintersScanners-desktop.jpg" alt="Weekend Deals" data-mobile-src="imgs/c7440a0a-dc63-4b96-a721-6192d40b85c6_A.jpg" />
                     </a>
                 </div>
 
                 <div>
-                    <a href="products.html">
+                    <a href="<?=base_url()?>index.php/printer/showAll">
                         <img class="rsImg" data-rstmb="<?=base_url()?>imgs/4375e42c-d6c7-4d7b-909c-5b5900a08344_A.jpeg" src="imgs/3748e53f-d175-4da1-9b58-ae631f81336c_A.jpeg" alt="Weekend Deals" data-mobile-src="<?=base_url()?>imgs/c7440a0a-dc63-4b96-a721-6192d40b85c6_A.jpg" />
                     </a>
                 </div>
                 <div>
-                    <a href="products.html">
+                    <a href="<?=base_url()?>index.php/printer/showAll">
                         <img class="rsImg" data-rstmb="<?=base_url()?>imgs/4375e42c-d6c7-4d7b-909c-5b5900a08344_A.jpeg" src="<?=base_url()?>imgs/20150326015737.jpg" alt="Weekend Deals" data-mobile-src="imgs/c7440a0a-dc63-4b96-a721-6192d40b85c6_A.jpg" />
                     </a>
                 </div>
@@ -74,59 +74,6 @@
         </noscript>
 
         <script src='<?=base_url()?>js/p13n.js'></script>
-
-
-<!-- <script>
-    var url = document.location.host;
-    
-    document.write('<script src="http://' + url + '/App/RichRelevance/RRAPI.js"></scr' + 'ipt>');
-    document.write('<script src="http://' + url + '/App/RichRelevance/RRHome.js"></scr' + 'ipt>');
- 
-
- </script>
-<script charset = 'utf-8' type = 'text/javascript'>var R3_COMMON = new r3_common();R3_COMMON.setApiKey('08932f0b537182dc');R3_COMMON.setBaseUrl(window.location.protocol + '//recs.richrelevance.com/rrserver/');R3_COMMON.setClickthruServer(window.location.protocol + '//' + window.location.host);R3_COMMON.setSessionId('3ayojuip0vzvzqudwo4zk2jo');R3_COMMON.setUserId('');R3_COMMON.setRegionId('ar-sa');</script>
-
-<script>
-    document.write('<script src="http://' + url + '/App/RichRelevance/RR_H_Placement.js"></scr' + 'ipt>');
-</script> -->
-
-
-
-
-<!-- <script>
-    if (ismobile() == 0) {
-        document.write("<div class='ThreeProdfullScont' style='background-color:#0065a4' id='rk1_top'>");
-    }
-    else {
-        document.write("<div class='ThreeProdfullScont' style='background-color:#0065a4' id='mobile_top_rk1'>");
-    }
-    document.write("<div class='headerarea'><h3 id='blockheader_rk1'></h3></div>");
-    document.write("<div id='products_rk1'></div></div>");
-
-    if (ismobile() == 0) {
-        document.write("<div class='ThreeProdfullScont' style='background-color:#0065a4' id='rk2_top'>");
-    }
-    else {
-        document.write("<div class='ThreeProdfullScont' style='background-color:#0065a4' id='mobile_top_rk2'>");
-    }
-    document.write("<div class='headerarea'><h3 id='blockheader_rk2'></h3></div>");
-    document.write("<div id='products_rk2'></div></div>");
-</script>
- 
-
-
-<script>
-    if (ismobile() == 0) {
-        document.write("<div class='prodslidercont' id='rk3_bottom'>");
-        document.write("<div class='headerarea'><h2 id='blockheader_rk3'></h2></div>");
-        document.write("<div id='products_rk3'></div></div>");
-
-        document.write("<div class='prodslidercont' id='rk4_bottom'>");
-        document.write("<div class='headerarea'><h2 id='blockheader_rk4'></h2></div>");
-        document.write("<div id='products_rk4'></div></div>");
-    } 
-
-</script>    -->
 
 <script>
 
@@ -240,7 +187,7 @@
             <h3>   ليه تختار بروتك ؟</h3>
             <p>لورم ایپسوم أبجد هوز هو مجرد دمية النص من التنضيد والطباعة والصناعة من مصممي الغرافيك. الطابعات والنصوص، ولكن أيضا أعمدة الصحف والمجلات و ما هو ضروري للحالة </p>
             <a href="#OurWorks" data-scroll>شاهد اعمالنا</a>
-            <a href="contact.html">اطلب الخدمة الان</a>
+            <a href="<?=base_url()?>index.php/Email/addMsg">اطلب الخدمة الان</a>
         </div>
     </div>
 </div>
@@ -281,7 +228,7 @@
                 <div class="item" style=" border-right: 10px black !important;">
 
                     <div class="WorkSlider-Control">
-                        <a href="products.html">مشاهدة المزيد من الطابعات</a>
+                        <a href="<?=base_url()?>index.php/printer/showAll">مشاهدة المزيد من الطابعات</a>
                     </div>
                     <!-- // Works -->
                 </div>
@@ -298,7 +245,7 @@
         <div class="info">
             <h3>هل تريد صيانة طابعتك ؟</h3>
             <h5>بتكلفة قليلة وفى خلال يوم واحد</h5>
-            <a href="contact.html">اتصل بنا الان لتحديد موعد للصيانه</a>
+            <a href="<?=base_url()?>index.php/Email/addMsg">اتصل بنا الان لتحديد موعد للصيانه</a>
         </div>
     </div>
 </div>
@@ -362,19 +309,6 @@
     </div>
 <?php endif;?>
 <!-- // Section 05 -->
-
-<!-- Section 06 -->
-<div class="Section06 ViewPort">
-    <div class="Grid1k">
-        <div class="info">
-            <h3>فى بروتك نحرص على توفير خدمة ما بعد البيع</h3>
-            <h4>بطريقة تتيح لنا فتح جسر للتواصل بيننا وبين عملائنا بهدف كسب المزيد من الثقة في شركتنا</h4>
-            <h5>وهذه مجموعه من اراء العملاء فى خدمتنا قدمناها لكم للتأكد من مصداقيتنا</h5>
-            <a href="#">شاهد اراء العملاء</a>
-        </div>
-    </div>
-</div>
-<!-- // Section 06 -->
 
 <!-- Section 07 -->
 <?php if(count($partners) > 0):?>
@@ -510,7 +444,7 @@
 
                 </div>
                 <div class="Control clear-after">
-                    <a href="products.html" class="more">المزيد من المنتجات</a>
+                    <a href="<?=base_url()?>index.php/printer/showAll" class="more">المزيد من المنتجات</a>
                 </div>
             </div>
         </div>

@@ -124,7 +124,8 @@ class MY_Controller extends CI_Controller
 		if($this->validateID($id))
 		{
 			$response['state'] = 'success';
-			$response['data'] = $this->model->get($id);
+			$response['type'] = $this->condition;
+ 			$response['data'] = $this->model->get($id);
 			$response['images'] = $this->model->images($response['data'][$this->condition]
 				,$this->condition."=".$response['data'][$this->condition]);
 			echo json_encode($response);

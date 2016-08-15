@@ -110,15 +110,15 @@
 </div>
 </div>
 
-<!-----------------------------------sideBarRight------>
+<!--sideBarRight-->
 <nav class="sideBarRight"></nav>
 
-<!-----------------------------------------footer------>
+<!---footer-->
 <footer></footer>
 
-<!-----------------------------------OverLayForms---- -->
+<!---OverLayForms -->
 
-<!----AddNewOffer------------------- -->
+<!--AddNewOffe- -->
 <div class="OverLayForm closed" id="AddNewProductOverlayForm">
   <div class="container-fluid OverLayFormHeader">
    <div class="row CustomRow">
@@ -242,7 +242,7 @@
 </form>
 </div>
 
-<!----EditProduct------------------- -->
+<!--EditProduct -->
 <div class="OverLayForm closed" id="EditProductOverlayForm">
   <div class="container-fluid OverLayFormHeader">
    <div class="row CustomRow">
@@ -364,7 +364,7 @@
             </div>
           </div>
         </div>
-        <!----------------------------------------scripts------>
+        <!--cripts-->
         <?php $this->load->view('CMS/Scripts');  ?>
 		<script>
 		function MyFunction(){
@@ -397,8 +397,8 @@
 </form>
 </div>
 
-<!------------------------------------DeleteModals---- -->
-<!----DeleteProduct------------------------------>
+<!--DeleteModals -->
+<!--DeleteProduct-->
 <div class="modal fade CustomModal" id="DeleteProductModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -421,7 +421,7 @@
   </div>
 </div>
 
-<!----ProductTags------------------------------>
+<!--ProductTags-->
 <div class="modal fade CustomModal" id="EditProductTagsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -446,7 +446,7 @@
   </div>
 </div>
 </div>
-<!----------------------------------------scripts------>
+<!--scripts-->
 <script src="<?=base_url()?>js/cms/js/jquery-1.12.1.min.js"></script>
 <script src="<?=base_url()?>js/cms/js/tinymce/tinymce.min.js"></script>
 <script src="<?=base_url()?>js/cms/js/bootstrap.min.js"></script>
@@ -479,6 +479,12 @@
     /// adjust edit form 
     $.get(path,function(data){
       console.log(JSON.stringify(data,null,2));
+      $.each(data.image , function(key,value){
+        console.log(key);
+        console.log('here');
+        console.log(value);
+        $('.prodImages').appendChild($('<img>').attr('src',value).addClass('editimgproduct'));
+      });
     },'json');
   });
 

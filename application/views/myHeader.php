@@ -175,13 +175,13 @@
             <a href="#" class="close-menu-2"><b class="fa fa-close"></b></a>
             <ul>
                 <li>
-                    <a href="downloads.html">
+                    <a href="<?=base_url()?>index.php/Download/getPDF">
                         <i><img src="<?=base_url()?>imgs/datasheet.png" alt=""></i>
                         <span>داتا شيت </span>
                     </a>
                 </li>
                 <li>
-                    <a href="downloads.html">
+                    <a href="<?=base_url()?>index.php/Download/getDRIVER">
                         <i><img src="<?=base_url()?>imgs/1287710488_folder_black_download512.png" alt=""></i>
                         <span>سوفتوير</span>
                     </a>
