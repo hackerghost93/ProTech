@@ -173,11 +173,11 @@ class Email extends CI_Controller
         
           <div class="Inboxes">
   
-             <div class="checkbox">
+             
               <label>
-                <p onclick="ShowMail('. $row['id'] .')">'. $row['name'].'</p>
-              </label>
-            </div>';
+                <a  href="#" class="inboxname" onclick="ShowMail('. $row['id'] .')">'. $row['name'].'</a>
+              </label>';
+            
              echo"<a href='#' class='deleteBtn'  data-target='#DeleteInboxMessageModal' data-toggle='modal' title='delete' data-placement='right' data-id='".$row['id']."'><span class='fa fa-trash'></span></a>";
             echo'<p>'.$row['subject'] .'</p>';
            echo' <h4 class="TimeInbox"> '.$row['created_at'].'</h4>';

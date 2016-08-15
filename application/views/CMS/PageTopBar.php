@@ -7,7 +7,7 @@
               <li class="dropdown subTopBarItem">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
                   <div class="SubHeaderAnchor">
-                       <h4>Mohamed Khalifa</h4>
+                       <h4>Admin</h4>
                        <h4><span class="fa fa-caret-down"></span></h4>
                    </div>
                    </a>
@@ -21,7 +21,7 @@
                 <li class="dropdown subTopBarItem">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
                        <div class="SubHeaderAnchor">
-                            <h4>Mohamed Fahmy</h4>
+                            <h4>Admin</h4>
                             <h4><span class="fa fa-caret-down"></span></h4>
                        </div>
                      </a>

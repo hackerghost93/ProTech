@@ -14,11 +14,11 @@
 				
 					<div class="Inboxes">
 	
-					   <div class="checkbox">
+					
 							<label>
-								<p onclick="ShowMail(<?php echo $row['id'] ?>)"><?php echo $row['name']; ?></p>
+								<a href="#" class="inboxname" onclick="ShowMail(<?php echo $row['id'] ?>)"><?php echo $row['name']; ?></a>
 							</label>
-						</div>
+					
 						<?php echo"<a href='#' class='deleteBtn'  data-target='#DeleteInboxMessageModal' data-toggle='modal' title='delete' data-placement='right' data-id='".$row['id']."'><span class='fa fa-trash'></span></a>" ?>
 						<p><?php echo $row['subject'] ;?></p>
 						<h4 class="TimeInbox"> <?php echo $row['created_at'];?></h4>

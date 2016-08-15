@@ -1,9 +1,9 @@
 <nav class=" clearfix navbar navbar-default navbar-static-top">
                  <div class="container-fluid">
                       <div class="navbar-left">
-                          <div class="HeaderLogo">
+                          <!--div class="HeaderLogo">
                             <img src="../_/images/logo.png"></img>
-                          </div>
+                          </div-->
                           <div class="HeaderLinks">
                           <a  class="btn" id="hi"><span class="fa fa-calendar"></span></a>
                           <a href="#" class="btn"><span class="fa fa-bell"></span></a>
@@ -23,7 +23,7 @@
                           <div class="dropdown ProfileHeader">
                               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
                                 <div class="ProfileHeaderAnchor">
-                                    <h4>Mohamed Khalifa</h4>
+                                    <h4>Admin</h4>
                                     <img src="../_/images/profile.jpg" alt="user"> 
                                 </div>
                               </a>
