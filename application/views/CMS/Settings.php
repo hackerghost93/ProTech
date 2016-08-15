@@ -15,8 +15,13 @@ button.btn.btn-md.changePassword:hover {
 }
 span.confirmpassword {
     position: absolute;
-    bottom: 16%;
-    right: -25%;
+    bottom: 24%;
+    color: red;
+    left: 194px;
+}
+span.Invalidpassword {
+    position: absolute;
+    left: 152px;
     color: red;
 }
 </style>
@@ -55,7 +60,7 @@ span.confirmpassword {
                                     <div class="box-header">
                                         <div class="row CustomRow">
                                         <div class="HeaderLeft"> 
-                                        </div>
+                                         </div>
                                         <div class="HeaderRight"> 
                                             
                                         </div>
@@ -79,6 +84,9 @@ span.confirmpassword {
                         <input type="text" name="Email" id="JSmail"  class="form-control" />
                        </div>
 											 <div class="form-group formLayout">
+                       <?php if(isset($state))
+                       {echo "<span class='Invalidpassword'>$state</span>";}
+                        ?>
 												<label for="CurrentPassword" class="control-label ">CurrentPassword :</label>
 												<input type="password" name="CurrentPassword" class="form-control" />
 											 </div>	
@@ -144,7 +152,7 @@ span.confirmpassword {
     }
     else
     {
-         $("#PWC").text("password&re-typed password miss match");
+         $("#PWC").text("password doesn't matchs");
          $("#Dis_able").prop('disabled', true);
     }
   }

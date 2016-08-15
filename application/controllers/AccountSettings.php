@@ -28,7 +28,7 @@ if($this->input->post("ID") != null && $this->input->post("Username") != null &&
 		$Checker = $this->Awd_Model->CheckOldPW($data['username'], $Old_Password);
 		if($Checker == true){$this->Awd_Model->update('admins',$data,$data['admin_id'],'admin_id');
 		redirect('AccountSettings');}
-		else{$Ret['state'] = "Wrong password";$this->load->view('CMS/Settings',$Ret);}
+		else{$Ret['state'] = "Invalid password";$this->load->view('CMS/Settings',$Ret);}
 	}
 	else
 	{
