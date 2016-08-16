@@ -81,7 +81,15 @@ class Awd_Model extends CI_Model{
     	$this->db->order_by($ArBy,$ArMod);
     	$query=$this->db->get($Tname);
     	$res=$query->result();
-    	return $res[0];
+    	return $res;
+    }
+     public function OneDataWhere($Tname,$cond,$var,$ArBy,$ArMod)
+    {
+        $this->db->where($cond,$var);
+        $this->db->order_by($ArBy,$ArMod);
+        $query=$this->db->get($Tname);
+        $res=$query->result();
+        return $res[0];
     }
     public function Login($username, $password)
     {       

@@ -1,0 +1,395 @@
+ button.btn.btn-md.AddNewSpecificationsbtn {
+    position: absolute;
+    right: 23px;
+	top: 80px;
+    background: #2D3446;
+    color: #fff;
+} 
+button.btn.btn-md.AddNewStepbtn {
+    position: absolute;
+    right: 23px;
+	top: 105px;
+    background: #2D3446;
+    color: #fff;
+}
+ button.btn.btn-md.AddNewStepserbtn {
+    position: absolute;
+    right: 23px;
+	top: 230px;
+    background: #2D3446;
+    color: #fff;
+} 
+a.removespecification {
+    float: right;
+    margin-top: -42px;
+    padding-right: 18px;
+}
+/* button.btn.btn-md.AddNewSpecificationsbtn {
+    background: #2D3446;
+    color: #fff;
+    float: right;
+    margin-right: 45%;
+    margin-top: -54px;
+} */
+ input.overlayproduct.form-control {
+    width: 83% !important;
+}  
+input.overlaystagesservices.form-control {
+    width: 83% !important;
+} 
+img.prodimg {
+    width: 60px;
+}
+input.InputProduct.form-control{
+	width:85% !important;
+}
+label.offer {
+    color: rgba(51, 51, 51, 0.62);
+}
+.mask .fa {
+    display: none;
+    position: absolute;
+    top: -20px;
+    transition: all 0.35s ease-in-out;
+    left: 40px;
+}
+img.editimgproduct {
+    width: 100px;
+}
+.mask:hover .fa {
+    display: block;
+    position: absolute;
+    top: 41px;
+    transition: all 1s ease-in-out;
+    left: 40px;
+    color: #fff;
+    font-size: 17px;
+}
+.mask {
+    position: absolute;
+    z-index: 2;
+    width: 100px;
+    height: 100px;
+    background: rgba(51, 51, 51, 0.25);
+    transition: all 0.35s ease-in-out;
+}
+.prodImages {
+    position: relative;
+}
+.FromOne {
+    border-bottom: 1px solid rgba(204, 204, 204, 0.13) !important;
+}
+.ToOne {
+    border-bottom: 1px solid rgba(204, 204, 204, 0.13);
+}
+.Time {
+    border-bottom: 1px solid rgba(204, 204, 204, 0.13);
+}
+.TitleMessage {
+    border-bottom: 1px solid rgba(204, 204, 204, 0.13);
+}
+button#Reply {
+    margin-top: 25px;
+    background: #FFC107;
+    color: #fff;
+}
+label.To {
+    margin-left: 19px;
+}
+p.inboxdetails {
+    width: 97%;
+    text-align: right;
+}
+.subSideBar.tt {
+    width: 300px;
+    padding: 25px;
+    padding-top: 10px;
+    background: rgba(204, 204, 204, 0.08);
+    height: 90%;
+    position: fixed;
+    left: 301px;
+    box-shadow: 8px 0px 12px 2px #ccc;
+    overflow: auto;
+}
+.SideBarContent.Inboxmessages {
+    width: 54%;
+    left: 592px;
+    position: fixed;
+    padding-left: 25px;
+    padding-right: 25px;
+    overflow-y: auto;
+    height: 100%;
+}
+.SideBarContent#Replysubsccribe {
+    width: 54%;
+    left: 592px;
+    position: fixed;
+    padding-left: 25px;
+    padding-right: 25px;
+    overflow-y: auto;
+    height: 100%;
+	display:none;
+}
+form.InboxSearch {
+    width: 92% !important;
+}
+.ReplyMessage{
+	display:none;
+}
+.ReplyMessage h3 {
+    font-size: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+.FromOne span {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 18px;
+}
+.ToOne span {
+    padding-left: 38px;
+    padding-right: 3px;
+    font-size: 18px;
+}
+.ToOneSubscribe span{
+       padding-left: 47px;
+    padding-right: 25px;
+    font-size: 18px;
+}
+.ToOneSubscribe span {
+    padding-left: 61px;
+    padding-right: 25px;
+    font-size: 18px;
+}
+button.btn.btn-md.OverLayFormBtn.Sendus {
+    margin-right: 30% !important;
+    position: absolute;
+    right: 23%;
+}
+.Time span {
+    padding-left: 23px;
+    padding-right: 21px;
+    font-size: 18px;
+}
+.TitleMessage span {
+    padding-left: 25px;
+    padding-right: 24px;
+    font-size: 18px;
+}
+.SubjectSubscribe span {
+    padding-left: 25px;
+    padding-right: 24px;
+    font-size: 18px;
+}
+button.btn.btn-md.OverLayFormBtn.submitReply {
+    margin-top: 8px;
+    margin-bottom: 34px;
+    background: #2D3446;
+    color: #fff;
+}
+input.Contact.form-control {
+    border: 1px solid rgba(230, 230, 230, 0.7);
+    border-radius: 0px;
+    padding: 10px;
+    min-height: 50px;
+    box-shadow: none;
+    background: none;
+    width: 50%;
+}
+span.notread {
+    background: #FF5722;
+    color: #fff;
+    padding: 3px;
+    font-size: 11px;
+    font-weight: bold;
+    text-decoration: none;
+    float: right;
+    margin-top: 10px;
+}
+span.notread1 {
+    background: #26D8EF;
+    color: #fff;
+    padding: 3px;
+    font-size: 11px;
+    font-weight: bold;
+    text-decoration: none;
+    float: right;
+    margin-top: 10px;
+}
+input.form-control.searchinbox {
+    width: 91%;
+    border: 1px solid rgba(204, 204, 204, 0.44);
+    height: 39px;
+}
+.form-group.searchone {
+    margin-top: 14px;
+    position: relative;
+}
+.form-group.searchone span {
+    padding-top: 0p;
+    float: right;
+    position: absolute;
+    right: -21px;
+    top: -2px;
+}
+.Inboxes h4 {
+    font-size: 15px;
+    text-align: left;
+    color: rgba(45, 52, 70, 0.52);
+    font-weight: bold;
+}
+nav.subSideBar.tt ul.subSideBarMenu li {
+    position: relative;
+}
+nav.subSideBar.tt ul.subSideBarMenu .Inboxes {
+    border-bottom: 1px solid rgba(174, 176, 182, 0.23);
+    padding: 6px;
+    margin-top: 35px;
+}
+nav.subSideBar.tt ul.subSideBarMenu .Inboxes span {
+    float: right;
+    color: #ccc;
+    margin-top: -26px;
+    padding-right: 1%;
+}
+nav.subSideBar.tt ul.subSideBarMenu li {
+    position: relative;
+    top: 21px;
+    margin-bottom: -8px;
+    width: 283px;
+    margin-left: -25px;
+    padding: 0px 24px 0px 16px;
+}
+.Inboxes h4 {
+    font-size: 12px;
+    text-align: left;
+    color: rgba(91, 149, 207, 0.42);
+}
+.Inboxes .checkbox {
+    width: 97% !important;
+}
+.Inboxes:hover .mask1 {
+   display:block;
+    top: 22px;
+    width: 301px;
+    height: 100%;
+    background: rgba(45, 52, 70, 0.76);
+	z-index:-2;
+}
+button.btn.btn-sucess.replysubscribeer {
+    float: right;
+    background: #26D8EF;
+    margin-top: -29px;
+    font-size: 17px;
+    color: #fff;
+    width: 23px;
+    height: 24px;
+}
+button.btn.btn-sucess.replysubscribeer .fa {
+    position: absolute;
+    bottom: 13px;
+    color: #fff !important;
+    right: 9px;
+}
+button.btn.btn-md.OverLayFormBtn.SubmitSubscribeReply {
+    background: #2D3446;
+    color: #fff;
+    margin-top: -62px;
+    margin-left: 113px;
+}
+nav.subSideBar.tt ul.subSideBarMenu .Inboxes span {
+    float: right;
+    color: rgb(255, 87, 34);
+    margin-top: 20px;
+    padding-right: 1%;
+}
+input.form-control {
+    border: 1px solid rgba(230, 230, 230, 0.7);
+    border-radius: 0px;
+    padding: 10px;
+    min-height: 42px;
+    box-shadow: none;
+    background: none;
+    width: 89%;
+    height: 13px !important;
+    margin-bottom: 15px;
+}
+.Inboxes p {
+    color: rgba(45, 52, 70, 0.41);
+}
+.backread {
+    height: 127px;
+    background: url("../../../imgs/bg2.jpg");
+    z-index: 8;
+    background-position: 39% 66% !important;
+    background-size: cover;
+    margin-top: -21px;
+    margin-bottom: 28px;
+}
+.border1 {
+    border: 1px solid #ccc;
+    margin-top: 37px;
+    margin-left: -23px;
+}
+.logologin h3 {
+    color: #f2cd0d;
+    font-size: 21px;
+    /* float: right; */
+    padding-left: 50px;
+    margin-top: 22px;
+}
+.logologin span {
+    color: #fff;
+    padding-left: 3px;
+    font-size: 13px;
+}
+.logologin.row img {
+    width: 95px;
+    height: 90px;
+    margin-top: -60px;
+    float: right;
+}
+.border2 {
+    border: 1px solid #ccc;
+    margin-top: 37px;
+    margin-left: 7px;
+    width: 64px;
+}
+.login {
+    margin-top: 60px;
+}
+button.loginsubmit {
+    background: #ccc;
+    border-radius: 3px;
+    color: #332245;
+    width: 88px;
+    margin-top: 15px;
+}
+body{
+	    background: #F5F5F5;
+    overflow-x: hidden;
+}
+.bodylogin { font-family: Helvetica, Arial, sans-serif; line-height: 1.3em; -webkit-font-smoothing: antialiased; }
+
+
+.container {
+    width: 30%;
+    margin: 103px auto;
+    background-color: #332245;
+    padding: 79px 1px 20px 39px;
+    height: 500px;
+	
+    border-radius: 10px;
+}
+label.loginform {
+    color: rgba(204, 204, 204, 0.84);
+}
+.fa.fa-search {
+    position: absolute;
+    top: -13px;
+    /*right: -50px;*/
+}
+.Inboxes a {
+    font-size: 15px !important;
+    font-weight: bold;
+}

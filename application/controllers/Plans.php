@@ -44,7 +44,8 @@ public function GetAllData()
  		$name = $this->Awd_Model->ChData('plans',$ID,'plane_id');
  		$plan_name = $name->plane_name;
  		$results = $this->Awd_Model->DataWhere('plan_item','plane_id',$ID,'item_id','ASC');
- 		foreach ($results as $object) {
+ 		foreach ($results as $object)
+ 		{
  			$items_text[] = $object->plane_text;
  		}
  		$data["state"]="success";

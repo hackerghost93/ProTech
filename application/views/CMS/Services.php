@@ -317,10 +317,13 @@ button.btn.btn-md.AddNewStepserbtn.addnewresult {
       {
       var ID=id;
       $('#SPlan_ID').val(ID);
+      console.log(ID);
       $.get('Plans/GetAllData',{ID:ID},function(data)
       {
+        console.log(data);
         $('#PlaneName').val(data.name);
         $.each($(data.plan_items), function(key, value) {
+          console.log(value);
          $('#SDiv').append('<p><input type="text" value='+value+' name="NewData_items[]" class="form-control overlayproduct result" /><a href="#" id="remScnt" class="removespecification  CloseBtn" ><i class="fa fa-close"></i></a></p>');
       });
       },'json');

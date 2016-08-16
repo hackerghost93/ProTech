@@ -243,9 +243,9 @@ if(isset($results))
       var ID=id;
       $.post('Customers/GetEditedData',{ID:ID},function(data)
           {
+            console.log(data);
             $("#EditCutomerID").val(data.partner_id);
             $("#EditCutomerTitle").val(data.partner_name);
-            $("#EditCutomerLogo").val(data.partner_image);
           },'json');
     }
   </script>

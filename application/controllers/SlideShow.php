@@ -46,7 +46,7 @@ public function GetEditedData()
 	if($this->input->post("ID") != null)
 	{
 		$ID = $this->input->post("ID");
-		$data = $this->Awd_Model->DataWhere('slide_show','Slide_ID',$ID,'Slide_ID','ASC');
+		$data = $this->Awd_Model->OneDataWhere('slide_show','Slide_ID',$ID,'Slide_ID','ASC');
 		echo json_encode($data);
 	}
 }
