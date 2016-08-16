@@ -119,7 +119,7 @@ class Awd_Model extends CI_Model{
         return $res;
      }
          public function CheckOldPW($username, $password)
-    {       
+        {       
         $this->db->where('username',$username);
         $this->db->where('password',$password);  
         $result=$this->db->get('admins');
@@ -129,8 +129,14 @@ class Awd_Model extends CI_Model{
         }
         else{
             return False;
+            }
         }
-    }
+        public function Counter($table,$col,$val)
+        {
+            $query = $this->db->query("SELECT COUNT($col) AS count FROM $table WHERE $col = '$val' ");
+            $res = $query->result();
+            return $res[0];
+        }
 }
 
 ?>

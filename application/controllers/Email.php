@@ -70,6 +70,11 @@ class Email extends CI_Controller
         //$this->load->view('CMS/ComposeEmail.php');
          $this->load->view('CMS/InboxSubscribers.php');
     }
+    public function UnRead()
+    {
+      $number = $this->Awd_Model->Counter('emails','Seen','new');
+      echo json_encode($number);
+    }
     public function send()
     {
       $this->form_validation->set_rules('Subject', 'Subject', 'trim|required');

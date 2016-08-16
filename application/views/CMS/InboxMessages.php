@@ -170,17 +170,22 @@
 function ShowMail(id)
 {
   var ID = id;
-  console.log("reached function");
-  console.log(ID);
       $.post('<?php echo base_url();?>index.php/Email/show',{ID:ID},
           function(data){
-            console.log(data);
             $("#email").text(data.email);
             $("#name").text(data.name);
             $("#subject").text(data.subject);
             $("#created_at").text(data.created_at);
             $("#message").text(data.message);
           },'json');
+        setUnread();
+      function setUnread() {
+          var nothing = "nothing";
+          $.post('Email/UnRead',{nothing:nothing},function(data)
+          {
+              $("#NewMails").text(data.count);
+          },'json');
+       }
 }
 </script>
 

@@ -6,7 +6,7 @@
                                 <a href="<?php echo base_url();?>index.php/Email/select_all" class="subSideBarPayrollMenuItemAnchor " id="SSMIBLog-Categories">
                                     <h4><span class="fa fa-envelope" aria-hidden="true"></span></h4>
                                     <h4>Inbox Messages</h4>
-									<span class="notread">23</span>
+									<span class="notread" id="NewMails"></span>
                                 </a>
                             </li>
                              <li class="subSideBarMenuItem BlogMenuItem">

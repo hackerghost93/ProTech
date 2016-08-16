@@ -5,7 +5,7 @@
         <title>AGED CMS : Email</title> 
 		   <?php $this->load->view('CMS/Links');  ?>
     </head>
-    <body>
+    <body onload="setUnread()">
 	
         <!-- ---------------------------------sideBarLeft------ -->
         <div class="sideBarLeft">
@@ -80,5 +80,15 @@
         <!----------------------------------------scripts------>
           <?php $this->load->view('CMS/Scripts.php'); ?>
 
+    <script type="text/javascript">
+       function setUnread() {
+          var nothing = "nothing";
+          $.post('Email/UnRead',{nothing:nothing},function(data)
+          {
+              $("#NewMails").text(data.count);
+          },'json');
+       }
+                         
+    </script>
     </body>
 </html>
