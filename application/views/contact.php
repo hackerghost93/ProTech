@@ -30,27 +30,13 @@
         </ul>
         <div class="contact-form_">
          <h4>يمكنك ارسال رسالة</h4>
-         <div role="form" class="wpcf7" id="wpcf7-f160-o1" dir="rtl">
-            <div class="screen-reader-response"></div>
-            <form action="<?php echo base_url()?>index.php/Email/addMsg" method="post" class="wpcf7-form" novalidate="novalidate">
-                <div style="display: none;">
-                    <input type="hidden" name="_wpcf7" value="160" />
-                    <input type="hidden" name="_wpcf7_version" value="4.3" />
-                    <input type="hidden" name="_wpcf7_locale" value="" />
-                    <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f160-o1" />
-                    <input type="hidden" name="_wpnonce" value="f69db08be4" />
-                </div>
-                <p><span class="wpcf7-form-control-wrap your-name"><input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="الإسم" /></span></p>
-                <p>    <span class="wpcf7-form-control-wrap your-email"><input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="البريد الالكتروني" /></span></p>
-                <p>    <span class="wpcf7-form-control-wrap your-subject"><input type="text" name="your-subject" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false" placeholder="العنوان" /></span></p>
-                <p>    <span class="wpcf7-form-control-wrap your-message"><textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="الرسالة"></textarea></span></p>
-                <p><input type="submit" value="إرسال" class="wpcf7-form-control wpcf7-submit" /></p>
-                <div class="wpcf7-response-output wpcf7-display-none">
-                </div>
-            </form>
-        </div>        
-    </div>
-    
+    <form method="post" action="<?php echo base_url()?>index.php/Email/addMsg">
+    <input type="text" name="your-name"  placeholder="الإسم" />
+    <input type="text" name="your-email"  placeholder="البريد الالكتروني" />
+    <input type="text" name="your-subject"  placeholder="العنوان" />
+    <textarea type="text" name="your-message"  placeholder="الرسالة" ></textarea>
+    <input type="submit" value="إرسال" />
+    </form>
     
     <span class="clear"><!--  --></span>
 </div>
@@ -152,7 +138,7 @@ if (typeof newsletter_check !== "function") {
 </div>
 <div class="SiteInfo">
     <a href="<?php echo base_url()?>" class="logo"><span>بروتك <span>لخدمات زيروكس المتكامله</span></span> </a>
-    <a href="<?php echo base_url()?>index.php/Email/addMsg" class="OpenTicket">فتح تذكرة</a>
+    <a href="<?php echo base_url()?>index.php/Email/ViewMassage" class="OpenTicket">فتح تذكرة</a>
     <div class="Social">
         <a target="_blank" href="#" class="Facebook" id="Facebook"><span></span></a>
             <a target="_blank" href="#" class="Twitter" id="Twitter"><span></span></a>
@@ -168,7 +154,7 @@ if (typeof newsletter_check !== "function") {
         <ul>
             <div class="menu-%d8%a8%d8%a8%d8%a8-container"><ul id="menu-%d8%a8%d8%a8%d8%a8" class="menu"><li id="menu-item-2470" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2470"><a href="<?php echo base_url()?>index.php/About">عن بروتك</a></li>
 
-                <li id="menu-item-2472" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2472"><a href="<?php echo base_url()?>index.php/Email/addMsg"> اتصل بنا </a></li>
+                <li id="menu-item-2472" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2472"><a href="<?php echo base_url()?>index.php/Email/ViewMassage"> اتصل بنا </a></li>
             </ul>
         </div>  
     </ul>

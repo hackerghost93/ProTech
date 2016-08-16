@@ -119,6 +119,10 @@ class Email extends CI_Controller
         $this->load->view('CMS/ComposeEmail.php');
          
     }
+    public function ViewMassage()
+    {
+      $this->load->view('contact.php');
+    }
      public function addMsg()
      {
       $this->form_validation->set_rules('your-email', 'email', 'trim|required');
@@ -133,9 +137,9 @@ class Email extends CI_Controller
                   'message'=>$this->input->post('your-message')
         );
       $this->Email_model->addRecievedMsg($data);
-      header('location:'.$this->config->base_url());
+      //header('location:'.$this->config->base_url());
     }
-      $this->load->view('contact.php');
+      redirect('Email/ViewMassage');
    //header('location:'.$this->config->base_url());
      }
 

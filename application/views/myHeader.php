@@ -111,7 +111,7 @@
     <header>
         <div class="Grid1k clear-after">
             <a href="#" class="logo ViewPort"><span>بروتك <span>لخدمات زيروكس المتكاملة</span></span> </a>
-            <a href="<?php echo base_url()?>index.php/Email/addMsg" class="OpenTicket">افتح تذكرة</a>
+            <a href="<?php echo base_url()?>index.php/Email/ViewMassage" class="OpenTicket">افتح تذكرة</a>
 
             <div class="primary-menu">
                 <ul id="menu-%d9%87%d9%8a%d8%af%d8%b1-%d9%81%d9%88%d9%82" class="menu">
@@ -135,7 +135,7 @@
                         <a href="<?php echo base_url()?>index.php/About">عن الشركه</a>
                     </li>
 
-                    <li id="menu-item-2474" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2474"><a href="<?php echo base_url()?>index.php/Email/addMsg">تواصل معنا</a></li>
+                    <li id="menu-item-2474" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2474"><a href="<?php echo base_url()?>index.php/Email/ViewMassage">تواصل معنا</a></li>
                 </ul></div>
             </div>
         </header>
