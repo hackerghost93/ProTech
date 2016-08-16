@@ -95,8 +95,8 @@
     <!-- Top Nav -->
     <div class="top-nav_"><div class="top-nav ViewPort">
         <div class="Grid1k clear-after">
-            <span class="text ViewPort">002-00000000000</span>
-            <a href="javascript:void(0)" class="MSG-Btn ViewPort"><span>info@AgedSystems.com</span></a>
+            <span class="text ViewPort Mobile" ></span>
+            <a href="javascript:void(0)" class="MSG-Btn ViewPort" ><span class="Email"></span></a>
             <div class="Social">
                 <a target="_blank" href="#" class="tooltip-bottom Facebook ViewPort" data-tip="Follow Us On Facebook"><span></span></a>
                 <a target="_blank" href="#" class="tooltip-bottom Twitter ViewPort" data-tip="Follow Us On Twitter"><span></span></a>

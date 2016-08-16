@@ -23,10 +23,10 @@
 
     <div class="Grid1k">
         <ul class="contact-it">
-            <li class="c_it1"><i></i>الجوال <span>002-0000000000000</span></li>
-            <li class="c_it2"><i></i>الايميل <span>info@ProTech.com</span></li>
-            <li class="c_it3"><i></i>سكايب <span>ProTech</span></li>
-            <li class="c_it4"><i></i>واتس اب <span>002-0000000000</span></li>
+            <li class="c_it1" ><i></i>الجوال <span class="Mobile"></span></li>
+            <li class="c_it2"><i></i>الايميل <span  class="Email"></span></li>
+            <li class="c_it3" ><i></i>سكايب <span class="Skypee"></span></li>
+            <li class="c_it4" ><i></i>واتس اب <span class="WhatsApp"></span></li>
         </ul>
         <div class="contact-form_">
          <h4>يمكنك ارسال رسالة</h4>
