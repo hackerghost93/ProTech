@@ -70,5 +70,15 @@ class Family extends CI_Controller
      </div></div>';
 
 
+   }
+
+
+   // hackerghost javascript call
+
+   function getAll()
+   {
+      $data['families'] = $this->Family_model->select_all_families();
+      $data['state'] = 'success';
+      echo json_encode($data);
    }          
  }

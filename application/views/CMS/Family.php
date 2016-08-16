@@ -44,27 +44,19 @@
         </header>
         <!------------------------------------dataSection------>
         <div class="dataSection">
-              <nav class="subTopBar">
-                  <ul class="subTopBarList">
-                      <li class="subTopBarItem">
-                          <h1>Family</h1>
-                      </li>
-                      <li>
-                          <form class="TopBarForm">
-                                <div class="form-group">
-                                     <input type="search" onkeyup="showHint(this.value)" class="form-control" name="Search" placeholder="Search By Family Name"/>
-                                      <a href="#" type="submit" role="button"><span class="fa fa-search"></span></a>
-                                </div>
-                          </form>    
-                      </li>
-                   </ul>
-             </nav>
+	  <div class="DataDiv">
+		<nav class="subSideBar">
+			<?php require_once("ProductsSidebar.php"); ?>
+		</nav>
+	 <div class="SideBarContent ">
               <div class="box-wider-text">
                 <div class="box-body">
                                  <div class="table-responsive">  <span id="txtHint"></span> </div>
                         <div class="table-responsive" id="UserTable">
-              <div class="DataDiv Wide">
                           <div class="DataDiv">
+  				<div class="PageHaeder">
+				 	 <h2>Family</h2>
+			   	</div>
                                <div class="box-wider-text">
                                     <div class="box-header">
                                         <div class="row CustomRow">
@@ -127,8 +119,8 @@
                                     </div>
                                </div>
                           </div>
-              </div>
-        </div>
+              </div></div>
+      </div>
 
         <!-----------------------------------sideBarRight------>
         <nav class="sideBarRight"></nav>

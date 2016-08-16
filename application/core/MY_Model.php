@@ -33,6 +33,21 @@ class MY_Model extends CI_Model
 		return $this->db->insert_id();
 	}
 
+	function deleteImage($path , $type)
+	{
+		if($type == 'printer')
+		{
+			$this->db->from('printer_image');
+		}
+		else
+		{
+			$this->db->from('part_image');
+		}
+		$this->db->where('image_path = ' , $path);
+		$this->db->delete();
+	}
+
+
 }
 
  ?>

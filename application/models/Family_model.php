@@ -6,7 +6,9 @@ class Family_model extends CI_Model
 	{
 		$query=$this->db->get('families');
 		if($query->num_rows()>=1)
-		return $query->result_array();
+		    return $query->result_array();
+        else
+            return array();
 	}
 	public function add_family($data)
     {

@@ -72,6 +72,28 @@ class printer_model extends MY_Model
 		$this->db->delete($this->table_name);
 	}
 
+
+	function getPrinting($id)
+	{
+		$this->db->from('printer_typing_specification');
+		$this->db->where('printer_id = ' ,$id);
+		return $this->db->get()->result_array(); 
+	}
+
+	function getGeneral($id)
+	{
+		$this->db->from('printer_general_specification');
+		$this->db->where('printer_id = ' ,$id);
+		return $this->db->get()->result_array();
+	}
+
+	function getGuarantee($id)
+	{
+		$this->db->from('guarantee');
+		$this->db->where('printer_id = ' ,$id);
+		return $this->db->get()->result_array();
+	}
+
 	
 
 
