@@ -13,7 +13,6 @@
                                 <a href="<?php echo base_url();?>index.php/Email/sendToAll" class="subSideBarPayrollMenuItemAnchor " id="SSMIBLog-Tags">
                                      <h4><span class="fa fa-envelope" aria-hidden="true"></span></h4>
                                     <h4>Send to Subscribers</h4>
-									<span class="notread1">23</span>
                                 </a>
                             </li>
                              <li  class="subSideBarMenuItem BlogMenuItem">
@@ -35,3 +34,14 @@
                                 </a>
                             </li-->
                          </ul>
+                         <script type="text/javascript">
+                                 function setUnread() {
+                                    console.log("we are here");
+                                    var nothing = "nothing";
+                                    $.post('<?php echo base_url();?>index.php/Email/UnRead',{nothing:nothing},function(data)
+                                    {
+                                        console.log(data.count);
+                                       $("#NewMails").text(data.count);
+                                   },'json');
+                                }
+                         </script>

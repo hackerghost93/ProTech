@@ -29,7 +29,7 @@
 }
         </script>
     </head>
-    <body>
+    <body onload="setUnread()">
 	 <div class="modal fade CustomModal" id="DeleteInboxMessageModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -179,13 +179,6 @@ function ShowMail(id)
             $("#message").text(data.message);
           },'json');
         setUnread();
-      function setUnread() {
-          var nothing = "nothing";
-          $.post('Email/UnRead',{nothing:nothing},function(data)
-          {
-              $("#NewMails").text(data.count);
-          },'json');
-       }
 }
 </script>
 
