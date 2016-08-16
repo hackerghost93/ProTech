@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <title>Protech CMS : Downloads</title> 
-     		 <?php require_once("Links.php"); ?>
+     		 <?php $this->load->view("CMS/Links.php"); ?>
 
         
     </head>
@@ -11,12 +11,12 @@
     <body>
         <!-- ---------------------------------sideBarLeft------ -->
         <div class="sideBarLeft">
-            <?php require_once("MainSideBar.php"); ?>
+           <?php $this->load->view("CMS/MainSideBar.php"); ?>
         </div>
         
         <!-- --------------------------------------Header----- -->
         <header>
-            <?php require_once("MainHeader.php"); ?>
+            <?php $this->load->view("CMS/MainHeader.php"); ?>
         </header>
         <!------------------------------------dataSection------>
         <div class="dataSection">
@@ -50,11 +50,17 @@
 													</tr>
 												</thead>
 												<tbody>
-													<tr>
-													  <td>1</td>
-													  <td>Cloudy</td>
-													  <td class='check-col tableAdmin'><a href='#' class='deleteBtn'  data-target='#DeleteDownloadsModal' data-toggle='modal' title='delete' data-placement='right'><span class='fa fa-trash'></span></a></td>
-													</tr> 
+<?php
+if(isset($results))
+{
+	////`PDF_ID``PDF_Title``PDF_URL`
+   foreach ($results as $object) {
+   echo "<tr><td>$object->PDF_ID</td><td>$object->PDF_Title</td>
+   <td class='check-col tableAdmin'><a href='#' onclick='SetPDFID($object->PDF_ID)' class='deleteBtn'  data-target='#DeleteDownloadsModal' data-toggle='modal' title='delete' data-placement='right'><span class='fa fa-trash'></span></a></td></tr>";
+ }
+}
+?>
+											
 												</tbody>
 										 </table>
 								  </div>
@@ -101,18 +107,18 @@
           <div class="container-fluid OverLayFormHeader">
                <div class="row CustomRow">
                    <div class="OverLayFormHeaderLeft">
-                        <h2> Add New Downloads </h2>
+                        <h2> Add New PDF </h2>
                    </div>
                    <div class="OverLayFormHeaderRight">
                         <span class="fa fa-close ExitBtn"></span>
                    </div>
                </div>
           </div>
-          <form>
+          <form method="post" action="<?=base_url()?>index.php/Family/AddPDF">
               <div class="container-fluid OverLayFormContent">
                    <div class="FormSection">
                        <div class="SectionHeader">
-                            <h3>Downloads Information</h3>
+                            <h3>Product Information</h3>
                        </div>
                        <div class="SectionContent row">
 							<div class="col-md-6" id="DownloadsNew">
@@ -133,7 +139,7 @@
               <div class="container-fluid OverLayFormFooter">
                    <div class="row CustomRow">
                        <div class="OverLayFormFooterItem right">
-                            <button type="button"class="btn btn-md OverLayFormBtn"> upload</button>
+                            <button type="submit"class="btn btn-md OverLayFormBtn"> upload</button>
                        </div>
                        <div class="OverLayFormFooterItem left">
                        
@@ -152,16 +158,16 @@
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
               </div>
-              <form id="ForgotPassForm" method="post">
+             <form id="ForgotPassForm" method="post" action="<?=base_url()?>index.php/Family/DeletePDF">
                   <div class="modal-body">
                         <h1>Delete Downloads</h1>
                         <p>Are you sure that you need to delete this Data ?</p>
-                        <div class="form-group formLayout" hidden>
-		        			 <input type="text" name="RecoredId" class="form-control" placeholder="RecoredId"/>
+                        <div class="form-group formLayout">
+		        		<input type="text" name="RecoredId" id="RecoredId" class="form-control" placeholder="RecoredId" readonly />
 	       				</div>
                   </div>
                   <div class="modal-footer">
-                        <button class="btn customBtn"> Delete</button>
+                        <button type="submit" class="btn customBtn"> Delete</button>
                   </div>
               </form>
             </div>
@@ -169,8 +175,14 @@
         </div>
 
         <!----------------------------------------scripts------>
- 	<?php require_once("Scripts.php"); ?>
-
+ 	<?php $this->load->view('CMS/Scripts');  ?>
+ 	<script type="text/javascript">
+ 	function SetPDFID(id)
+    {
+      var ID=id;
+      document.getElementById("RecoredId").value=ID;
+    }
+ 	</script>
 
     </body>
 </html>

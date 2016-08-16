@@ -83,10 +83,34 @@ class Family extends CI_Controller
    }
    public function DownloadsIndex()
    {
-    $this->load->view("CMS/Downloads");
+    //`PDF_ID``PDF_Title``PDF_URL`
+    $data['results'] = $this->Awd_Model->GetData('other_pdf');
+    $this->load->view("CMS/Downloads",$data);
    }
    public function DriverIndex()
    {
+    //`Driver_ID``Driver_Title``Driver_URL`
     $this->load->view("CMS/Drivers");
-   }          
+   }
+public function AddPDF()
+{
+  if($this->input->post("Producttitle") != null && $this->input->post("DownloadPdf") != null)
+  {
+    $data['PDF_Title'] = $this->input->post("Producttitle");
+    $data['PDF_URL'] = $this->input->post("DownloadPdf");
+    $this->Awd_Model->AddToDB('other_pdf',$data);
+    redirect('Family/DownloadsIndex');
+  }
+  else{redirect('Family/DownloadsIndex');}
+}
+public function DeletePDF()
+{
+  if($this->input->post('RecoredId') != null)
+  {
+  $PDF_ID=$this->input->post('RecoredId');
+  $this->Awd_Model->DelData('other_pdf',$PDF_ID,'PDF_ID');
+  redirect('Family/DownloadsIndex');
+  }
+  else{redirect('Family/DownloadsIndex');}
+}
  }
