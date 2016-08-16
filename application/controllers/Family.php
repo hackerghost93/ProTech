@@ -87,11 +87,7 @@ class Family extends CI_Controller
     $data['results'] = $this->Awd_Model->GetData('other_pdf');
     $this->load->view("CMS/Downloads",$data);
    }
-   public function DriverIndex()
-   {
-    //`Driver_ID``Driver_Title``Driver_URL`
-    $this->load->view("CMS/Drivers");
-   }
+
 public function AddPDF()
 {
   if($this->input->post("Producttitle") != null && $this->input->post("DownloadPdf") != null)
@@ -113,4 +109,33 @@ public function DeletePDF()
   }
   else{redirect('Family/DownloadsIndex');}
 }
+  public function DriverIndex()
+   {
+    //`Driver_ID``Driver_Title``Driver_URL`
+    $data['results'] = $this->Awd_Model->GetData('Other_Drivers');
+    $this->load->view("CMS/Drivers",$data);
+   }
+public function AddDriver()
+{
+  if($this->input->post("Title") != null && $this->input->post("LinkDriver") != null)
+  {
+    $data['Driver_Title'] = $this->input->post("Title");
+    $data['Driver_URL'] = $this->input->post("LinkDriver");
+    $this->Awd_Model->AddToDB('Other_Drivers',$data);
+    redirect('Family/DriverIndex');
+  }
+  else{redirect('Family/DriverIndex');}
+}
+public function DeleteDriver()
+{
+  if($this->input->post('RecoredId') != null)
+  {
+  $Driver_ID=$this->input->post('RecoredId');
+  $this->Awd_Model->DelData('Other_Drivers',$Driver_ID,'Driver_ID');
+  redirect('Family/DriverIndex');
+  }
+  else{redirect('Family/DriverIndex');}
+}
+
+
  }
