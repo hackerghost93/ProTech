@@ -45,5 +45,26 @@ class Part_model extends MY_Model
 		$this->db->where('part_id = ' , $id);
 		$this->db->delete($this->table_name);
 	}
+
+	function getPrinting($id)
+	{
+		$this->db->from('parts_typing_specification');
+		$this->db->where('part_id = ' ,$id);
+		return $this->db->get()->result_array(); 
+	}
+
+	function getGeneral($id)
+	{
+		$this->db->from('parts_general_specification');
+		$this->db->where('part_id = ' ,$id);
+		return $this->db->get()->result_array();
+	}
+
+	function getGuarantee($id)
+	{
+		$this->db->from('parts_guarantee');
+		$this->db->where('part_id = ' ,$id);
+		return $this->db->get()->result_array();
+	}
 }
  ?>

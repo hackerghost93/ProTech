@@ -5,35 +5,28 @@
   <title>Protech CMS : Products</title> 
   <?php $this->load->view("CMS/Links"); ?>
 </head>
+
 <body>
-  <!-- ---------------------------------sideBarLeft------ -->
+  <!-- -sideBarLeft -->
   <div class="sideBarLeft">
-    <?php require_once("MainSideBar.php"); ?>
+    <?php $this->load->view('CMS/MainSideBar'); ?>
   </div>
 
-  <!-- --------------------------------------Header----- -->
+  <!-- Header -->
   <header>
-    <?php require_once("MainHeader.php"); ?>
+    <?php $this->load->view('CMS/MainHeader'); ?>
   </header>
-  <!------------------------------------dataSection------>
+  <!--dataSection-->
   <div class="dataSection">
-    <nav class="subTopBar">
-      <ul class="subTopBarList">
-        <li class="subTopBarItem">
-          <h1>Products</h1>
-        </li>
-        <li>
-          <form class="TopBarForm">
-            <div class="form-group">
-             <input type="search" class="form-control" name="Search" placeholder="Search By Product Name"/>
-             <a href="#" type="submit" role="button"><span class="fa fa-search"></span></a>
-           </div>
-         </form>    
-       </li>
-     </ul>
-   </nav>
-   <div class="DataDiv Wide">
+	  <div class="DataDiv">
+		<nav class="subSideBar">
+			<?php require_once("ProductsSidebar.php"); ?>
+		</nav>
+	 <div class="SideBarContent ">
     <div class="DataDiv">
+<div class="PageHaeder">
+ <h2>Products</h2>
+</div>
      <div class="box-wider-text">
       <div class="box-header">
         <div class="row CustomRow">
@@ -109,6 +102,8 @@
 </div>
 </div>
 </div>
+</div>
+
 
 <!--sideBarRight-->
 <nav class="sideBarRight"></nav>
@@ -243,7 +238,7 @@
 </div>
 
 <!--EditProduct -->
-<div class="OverLayForm closed" id="EditProductOverlayForm">
+<div class="OverLayForm closed" id="EditProductOverlayForm" data-id="">
   <div class="container-fluid OverLayFormHeader">
    <div class="row CustomRow">
      <div class="OverLayFormHeaderLeft">
@@ -264,37 +259,33 @@
      <div class="col-md-6">
       <div class="form-group formLayout">
        <label for="ProductTitle" class="control-label ">Product Title : </label>
-       <input type="text" name="ProductTitle" class="form-control InputProduct" placeholder="Product Title" />
+       <input type="text" name="ProductTitle" class="form-control InputProduct" placeholder="Product Title" id="hackerTitle"/>
      </div>
      <div class="form-group formLayout">
        <label for="ProductPdf" class="control-label ">Product Pdf: </label>
-       <input type="file" name="ProductPdf" class="form-control InputProduct" />
+       <input type="file" name="ProductPdf" class="form-control InputProduct" id="hackerPDF" />
      </div> 
 
      <div class="form-group formLayout">
        <label for="ProductFamily" class="control-label ">Product Product Family: </label>
-       <select name="ProductFamily" class="form-control InputProduct">
-        <option class=""> Choose Product Family</option>
+       <select name="ProductFamily" class="form-control InputProduct" id="hackerSelect">
+        <option class="" > Choose Product Family</option>
       </select>
     </div>
   </div>
   <div class="col-md-6">
    <div class="form-group formLayout">
      <label for="product_driver" class="control-label ">Product Driver Link: </label>
-     <input type="text" name="product_driver" class="form-control InputProduct" />
+     <input type="text" name="product_driver" class="form-control InputProduct" id="hackerDRIVER"/>
    </div>
    <div class="form-group formLayout">
      <label for="description" class="control-label ">Description: </label>
-     <textarea name="description"></textarea>
+     <textarea ></textarea>
    </div>
    <div class="checkbox-inline">
      <label>
        <input type="checkbox" id="checkbox2"><label class="offer"> Offer</label>
      </label>
-   </div>
-   <div class="form-group formLayout EditDescription">
-     <label for="Description" class="control-label ">Description : </label>
-     <textarea placeholder="Description"></textarea>
    </div>
  </div>
 </div>
@@ -308,7 +299,6 @@
   <div class="mask">
    <i class="fa fa-close"></i>
  </div>
-  <!-- <img class="editimgproduct" src=""> -->
 </div>
 </div>
 </div>	
@@ -353,19 +343,12 @@
       </div>
       <div class="SectionContent Specifications">
         <div id="RemoveSpecifications">
-         <div class="form-group formLayout">
-          <p><input type="text" name="PrintingSpecifications" id="p_scents" class="form-control overlayproduct" placeholder="Printing Specifications1" />
-            <a href="#" id="remScnt" class="removespecification  CloseBtn" ><i class="fa fa-close"></i></a></p>
-            <p><input type="text" name="PrintingSpecifications" id="p_scents" class="form-control overlayproduct" placeholder="Printing Specifications2" />
-              <a href="#" id="remScnt" class="removespecification CloseBtn"><i class="fa fa-close"></i></a></p>	
-              <p><input type="text" name="PrintingSpecifications" id="p_scents" class="form-control overlayproduct" placeholder="Printing Specifications3" />
-                <a href="#" id="remScnt" class="removespecification CloseBtn" ><i class="fa fa-close"></i></a></p>	
-              </div>
+         <div class="form-group formLayout" id="hackerGuarantee">
+          </div>
             </div>
           </div>
         </div>
         <!--cripts-->
-        <?php $this->load->view('CMS/Scripts');  ?>
 		<script>
 		function MyFunction(){
 		 var e = document.getElementById("ReplyMessage");
@@ -414,7 +397,7 @@
           </div>
         </div>
         <div class="modal-footer">
-          <button class="btn customBtn" type="submit" data-dismiss="modal"> Delete</button>
+          <button class="btn customBtn" type="submit" > Delete</button>
         </div>
       </form>
     </div>
@@ -448,11 +431,10 @@
 </div>
 <!--scripts-->
 <script src="<?=base_url()?>js/cms/js/jquery-1.12.1.min.js"></script>
-<script src="<?=base_url()?>js/cms/js/tinymce/tinymce.min.js"></script>
 <script src="<?=base_url()?>js/cms/js/bootstrap.min.js"></script>
 <script src="<?=base_url()?>js/cms/js/ProjectScripts.js"></script>
 <script src="<?=base_url()?>js/cms/js/test.js"></script>
-<script>
+<!--script>
   function MyFunction(){
    var e = document.getElementById("ReplyMessage");
    if(e.style.display == 'block')
@@ -460,54 +442,10 @@
   else
     e.style.display = 'block';
 }
-</script>
-<script>
-  $(document).on("click",".CloseBtn",function(){
-        
-     });
-
-  $('.deleteBtn').click(function(event){
-    var $target = $(this);
-    $('#deleteConfirm').val($target.attr('data-id'));
-  });
-
-  $('.editeBtn').click(function(event)
-  {
-    var $target = $(this);
-    var value  = $target.attr('data-id');
-    var path = "<?=base_url()?>index.php/<?=$type?>/get/"+value ;
-    /// adjust edit form 
-    $.get(path,function(data){
-      console.log(JSON.stringify(data,null,2));
-      $.each(data.image , function(key,value){
-        console.log(key);
-        console.log('here');
-        console.log(value);
-        $('.prodImages').appendChild($('<img>').attr('src',value).addClass('editimgproduct'));
-      });
-    },'json');
-  });
-
-  $('#deleteConfirmed').submit(function(event){
-    event.preventDefault();
-    var $target = $(this);
-    var value = $('#deleteConfirm').val();
-    console.log(value);
-    var path = "<?=base_url()?>index.php/printer/delete" ;
-    console.log(path);
-    $.post(path,{id: value},function(data){
-      $("tr[data-id='"+value+"']").remove();
-      if(data.state == 'success')
-      {
-        console.log('success');
-      }
-      else
-      {
-        console.log('something went wrong');
-      }
-    } , 'json');
-  });
-</script>
+var MyType = "<?=$type?>" ;
+var MyUrl = "<?=base_url()?>" ;
+</script-->
+<script type="text/javascript" src="<?=base_url()?>js/hacker.js"></script>
 <script>
   $(document).ready(function(){
 

@@ -34,7 +34,8 @@ $(document).ready(function ()
     });
 
     //----------------------------------------------------------------
-
+		
+		
     //-------------------------------------------Tags-------------
     $(document).on("click", "#AddNewTagShow", function ()
     {
@@ -117,7 +118,25 @@ $(document).ready(function ()
     {
         $("#EditSparePartsOverlayForm").removeClass("closed");
         $("#EditSparePartsOverlayForm").addClass("show");
-    });	
+    });		
+//-------------------------------------------ChangePassword-------------
+    $(document).on("click", "#ChangePasswordShow", function ()
+    {
+        $("#ChangePasswordOverlay").removeClass("closed");
+        $("#ChangePasswordOverlay").addClass("show");
+    });
+//-------------------------------------------Downloads-------------
+    $(document).on("click", "#AddNewDownloadsShow", function ()
+    {
+        $("#AddNewDownloadsOverlayForm").removeClass("closed");
+        $("#AddNewDownloadsOverlayForm").addClass("show");
+    });
+	//-------------------------------------------Drivers-------------
+    $(document).on("click", "#AddNewDriversShow", function ()
+    {
+        $("#AddNewDriversOverlayForm").removeClass("closed");
+        $("#AddNewDriversOverlayForm").addClass("show");
+    });
 	//-------------------------------------------Family-------------
     $(document).on("click", "#AddNewFamilyShow", function ()
     {

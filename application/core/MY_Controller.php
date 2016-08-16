@@ -119,6 +119,14 @@ class MY_Controller extends CI_Controller
 		return (count($arr) == 0 ?  array() : $this->model->getImages($arr) ) ;
 	}
 
+	function deleteImage()
+	{
+		$path = $this->input->post('image');
+		$type = $this->input->post('type');
+		$this->model->deleteImage($path , $type);
+		echo json_encode('state' , 'success');
+	}
+
 	function get($id)
 	{
 		if($this->validateID($id))
@@ -128,6 +136,9 @@ class MY_Controller extends CI_Controller
  			$response['data'] = $this->model->get($id);
 			$response['images'] = $this->model->images($response['data'][$this->condition]
 				,$this->condition."=".$response['data'][$this->condition]);
+			$response['general'] = $this->model->getGeneral($id);
+			$response['typing'] = $this->model->getPrinting($id);
+			$response['guarantee'] = $this->model->getGuarantee($id);
 			echo json_encode($response);
 		}
 		else 
