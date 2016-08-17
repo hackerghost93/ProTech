@@ -11,6 +11,7 @@ class Email extends CI_Controller
         $this->load->library('email');
         $this->load->library('form_validation'); 
         $this->load->model('Email_model');  
+        $this->load->model('Awd_Model');
     }
     public function index()
     {
@@ -19,13 +20,14 @@ class Email extends CI_Controller
     public function sendToAll()
 
     {
+              $Data = $this->Awd_Model->GetOneRow('contact');
               $this->form_validation->set_rules('Subject', 'Subject', 'trim|required');
               $this->form_validation->set_rules('Send_Email', 'Message', 'trim|required');
               if ($this->form_validation->run() == FALSE) {
               //$this->load->view('email_view');
               } else {
 
-               $from_email = 'ner.kelila@gmail.com'; //change this to yours
+               $from_email =$Data->email; //'ner.kelila@gmail.com'; //change this to yours
                //$from_name=$this->input->post('name');
                $subject = $this->input->post('Subject');
                $message = $this->input->post('Send_Email');
@@ -35,7 +37,7 @@ class Email extends CI_Controller
                $config['smtp_host'] = 'ssl://smtp.gmail.com'; //smtp host name
                $config['smtp_port'] = '465'; //smtp port number
                $config['smtp_user'] = $from_email;
-               $config['smtp_pass'] = 'ner123456'; //$from_email password
+               $config['smtp_pass'] =$Data->Email_Password; //'ner123456'; //$from_email password
                $config['mailtype'] = 'html';
                $config['charset'] = 'iso-8859-1';
                $config['wordwrap'] = TRUE;
@@ -77,13 +79,14 @@ class Email extends CI_Controller
     }
     public function send()
     {
+      $Data = $this->Awd_Model->GetOneRow('contact');
       $this->form_validation->set_rules('Subject', 'Subject', 'trim|required');
               $this->form_validation->set_rules('Send_Email', 'Message', 'trim|required');
               if ($this->form_validation->run() == FALSE) {
               //$this->load->view('email_view');
               } else {
 
-               $from_email = 'ner.kelila@gmail.com'; //change this to yours
+               $from_email =$Data->email; //'ner.kelila@gmail.com'; //change this to yours
                //$from_name=$this->input->post('name');
                $subject = $this->input->post('Subject');
                $message = $this->input->post('Send_Email');
@@ -93,7 +96,7 @@ class Email extends CI_Controller
                $config['smtp_host'] = 'ssl://smtp.gmail.com'; //smtp host name
                $config['smtp_port'] = '465'; //smtp port number
                $config['smtp_user'] = $from_email;
-               $config['smtp_pass'] = 'ner123456'; //$from_email password
+               $config['smtp_pass'] =$Data->Email_Password; //'ner123456'; //$from_email password
                $config['mailtype'] = 'html';
                $config['charset'] = 'iso-8859-1';
                $config['wordwrap'] = TRUE;

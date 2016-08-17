@@ -1078,14 +1078,11 @@ header {
 /*.ChatDetails*/
 /* line 350, ../components/sass/_Modules.scss */
 .TopBarForm {
-  display: inline-Block;
-  float: left;
-  margin-right: 15px;
-  min-width: 35%;
-  /*input*/
-  /*.form-control*/
-  /*a*/
-  /*.form-group*/ }
+display: inline-Block;
+float: left;
+margin-right: 15px;
+min-width: 83%;
+}
   /* line 355, ../components/sass/_Modules.scss */
   .TopBarForm input {
     border-radius: 0px;

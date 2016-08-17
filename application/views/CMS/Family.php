@@ -44,30 +44,41 @@
         </header>
         <!------------------------------------dataSection------>
         <div class="dataSection">
-	  <div class="DataDiv">
+                     
+	  <div class="DataDiv">     
 		<nav class="subSideBar">
 			<?php require_once("ProductsSidebar.php"); ?>
 		</nav>
-	 <div class="SideBarContent ">
+	 <div class="SideBarContent " id="SidBarContentDiv">
+	   <div class="DataDiv">
+	   			   <div class="PageHaeder">
+           <h2>Family</h2>
+          </div>
               <div class="box-wider-text">
                 <div class="box-body">
-                                 <div class="table-responsive">  <span id="txtHint"></span> </div>
+                                
                         <div class="table-responsive" id="UserTable">
                           <div class="DataDiv">
-  				<div class="PageHaeder">
-				 	 <h2>Family</h2>
-			   	</div>
-                               <div class="box-wider-text">
+			
+  		              <div class="box-wider-text">
                                     <div class="box-header">
                                         <div class="row CustomRow">
                                         <div class="HeaderLeft"> 
+                                                         <form class="TopBarForm">
+                                <div class="form-group">
+                                     <input type="search" onkeyup="showHint(this.value)" class="form-control" name="Search" placeholder="Search By Family Name"/>
+                                      <a href="#" type="submit" role="button"><span class="fa fa-search"></span></a>
+                                </div>
+                          </form> 
                                         </div>
                                         <div class="HeaderRight"> 
+                            
                                              <button class="btn btn-sucess" id="AddNewFamilyShow"> Add New Family</button>
                                         </div>
                                         </div>
                                     </div>
                                     <div class="box-body">
+									 <div class="table-responsive">  <span id="txtHint"></span> </div>
                                        <div class="table-responsive" id="UserTable">
                                          <?php 
                                             echo"<table class='table table-hover table-condensed'>
@@ -119,7 +130,9 @@
                                     </div>
                                </div>
                           </div>
+                          </div>
               </div></div>
+      </div>
       </div>
 
         <!-----------------------------------sideBarRight------>
