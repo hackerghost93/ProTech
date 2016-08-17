@@ -59,6 +59,20 @@ public function GetAllData()
  		echo json_encode($data);
  	}
  }
+ public function GetServiceData()
+ {
+ 	$plans = $this->Awd_Model->GetData('plans');
+ 	$i = 0;
+ 	foreach ($plans as $object) {
+ 		 $planData[$i]['ID'] = $object->plane_id;
+ 		 $planData[$i]['name'] = $object->plane_name;
+ 		 $i++;
+ 	}
+ for ($i=0; $i < sizeof($planData) ; $i++) { 
+ $planData[$i]['items'] = $this->Awd_Model->DataWhere('plan_item','plane_id',$planData[$i]['ID'],'plane_id','ASC');
+    }
+    echo json_encode($planData);
+ }
 public function EditPlan()
  {
  if($this->input->post('PlaneName') != null && $this->input->post('NewData_items') != null && $this->input->post('PlaneID') != null)
