@@ -40,11 +40,17 @@
 								<div class="box-wider-text">
 								<div class="box-header">
 									<div class="row CustomRow">
-									<div class="HeaderLeft"> 
-									</div>
-						<div class="HeaderRight"> 
-						 <button class="btn btn-sucess" id="AddNewDriversShow"> Add New Drivers</button>
-									</div>
+										<div class="HeaderLeft"> 
+										   <form class="TopBarForm">
+												<div class="form-group">
+													 <input type="search" onkeyup="showHint(this.value)" class="form-control" name="Search" placeholder="Search By Family Name"/>
+													  <a href="#" type="submit" role="button"><span class="fa fa-search"></span></a>
+												</div>
+											</form> 
+										</div>
+										<div class="HeaderRight"> 
+											<button class="btn btn-sucess" id="AddNewDriversShow"> Add New Drivers</button>
+										</div>
 									</div>
 								</div>
 								<div class="box-body">
@@ -122,7 +128,7 @@ if(isset($results))
                    </div>
                </div>
           </div>
-          <form method="post" action="<?=base_url()?>index.php/Family/AddDriver">
+          <form method="post" action="<?=base_url()?>index.php/Family/AddDriver" id="AddDriverForm">
               <div class="container-fluid OverLayFormContent">
                    <div class="FormSection">
                        <div class="SectionHeader">
@@ -196,6 +202,30 @@ if(isset($results))
       document.getElementById("RecoredId").value=ID;
     }
  	</script>
+<script>
+    $(document).ready(function () {
+	   var validator = $("#AddDriverForm").validate({
+		errorPlacement: function (error, element)
+		{
+			// Append error within linked label
+			$( element ).closest( "div" ).find( "label[for='" + element.attr( "name" ) + "']" ).append( error );},
+		errorElement: "span",
+		rules :
+		{
+		
+			LinkDriver: {required:true, url:true},
+			Title: "required"
+	
+		},
+		messages: 
+		{
 
+			LinkDriver:{required:"this field is required", url:"Please enter valid url"},
+			Title:"This field is required"
+
+		}
+	});
+    });
+</script>
     </body>
 </html>

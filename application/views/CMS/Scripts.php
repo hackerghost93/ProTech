@@ -1,7 +1,12 @@
     <script src="<?php echo base_url();?>js/cms/js/jquery-1.12.1.min.js"></script>
+  <!---  <script src="<?php echo base_url();?>js/cms/js/jquery-1.11.3.min.js"></script>
+	<script src="<?php echo base_url();?>js/cms/js/jquery-1.8.2.min.js"></script> validate---->
     <script src="<?php echo base_url();?>js/cms/js/jquery-ui.min.js"></script>
-    <script src="<?php echo base_url();?>js/cms/js/jquery-ui-1.10.2.custom.min.js"></script>
+  <!--  <script src="<?php echo base_url();?>js/cms/js//jquery.min.js"></script>-->
     <script src="<?php echo base_url();?>js/cms/js/jquery.validate.min.js"></script>
+ <!--  <script src="<?php echo base_url();?>js/cms/js/jquery-ui-1.10.2.custom.min.js"></script>
+    <script src="<?php echo base_url();?>js/cms/js/jquery.validationEngine-en.js"></script>--validate----
+    <script src="<?php echo base_url();?>js/cms/js/jquery.validationEngine.js"></script>--validate---->
     <script src="<?php echo base_url();?>js/cms/js/tinymce/tinymce.min.js"></script>
         <script type="text/javascript">
                 tinymce.init({

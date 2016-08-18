@@ -120,7 +120,7 @@
                    </div>
                </div>
           </div>
-          <form>
+          <form id="AddSparePartForm">
               <div class="container-fluid OverLayFormContent">
                    <div class="FormSection">
                        <div class="SectionHeader">
@@ -142,7 +142,7 @@
 								 </div>
 								 	  <div class="form-group formLayout">
 									<label for="name" class="control-label ">Description: </label>
-									<textarea></textarea>
+									<textarea name="name"></textarea>
 								 </div>
 							</div>
 							<div class="col-md-6">
@@ -214,7 +214,7 @@
               <div class="container-fluid OverLayFormFooter">
                    <div class="row CustomRow">
                        <div class="OverLayFormFooterItem right">
-                            <button type="button"class="btn btn-md OverLayFormBtn"> Creat</button>
+                            <button type="button"class="btn btn-md"> Creat</button>
                        </div>
                        <div class="OverLayFormFooterItem left">
                        
@@ -236,7 +236,7 @@
                    </div>
                </div>
           </div>
-          <form>
+          <form id="EditFormSparepart">
 			<div class="container-fluid OverLayFormContent">
                    <div class="FormSection">
                        <div class="SectionHeader">
@@ -254,7 +254,7 @@
 								 </div>
 									  <div class="form-group formLayout">
 									<label for="name" class="control-label ">Description: </label>
-									<textarea></textarea>
+									<textarea placeholder="name"></textarea>
 								 </div>
 							</div>
 							<div class="col-md-6">
@@ -347,7 +347,7 @@
               <div class="container-fluid OverLayFormFooter">
                    <div class="row CustomRow">
                        <div class="OverLayFormFooterItem right">
-                            <button type="button"class="btn btn-md OverLayFormBtn"> Creat</button>
+                            <button type="button"class="btn btn-md"> Creat</button>
                        </div>
                        <div class="OverLayFormFooterItem left">
                        
@@ -382,7 +382,85 @@
         </div>
 
         <!----------------------------------------scripts------>
-	<?php $this->load->view('CMS/Scripts');  ?>
+<script src="<?=base_url()?>js/cms/js/jquery-1.12.1.min.js"></script>
+<script src="<?=base_url()?>js/cms/js/bootstrap.min.js"></script>
+<script src="<?=base_url()?>js/cms/js/ProjectScripts.js"></script>
+<script src="<?=base_url()?>js/cms/js/test.js"></script>
+    <script src="<?php echo base_url();?>js/cms/js/jquery.validate.min.js"></script>
+	<script>
+    $(document).ready(function () {
+	   var validator = $("#AddSparePartForm").validate({
+		errorPlacement: function (error, element)
+		{
+			// Append error within linked label
+			$( element ).closest( "div" ).find( "label[for='" + element.attr( "name" ) + "']" ).append( error );},
+		errorElement: "span",
+		rules :
+		{	
+			SparePartsDriverLink: {required:true, url:true},
+			ProductImage: {
+				required: true,
+				accept: "audio/*"},	
+			ProductPdf: {
+				required: true,
+				accept: "audio/*"},
+			ProductTitle: "required",
+			name: "required"
+	
+		},
+		messages: 
+		{
+		
+			SparePartsDriverLink:{required:"this field is required", url:"Please enter a url"},
+			ProductImage: {
+					required: "This field is required",
+					accept: "audio/*"},	
+			ProductPdf: {
+					required: "This field is required",
+					accept: "audio/*"},
+			ProductTitle:"This field is required",
+			name:"This field is required"
+
+		}
+	});	 
+
+//---------------------Edit-------------------------
+	var validator = $("#EditFormSparepart").validate({
+		errorPlacement: function (error, element)
+		{
+			// Append error within linked label
+			$( element ).closest( "div" ).find( "label[for='" + element.attr( "name" ) + "']" ).append( error );},
+		errorElement: "span",
+		rules :
+		{	
+			SparePartsDriverLink: {required:true, url:true},
+			ProductImage: {
+				required: true,
+				accept: "audio/*"},	
+			ProductPdf: {
+				required: true,
+				accept: "audio/*"},
+			ProductTitle: "required",
+			name: "required"
+	
+		},
+		messages: 
+		{
+		
+			SparePartsDriverLink:{required:"this field is required", url:"Please enter a url"},
+			ProductImage: {
+					required: "This field is required",
+					accept: "audio/*"},	
+			ProductPdf: {
+					required: "This field is required",
+					accept: "audio/*"},
+			ProductTitle:"This field is required",
+			name:"This field is required"
+
+		}
+	});
+    });
+</script>
 		<script>
           $(document).on("click",".CloseBtn",function(){
 			  $(this).closest("p").css("display", "none");

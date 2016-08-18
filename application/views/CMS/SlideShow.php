@@ -25,14 +25,7 @@
                       <li class="subTopBarItem">
                           <h1>SlideShow</h1>
                       </li>
-                      <li>
-                          <form class="TopBarForm">
-                                <div class="form-group">
-                                     <input type="search" class="form-control" name="Search" placeholder="Search By Gallery Name"/>
-                                      <a href="#" type="submit" role="button"><span class="fa fa-search"></span></a>
-                                </div>
-                          </form>    
-                      </li>
+                    
                    </ul>
              </nav>
               <div class="DataDiv Wide">
@@ -40,7 +33,13 @@
                                <div class="box-wider-text">
                                     <div class="box-header">
                                         <div class="row CustomRow">
-                                        <div class="HeaderLeft"> 
+                                        <div class="HeaderLeft">
+							<form class="TopBarForm">
+                                <div class="form-group">
+                                     <input type="search" class="form-control" name="Search" placeholder="Search By Gallery Name"/>
+                                      <a href="#" type="submit" role="button"><span class="fa fa-search"></span></a>
+                                </div>
+                          </form>    										
                                         </div>
                                         <div class="HeaderRight"> 
                                              <button class="btn btn-sucess" id="AddNewImageShow"> Add New Image</button>
@@ -130,7 +129,7 @@ if(isset($results))
                    </div>
                </div>
           </div>
-          <form method="POST" action="<?=base_url()?>index.php/SlideShow/ADD">
+          <form method="POST" action="<?=base_url()?>index.php/SlideShow/ADD" id="AddSlideShowForm">
               <div class="container-fluid OverLayFormContent">
                    <div class="FormSection">
                        <div class="SectionHeader">
@@ -154,7 +153,7 @@ if(isset($results))
               <div class="container-fluid OverLayFormFooter">
                    <div class="row CustomRow">
                        <div class="OverLayFormFooterItem right">
-                            <button type="submit"class="btn btn-md OverLayFormBtn"> Create</button>
+                            <button type="submit"class="btn btn-md "> Create</button>
                        </div>
                        <div class="OverLayFormFooterItem left">
                        
@@ -176,7 +175,7 @@ if(isset($results))
                    </div>
                </div>
           </div>
-          <form method="post" action="<?=base_url()?>index.php/SlideShow/edit">
+          <form method="post" action="<?=base_url()?>index.php/SlideShow/edit" id="EditSlideShowForm">
 			<div class="container-fluid OverLayFormContent">
                    <div class="FormSection">
                        <div class="SectionHeader">
@@ -188,7 +187,7 @@ if(isset($results))
               <input type="number" name="edited_ID" id="edited_ID" class="form-control" readonly />
               </div>
 					   	<div class="form-group formLayout">
-							<label for="Title" class="control-label ">Slide Title : </label>
+							<label for="EditTitle" class="control-label ">Slide Title : </label>
 							<input type="text" name="EditTitle" id="EditTitle" class="form-control" placeholder=" Title" />
 							</div>
 						 <div class="form-group formLayout">
@@ -204,7 +203,7 @@ if(isset($results))
               <div class="container-fluid OverLayFormFooter">
                    <div class="row CustomRow">
                        <div class="OverLayFormFooterItem right">
-                            <button type="submit"class="btn btn-md OverLayFormBtn"> Edit</button>
+                            <button type="submit"class="btn btn-md "> Edit</button>
                        </div>
                        <div class="OverLayFormFooterItem left">
                        
@@ -240,6 +239,55 @@ if(isset($results))
 
         <!----------------------------------------scripts------>
 	<?php require_once("Scripts.php"); ?>
+	<script>
+    $(document).ready(function () {
+	   var validator = $("#AddSlideShowForm").validate({
+		errorPlacement: function (error, element)
+		{
+			// Append error within linked label
+			$( element ).closest( "div" ).find( "label[for='" + element.attr( "name" ) + "']" ).append( error );},
+		errorElement: "span",
+		rules :
+		{
+	
+			Title: "required",
+			SlideShowImg: {required: true,
+			accept: "audio/*"}
+	
+		},
+		messages: 
+		{
+		
+			Title:"This field is required",
+			SlideShowImg: {required: "This field is required",
+			accept: "audio/*"}
+		}
+	});
+	//----------------Edit---------------------------------
+	var validator = $("#EditSlideShowForm").validate({
+		errorPlacement: function (error, element)
+		{
+			// Append error within linked label
+			$( element ).closest( "div" ).find( "label[for='" + element.attr( "name" ) + "']" ).append( error );},
+		errorElement: "span",
+		rules :
+		{
+	
+			EditTitle: "required",
+			EditSlideShowImg: {required: true,
+			accept: "audio/*"}
+	
+		},
+		messages: 
+		{
+		
+			EditTitle:"This field is required",
+			EditSlideShowImg: {required: "This field is required",
+			accept: "audio/*"}
+		}
+	});
+    });
+</script>
 		<script>
           $(document).on("click",".CloseBtn",function(){
 			  $(this).closest("p").css("display", "none");

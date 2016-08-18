@@ -26,12 +26,7 @@
           <h1>Contact Us</h1>
       </li>
       <li>
-          <form class="TopBarForm">
-                <div class="form-group">
-                     <input type="search" class="form-control" name="Search" placeholder="Search By Contact Name"/>
-                      <a href="#" type="submit" role="button"><span class="fa fa-search"></span></a>
-                </div>
-          </form>    
+       
       </li>
    </ul>
 </nav>
@@ -42,9 +37,7 @@
 <div class="box-body">
 	<div class="FormSection">
 <form method="post" action="<?=base_url()?>index.php/Contacts/Edit" id="AddContactsform">
-		   <div class="SectionHeader">
-				<h3>Contact Information</h3>
-		   </div>
+		
 			<div class="SectionContent">
 <div class="form-group formLayout" hidden>
 <label for="ID" class="control-label ">ID : </label>
@@ -194,44 +187,54 @@ $('#Address').val(data.adress);
 });
 </script>
 <script>
-$(document).ready(function () {
+    $(document).ready(function () {
+	   var validator = $("#AddContactsform").validate({
+		errorPlacement: function (error, element)
+		{
+			// Append error within linked label
+			$( element ).closest( "div" ).find( "label[for='" + element.attr( "name" ) + "']" ).append( error );},
+		errorElement: "span",
+		rules :
+		{
+			ContactTelephone:{ required: true, number: true},
+			ContactWhatsApp:{ required: true, number: true},
+			ContactMobile:{ required: true, number: true},
+			Email: { required :true,email: true},
+			Email_Password: "required",
+			ContactSkypee: "required",
+			ContactYoutube: {required:true, url:true},
+			ContactTwitter: {required:true, url:true},
+			ContactFacebook: {required:true, url:true},
+			ContactLinkedin: {required:true, url:true},
+			ContactAddress: "required"
+	
+		},
+		messages: 
+		{
+			ContactTelephone:{
+				required:"This field is required",
+				number:"Please enter number"
+			},	
+			ContactWhatsApp:{
+				required:"This field is required",
+				number:"Please enter number"
+			},	
+			ContactMobile:{
+				required:"This field is required",
+				number:"Please enter number"
+			},
+			Email: { required :"This field is required",email: "Please enter valid email"},
+			Email_Password:"Please Enter Data",
+			ContactSkypee:"This field is required",
+			ContactYoutube:{required:"this field is required", url:"Please enter a url"},
+			ContactTwitter:{required:"this field is required", url:"Please enter a url"},
+			ContactFacebook:{required:"this field is required", url:"Please enter a url"},
+			ContactLinkedin:{required:"this field is required", url:"Please enter a url"},
+			ContactAddress:"This field is required"
 
-var validator = $("#AddContactsform").validate({
-errorPlacement: function (error, element)
-{
-// Append error within linked label
-$( element ).closest( "div" ).find( "label[for='" + element.attr( "name" ) + "']" ).append( error );},
-errorElement: "span",
-rules :
-{
-ContactTelephone: {required:true, number:true},
-ContactMobile: {required:true, number:true},
-Email: {required:true, email:true},
-Email_Password:"required",
-ContactWhatsApp: {required:true, number:true},
-ContactSkypee: "required",
-ContactYoutube:"required",
-ContactTwitter:"required",
-ContactFacebook:"required",
-ContactLinkedin:"required",
-ContactAddress:"required"
-}	
-messages: 
-{
-ContactTelephone: {required:"Please enter data" , number:"Enter numbers"},
-ContactMobile: {required:"Please enter data", number:"Enter numbers"},
-Email: {required:"Please enter data", email:"Invalid email"},
-Email_Password: "Please enter data",
-ContactSkypee: "Please enter data",
-ContactWhatsApp: {required:"Please enter data" , number:"Enter numbers"},
-ContactYoutube: "Please enter data",
-ContactTwitter: "Please enter data",
-ContactFacebook: "Please enter data",
-ContactLinkedin: "Please enter data",
-ContactAddress:  "Please enter data"
-}
-});
-});
+		}
+	});
+    });
 </script>
 </body>
 </html>

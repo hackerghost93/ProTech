@@ -77,28 +77,28 @@
                            </div>
                           <?php //if(isset($show)):;?>
 								<div class="box-wider-text">
-                <div class="backread"></div>
+									<div class="backread"></div>
                                 <div class="box-header">
                                     <div class="row CustomRow">
                                     <div class="HeaderLeft"> 
                                          <div class="SubHeader">
-                                                <div class="form-group FromOne">
-													<label for="From">From </label><span>:</span>
-                                                    
-                                                    <label class="from" id="email"><?php //echo $show->email; ?></label>
-                                                </div><br>
-												<div class="form-group ToOne">
-													 <label for="To">Name </label><span>:</span>
-                                                  <label class="To" id="name"><?php //echo $show->name; ?></label>
-                                                </div><br>
-                        <div class="form-group TitleMessage">
-                          <label for="Title">Title </label><span>:</span>
-                                                    <label class="To" id="subject"><?php //echo $show->subject; ?></label>
-                                                </div><br>
-												<div class="form-group Time">
-													<label for="Time">Time </label><span>:</span>
-                                                   <label class="Timeemail" id="created_at"><?php //echo $show->created_at; ?></label>
-                                                </div>
+											<div class="form-group FromOne">
+												<label for="From">From </label><span>:</span>
+												
+												<label class="from" id="email"><?php //echo $show->email; ?></label>
+											</div><br>
+											<div class="form-group ToOne">
+												 <label for="To">Name </label><span>:</span>
+											  <label class="To" id="name"><?php //echo $show->name; ?></label>
+											</div><br>
+											<div class="form-group TitleMessage">
+												<label for="Title">Title </label><span>:</span>
+												<label class="To" id="subject"><?php //echo $show->subject; ?></label>
+											</div><br>
+											<div class="form-group Time">
+												<label for="Time">Time </label><span>:</span>
+											   <label class="Timeemail" id="created_at"><?php //echo $show->created_at; ?></label>
+											</div>
                                          </div> 
 										 <button class="btn btn-sucess reply" onclick="MyFunction();"id="Reply"> <span class="fa fa-reply" aria-hidden="true"></span>Reply </button>
                                     </div>
@@ -117,7 +117,7 @@
 											<textarea id="Edit_ProductBodyEditor" name="Send_Email" class="form-control textHeight" placeholder="" ></textarea>
 										</div>
 										<div class="form-group formLayout">
-											<button type="button" type="submit" class="btn btn-md OverLayFormBtn submitReply"> Send</button>
+											<button type="button" type="submit" class="btn btn-md  submitReply"> Send</button>
 										</div>
 									</form>
 								</div>
@@ -160,6 +160,31 @@
         <!----------------------------------------scripts------>
           <?php $this->load->view('CMS/Scripts');  ?>
 
+    <script type="text/javascript">
+    $(document).ready(function () {
+	   var validator = $("#AddsubscriberForm").validate({
+		errorPlacement: function (error, element)
+		{
+			// Append error within linked label
+			$( element ).closest( "div" ).find( "label[for='" + element.attr( "name" ) + "']" ).append( error );},
+		errorElement: "span",
+		rules :
+		{
+			BCC: { required :true,email: true},
+			Subject: "required",
+			Send_Email: "required"
+			
+		},
+		messages: 
+		{
+			BCC: { required :"This field is required",email: "Please enter valid email"},
+			Subject:"This field is required",
+			Send_Email:"Please enter data"
+		
+		}
+	});
+    });
+</script>
           <script> //delete script
         $(document).on("click", ".deleteBtn", function () {
      var Id = $(this).data('id');

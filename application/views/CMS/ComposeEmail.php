@@ -28,13 +28,13 @@
                            <div class="PageHaeder">
                               <h2>Compose Email</h2>
                            </div>
-							<form class="form-inline" method="post" action="<?php echo base_url();?>index.php/Email/send">
+							<form class="form-inline" method="post" action="<?php echo base_url();?>index.php/Email/send" id="ComposeEmail">
 								<div class="box-wider-text">
 									<div class="box-header">
                                     <div class="row CustomRow">
 										   <div class="HeaderLeft"> 
 										     <div class="form-group ToOneSubscribe ">
-													<label for="ToOneSubscribecompose" >To </label><span>:</span>
+													<label for="To" >To </label><span>:</span>
 													<input type="text" name="To" class="form-control " placeholder="example@domain.com"/>     
 												</div><br>
 												<div class="form-group SubjectSubscribe ">
@@ -44,7 +44,7 @@
                                         </div>
                                         <div class="HeaderRight"> 
                                          		<div class="form-group formLayout ">
-													<button  type="submit" class="btn btn-md OverLayFormBtn Sendus"> Send</button>
+													<button  type="submit" class="btn btn-md Sendus"> Send</button>
 												</div>
                                         </div>
                                          <div class="SubHeader ">
@@ -79,6 +79,32 @@
 
         <!----------------------------------------scripts------>
          <?php $this->load->view('CMS/Scripts');  ?>
-
+<script>
+    $(document).ready(function () {
+	 
+	var validator = $("#ComposeEmail").validate({
+		errorPlacement: function (error, element)
+		{
+			// Append error within linked label
+			$( element ).closest( "div" ).find( "label[for='" + element.attr( "name" ) + "']" ).append( error );},
+		errorElement: "span",
+		rules :
+		{
+	
+			To: "required",
+			Subject: "required"
+		
+	
+		},
+		messages: 
+		{
+		
+			To:"This field is required",
+			Subject:"This field is required"
+		
+		}
+	});
+    });
+</script>
     </body>
 </html>

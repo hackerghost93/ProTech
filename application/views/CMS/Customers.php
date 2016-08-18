@@ -26,12 +26,7 @@
                           <h1>Customers</h1>
                       </li>
                       <li>
-                          <form class="TopBarForm">
-                                <div class="form-group">
-                                     <input type="search" class="form-control" name="Search" placeholder="Search By Customers Name"/>
-                                      <a href="#" type="submit" role="button"><span class="fa fa-search"></span></a>
-                                </div>
-                          </form>    
+                 
                       </li>
                    </ul>
              </nav>
@@ -41,6 +36,12 @@
                                     <div class="box-header">
                                         <div class="row CustomRow">
                                         <div class="HeaderLeft"> 
+										          <form class="TopBarForm">
+                                <div class="form-group">
+                                     <input type="search" class="form-control" name="Search" placeholder="Search By Customers Name"/>
+                                      <a href="#" type="submit" role="button"><span class="fa fa-search"></span></a>
+                                </div>
+                          </form>   
                                         </div>
                                         <div class="HeaderRight"> 
                                              <button class="btn btn-sucess" id="AddNewcustomerShow"> Add New Customers</button>
@@ -124,7 +125,7 @@ if(isset($results))
                    </div>
                </div>
           </div>
-          <form method="POST" action="<?=base_url()?>index.php/Customers/ADD">
+          <form method="POST" action="<?=base_url()?>index.php/Customers/ADD" id="AddCustomerForm">
               <div class="container-fluid OverLayFormContent">
                    <div class="FormSection">
                        <div class="SectionHeader">
@@ -147,7 +148,7 @@ if(isset($results))
               <div class="container-fluid OverLayFormFooter">
                    <div class="row CustomRow">
                        <div class="OverLayFormFooterItem right">
-                            <button type="submit"class="btn btn-md OverLayFormBtn"> Create</button>
+                            <button type="submit"class="btn btn-md "> Create</button>
                        </div>
                        <div class="OverLayFormFooterItem left">
                        
@@ -169,7 +170,7 @@ if(isset($results))
                    </div>
                </div>
           </div>
-          <form method="post" action="<?=base_url()?>index.php/Customers/edit">
+          <form method="post" action="<?=base_url()?>index.php/Customers/edit" id="EditCustomerForm">
 			<div class="container-fluid OverLayFormContent">
                    <div class="FormSection">
                        <div class="SectionHeader">
@@ -196,7 +197,7 @@ if(isset($results))
               <div class="container-fluid OverLayFormFooter">
                    <div class="row CustomRow">
                        <div class="OverLayFormFooterItem right">
-                            <button type="submit"class="btn btn-md OverLayFormBtn"> Update </button>
+                            <button type="submit"class="btn btn-md"> Update </button>
                        </div>
                        <div class="OverLayFormFooterItem left">
                        
@@ -249,5 +250,54 @@ if(isset($results))
           },'json');
     }
   </script>
+<script>
+    $(document).ready(function () {
+	   var validator = $("#AddCustomerForm").validate({
+		errorPlacement: function (error, element)
+		{
+			// Append error within linked label
+			$( element ).closest( "div" ).find( "label[for='" + element.attr( "name" ) + "']" ).append( error );},
+		errorElement: "span",
+		rules :
+		{
+	
+			CutomerTitle: "required",
+			CutomerLogo: {required: true,
+			accept: "audio/*"}
+	
+		},
+		messages: 
+		{
+		
+			CutomerTitle:"This field is required",
+			CutomerLogo: {required: "This field is required",
+			accept: "audio/*"}
+		}
+	});	 
+//--------------------edit-------------------------	
+	var validator = $("#EditCustomerForm").validate({
+		errorPlacement: function (error, element)
+		{
+			// Append error within linked label
+			$( element ).closest( "div" ).find( "label[for='" + element.attr( "name" ) + "']" ).append( error );},
+		errorElement: "span",
+		rules :
+		{
+	
+			EditCutomerTitle: "required",
+			EditCutomerLogo: {required: true,
+			accept: "audio/*"}
+	
+		},
+		messages: 
+		{
+		
+			EditCutomerTitle:"This field is required",
+			EditCutomerLogo: {required: "This field is required",
+			accept: "audio/*"}
+		}
+	});
+    });
+</script>
     </body>
 </html>

@@ -28,14 +28,14 @@
                            <div class="PageHaeder">
                               <h2>Send To all Subscribers</h2>
                            </div>
-                           <form class="form-inline" method="post" action="<?php echo base_url();?>index.php/Email/sendToAll">
+                           <form class="form-inline" method="post" action="<?php echo base_url();?>index.php/Email/sendToAll" id="AddsubscriberForm">
 								<div class="box-wider-text">
 									<div class="box-header">
                                     <div class="row CustomRow">
 										   <div class="HeaderLeft"> 
 										     <div class="form-group ToOneSubscribe ">
-													<label for="ToOneSubscribecompose" >BCC </label><span>:</span>
-                          <input type="text" name="BCC" class="form-control " placeholder="example@domain.com"/>        
+													<label for="BCC" >BCC </label><span>:</span>
+											<input type="text" name="BCC" class="form-control " placeholder="example@domain.com"/>        
 												</div><br>
 												<div class="form-group SubjectSubscribe ">
 													<label for="Subject">Subject </label><span>:</span>
@@ -44,7 +44,7 @@
                                         </div>
                                         <div class="HeaderRight"> 
                                          		<div class="form-group formLayout ">
-													<button type="submit" class="btn btn-md OverLayFormBtn Sendus"> Send</button> 
+													<button type="submit" class="btn btn-md  Sendus"> Send</button> 
 												</div>
                                         </div>
                                          <div class="SubHeader ">
@@ -61,6 +61,7 @@
 									<div class="box-body">
 									<h3>Message</h3>
 									<div class="form-group formLayout">
+									<label for="Send_Email"></label>
 										<textarea id="Edit_ProductBodyEditor" name="Send_Email" class="form-control textHeight" placeholder="" ></textarea>
 									</div>
 									</div>
@@ -81,7 +82,30 @@
           <?php $this->load->view('CMS/Scripts.php'); ?>
 
     <script type="text/javascript">
-   
+    $(document).ready(function () {
+	   var validator = $("#AddsubscriberForm").validate({
+		errorPlacement: function (error, element)
+		{
+			// Append error within linked label
+			$( element ).closest( "div" ).find( "label[for='" + element.attr( "name" ) + "']" ).append( error );},
+		errorElement: "span",
+		rules :
+		{
+			BCC: { required :true,email: true},
+			Subject: "required"
+			Send_Email: "required"
+			
+		},
+		messages: 
+		{
+			BCC: { required :"This field is required",email: "Please enter valid email"},
+			Subject:"This field is required",
+			Send_Email:"Please enter data"
+		
+		}
+	});
+    });
+</script>
                          
     </script>
     </body>

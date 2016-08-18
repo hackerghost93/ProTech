@@ -68,7 +68,7 @@ span.Invalidpassword {
                                         </div>
                                     </div>
                                     <div class="box-body row">
-										<form class="col-md-7" method="post" action="<?=base_url()?>index.php/AccountSettings/edit">
+										<form class="col-md-7" method="post" action="<?=base_url()?>index.php/AccountSettings/edit" id="ChangeUsername">
 											 <div class="form-group formLayout" hidden>
 												<label for="" class="control-label "> </label>
 												<input type="hidden" name="ID" id="Admin_ID" class="form-control" readonly value="<?php  if($this->session->userdata('loggedIn') == true)
@@ -95,13 +95,13 @@ span.Invalidpassword {
 												<label for="NewPassword" class="control-label ">New Password :</label>
 												<input type="password" name="NewPassword" id="NewPassword" class="form-control" />
 											 </div>
-                       <div class="form-group formLayout">
-                        <label for="ConfirmPassword" class="control-label ">Confirm New Password :</label>
-                        <input type="password" onkeyup="CheckPW()" name="ConfirmPassword" id="ConfirmPassword" class="form-control" />
-                        <span class="confirmpassword" id="PWC"></span>
-                       </div>
+											   <div class="form-group formLayout">
+												<label for="ConfirmPassword" class="control-label ">Confirm New Password :</label>
+												<input type="password" onkeyup="CheckPW()" name="ConfirmPassword" id="ConfirmPassword" class="form-control" />
+												<span class="confirmpassword" id="PWC"></span>
+											   </div>
 											 <div class="form-group formLayout">
-												 <button type="submit" id="Dis_able" class="btn btn-md OverLayFormBtn changePassword"> Change</button>
+												 <button type="submit" id="Dis_able" class="btn btn-md  changePassword"> Change</button>
 											 </div>
 										</form>
                                     </div>
@@ -143,6 +143,34 @@ span.Invalidpassword {
 
         <!----------------------------------------scripts------>
  	<?php require_once("Scripts.php"); ?>
+	<script>
+    $(document).ready(function () {
+	   var validator = $("#ChangeUsername").validate({
+		errorPlacement: function (error, element)
+		{
+			// Append error within linked label
+			$( element ).closest( "div" ).find( "label[for='" + element.attr( "name" ) + "']" ).append( error );},
+		errorElement: "span",
+		rules :
+		{		
+			Username: "required",
+			CurrentPassword: "required",
+			ConfirmPassword: "required",
+			NewPassword: "required",
+			Email: { required :true,email: true}
+	
+		},
+		messages: 
+		{
+			CurrentPassword:"This field is required",
+			ConfirmPassword:"This field is required",
+			Username:"This field is required",
+			NewPassword:"This field is required",
+			Email: { required :"This field is required",email: "Please enter valid email"}
+		}
+	});
+    });
+</script>
 <script type="text/javascript">
   function CheckPW()
   {

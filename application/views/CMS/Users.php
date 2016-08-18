@@ -24,12 +24,7 @@
                           <h1>Users</h1>
                       </li>
                       <li>
-                          <form class="TopBarForm">
-                                <div class="form-group">
-                                     <input type="search" class="form-control" name="Search" placeholder="Search By Email"/>
-                                      <a href="#" type="submit" role="button"><span class="fa fa-search"></span></a>
-                                </div>
-                          </form>    
+                
                       </li>
                    </ul>
              </nav>
@@ -38,6 +33,12 @@
                         <div class="box-header">
                              <div class="row CustomRow">
                                    <div class="HeaderLeft"> 
+								                <form class="TopBarForm">
+                                <div class="form-group">
+                                     <input type="search" class="form-control" name="Search" placeholder="Search By Email"/>
+                                      <a href="#" type="submit" role="button"><span class="fa fa-search"></span></a>
+                                </div>
+                          </form> 
                                    </div>
                                    <div class="HeaderRight"> 
                                         <button class="btn btn-sucess" id="AddNewUserShow"> Add New User</button>
@@ -117,7 +118,7 @@ if(isset($results))
                    </div>
                </div>
           </div>
-          <form method="POST" action="<?=base_url()?>index.php/Login/Add">
+          <form method="POST" action="<?=base_url()?>index.php/Login/Add" id="AddUserForm">
               <div class="container-fluid OverLayFormContent">
                    <div class="FormSection">
                        <div class="SectionHeader">
@@ -143,7 +144,7 @@ if(isset($results))
                <div class="container-fluid OverLayFormFooter">
                    <div class="row CustomRow">
                        <div class="OverLayFormFooterItem right">
-                            <button type="submit"class="btn btn-md OverLayFormBtn"> Register </button>
+                            <button type="submit"class="btn btn-md"> Register </button>
                        </div>
                        <div class="OverLayFormFooterItem left">
                        
@@ -182,6 +183,35 @@ if(isset($results))
 
         <!----------------------------------------scripts------>
         <?php $this->load->view('CMS/Scripts');  ?>
+		<script>
+    $(document).ready(function () {
+	   var validator = $("#AddUserForm").validate({
+		errorPlacement: function (error, element)
+		{
+			// Append error within linked label
+			$( element ).closest( "div" ).find( "label[for='" + element.attr( "name" ) + "']" ).append( error );},
+		errorElement: "span",
+		rules :
+		{
+	
+			username: "required",
+			UserPassword: "required",
+			Email: { required :true,email: true}
+		
+	
+		},
+		messages: 
+		{
+		
+			username:"This field is required",
+			UserPassword:"This field is required",
+			Email: { required :"This field is required",email: "Please enter Avalid Email"}
+			
+		}
+	});	 
+
+    });
+</script>
         <script type="text/javascript">
           function SetAdminID(id)
           {

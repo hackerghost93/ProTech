@@ -11,10 +11,19 @@
 .resultadd{
   margin-top:-10px;
 }
-button.btn.btn-md.AddNewStepserbtn.addnewresult {
+button.btn.btn-md.editNewStepserbtn.addnewresult {
     position: absolute;
-    left: 164px;
-    top: 169px;
+    right: -52px;
+    top: 356px;
+    background: #2d3446;
+    color: #fff;
+}
+button.btn.btn-md.AddNewStepserbtn {
+    position: absolute;
+    right: 23px;
+    top: 245px;
+    background: #2D3446;
+    color: #fff;
 }
 </style>
 <?php  if($this->session->userdata('loggedIn') != true){redirect('Login');}   ?>
@@ -37,12 +46,7 @@ button.btn.btn-md.AddNewStepserbtn.addnewresult {
                           <h1>Services</h1>
                       </li>
                       <li>
-                          <form class="TopBarForm">
-                                <div class="form-group">
-                                     <input type="search" class="form-control" name="Search" placeholder="Search by stage"/>
-                                      <a href="#" type="submit" role="button"><span class="fa fa-search"></span></a>
-                                </div>
-                          </form>    
+                            
                       </li>
                    </ul>
              </nav>
@@ -51,7 +55,13 @@ button.btn.btn-md.AddNewStepserbtn.addnewresult {
                                <div class="box-wider-text">
                                     <div class="box-header">
                                         <div class="row CustomRow">
-                                        <div class="HeaderLeft"> 
+                                        <div class="HeaderLeft">
+ <form class="TopBarForm">
+                                <div class="form-group">
+                                     <input type="search" class="form-control" name="Search" placeholder="Search by stage"/>
+                                      <a href="#" type="submit" role="button"><span class="fa fa-search"></span></a>
+                                </div>
+                          </form> 										
                                         </div>
                                         <div class="HeaderRight"> 
                                              <button class="btn btn-sucess" id="AddNewServicesShow"> Add New Services</button>
@@ -132,7 +142,7 @@ button.btn.btn-md.AddNewStepserbtn.addnewresult {
                    </div>
                </div>
           </div>
-          <form method="POST" action="<?=base_url()?>index.php/Plans/AddPlan">
+          <form method="POST" action="<?=base_url()?>index.php/Plans/AddPlan" id="AddFormPlane">
               <div class="container-fluid OverLayFormContent">
         <div class="FormSection row">
             <div class="col-md-4 ">
@@ -183,7 +193,7 @@ button.btn.btn-md.AddNewStepserbtn.addnewresult {
                    </div>
                </div>
           </div>
-          <form method="post" action="<?=base_url()?>index.php/Plans/EditPlan">
+          <form method="post" action="<?=base_url()?>index.php/Plans/EditPlan" id="EditPlaneName">
       <div class="container-fluid OverLayFormContent">
           <div class="FormSection row">
             <div class="col-md-8">
@@ -207,7 +217,7 @@ button.btn.btn-md.AddNewStepserbtn.addnewresult {
                     <!-- <p><input type="text" name="Stage1Specifications[]" id="p_scents" class="form-control overlaystagesservices" placeholder="Plane Details" /> -->
                 
                   </div>
-                  <button type="button"class="btn btn-md AddNewStepserbtn addnewresult" onclick="Edit_StageOne();"> 
+                  <button type="button"class="btn btn-md editNewStepserbtn addnewresult" onclick="Edit_StageOne();"> 
                     <i class="fa fa-plus"></i></button>
                 </div>
               </div>
@@ -252,6 +262,59 @@ button.btn.btn-md.AddNewStepserbtn.addnewresult {
       
         <!----------------------------------------scripts------>
    <?php $this->load->view('CMS/Scripts');  ?>
+   <script> //edit script
+    $(document).on("click", ".editeBtn", function () {     
+     var myId = $(this).data('id');
+     var myName = $(this).data('editname'); 
+     
+       
+     $(" #edit_id").val( myId);
+     $(" #FamilyTitle").val( myName );
+     
+     
+       });
+</script>
+	   <script>
+    $(document).ready(function () {
+	   var validator = $("#AddFormPlane").validate({
+		errorPlacement: function (error, element)
+		{
+			// Append error within linked label
+			$( element ).closest( "div" ).find( "label[for='" + element.attr( "name" ) + "']" ).append( error );},
+		errorElement: "span",
+		rules :
+		{
+		
+			PlaneName: "required"
+	
+		},
+		messages: 
+		{
+		
+			PlaneName:"This field is required"
+
+		}
+	});	  
+//-------------------EditForm---------------
+	var validator = $("#EditPlaneName").validate({
+		errorPlacement: function (error, element)
+		{
+			// Append error within linked label
+			$( element ).closest( "div" ).find( "label[for='" + element.attr( "name" ) + "']" ).append( error );},
+		errorElement: "span",
+		rules :
+		{
+			PlaneName: "required"
+	
+		},
+		messages: 
+		{
+			PlaneName:"This field is required"
+
+		}
+	});
+    });
+</script>
     <script>  
         $(document).on("click",".CloseBtn",function(){
         $(this).closest("p").css("display", "none");

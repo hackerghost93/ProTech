@@ -155,7 +155,7 @@
                    </div>
                </div>
           </div>
-          <form action="<?=base_url()?>index.php/Family/AddFamily" method="post">
+          <form action="<?=base_url()?>index.php/Family/AddFamily" method="post" id="AddFamilyForm">
               <div class="container-fluid OverLayFormContent">
                    <div class="FormSection">
                        <div class="SectionHeader">
@@ -174,7 +174,7 @@
               <div class="container-fluid OverLayFormFooter">
                    <div class="row CustomRow">
                        <div class="OverLayFormFooterItem right">
-                            <button type="submit"class="btn btn-md OverLayFormBtn"> Creat</button>
+                            <button type="submit"class="btn btn-md "> Creat</button>
                        </div>
                        <div class="OverLayFormFooterItem left">
                        
@@ -196,7 +196,7 @@
                    </div>
                </div>
           </div>
-          <form method="post" action="<?php echo base_url();?>index.php/Family/UpdateFamily">
+          <form method="post" action="<?php echo base_url();?>index.php/Family/UpdateFamily" id="EditFamilyForm">
 			<div class="container-fluid OverLayFormContent">
                    <div class="FormSection">
                        <div class="SectionHeader">
@@ -217,7 +217,7 @@
               <div class="container-fluid OverLayFormFooter">
                    <div class="row CustomRow">
                        <div class="OverLayFormFooterItem right">
-                            <button type="submit"class="btn btn-md OverLayFormBtn"> Creat</button>
+                            <button type="submit"class="btn btn-md"> Creat</button>
                        </div>
                        <div class="OverLayFormFooterItem left">
                        
@@ -322,6 +322,48 @@
      
        });
 </script>
+	   <script>
+    $(document).ready(function () {
+	   var validator = $("#AddFamilyForm").validate({
+		errorPlacement: function (error, element)
+		{
+			// Append error within linked label
+			$( element ).closest( "div" ).find( "label[for='" + element.attr( "name" ) + "']" ).append( error );},
+		errorElement: "span",
+		rules :
+		{
+		
+			FamilyTitle: "required"
+	
+		},
+		messages: 
+		{
+		
+			FamilyTitle:"This field is required"
 
+		}
+	});	  
+//-------------------EditForm---------------
+	var validator = $("#EditFamilyForm").validate({
+		errorPlacement: function (error, element)
+		{
+			// Append error within linked label
+			$( element ).closest( "div" ).find( "label[for='" + element.attr( "name" ) + "']" ).append( error );},
+		errorElement: "span",
+		rules :
+		{
+			FamilyTitle: "required"
+	
+		},
+		messages: 
+		{
+			FamilyTitle:"This field is required"
+
+		}
+	});
+    });
+</script>
     </body>
-</html>
+
+	
+	</html>

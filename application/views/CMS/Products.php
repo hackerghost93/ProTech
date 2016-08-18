@@ -125,7 +125,7 @@
     </div>
   </div>
 </div>
-<form method="POST" action="<?=base_url()?>index.php/printer/create" enctype="multipart/form-data">
+<form method="POST" action="<?=base_url()?>index.php/printer/create" enctype="multipart/form-data" id="AddNewProductForm">
   <div class="container-fluid OverLayFormContent">
    <div class="FormSection">
      <div class="SectionHeader">
@@ -138,7 +138,7 @@
        <input type="text" name="printer_name" class="form-control InputProduct" placeholder="Product Title" />
      </div>
      <div class="form-group formLayout">
-       <label for="ProductImage" class="control-label ">Product Image: </label>
+       <label for="image[]" class="control-label ">Product Image: </label>
        <input type="file" name="image[]" class="form-control InputProduct" multiple=""/>
      </div>
      <div class="form-group formLayout">
@@ -146,7 +146,7 @@
        <input type="file" name="PDF[]" class="form-control InputProduct"/>
      </div>	
      <div class="form-group formLayout">
-       <label for="ProductFamily" class="control-label ">Product Product Family: </label>
+       <label for="family" class="control-label ">Product Product Family: </label>
        <select name="family" class="form-control InputProduct">
         <option class="" value=""> Choose Product Family</option>
         <?php foreach ($families as $family):?>
@@ -227,7 +227,7 @@
 <div class="container-fluid OverLayFormFooter">
  <div class="row CustomRow">
    <div class="OverLayFormFooterItem right">
-    <button type="submit"class="btn btn-md OverLayFormBtn">ADD PRODUCT</button>
+    <button type="submit"class="btn btn-md ">ADD PRODUCT</button>
   </div>
   <div class="OverLayFormFooterItem left">
 
@@ -249,7 +249,7 @@
     </div>
   </div>
 </div>
-<form>
+<form id="EditFormProduct">
  <div class="container-fluid OverLayFormContent">
    <div class="FormSection">
      <div class="SectionHeader">
@@ -262,7 +262,7 @@
        <input type="text" name="ProductTitle" class="form-control InputProduct" placeholder="Product Title" id="hackerTitle"/>
      </div>
      <div class="form-group formLayout">
-       <label for="ProductPdf" class="control-label ">Product Pdf: </label>
+       <label for="" class="control-label ">Product Pdf: </label>
        <input type="file" name="ProductPdf" class="form-control InputProduct" id="hackerPDF" />
      </div> 
 
@@ -280,7 +280,7 @@
    </div>
    <div class="form-group formLayout">
      <label for="description" class="control-label ">Description: </label>
-     <textarea ></textarea>
+     <textarea name="description" ></textarea>
    </div>
    <div class="checkbox-inline">
      <label>
@@ -370,7 +370,7 @@
     <div class="container-fluid OverLayFormFooter">
      <div class="row CustomRow">
        <div class="OverLayFormFooterItem right">
-        <button type="button"class="btn btn-md OverLayFormBtn"> Creat</button>
+        <button type="button"class="btn btn-md "> Creat</button>
       </div>
       <div class="OverLayFormFooterItem left">
 
@@ -434,6 +434,7 @@
 <script src="<?=base_url()?>js/cms/js/bootstrap.min.js"></script>
 <script src="<?=base_url()?>js/cms/js/ProjectScripts.js"></script>
 <script src="<?=base_url()?>js/cms/js/test.js"></script>
+    <script src="<?php echo base_url();?>js/cms/js/jquery.validate.min.js"></script>
 <!--script>
   function MyFunction(){
    var e = document.getElementById("ReplyMessage");
@@ -446,6 +447,7 @@ var MyType = "<?=$type?>" ;
 var MyUrl = "<?=base_url()?>" ;
 </script-->
 <script type="text/javascript" src="<?=base_url()?>js/hacker.js"></script>
+
 <script>
   $(document).ready(function(){
 
@@ -488,6 +490,70 @@ var MyUrl = "<?=base_url()?>" ;
    document.getElementById('AddNewSpecifications').appendChild(newspan);
  }
 </script>
+	   <script>
+    $(document).ready(function () {
+	   var validator = $("#AddNewProductForm").validate({
+		errorPlacement: function (error, element)
+		{
+			// Append error within linked label
+			$( element ).closest( "div" ).find( "label[for='" + element.attr( "name" ) + "']" ).append( error );},
+		errorElement: "span",
+		rules :
+		{
 
+			printer_name: "required",
+			family: "required",
+			name: "required",
+			ProductDriverLink: {required:true, url:true}
+	
+	
+		},
+		messages: 
+		{
+		
+			printer_name:"This field is required",
+			name:"This field is required",
+			family:"Please Select one",
+			ProductDriverLink:{required:"this field is required", url:"Please enter a url"}
+		 
+
+
+		}
+	});	  
+//-------------------EditForm---------------
+	   var validator = $("#EditFormProduct").validate({
+		errorPlacement: function (error, element)
+		{
+			// Append error within linked label
+			$( element ).closest( "div" ).find( "label[for='" + element.attr( "name" ) + "']" ).append( error );},
+		errorElement: "span",
+		rules :
+		{
+			ProductPdf: {required: "required",
+			accept: "audio/*"}
+			ProductTitle: "required",
+			ProductFamily: "required",
+			name: "required",
+			description: "required",
+			product_driver: {required:true, url:true}
+
+	
+		},
+		messages: 
+		{
+			ProductPdf: {required: "This field is required",
+			accept: "audio/*"}
+			ProductTitle:"This field is required",
+			name:"This field is required",
+			description:"This field is required",
+			ProductFamily:"Please Select one",
+			product_driver:{required:"this field is required", url:"Please enter a url"}
+		 
+
+
+		}
+	});	 
+    });
+</script>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-        <title>Protech CMS : Downloads</title> 
+        <title>Protech CMS : PDF</title> 
      		 <?php $this->load->view("CMS/Links.php"); ?>
 
         
@@ -27,15 +27,21 @@
 						 <div class="SideBarContent ">
 							<div class="DataDiv">
 							   <div class="PageHaeder">
-								  <h2>Downloads</h2>
+								  <h2>PDF</h2>
 							   </div>
 								<div class="box-wider-text">
 								<div class="box-header">
 									<div class="row CustomRow">
 									<div class="HeaderLeft"> 
+									                                   <form class="TopBarForm">
+                                <div class="form-group">
+                                     <input type="search" onkeyup="showHint(this.value)" class="form-control" name="Search" placeholder="Search By  Name"/>
+                                      <a href="#" type="submit" role="button"><span class="fa fa-search"></span></a>
+                                </div>
+                          </form> 
 									</div>
 									<div class="HeaderRight"> 
-										 <button class="btn btn-sucess" id="AddNewDownloadsShow"> Add New Downloads</button>
+										 <button class="btn btn-sucess" id="AddNewDownloadsShow"> Add New PDF</button>
 									</div>
 									</div>
 								</div>
@@ -114,7 +120,7 @@ if(isset($results))
                    </div>
                </div>
           </div>
-          <form method="post" action="<?=base_url()?>index.php/Family/AddPDF">
+          <form method="post" action="<?=base_url()?>index.php/Family/AddPDF" id="AddPDFForm">
               <div class="container-fluid OverLayFormContent">
                    <div class="FormSection">
                        <div class="SectionHeader">
@@ -139,7 +145,7 @@ if(isset($results))
               <div class="container-fluid OverLayFormFooter">
                    <div class="row CustomRow">
                        <div class="OverLayFormFooterItem right">
-                            <button type="submit"class="btn btn-md OverLayFormBtn"> upload</button>
+                            <button type="submit"class="btn btn-md "> upload</button>
                        </div>
                        <div class="OverLayFormFooterItem left">
                        
@@ -160,7 +166,7 @@ if(isset($results))
               </div>
              <form id="ForgotPassForm" method="post" action="<?=base_url()?>index.php/Family/DeletePDF">
                   <div class="modal-body">
-                        <h1>Delete Downloads</h1>
+                        <h1>Delete PDF</h1>
                         <p>Are you sure that you need to delete this Data ?</p>
                         <div class="form-group formLayout">
 		        		<input type="text" name="RecoredId" id="RecoredId" class="form-control" placeholder="RecoredId" readonly />
@@ -183,6 +189,31 @@ if(isset($results))
       document.getElementById("RecoredId").value=ID;
     }
  	</script>
-
+<script>
+    $(document).ready(function () {
+	   var validator = $("#AddPDFForm").validate({
+		errorPlacement: function (error, element)
+		{
+			// Append error within linked label
+			$( element ).closest( "div" ).find( "label[for='" + element.attr( "name" ) + "']" ).append( error );},
+		errorElement: "span",
+		rules :
+		{
+	
+			Producttitle: "required",
+			DownloadPdf: {required: true,
+			accept: "audio/*"}
+	
+		},
+		messages: 
+		{
+		
+			Producttitle:"This field is required",
+			DownloadPdf: {required: "This field is required",
+			accept: "audio/*"}
+		}
+	});
+    });
+</script>
     </body>
 </html>

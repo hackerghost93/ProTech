@@ -118,7 +118,7 @@
                    </div>
                </div>
           </div>
-          <form method="post" action="<?=base_url()?>index.php/Tags/AddProductTag">
+          <form method="post" action="<?=base_url()?>index.php/Tags/AddProductTag" id="AddTagForm">
               <div class="container-fluid OverLayFormContent">
                    <div class="FormSection">
                        <div class="SectionHeader">
@@ -143,7 +143,7 @@
               <div class="container-fluid OverLayFormFooter">
                    <div class="row CustomRow">
                        <div class="OverLayFormFooterItem right">
-                            <button type="submit"class="btn btn-md OverLayFormBtn"> Create</button>
+                            <button type="submit"class="btn btn-md"> Create</button>
                        </div>
                        <div class="OverLayFormFooterItem left">
                        
@@ -179,6 +179,35 @@
         
         <!----------------------------------------scripts------>
         <?php $this->load->view('CMS/Scripts');  ?>
+				<script>
+    $(document).ready(function () {
+	   var validator = $("#AddTagForm").validate({
+		errorPlacement: function (error, element)
+		{
+			// Append error within linked label
+			$( element ).closest( "div" ).find( "label[for='" + element.attr( "name" ) + "']" ).append( error );},
+		errorElement: "span",
+		rules :
+		{
+	
+			ChooseProduct: "required",
+			ProductTag: "required"
+
+		
+	
+		},
+		messages: 
+		{
+		
+			ChooseProduct:"Please Choose Product",
+			ProductTag:"This field is required"
+			
+			
+		}
+	});	 
+
+    });
+</script>
         <script type="text/javascript">
                 tinymce.init({
                   selector: 'textarea',
