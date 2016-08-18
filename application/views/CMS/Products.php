@@ -61,7 +61,11 @@
             <?php endif; ?>
             <?php  $the_id = ($type == 'printer' ?  'printer_id' : 'part_id') ?>;
               <td><?=$product['name']?></td>
-              <td><img src="<?=base_url().$product['images'][0]['image_path']?>" class="prodimg"></td>
+              <?php if(isset($product['images'][0])): ?>
+                <td><img src="<?=base_url().$product['images'][0]['image_path']?>" class="prodimg"></td>
+              <?php else: ?>
+                <td>no photo</td>
+              <?php endif; ?>
               <td>
                 <?php if(isset($product['family_name'])): ?>
                   <?=$product['family_name']?>
@@ -125,7 +129,7 @@
     </div>
   </div>
 </div>
-<form method="POST" action="<?=base_url()?>index.php/printer/create" enctype="multipart/form-data" id="AddNewProductForm">
+<form method="POST" action="<?=base_url()?>index.php/<?=$type?>/create" enctype="multipart/form-data">
   <div class="container-fluid OverLayFormContent">
    <div class="FormSection">
      <div class="SectionHeader">
@@ -138,22 +142,23 @@
        <input type="text" name="printer_name" class="form-control InputProduct" placeholder="Product Title" />
      </div>
      <div class="form-group formLayout">
-       <label for="image[]" class="control-label ">Product Image: </label>
-       <input type="file" name="image[]" class="form-control InputProduct" multiple=""/>
-     </div>
+       <label for="Pdf" class="control-label ">Product Pdf: </label>
+       <input type="file" name="PDF" class="form-control InputProduct"/>
+     </div> 
      <div class="form-group formLayout">
-       <label for="Pdf[]" class="control-label ">Product Pdf: </label>
-       <input type="file" name="PDF[]" class="form-control InputProduct"/>
-     </div>	
-     <div class="form-group formLayout">
-       <label for="family" class="control-label ">Product Product Family: </label>
+       <label for="ProductFamily" class="control-label ">Product Product Family: </label>
        <select name="family" class="form-control InputProduct">
-        <option class="" value=""> Choose Product Family</option>
+        <option value="0">Choose Product Family</option>
         <?php foreach ($families as $family):?>
           <option value="<?=$family['family_id']?>"><?=$family['family_name']?></option>
         <?php endforeach;?>
       </select>
     </div>
+   <button type="button" class="btn btn-md" id="incrementAdd">Add Image</button>
+     <div class="form-group formLayout" id="hackerAddImages">
+       <label for="ProductImage" class="control-label ">Product Image: </label>
+       <input type="file" name="image[]" class="form-control InputProduct" multiple=""/>
+     </div>
   </div>
   <div class="col-md-6">
     <div class="form-group formLayout">
@@ -161,8 +166,8 @@
      <input type="text" name="ProductDriverLink" class="form-control InputProduct" />
    </div>
    <div class="form-group formLayout">
-     <label for="name" class="control-label ">Description: </label>
-     <textarea name="description"></textarea>
+     <label for="description" class="control-label ">Description: </label>
+     <input name="description" type="text" value="" placeholder="Write description" />
    </div>
    <div class="checkbox-inline">
      <label>
@@ -171,7 +176,7 @@
    </div>
    <div class="form-group formLayout Description">
      <label for="Description" class="control-label ">Description : </label>
-     <textarea placeholder="Description"></textarea>
+     <textarea name="orderDescription" placeholder="Description"></textarea>
    </div>
  </div>
 </div>
@@ -227,7 +232,7 @@
 <div class="container-fluid OverLayFormFooter">
  <div class="row CustomRow">
    <div class="OverLayFormFooterItem right">
-    <button type="submit"class="btn btn-md ">ADD PRODUCT</button>
+    <button type="submit"class="btn btn-md OverLayFormBtn">ADD PRODUCT</button>
   </div>
   <div class="OverLayFormFooterItem left">
 
@@ -249,7 +254,8 @@
     </div>
   </div>
 </div>
-<form id="EditFormProduct">
+<form action="<?=base_url().'index.php/'.$type.'/edit'?>" method="POST" enctype="multipart/form-data">
+  <input type="hidden" name="id" value="" id="hackerID"/>
  <div class="container-fluid OverLayFormContent">
    <div class="FormSection">
      <div class="SectionHeader">
@@ -262,8 +268,10 @@
        <input type="text" name="ProductTitle" class="form-control InputProduct" placeholder="Product Title" id="hackerTitle"/>
      </div>
      <div class="form-group formLayout">
-       <label for="" class="control-label ">Product Pdf: </label>
+       <label for="ProductPdf" class="control-label ">Product Pdf: </label>
        <input type="file" name="ProductPdf" class="form-control InputProduct" id="hackerPDF" />
+       <h4>The existant pdf:
+       <h5 id="hackerOldPDF"></h5></h4>
      </div> 
 
      <div class="form-group formLayout">
@@ -272,6 +280,11 @@
         <option class="" > Choose Product Family</option>
       </select>
     </div>
+    <button type="button" class="btn btn-md" id="incrementAdd1">Add Image</button>
+     <div class="form-group formLayout" id="hackerAddImages1">
+       <label for="ProductImage" class="control-label ">Product Image: </label>
+       <input type="file" name="image[]" class="form-control InputProduct" multiple=""/>
+     </div>
   </div>
   <div class="col-md-6">
    <div class="form-group formLayout">
@@ -280,7 +293,7 @@
    </div>
    <div class="form-group formLayout">
      <label for="description" class="control-label ">Description: </label>
-     <textarea name="description" ></textarea>
+     <input type="text" name="description" id="hackerDescription"/>
    </div>
    <div class="checkbox-inline">
      <label>
@@ -294,60 +307,58 @@
  <div class="SectionHeader">
   <h3>Product Images</h3>
 </div>
-<div class="SectionContent row">
- <div class="prodImages">
-  <div class="mask">
-   <i class="fa fa-close"></i>
- </div>
-</div>
+<div class="SectionContent row myhackerImages">
+ <!-- <div class="prodImages">
+</div> -->
 </div>
 </div>	
 <div class="FormSection row">
   <div class="col-md-4 ">
    <div class="SectionHeader">
     <h3>General Specifications </h3>
+     <button type="button"class="btn btn-md id="AddNewSpecificationsbtn1"> 
+      <i class="fa fa-plus"></i></button>
   </div>
   <div class="SectionContent Specifications">
     <div id="RemoveSpecifications">
-     <div class="form-group formLayout">
-      <p><input type="text" name="PrintingSpecifications" id="p_scents" class="form-control overlayproduct" placeholder="Printing Specifications1" />
-        <a href="#" id="remScnt" class="removespecification  CloseBtn" ><i class="fa fa-close"></i></a></p>
-        <p><input type="text" name="PrintingSpecifications" id="p_scents" class="form-control overlayproduct" placeholder="Printing Specifications2" />
-          <a href="#" id="remScnt" class="removespecification CloseBtn"><i class="fa fa-close"></i></a></p>	
-          <p><input type="text" name="PrintingSpecifications" id="p_scents" class="form-control overlayproduct" placeholder="Printing Specifications3" />
-            <a href="#" id="remScnt" class="removespecification CloseBtn" ><i class="fa fa-close"></i></a></p>	
-          </div>
-        </div>
+     <div class="form-group formLayout" id="hackerGeneral">
+      </div>
+    </div>
       </div>
     </div>
     <div class="col-md-4">
      <div class="SectionHeader">
       <h3>Printing Specifications </h3>
+       <button type="button"class="btn btn-md" id="AddNewSpecificationsbtn2"> 
+      <i class="fa fa-plus"></i></button>
     </div>
     <div class="SectionContent Specifications">
-      <div id="RemoveSpecifications">
-       <div class="form-group formLayout">
-        <p><input type="text" name="PrintingSpecifications" id="p_scents" class="form-control overlayproduct" placeholder="Printing Specifications1" />
-          <a href="#" id="remScnt" class="removespecification  CloseBtn" ><i class="fa fa-close"></i></a></p>
-          <p><input type="text" name="PrintingSpecifications" id="p_scents" class="form-control overlayproduct" placeholder="Printing Specifications2" />
-            <a href="#" id="remScnt" class="removespecification CloseBtn"><i class="fa fa-close"></i></a></p>	
-            <p><input type="text" name="PrintingSpecifications" id="p_scents" class="form-control overlayproduct" placeholder="Printing Specifications3" />
-              <a href="#" id="remScnt" class="removespecification CloseBtn" ><i class="fa fa-close"></i></a></p>	
-            </div>
-          </div>
+       <div class="form-group formLayout" id="hackerTyping">
+      </div>
         </div>
       </div>
       <div class="col-md-4 ">
        <div class="SectionHeader">
         <h3>Guarantee</h3>
+         <button type="button"class="btn btn-md" id="AddNewSpecificationsbtn3"> 
+      <i class="fa fa-plus"></i></button>
       </div>
       <div class="SectionContent Specifications">
         <div id="RemoveSpecifications">
          <div class="form-group formLayout" id="hackerGuarantee">
-          </div>
+        </div>
             </div>
           </div>
         </div>
+      </div> 
+
+    </div>
+    <div class="container-fluid OverLayFormFooter">
+     <div class="row CustomRow">
+       <div class="OverLayFormFooterItem right">
+        <button type="submit"class="btn btn-md OverLayFormBtn">Edit</button>
+      </div>
+      <div class="OverLayFormFooterItem left">
         <!--cripts-->
 		<script>
 		function MyFunction(){
@@ -358,21 +369,7 @@
           e.style.display = 'block';
     }
 		</script>
-		<script>
-          $(document).on("click",".CloseBtn",function(){
-			  $(this).closest("p").css("display", "none");
-			  
-		  });
-		</script>
-      </div> 
-
-    </div>
-    <div class="container-fluid OverLayFormFooter">
-     <div class="row CustomRow">
-       <div class="OverLayFormFooterItem right">
-        <button type="button"class="btn btn-md "> Creat</button>
-      </div>
-      <div class="OverLayFormFooterItem left">
+		
 
       </div>
     </div>
@@ -434,20 +431,11 @@
 <script src="<?=base_url()?>js/cms/js/bootstrap.min.js"></script>
 <script src="<?=base_url()?>js/cms/js/ProjectScripts.js"></script>
 <script src="<?=base_url()?>js/cms/js/test.js"></script>
-    <script src="<?php echo base_url();?>js/cms/js/jquery.validate.min.js"></script>
-<!--script>
-  function MyFunction(){
-   var e = document.getElementById("ReplyMessage");
-   if(e.style.display == 'block')
-    e.style.display = 'none';
-  else
-    e.style.display = 'block';
-}
+<script>
 var MyType = "<?=$type?>" ;
 var MyUrl = "<?=base_url()?>" ;
-</script-->
+</script>
 <script type="text/javascript" src="<?=base_url()?>js/hacker.js"></script>
-
 <script>
   $(document).ready(function(){
 
@@ -474,6 +462,12 @@ var MyUrl = "<?=base_url()?>" ;
 
 </script>
 <script>
+          $(document).on("click",".CloseBtn",function(){
+        $(this).closest("p").css("display", "none");
+        
+      });
+    </script>
+<script>
  function add_Guarantee() {
    var newspan = document.createElement('div');
    newspan.innerHTML = '<div class="form-group formLayout"><input type="text" name="Guarantee[]" class="form-control overlayproduct" placeholder="Product Guarantee" /></div>';
@@ -489,71 +483,30 @@ var MyUrl = "<?=base_url()?>" ;
    newspan.innerHTML = '	<div class="form-group formLayout"><input type="text" name="General[]" class="form-control overlayproduct" placeholder="Product Specifications" /></div>';
    document.getElementById('AddNewSpecifications').appendChild(newspan);
  }
+
+ $('#AddNewSpecificationsbtn1').click(function(event)
+ {
+    console.log('fired');
+    $('#hackerGeneral').append('<p><input type="text" value="" name="general[]" id="p_scents" class="form-control overlayproduct" placeholder="Printing Specifications3" /><a href="#" id="remScnt" class="removespecification CloseBtn" ><i class="fa fa-close"></i></a></p>');
+ });
+
+
+ $('#AddNewSpecificationsbtn2').click(function(event)
+ {
+    console.log('fired');
+    $('#hackerTyping').append('<p><input type="text" value="" name="typing[]" id="p_scents" class="form-control overlayproduct" placeholder="Printing Specifications3" /><a href="#" id="remScnt" class="removespecification CloseBtn" ><i class="fa fa-close"></i></a></p>');
+ });
+
+
+ $('#AddNewSpecificationsbtn3').click(function(event)
+ {
+    console.log('fired');
+    $('#hackerGuarantee').append('<p><input type="text" value="" name="guarantee[]" id="p_scents" class="form-control overlayproduct" placeholder="Printing Specifications3" /><a href="#" id="remScnt" class="removespecification CloseBtn" ><i class="fa fa-close"></i></a></p>');
+ });
+
+
+
 </script>
-	   <script>
-    $(document).ready(function () {
-	   var validator = $("#AddNewProductForm").validate({
-		errorPlacement: function (error, element)
-		{
-			// Append error within linked label
-			$( element ).closest( "div" ).find( "label[for='" + element.attr( "name" ) + "']" ).append( error );},
-		errorElement: "span",
-		rules :
-		{
 
-			printer_name: "required",
-			family: "required",
-			name: "required",
-			ProductDriverLink: {required:true, url:true}
-	
-	
-		},
-		messages: 
-		{
-		
-			printer_name:"This field is required",
-			name:"This field is required",
-			family:"Please Select one",
-			ProductDriverLink:{required:"this field is required", url:"Please enter a url"}
-		 
-
-
-		}
-	});	  
-//-------------------EditForm---------------
-	   var validator = $("#EditFormProduct").validate({
-		errorPlacement: function (error, element)
-		{
-			// Append error within linked label
-			$( element ).closest( "div" ).find( "label[for='" + element.attr( "name" ) + "']" ).append( error );},
-		errorElement: "span",
-		rules :
-		{
-			ProductPdf: {required: "required",
-			accept: "audio/*"}
-			ProductTitle: "required",
-			ProductFamily: "required",
-			name: "required",
-			description: "required",
-			product_driver: {required:true, url:true}
-
-	
-		},
-		messages: 
-		{
-			ProductPdf: {required: "This field is required",
-			accept: "audio/*"}
-			ProductTitle:"This field is required",
-			name:"This field is required",
-			description:"This field is required",
-			ProductFamily:"Please Select one",
-			product_driver:{required:"this field is required", url:"Please enter a url"}
-		 
-
-
-		}
-	});	 
-    });
-</script>
 </body>
 </html>

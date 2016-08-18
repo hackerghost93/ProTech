@@ -29,7 +29,7 @@ class MY_Model extends CI_Model
 
 	function insert($data)
 	{
-		$this->db->insert($this->table_name , $data);
+		$this->db->insert($this->table_name ,$data);
 		return $this->db->insert_id();
 	}
 
@@ -45,6 +45,17 @@ class MY_Model extends CI_Model
 		}
 		$this->db->where('image_path = ' , $path);
 		$this->db->delete();
+	}
+
+	function update($id,$myType,$arr)
+	{
+		$this->db->set($arr);
+		var_dump($arr);
+		if($myType == 'printer')
+			$this->db->where('printer_id = ' , $id);
+		else
+			$this->db->where('part_id = ' , $id);
+		$this->db->update($this->table_name);
 	}
 
 

@@ -26,15 +26,10 @@ class printer_model extends MY_Model
 
 	function get($id)
 	{
-		$this->db->select('*');
 		$this->db->from($this->table_name);
-		$this->db->join('printer_general_specification' , 'printer_general_specification.printer_id = printers.printer_id','left');
 		$this->db->join('families' , 'families.family_id = printers.family_id','left');
-		$this->db->join('printer_typing_specification' , 'printer_typing_specification.printer_id = printers.printer_id','left');
-		$this->db->join('guarantee' , 'guarantee.printer_id = printers.printer_id','left');
 		$this->db->where('printers.printer_id =' , $id );
 		$ret =  $this->db->get()->row_array();
-		$ret['image'] = $this->images($ret['printer_id'],'printer_id = '.$ret['printer_id']);
 		return $ret ;
 	}
 
@@ -92,6 +87,27 @@ class printer_model extends MY_Model
 		$this->db->from('guarantee');
 		$this->db->where('printer_id = ' ,$id);
 		return $this->db->get()->result_array();
+	}
+
+	function deletePrinting($id)
+	{
+		$this->db->from('printer_typing_specification');
+		$this->db->where('printer_id = ' ,$id);
+		return $this->db->delete(); 
+	}
+
+	function deleteGeneral($id)
+	{
+		$this->db->from('printer_general_specification');
+		$this->db->where('printer_id = ' ,$id);
+		return $this->db->delete();
+	}
+
+	function deleteGuarantee($id)
+	{
+		$this->db->from('guarantee');
+		$this->db->where('printer_id = ' ,$id);
+		return $this->db->delete();
 	}
 
 	

@@ -207,13 +207,13 @@
 
             <!-- Works -->
             <div class="WorksSlider">
-               <div class="item">
 
                    <?php
                 // var_dump($printers);
                    ?>
                    <!-- Work Block -->
                    <?php foreach($printers as $printer): ?>
+               <div class="item" style=" border-right: 10px black !important;">
                     <a href="<?=base_url()?>index.php/printer/show/<?=$printer['printer_id']?>" class="i_1">
                         <div class="Work-Block">
                             <div class="img-fill">
@@ -223,19 +223,17 @@
                             </div>
                         </div>
                     </a>
+                </div>
                 <?php endforeach; ?>  
 
-                <div class="item" style=" border-right: 10px black !important;">
 
+                    <!-- // Works -->
+            </div>
                     <div class="WorkSlider-Control">
                         <a href="<?=base_url()?>index.php/printer/showAll">مشاهدة المزيد من الطابعات</a>
                     </div>
-                    <!-- // Works -->
-                </div>
-            </div>
         </div>
     </div>
-</div>
 <?php endif;?> 
 <!-- // Section 03 -->
 

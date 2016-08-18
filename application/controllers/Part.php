@@ -9,6 +9,7 @@ class Part extends MY_Controller
 	{
 		parent::__construct('part_model');
 		$this->condition = "part_id";
+		$this->myType = 'part' ;
 	}
 
 	function showAll()
@@ -28,61 +29,6 @@ class Part extends MY_Controller
 		$data['products'] = $this->getImages($this->getAll());
 		$this->load->view('CMS/Products' , $data);
 	}
-
-	function create()
-	{
-		$post = $this->input->post();
-		var_dump($post) ;
-		var_dump($_FILES);
-		/// set common variables 
-		$data['name'] = $post['printer_name'];
-		$data['family_id'] = $post['family'];
-		$data['driver'] = $post['ProductDriverLink']; 
-		$data['general_description'] = $post['description'];
-
-
-		$pdf = $this->upload('PDF');
-		
-		$id = 0 ;
-
-		$data['pdf'] = $pdf[0];
-
-		var_dump($data) ;
-
-		$id = $this->model->insert($data);	
-		
-		var_dump($id);	
-
-		if($id != 0 || $id != null)
-		{
-			// add images 
-			$images = $this->upload('image');
-			var_dump($images);
-			foreach ($images as $image) {
-				$this->model->addImage($id , $image);
-			}
-			// general 	
-			foreach ($post['General'] as $key) {
-				$this->model->addGeneral($id,$key);
-			}
-			// add printing 
-			foreach ($post['Printing'] as $key) {
-				$this->model->addPrinting($id,$key);
-			}
-			// add guarantee
-			foreach ($post['Guarantee'] as $key) {
-				$this->model->addGuarantee($id,$key);
-			}
-		}
-
-	}
-
-
-
-
-
-
-
 
 }
  ?>
