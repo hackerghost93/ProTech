@@ -122,7 +122,7 @@ if (typeof newsletter_check !== "function") {
 </script>
 
 <div class="newsletter newsletter-subscription">
-    <form class="clear-after" method="post" action="" onsubmit="return newsletter_check(this)">
+    <form class="clear-after" method="post" id="subscribeMail" action="" onsubmit="return newsletter_check(this)">
 
         <input class="newsletter-email" type="email" name="ne" size="30" placeholder="البريد الإلكتروني" required>
 

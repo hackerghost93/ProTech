@@ -129,7 +129,7 @@
                         <a href="#"> التحميلات</a>
                     </li>
                     <li id="menu-item-2508" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2508">
-                        <a href="#sec7">عملائنا</a>
+                        <a href="<?=base_url()?>#sec7">عملائنا</a>
                     </li>
                     <li id="#" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2508">
                         <a href="<?php echo base_url()?>index.php/About">عن الشركه</a>
