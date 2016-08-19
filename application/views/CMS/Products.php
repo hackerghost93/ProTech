@@ -5,7 +5,7 @@
   <title>Protech CMS : Products</title> 
   <?php $this->load->view("CMS/Links"); ?>
 </head>
-
+<?php  if($this->session->userdata('loggedIn') != true){redirect('Login');}   ?>
 <body>
   <!-- -sideBarLeft -->
   <div class="sideBarLeft">
