@@ -15,6 +15,11 @@ class MY_Model extends CI_Model
 		$this->family_table = 'families';
 	}
 
+	function getContact()
+	{
+		return $this->db->get('contact')->row_array();
+	}
+
 	function getAll()
 	{
 		return $this->db->get($this->table_name)->result_array();

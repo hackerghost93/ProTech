@@ -25,7 +25,11 @@
                     <li>
                         <div class="Work-Block">
                             <div class="img-fill">
+                                <?php if (isset($product['images'][0]['image_path'])): ?>
                                 <img width="404" height="316" src="<?=base_url().$product['images'][0]['image_path']?>" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="<?=$product['name']?>" sizes="(max-width: 404px) 100vw, 404px" />
+                             <?php else: ?>
+                                <h4> no photo </h4>
+                                <?php endif; ?>
                                 <?php if($type == 'printer'):?>                         
                                     <a href="<?=base_url().'index.php/printer/show/'.$product['printer_id']?>" class="info"><h3><?=$product['name']?></h3></a>
                                 <?php else:?>
@@ -147,10 +151,10 @@ window.newsletter_check = function (f) {
             <a href="<?php echo base_url()?>" class="logo"><span>بروتك <span>لخدمات زيروكس المتكامله</span></span> </a>
             <a href="<?php echo base_url()?>index.php/Email/ViewMassage" class="OpenTicket">فتح تذكرة</a>
             <div class="Social">
-             <a target="_blank" href="#" class="Facebook" id="Facebook"><span></span></a>
-            <a target="_blank" href="#" class="Twitter" id="Twitter"><span></span></a>
-            <a target="_blank" href="#" class="Youtube" id="Youtube"><span></span></a>
-            <a target="_blank" href="#" class="LinkedIn" id="Linkedin"><span></span></a>
+        <a target="_blank" href="<?=$contact['facebook']?>" class="Facebook" id="Facebook"><span></span></a>
+        <a target="_blank" href="<?=$contact['twitter']?>" class="Twitter" id="Twitter"><span></span></a>
+        <a target="_blank" href="<?=$contact['youtube']?>" class="Youtube" id="Youtube"><span></span></a>
+        <a target="_blank" href="<?=$contact['linkedin']?>" class="LinkedIn" id="Linkedin"><span></span></a>
             </div>
         </div>
     </div>

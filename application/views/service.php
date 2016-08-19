@@ -186,13 +186,13 @@
             <div class="Right clear-after">
                 <img src="imgs/icon24.png" alt="">
                 <div class="info">
-                    <div><h3 class="Mobile"></h3>
+                    <div><h3 class="Mobile"><?=?></h3>
                     <h5>متاح واتس اب - فايبر - لاين</h5></div>
                 </div>
             </div>
             <div class="Left clear-after">
                 <img src="imgs/icon25.png" alt="">
-                <div class="info"><h3 class="Email"></h3></div>
+                <div class="info"><h3 class="Email"><?=$contact['']?></h3></div>
             </div>
         </div>
         <!-- // Contact Area -->
@@ -270,10 +270,10 @@ window.newsletter_check = function (f) {
             <a href="<?php echo base_url()?>" class="logo"><span>بروتك <span>لخدمات زيروكس المتكامله</span></span> </a>
             <a href="<?php echo base_url()?>index.php/Email/ViewMassage" class="OpenTicket">فتح تذكرة</a>
             <div class="Social">
-            <a target="_blank" href="#" class="Facebook" id="Facebook"><span></span></a>
-            <a target="_blank" href="#" class="Twitter" id="Twitter"><span></span></a>
-            <a target="_blank" href="#" class="Youtube" id="Youtube"><span></span></a>
-            <a target="_blank" href="#" class="LinkedIn" id="Linkedin"><span></span></a>
+        <a target="_blank" href="<?=$contact['facebook']?>" class="Facebook" id="Facebook"><span></span></a>
+        <a target="_blank" href="<?=$contact['twitter']?>" class="Twitter" id="Twitter"><span></span></a>
+        <a target="_blank" href="<?=$contact['youtube']?>" class="Youtube" id="Youtube"><span></span></a>
+        <a target="_blank" href="<?=$contact['linkedin']?>" class="LinkedIn" id="Linkedin"><span></span></a>
             </div>
         </div>
     </div>

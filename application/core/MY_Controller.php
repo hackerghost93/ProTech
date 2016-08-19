@@ -152,6 +152,7 @@ class MY_Controller extends CI_Controller
 			$response['typing'] = $this->model->getPrinting($id);
 			$response['guarantee'] = $this->model->getGuarantee($id);
 			$response['tags'] = $this->model->getProductTags($this->myType,$id);
+			$response['contact'] = $this->model->getContact();
 			$this->load->view('productdetails', $response);
 		}
 		else
@@ -184,6 +185,7 @@ class MY_Controller extends CI_Controller
 			$response['typing'] = $this->model->getPrinting($id);
 			$response['guarantee'] = $this->model->getGuarantee($id);
 			$response['tags'] = $this->model->getProductTags($this->myType,$id);
+			$response['contact'] = $this->model->getContact();
 			echo json_encode($response);
 		}
 		else 
@@ -248,7 +250,6 @@ class MY_Controller extends CI_Controller
 					$this->model->addTag($id,$tag,$this->myType);
 				}
 			}
-			die();
 		header("Location: ".base_url()."index.php/".$this->myType."/add");
 		}
 

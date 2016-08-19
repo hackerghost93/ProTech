@@ -23,10 +23,10 @@
 
     <div class="Grid1k">
         <ul class="contact-it">
-            <li class="c_it1" ><i></i>الجوال <span class="Mobile"></span></li>
-            <li class="c_it2"><i></i>الايميل <span  class="Email"></span></li>
-            <li class="c_it3" ><i></i>سكايب <span class="Skypee"></span></li>
-            <li class="c_it4" ><i></i>واتس اب <span class="WhatsApp"></span></li>
+            <li class="c_it1" ><i></i>الجوال <span class="Mobile"><?=$contact['mobile']?></span></li>
+            <li class="c_it2"><i></i>الايميل <span  class="Email"><?=$contact['email']?></span></li>
+            <li class="c_it3" ><i></i>سكايب <span class="Skypee"><?=$contact['skybe']?></span></li>
+            <li class="c_it4" ><i></i>واتس اب <span class="WhatsApp"><?=$contact['whatsapp']?></span></li>
         </ul>
         <div class="contact-form_">
          <h4>يمكنك ارسال رسالة</h4>
@@ -140,10 +140,10 @@ if (typeof newsletter_check !== "function") {
     <a href="<?php echo base_url()?>" class="logo"><span>بروتك <span>لخدمات زيروكس المتكامله</span></span> </a>
     <a href="<?php echo base_url()?>index.php/Email/ViewMassage" class="OpenTicket">فتح تذكرة</a>
     <div class="Social">
-        <a target="_blank" href="#" class="Facebook" id="Facebook"><span></span></a>
-            <a target="_blank" href="#" class="Twitter" id="Twitter"><span></span></a>
-            <a target="_blank" href="#" class="Youtube" id="Youtube"><span></span></a>
-            <a target="_blank" href="#" class="LinkedIn" id="Linkedin"><span></span></a>
+               <a target="_blank" href="<?=$contact['facebook']?>" class="Facebook" id="Facebook"><span></span></a>
+        <a target="_blank" href="<?=$contact['twitter']?>" class="Twitter" id="Twitter"><span></span></a>
+        <a target="_blank" href="<?=$contact['youtube']?>" class="Youtube" id="Youtube"><span></span></a>
+        <a target="_blank" href="<?=$contact['linkedin']?>" class="LinkedIn" id="Linkedin"><span></span></a>
     </div>
 </div>
 </div>

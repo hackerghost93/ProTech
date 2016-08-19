@@ -18,6 +18,7 @@ class Part extends MY_Controller
 		$data['products'] = $this->getImages($this->getAll());
 		$this->load->model('partner_model');
 		$data['partners'] = $this->partner_model->getAll();
+		$data['contact'] = $this->model->getContact();
 		$this->load->view('products.php' , $data);
 	}
 
@@ -28,6 +29,7 @@ class Part extends MY_Controller
 		$data['families'] = $this->family_model->select_all_families();
 		$data['products'] = $this->getImages($this->getAll());
 		$data['tags'] = $this->model->getTags();
+		$data['contact'] = $this->model->getContact();
 		$this->load->view('CMS/Products' , $data);
 	}
 

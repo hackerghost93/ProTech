@@ -208,17 +208,14 @@
 <div class="tags-box clfx">
     <h5>كلمات دلالية</h5>
     <br>
-    <?php var_dump($tags); ?>
-
     <?php foreach ($tags as $tag): ?>
-        <?=$tag['tag_name']?>
+       <h4> <?=$tag['tag_name']?></h4>
     <?php endforeach ?>
 
 </div>
 <br>
 <br>
 <br>
-
 
 
 <!-- Section 09 -->
@@ -230,13 +227,13 @@
             <div class="Right clear-after">
                 <img src="<?=base_url()?>imgs/icon24.png" alt="">
                 <div class="info">
-                    <div><h3 class="Mobile"></h3>
+                    <div><h3 class="Mobile"><?=$contact['mobile']?></h3>
                         <h5>متاح واتس اب - فايبر - لاين</h5></div>
                     </div>
                 </div>
                 <div class="Left clear-after">
                     <img src="<?=base_url()?>imgs/icon25.png" alt="">
-                    <div class="info"><h3 class="Email"></h3></div>
+                    <div class="info"><h3 class="Email"><?=$contact['email']?></h3></div>
                 </div>
             </div>
             <!-- // Contact Area -->
@@ -259,10 +256,10 @@
         <div class="Footer-Container Grid1k">
             <div class="Contact-Info">
                 <h3>اتصل بنا</h3>
-                <h4 class="Mobile"></h4>
-                <h4 class="Skypee"></h4>
-                <h4 class="WhatsApp"></h4>
-                <h4 class="Telephone"></h4>
+                <h4 class="Mobile"><?=$contact['mobile']?></h4>
+                <h4 class="Skypee"><?=$contact['skybe']?></h4>
+                <h4 class="WhatsApp"><?=$contact['whatsapp']?></h4>
+                <h4 class="Telephone"><?=$contact['telephone']?></h4>
             </div>
             <div class="SendMail">
                 <h3>القائمة البريدية</h3>
@@ -289,10 +286,10 @@
     <a href="<?php echo base_url()?>" class="logo"><span>بروتك <span>لخدمات زيروكس المتكامله</span></span> </a>
     <a href="<?php echo base_url()?>index.php/Email/ViewMassage" class="OpenTicket">فتح تذكرة</a>
     <div class="Social">
-        <a target="_blank" href="#" class="Facebook" id="Facebook"><span></span></a>
-        <a target="_blank" href="#" class="Twitter" id="Twitter"><span></span></a>
-        <a target="_blank" href="#" class="Youtube" id="Youtube"><span></span></a>
-        <a target="_blank" href="#" class="LinkedIn" id="Linkedin"><span></span></a>
+        <a target="_blank" href="<?=$contact['facebook']?>" class="Facebook" id="Facebook"><span></span></a>
+        <a target="_blank" href="<?=$contact['twitter']?>" class="Twitter" id="Twitter"><span></span></a>
+        <a target="_blank" href="<?=$contact['youtube']?>" class="Youtube" id="Youtube"><span></span></a>
+        <a target="_blank" href="<?=$contact['linkedin']?>" class="LinkedIn" id="Linkedin"><span></span></a>
     </div>
 </div>
 </div>
