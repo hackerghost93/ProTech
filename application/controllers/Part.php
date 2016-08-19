@@ -27,6 +27,7 @@ class Part extends MY_Controller
 		$data['type'] = 'part';
 		$data['families'] = $this->family_model->select_all_families();
 		$data['products'] = $this->getImages($this->getAll());
+		$data['tags'] = $this->model->getTags();
 		$this->load->view('CMS/Products' , $data);
 	}
 

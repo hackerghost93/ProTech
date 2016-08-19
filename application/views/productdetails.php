@@ -176,19 +176,6 @@
 </ul>
 
 
-</div>
-
-
-</section>
-
-</div>
-
-<div class="big-img-work_box"><a href="#" class="close0">X</a>
-    <div class="appendHere"><div class="loader0"></div></div>
-</div><div class="overly_"></div>
-
-
-
 <ul class="c_post">
 
     <li>
@@ -198,22 +185,40 @@
          <a href="<?=base_url()?>index.php/part/showAll">المزيد من الطابعات</a>
         <?php endif; ?>
    </li>
+</ul>
+</div>
+
+
+</section>
+
+</div>
+
+
+
+
+<div class="big-img-work_box"><a href="#" class="close0">X</a>
+    <div class="appendHere"><div class="loader0"></div></div>
+</div><div class="overly_"></div>
+
+
+
 
 <br>
 
 <div class="tags-box clfx">
     <h5>كلمات دلالية</h5>
     <br>
+    <?php var_dump($tags); ?>
 
-    <!-- tags -->
-
-</div>
-<br>
-<br>
-<br>
-
+    <?php foreach ($tags as $tag): ?>
+        <?=$tag['tag_name']?>
+    <?php endforeach ?>
 
 </div>
+<br>
+<br>
+<br>
+
 
 
 <!-- Section 09 -->
@@ -265,31 +270,6 @@
 
 
 
-                <script type="text/javascript">
-//<![CDATA[
-if (typeof newsletter_check !== "function") {
-    window.newsletter_check = function (f) {
-        var re = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-]{1,})+\.)+([a-zA-Z0-9]{2,})+$/;
-        if (!re.test(f.elements["email"].value)) {
-            alert("The email is not correct");
-            return false;
-        }
-        for (var i=1; i<20; i++) {
-            if (f.elements["np" + i] && f.elements["np" + i].required && f.elements["np" + i].value == "") {
-                alert("");
-                return false;
-            }
-        }
-        if (f.elements["ny"] && !f.elements["ny"].checked) {
-            alert("You must accept the privacy statement");
-            return false;
-        }
-        return true;
-    }
-}
-//]]>
-</script>
-
 <div class="newsletter newsletter-subscription">
     <form class="clear-after" id="subscribeMail" method="post" action="" onsubmit="return newsletter_check(this)">
 
@@ -331,6 +311,33 @@ if (typeof newsletter_check !== "function") {
 </div>
 </div>
 <div class="big-menu-overly"></div>
+
+
+
+                <script type="text/javascript">
+//<![CDATA[
+if (typeof newsletter_check !== "function") {
+    window.newsletter_check = function (f) {
+        var re = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-]{1,})+\.)+([a-zA-Z0-9]{2,})+$/;
+        if (!re.test(f.elements["email"].value)) {
+            alert("The email is not correct");
+            return false;
+        }
+        for (var i=1; i<20; i++) {
+            if (f.elements["np" + i] && f.elements["np" + i].required && f.elements["np" + i].value == "") {
+                alert("");
+                return false;
+            }
+        }
+        if (f.elements["ny"] && !f.elements["ny"].checked) {
+            alert("You must accept the privacy statement");
+            return false;
+        }
+        return true;
+    }
+}
+//]]>
+</script>
 
 
 <?php $this->load->view('myFooter') ; ?>

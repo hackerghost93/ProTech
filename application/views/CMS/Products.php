@@ -169,15 +169,23 @@
      <label for="description" class="control-label ">Description: </label>
      <input name="description" type="text" value="" placeholder="Write description" />
    </div>
-   <div class="checkbox-inline">
-     <label>
-       <input type="checkbox" id="checkbox1"><label class="offer"> Offer</label>
-     </label>
-   </div>
-   <div class="form-group formLayout Description">
-     <label for="Description" class="control-label ">Description : </label>
-     <textarea name="orderDescription" placeholder="Description"></textarea>
-   </div>
+  <div class="dropdown open">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Choose tags
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+  <style type="text/css">
+    .hackerCheck{
+      margin-left: 10px ;
+    }
+  </style>
+    <?php foreach ($tags as $tag):?>
+       <h5 class="hackerCheck"> <?=$tag['tag_name']?>    <input value="<?=$tag['tag_name']?>" name="tags[]" type="checkbox"> </h5>
+        <div class="dropdown-divider"></div>
+      <?php endforeach;?>
+  </div>
+  </div>
+
  </div>
 </div>
 </div>

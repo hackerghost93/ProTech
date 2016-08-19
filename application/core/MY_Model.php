@@ -20,6 +20,33 @@ class MY_Model extends CI_Model
 		return $this->db->get($this->table_name)->result_array();
 	}
 
+	function getProductTags($type,$id)
+	{
+		if($type == 'printer')
+		{
+			$this->db->where('printer_id = ' , $id);
+			return $this->db->get('printer_tags')->result_array();			
+		}
+		else
+		{
+			$this->db->where('part_id = ' , $id);
+			return $this->db->get('part_tag')->result_array();
+		}
+	}
+
+	function addTag($id,$tag,$type)
+	{
+		if($type == 'printer')
+			$this->db->insert('printer_tags', array('printer_id' => $id , 'tag_name' => $tag));
+		else
+			$this->db->insert('part_tag' , array('part_id' => $id , 'tag_name' => $tag));
+	}
+
+	function getTags()
+	{
+		return $this->db->get('tags')->result_array();
+	}
+
 	function images($product_id,$condition)
 	{
 		$this->db->select('image_path');

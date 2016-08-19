@@ -151,6 +151,7 @@ class MY_Controller extends CI_Controller
 			$response['generals'] = $this->model->getGeneral($id);
 			$response['typing'] = $this->model->getPrinting($id);
 			$response['guarantee'] = $this->model->getGuarantee($id);
+			$response['tags'] = $this->model->getProductTags($this->myType,$id);
 			$this->load->view('productdetails', $response);
 		}
 		else
@@ -182,6 +183,7 @@ class MY_Controller extends CI_Controller
 			$response['general'] = $this->model->getGeneral($id);
 			$response['typing'] = $this->model->getPrinting($id);
 			$response['guarantee'] = $this->model->getGuarantee($id);
+			$response['tags'] = $this->model->getProductTags($this->myType,$id);
 			echo json_encode($response);
 		}
 		else 
@@ -193,7 +195,6 @@ class MY_Controller extends CI_Controller
 		$post = $this->input->post();
 		var_dump($post) ;
 		var_dump($_FILES);
-/// set common variables 
 		$data['name'] = $post['printer_name'];
 		if($post['family'] != 0)
 			$data['family_id'] = $post['family'];
@@ -240,6 +241,14 @@ class MY_Controller extends CI_Controller
 					$this->model->addGuarantee($id,$key);
 				}
 			}
+			if(isset($post['tags']))
+			{
+				foreach($post['tags'] as $tag)
+				{
+					$this->model->addTag($id,$tag,$this->myType);
+				}
+			}
+			die();
 		header("Location: ".base_url()."index.php/".$this->myType."/add");
 		}
 
