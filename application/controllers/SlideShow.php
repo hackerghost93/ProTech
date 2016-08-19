@@ -50,5 +50,10 @@ public function GetEditedData()
 		echo json_encode($data);
 	}
 }
+public function GetAllSlides()
+{
+	$data = $this->Awd_Model->GetData('slide_show');
+	echo json_encode($data);
+}
 
 }
