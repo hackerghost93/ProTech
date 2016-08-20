@@ -5,7 +5,7 @@ class Login extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('CMS/login');
+		$this->load->view('CMS/Login');
 	}
 	public function Reg_index()
 	{
@@ -28,7 +28,7 @@ class Login extends CI_Controller {
 		if($result == false )
 		{
 			$data["state"] = "wrong username or password";
-			$this->load->view('CMS/login',$data);
+			$this->load->view('CMS/Login',$data);
 		}
 		else{
 			$data["statue"]="success";

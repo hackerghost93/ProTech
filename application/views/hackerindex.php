@@ -217,9 +217,13 @@
                     <a href="<?=base_url()?>index.php/printer/show/<?=$printer['printer_id']?>" class="i_1">
                         <div class="Work-Block">
                             <div class="img-fill">
-                                <img width="404" height="316" src="<?=base_url().$printer['images'][0]['image_path']?>" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" 
-                                alt="printerImg" sizes="(max-width: 404px) 100vw, 404px" />                        
+                                <?php if(isset($printer['images'][0]['image_path'])): ?>
+                                    <img width="404" height="316" src="<?=base_url().$printer['images'][0]['image_path']?>" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" 
+                                    alt="printerImg" sizes="(max-width: 404px) 100vw, 404px" />                        
                                 <div class="info"><h3><?=$printer['name']?></h3></div>
+                                 <?php else: ?>
+                                    <h4>no photo</h4>
+                                <?php endif; ?>
                             </div>
                         </div>
                     </a>
@@ -271,9 +275,13 @@
                         <?php foreach($printers as $key => $printer): ?>
                             <div class="item">
                                 <div class="li" id="tab<?=$key?>">
+                                    <?php if(isset($printer['images'][0]['image_path'])): ?>
                                     <span><img src="<?=base_url().$printer['images'][0]['image_path']?>" alt="">
                                         <span><?=$printer['name']?></span>
                                     </span>
+                                     <?php else: ?>
+                                    <h4>no photo</h4>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                         <?php endforeach; ?>
@@ -295,7 +303,11 @@
                                     <?php endif; ?>
                                     <a href="<?=base_url()?>index.php/printer/show/<?=$printer['printer_id']?>" class="more">تفاصيل العرض</a>
                                 </div>
+                                <?php if(isset($printer['images'][0]['image_path'])): ?>
                                 <div class="image"><img src="<?=base_url().$printer['images'][0]['image_path']?>" alt="printer image"></div>
+                                 <?php else: ?>
+                                    <h4>no photo</h4>
+                                <?php endif; ?>
                             </div>
                         </div>
                     <?php endforeach; ?>

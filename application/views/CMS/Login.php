@@ -11,14 +11,13 @@
     </head>
     <body >
 	<div class="bodylogin">
-        <!-- ---------------------------------sideBarLeft------ -->
+        <!---sideBarLeft -->
 
     <div class="container section--purple wow flipInX" data-wow-delay="1s">
 		<div class="logologin row">
 			<div class="col-md-2 border1"></div>
-			<div class="col-md-8"><h3>بـــروتــك</h3><span>لخدمات  زيروكس المتكاملة</span><img src="<?php echo base_url(); ?>imgs/logo.jpg"></div>
+			<div class="col-md-8"><h3>بـــروتــك</h3><span>لخدمات  زيروكس المتكاملة</span><img src="<?php echo base_url(); ?>imgs/xeroex.png"></div>
 		    <div class="col-md-2 border2"></div>
-
 		</div>
 		<form method="post" action="<?=base_url()?>index.php/Login/log">
 		<div class="login">
@@ -40,9 +39,9 @@
 	
 
 
-        <!------------------------------------DeleteModals---- -->
+        <!--DeleteModals -->
 
-        <!----------------------------------------scripts------>
+        <!--scripts-->
 	 <?php $this->load->view('CMS/Scripts');  ?>
 
 </div>

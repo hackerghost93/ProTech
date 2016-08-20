@@ -4,7 +4,27 @@
   <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title>Protech CMS : Products</title> 
   <?php $this->load->view("CMS/Links"); ?>
+
+<style type="text/css">
+  
+ /* #imaginary_container{
+      margin-top:20%; /* Don't copy this */
+  }*/
+  .stylish-input-group .input-group-addon{
+      background: white !important; 
+  }
+  .stylish-input-group .form-control{
+    border-right:0; 
+    box-shadow:0 0 0; 
+    border-color:#ccc;
+  }
+  .stylish-input-group button{
+      border:0;
+      background:transparent;
+  }
+</style>
 </head>
+
 <?php  if($this->session->userdata('loggedIn') != true){redirect('Login');}   ?>
 <body>
   <!-- -sideBarLeft -->
@@ -25,12 +45,29 @@
 	 <div class="SideBarContent ">
     <div class="DataDiv">
 <div class="PageHaeder">
+
  <h2>Products</h2>
 </div>
      <div class="box-wider-text">
       <div class="box-header">
         <div class="row CustomRow">
           <div class="HeaderLeft"> 
+            <form id="hackerSearchForm">
+                <div class="row">
+                  <div class="col-sm-6 col-sm-offset-3">
+                      <div id="imaginary_container"> 
+                          <div class="input-group stylish-input-group">
+                              <input type="text" class="form-control"  placeholder="Search" id="hackerSearchBar" value="" >
+                              <span class="input-group-addon">
+                                  <button type="submit">
+                                      <span class="glyphicon glyphicon-search"></span>
+                                  </button>  
+                              </span>
+                          </div>
+                      </div>
+                  </div>
+            </div>
+            </form>
           </div>
           <div class="HeaderRight"> 
            <button class="btn btn-sucess" id="AddNewProductShow"> Add New Product</button>
@@ -53,14 +90,14 @@
         <tbody>
           <?php foreach ($products as $product ):?>
             <?php if($type == 'printer'): ?>
-            <tr data-id="<?=$product['printer_id']?>">
+            <tr data-id="<?=$product['printer_id']?>" class="hackerSearch">
               <td><?=$product['printer_id']?></td>
             <?php else: ?>
-            <tr data-id="<?=$product['part_id']?>">
+            <tr data-id="<?=$product['part_id']?>" class="hackerSearch">
               <td><?=$product['part_id']?></td>
             <?php endif; ?>
             <?php  $the_id = ($type == 'printer' ?  'printer_id' : 'part_id') ?>;
-              <td><?=$product['name']?></td>
+              <td class="hackerSearchAttr"><?=$product['name']?></td>
               <?php if(isset($product['images'][0])): ?>
                 <td><img src="<?=base_url().$product['images'][0]['image_path']?>" class="prodimg"></td>
               <?php else: ?>
@@ -515,6 +552,8 @@ var MyUrl = "<?=base_url()?>" ;
 
 
 </script>
+
+<script type="text/javascript" src="<?=base_url()?>js/hackerSearch.js"></script>
 
 </body>
 </html>

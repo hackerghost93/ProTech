@@ -1,4 +1,23 @@
 <?php $this->load->view('myHeader') ; ?>
+<style type="text/css">
+  
+  #imaginary_container{
+    margin-top: 50px;
+      margin-right:40%; /* Don't copy this */
+  }
+  .stylish-input-group .input-group-addon{
+      background: white !important; 
+  }
+  .stylish-input-group .form-control{
+    border-right:0; 
+    box-shadow:0 0 0; 
+    border-color:#ccc;
+  }
+  .stylish-input-group button{
+      border:0;
+      background:transparent;
+  }
+</style>
 
         
         
@@ -17,12 +36,30 @@
     </div>
     <!-- // page nav -->
 
+    <form id="hackerSearchForm">
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3">
+          <div id="imaginary_container"> 
+              <div class="input-group stylish-input-group">
+                    <h3>Search a product</h3>
+                  <input type="text" class="form-control"  placeholder="Search" id="hackerSearchBar" value="" >
+                  <span class="input-group-addon">
+                      <button type="submit">
+                          <span class="glyphicon glyphicon-search"></span>
+                      </button>  
+                  </span>
+              </div>
+          </div>
+      </div>
+    </div>
+    </form>
+
     <section class="works-box">
         <div class="Grid1k clfx">
             <ul class="work-items">
                 <!-- Work Block -->
                 <?php foreach( $products as $key => $product): ?> 
-                    <li>
+                    <li class="hackerSearch">
                         <div class="Work-Block">
                             <div class="img-fill">
                                 <?php if (isset($product['images'][0]['image_path'])): ?>
@@ -31,7 +68,7 @@
                                 <h4> no photo </h4>
                                 <?php endif; ?>
                                 <?php if($type == 'printer'):?>                         
-                                    <a href="<?=base_url().'index.php/printer/show/'.$product['printer_id']?>" class="info"><h3><?=$product['name']?></h3></a>
+                                    <a href="<?=base_url().'index.php/printer/show/'.$product['printer_id']?>" class="info"><h3 class="hackerSearchAttr"><?=$product['name']?></h3></a>
                                 <?php else:?>
                                     <a href="<?=base_url().'index.php/part/show/'.$product['part_id']?>" class="info"><h3><?=$product['name']?></h3></a>
                                 <?php endif; ?>
@@ -44,17 +81,8 @@
                 </ul>
                <span class="clear clr"><!--  --></span>
                 <br>
-                <ul class="navigation">
-<li><span class='page-numbers current'>1</span>
-<a class='page-numbers' href='#'>2</a>
-<a class='page-numbers' href='#'>3</a>
-<a class='page-numbers' href='#'>4</a>
-<a class="next page-numbers" href="#">></a></li>
-                </ul>
-
-                <br>
-        </div>
-    </section>
+                    </div>
+                </section>
 
         
            
@@ -173,5 +201,6 @@ window.newsletter_check = function (f) {
 </div>
 </div>
 <div class="big-menu-overly"></div>
+
 
 <?php $this->load->view('myFooter') ; ?>

@@ -6,14 +6,12 @@
                 <li class="sideMenuItem">
                     <a href="<?php echo base_url()?>index.php/Family" data-toggle="tooltip" data-placement="right" class="SMenuItem " title="Family" id="SMI-Family">
                 <span class="fa fa-sitemap" aria-hidden="true"></span></a>
-                </li>
-                <!--li class="sideMenuItem">
-                    <a href="<?php echo base_url()?>index.php/" data-toggle="tooltip" data-placement="right" class="SMenuItem " title="Products" id="SMI-Products">
-                    <span class="fa fa-cubes"></span></a>
-                </l
-i-->   
+                </li>   
                 <li class="sideMenuItem">
-                    <a href="SpareParts.php" data-toggle="tooltip" data-placement="right" class="SMenuItem " title="Spareparts" id="SMI-SpareParts">    <span class="fa fa-database" aria-hidden="true"></span></a>
+                    <a href="<?=base_url()?>index.php/part/add" data-toggle="tooltip" data-placement="right" class="SMenuItem " title="Spareparts" id="SMI-SpareParts">    <span class="fa fa-database" aria-hidden="true"></span></a>
+                </li> 
+                <li class="sideMenuItem">
+                    <a href="<?=base_url()?>index.php/printer/add" data-toggle="tooltip" data-placement="right" class="SMenuItem " title="Products" id="SMI-SpareParts">    <span class="fa fa-database" aria-hidden="true"></span></a>
                 </li>   
                 <li class="sideMenuItem">
                     <a href="<?php echo base_url()?>index.php/SlideShow" data-toggle="tooltip" data-placement="right" class="SMenuItem " title="SlideShow" id="SMI-SlideShow">   <span class="fa fa-film" aria-hidden="true"></span></a>
