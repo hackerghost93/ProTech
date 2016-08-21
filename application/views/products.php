@@ -1,5 +1,5 @@
 <?php $this->load->view('myHeader') ; ?>
-<style type="text/css">
+<!-- <style type="text/css">
   
   #imaginary_container{
     margin-top: 50px;
@@ -17,6 +17,46 @@
       border:0;
       background:transparent;
   }
+
+
+:hov
+
+
+.cls
+
+element.style {
+}
+.input-group.stylish-input-group h3 {
+    font-size: 15px;
+    color: #fa4c6a;
+    margin-left: 30px;
+    float: right;
+    position: absolute;
+    right: 150px;
+    top: 21%;
+</style> -->
+
+
+<style type="text/css">
+
+  .img-fill h4{
+    padding-top:39%;
+  }
+  .input-group.stylish-input-group h3 {
+    font-size: 15px;
+    margin-right: 78px;
+    color: #cd6f84;
+    margin-top: 26px;
+}
+
+
+input.searchone {
+    float: right;
+    margin-top: -27px;
+    margin-right: 14%;
+    background: #fff;
+    width : 300px;
+}
 </style>
 
         
@@ -35,25 +75,21 @@
         </div>
     </div>
     <!-- // page nav -->
-
+<div class="row">
     <form id="hackerSearchForm">
     <div class="row">
       <div class="col-sm-6 col-sm-offset-3">
           <div id="imaginary_container"> 
               <div class="input-group stylish-input-group">
-                    <h3>Search a product</h3>
-                  <input type="text" class="form-control"  placeholder="Search" id="hackerSearchBar" value="" >
-                  <span class="input-group-addon">
-                      <button type="submit">
-                          <span class="glyphicon glyphicon-search"></span>
-                      </button>  
-                  </span>
+                    <h3>ابحث المنتجات</h3>
+                  <input type="text" class="form-control searchone"  placeholder="ابحث" id="hackerSearchBar" value="" >
               </div>
           </div>
       </div>
     </div>
     </form>
-
+    <div>
+    <div class="row">
     <section class="works-box">
         <div class="Grid1k clfx">
             <ul class="work-items">
@@ -83,8 +119,8 @@
                 <br>
                     </div>
                 </section>
-
-        
+    <div>
+          
            
 <!-- Section 09 -->
 <div class="Section09">
