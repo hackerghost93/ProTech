@@ -224,7 +224,7 @@ button.btn.btn-md.AddNewStepserbtn {
                 </div>
                    <div class="form-group formLayout">
                   <label for="PlaneName" class="control-label ">Plane type : </label>
-                  <select name="EditedType" class="form-control InputProduct" id="">
+                  <select name="EditedType" class="form-control InputProduct" id="EPlanType">
                       <option value="1"> الدعم الفنى</option>
                       <option value="2"> بيع واستبدال</option>
                       <option value="3"> قطع غيار</option>
@@ -405,8 +405,10 @@ button.btn.btn-md.AddNewStepserbtn {
       {
         console.log(data);
         $('#PlaneName').val(data.name);
+        var XType=data.type;
+        console.log(XType);
+        $('#EPlanType').append("<option value="+XType+" selected='selected'>لا تعديل</option>")
         $.each($(data.plan_items), function(key, value) {
-          console.log(value);
          $('#SDiv').append('<p><input type="text" value='+value+' name="NewData_items[]" class="form-control overlayproduct result" /><a href="#" id="remScnt" class="removespecification  CloseBtn" ><i class="fa fa-close"></i></a></p>');
       });
       },'json');
