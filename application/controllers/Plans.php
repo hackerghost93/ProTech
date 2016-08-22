@@ -20,9 +20,10 @@ public function DeletePlan()
 }
 public function AddPlan()
  {
-	if($this->input->post("plane_name") != null && $this->input->post("plane_item") != null)
+	if($this->input->post("plane_name") != null && $this->input->post("plane_item") != null && $this->input->post("ChooseType") != null)
 	{
 	$input["plane_name"] = $this->input->post("plane_name");
+	$input["type"]       = $this->input->post("ChooseType");
 	$items = $this->input->post("plane_item");
 	$plane_id = $this->Awd_Model->AddToDBKey('plans',$input);
 	foreach ($items as $key => $value) {
@@ -75,9 +76,10 @@ public function GetAllData()
  }
 public function EditPlan()
  {
- if($this->input->post('PlaneName') != null && $this->input->post('NewData_items') != null && $this->input->post('PlaneID') != null)
+ if($this->input->post('PlaneName') != null && $this->input->post('NewData_items') != null && $this->input->post('PlaneID') != null && $this->input->post('EditedType') != null)
  	{
  		$New_Plan_Data['plane_name'] = $this->input->post('PlaneName');
+ 		$New_Plan_Data['type']       = $this->input->post('EditedType');
  		$New_Plan_items = $this->input->post('NewData_items');
  		$New_Plan_Data['plane_id'] = $this->input->post('PlaneID');
  		$this->Awd_Model->DelData('plans',$New_Plan_Data['plane_id'],'plane_id');

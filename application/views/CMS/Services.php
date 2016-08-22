@@ -74,7 +74,8 @@ button.btn.btn-md.AddNewStepserbtn {
                                                    <thead>
                                                         <tr>
                                                           <th>ID</th>
-                                                          <th>Stage</th>
+                                                          <th>plan type</th>
+                                                          <th>name</th>
                                                           <th>Edit</th>
                                                           <th>Delete</th>
                                                         </tr>
@@ -84,7 +85,10 @@ button.btn.btn-md.AddNewStepserbtn {
           if(isset($results))
           {
             foreach ($results as $object) {
-              echo "<tr><td>$object->plane_id</td><td>$object->plane_name</td>
+              if($object->type == "1"){$type = "الدعم الفنى";}
+              else if($object->type == "2"){$type ="بيع واستبدال";}
+              else{$type ="قطع غيار";}
+              echo "<tr><td>$object->plane_id</td><td>$type</td><td>$object->plane_name</td>
               <td class='check-col tableAdmin'>
               <a  class='editeBtn' onclick='GetPlanData($object->plane_id)' id='EditStageOverlayFormShow' data-placement='right'><span class='fa fa-gear'></span></a></td>
             <td class='check-col tableAdmin'><a href='#' onclick='SetPlanID($object->plane_id)' class='deleteBtn'  data-target='#DeleteStageModal' data-toggle='modal' title='delete' data-placement='right'><span class='fa fa-trash'></span></a></td></tr> ";
@@ -155,6 +159,14 @@ button.btn.btn-md.AddNewStepserbtn {
                   <label for="PlaneName" class="control-label ">Plane Name : </label>
                   <input type="text" name="plane_name" class="form-control InputProduct" placeholder="Plane Name" />
                 </div>
+                <div class="form-group formLayout">
+                  <label for="PlaneName" class="control-label ">Plane type : </label>
+                  <select name="ChooseType" class="form-control InputProduct" id="">
+                      <option value="1"> الدعم الفنى</option>
+                      <option value="2"> بيع واستبدال</option>
+                      <option value="3"> قطع غيار</option>
+                  </select>
+                </div>
                 <h3>Plane Details</h3>
                   <div class="form-group formLayout">
                     <!--<label for="ProductSpecifications" class="control-label ">Contact Specifications : </label>-->
@@ -209,6 +221,14 @@ button.btn.btn-md.AddNewStepserbtn {
                 <div class="form-group formLayout">
                   <label for="PlaneName" class="control-label ">Plan Name : </label>
                   <input type="text" name="PlaneName" id="PlaneName" class="form-control InputProduct" placeholder="Plane Name" />
+                </div>
+                   <div class="form-group formLayout">
+                  <label for="PlaneName" class="control-label ">Plane type : </label>
+                  <select name="EditedType" class="form-control InputProduct" id="">
+                      <option value="1"> الدعم الفنى</option>
+                      <option value="2"> بيع واستبدال</option>
+                      <option value="3"> قطع غيار</option>
+                  </select>
                 </div>
 
                   <h3>Plan Details</h3>
