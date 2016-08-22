@@ -125,9 +125,9 @@
                     <li id="menu-item-2507" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2507 ea-SubMenu">
                         <a href="#"> المنتجات</a>
                     </li>
-                    <li id="menu-item-2479" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2479">
+                  <!--   <li id="menu-item-2479" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2479">
                         <a href="#"> التحميلات</a>
-                    </li>
+                    </li> -->
                     <li id="menu-item-2508" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2508">
                         <a href="<?=base_url()?>#sec7">عملائنا</a>
                     </li>
@@ -147,19 +147,19 @@
             <a href="#" class="close-menu-2"><b class="fa fa-close"></b></a>
             <ul>
                 <li>
-                    <a href="<?php echo base_url()?>index.php/Plan">
+                    <a href="<?php echo base_url()?>index.php/Plan/showPlans/1">
                         <i><img src="<?=base_url()?>imgs/tech-support-grey.png" alt=""></i>
                         <span>الدعم الفني</span>
                     </a>
                 </li>
                 <li>
-                    <a href="<?php echo base_url()?>index.php/Plan">
+                    <a href="<?php echo base_url()?>index.php/Plan/showPlans/2">
                         <i><img src="<?=base_url()?>imgs/shopping-card-512.png" alt=""></i>
                         <span> بيع و استبدال </span>
                     </a>
                 </li>
                 <li>
-                    <a href="<?php echo base_url()?>index.php/Plan">
+                    <a href="<?php echo base_url()?>index.php/Plan/showPlans/3">
                         <i><img src="<?=base_url()?>imgs/Icon_49-512.png" alt=""></i>
                         <span>قطع غيار </span>
                     </a>
