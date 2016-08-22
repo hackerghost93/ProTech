@@ -10,15 +10,52 @@ public function index()
 }
 public function ADD()
 {
-	if($this->input->post("Title") != null && $this->input->post("SlideShowImg") != null)
+	if($this->input->post("Title") != null && count($_FILES) > 0)
 	{
 		$data['Slide_Title'] = $this->input->post("Title");
-		$data['Slide_image'] = $this->input->post("SlideShowImg");
+		$data['Slide_image'] = $this->uploadFile('SlideShowImg');
 		$this->Awd_Model->AddToDB('slide_show',$data);
 		redirect('SlideShow');
 	}
 	else{redirect('SlideShow');}
 }
+
+function uploadFile($name)
+{
+if(isset($_FILES[$name]) && $_FILES[$name]['tmp_name'] != "")
+{
+	if(is_uploaded_file($_FILES[$name]['tmp_name']))
+	{
+		$temp = explode('.', $_FILES[$name]['name']);
+		$imageFileType = end($temp);	
+		$target_name ='image_' . date('Y-m-d-H-i-s') . '_' . uniqid().".".$imageFileType;
+		if(file_exists(image_url().$target_name)) {
+			    	unlink(image_url().$target_name); //remove the file
+			    }
+			    $target_dir = "imgs/";
+			    $target_file = $target_dir.$target_name;
+			    $uploadok = 1 ;
+			    $check = getimagesize($_FILES[$name]["tmp_name"]);
+			    if ($_FILES[$name]['size'] > 500000) {
+			    	echo "Sorry, your file is too large.";
+			    	$uploadok = 0 ;
+			    	die();
+			    }
+			    else
+			    {		
+			    	if (move_uploaded_file($_FILES[$name]['tmp_name'], $target_file)) {
+			    		echo "Upload Complete\n";
+			    		return $target_file ;
+			    	}
+			    	else 
+			    	{
+			    		echo 'something went wrong';
+			    		return FALSE ;
+			    	}
+			    }
+			}		
+		}
+	}
 public function Delete()
 {
 	if($this->input->post('RecoredId') != null)

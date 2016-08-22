@@ -64,7 +64,7 @@ if(isset($results))
 {
   //`Slide_ID``Slide_Title``Slide_image`
    foreach ($results as $object) {
-   echo "<tr><td>$object->Slide_ID</td><td>$object->Slide_Title</td><td><img src=".base_url()."/imgs/".$object->Slide_image." class='prodimg'></td>
+   echo "<tr><td>$object->Slide_ID</td><td>$object->Slide_Title</td><td><img src=".base_url().$object->Slide_image." class='prodimg'></td>
    <td class='check-col tableAdmin'><a href='#' onclick='SetEditData($object->Slide_ID)' class='editeBtn' id='EditSlideShow' data-placement='right'><span class='fa fa-gear'></span></a></td>
    <td class='check-col tableAdmin'><a href='#' onclick='SetSlideID($object->Slide_ID)' class='deleteBtn'  data-target='#DeleteSildeShowModal' data-toggle='modal' title='delete' data-placement='right'><span class='fa fa-trash'></span></a></td></tr>";
  }
@@ -129,7 +129,7 @@ if(isset($results))
                    </div>
                </div>
           </div>
-          <form method="POST" action="<?=base_url()?>index.php/SlideShow/ADD" id="AddSlideShowForm">
+          <form method="POST" action="<?=base_url()?>index.php/SlideShow/ADD" id="AddSlideShowForm" enctype="multipart/form-data">
               <div class="container-fluid OverLayFormContent">
                    <div class="FormSection">
                        <div class="SectionHeader">
@@ -226,7 +226,7 @@ if(isset($results))
                         <h1>Delete SlideShow</h1>
                         <p>Are you sure that you need to delete this Data ?</p>
                         <div class="form-group formLayout">
-		        			 <input type="text" name="RecoredId" id="RecoredId" class="form-control"  readonly />
+		        			 <input type="hidden" name="RecoredId" id="RecoredId" class="form-control"  readonly />
 	       				</div>
                   </div>
                   <div class="modal-footer">

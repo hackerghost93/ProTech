@@ -1,4 +1,10 @@
     <?php $this->load->view('myHeader') ;  ?>
+
+    <style type="text/css">
+        .hackerNo{
+            padding-top: 39%;
+        }
+    </style>
     <!-- Section 01 -->
 
     <div id="contentarea" style="position: relative; right: 200px;">
@@ -8,70 +14,16 @@
 
 
                 <div id="slider1" class="royalSlider rsDefault js-content">
-
+                <?php foreach($slides as $slide):?>
                  <div>
                     <a href="<?=base_url()?>index.php/printer/showAll">
-                        <img class="rsImg" data-rstmb="<?=base_url()?>imgs/4375e42c-d6c7-4d7b-909c-5b5900a08344_A.jpeg" src="<?=base_url()?>imgs/3748e53f-d175-4da1-9b58-ae631f81336c_A.jpeg" alt="Weekend Deals" data-mobile-src="imgs/c7440a0a-dc63-4b96-a721-6192d40b85c6_A.jpg" />
+                        <img class="rsImg" data-rstmb="<?=base_url()?>imgs/4375e42c-d6c7-4d7b-909c-5b5900a08344_A.jpeg" src="<?=base_url().$slide['Slide_image']?>" alt="Weekend Deals" data-mobile-src="<?=base_url().$slide['Slide_image']?>" />
                     </a>
                 </div>
-                <div>
-                    <a href="<?=base_url()?>index.php/printer/showAll">
-                        <img class="rsImg" data-rstmb="<?=base_url()?>imgs/4375e42c-d6c7-4d7b-909c-5b5900a08344_A.jpeg" src="<?=base_url()?>imgs/20150326015737.jpg" alt="Weekend Deals" data-mobile-src="imgs/c7440a0a-dc63-4b96-a721-6192d40b85c6_A.jpg" />
-                    </a>
-                </div>
-
-                <div>
-                    <a href="<?=base_url()?>index.php/printer/showAll">
-                        <img class="rsImg" data-rstmb="<?=base_url()?>imgs/4375e42c-d6c7-4d7b-909c-5b5900a08344_A.jpeg" src="<?=base_url()?>imgs/B1-L2PrintersScanners-desktop.jpg" alt="Weekend Deals" data-mobile-src="imgs/c7440a0a-dc63-4b96-a721-6192d40b85c6_A.jpg" />
-                    </a>
-                </div>
-
-                <div>
-                    <a href="<?=base_url()?>index.php/printer/showAll">
-                        <img class="rsImg" data-rstmb="<?=base_url()?>imgs/4375e42c-d6c7-4d7b-909c-5b5900a08344_A.jpeg" src="<?=base_url()?>imgs/3748e53f-d175-4da1-9b58-ae631f81336c_A.jpeg" alt="Weekend Deals" data-mobile-src="imgs/c7440a0a-dc63-4b96-a721-6192d40b85c6_A.jpg" />
-                    </a>
-                </div>
-                <div>
-                    <a href="<?=base_url()?>index.php/printer/showAll">
-                        <img class="rsImg" data-rstmb="<?=base_url()?>imgs/4375e42c-d6c7-4d7b-909c-5b5900a08344_A.jpeg" src="<?=base_url()?>imgs/20150326015737.jpg" alt="Weekend Deals" data-mobile-src="imgs/c7440a0a-dc63-4b96-a721-6192d40b85c6_A.jpg" />
-                    </a>
-                </div>
-            </div>
-
-            <noscript>
-
-                <div id="slider1" class="royalSlider rsDefault js-content">
-
-                 <div>
-                    <a href="<?=base_url()?>index.php/printer/showAll">
-                        <img class="rsImg" data-rstmb="<?=base_url()?>imgs/4375e42c-d6c7-4d7b-909c-5b5900a08344_A.jpeg" src="<?=base_url()?>imgs/3748e53f-d175-4da1-9b58-ae631f81336c_A.jpeg" alt="Weekend Deals" data-mobile-src="imgs/c7440a0a-dc63-4b96-a721-6192d40b85c6_A.jpg" />
-                    </a>
-                </div>
-                <div>
-                    <a href="<?=base_url()?>index.php/printer/showAll">
-                        <img class="rsImg" data-rstmb="<?=base_url()?>imgs/4375e42c-d6c7-4d7b-909c-5b5900a08344_A.jpeg" src="<?=base_url()?>imgs/20150326015737.jpg" alt="Weekend Deals" data-mobile-src="imgs/c7440a0a-dc63-4b96-a721-6192d40b85c6_A.jpg" />
-                    </a>
-                </div>
-                <div>
-                    <a href="<?=base_url()?>index.php/printer/showAll">
-                        <img class="rsImg" data-rstmb="<?=base_url()?>imgs/4375e42c-d6c7-4d7b-909c-5b5900a08344_A.jpeg" src="<?=base_url()?>imgs/B1-L2PrintersScanners-desktop.jpg" alt="Weekend Deals" data-mobile-src="imgs/c7440a0a-dc63-4b96-a721-6192d40b85c6_A.jpg" />
-                    </a>
-                </div>
-
-                <div>
-                    <a href="<?=base_url()?>index.php/printer/showAll">
-                        <img class="rsImg" data-rstmb="<?=base_url()?>imgs/4375e42c-d6c7-4d7b-909c-5b5900a08344_A.jpeg" src="imgs/3748e53f-d175-4da1-9b58-ae631f81336c_A.jpeg" alt="Weekend Deals" data-mobile-src="<?=base_url()?>imgs/c7440a0a-dc63-4b96-a721-6192d40b85c6_A.jpg" />
-                    </a>
-                </div>
-                <div>
-                    <a href="<?=base_url()?>index.php/printer/showAll">
-                        <img class="rsImg" data-rstmb="<?=base_url()?>imgs/4375e42c-d6c7-4d7b-909c-5b5900a08344_A.jpeg" src="<?=base_url()?>imgs/20150326015737.jpg" alt="Weekend Deals" data-mobile-src="imgs/c7440a0a-dc63-4b96-a721-6192d40b85c6_A.jpg" />
-                    </a>
-                </div>
+                <?php endforeach; ?>
 
             </div>
 
-        </noscript>
 
         <script src='<?=base_url()?>js/p13n.js'></script>
 
@@ -222,7 +174,7 @@
                                     alt="printerImg" sizes="(max-width: 404px) 100vw, 404px" />                        
                                 <div class="info"><h3><?=$printer['name']?></h3></div>
                                  <?php else: ?>
-                                    <h4>no photo</h4>
+                                    <h4 class="hackerNo">no photo</h4>
                                 <?php endif; ?>
                             </div>
                         </div>

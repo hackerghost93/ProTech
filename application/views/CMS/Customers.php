@@ -65,7 +65,7 @@
 if(isset($results))
 {
    foreach ($results as $object) {
-   echo "<tr><td>$object->partner_id</td><td>$object->partner_name</td><td><img src='object->partner_image' class='prodimg'>
+   echo "<tr><td>$object->partner_id</td><td>$object->partner_name</td><td><img src='".base_url().$object->partner_image."' class='prodimg'>
    </td><td class='check-col tableAdmin'><a href='#' onclick='SetEditData($object->partner_id)
 'class='editeBtn' id='EditNewCustomersShow' data-placement='right'><span class='fa fa-gear'></span></a></td>
    <td class='check-col tableAdmin'><a href='#' onclick='SetCustomerID($object->partner_id)' class='deleteBtn'  data-target='#DeleteCustomerModal' data-toggle='modal' title='delete' data-placement='right'><span class='fa fa-trash'></span></a></td></tr>";
@@ -125,7 +125,7 @@ if(isset($results))
                    </div>
                </div>
           </div>
-          <form method="POST" action="<?=base_url()?>index.php/Customers/ADD" id="AddCustomerForm">
+          <form method="POST" action="<?=base_url()?>index.php/Customers/ADD" id="AddCustomerForm" enctype="multipart/form-data">
               <div class="container-fluid OverLayFormContent">
                    <div class="FormSection">
                        <div class="SectionHeader">
