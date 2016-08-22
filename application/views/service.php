@@ -3,7 +3,7 @@
         
          <div class="page_nav supp-page">
         <div class="Grid1k">
-            <i class="page_left-icon2"><img width="291" height="293" src="imgs/supp-title.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="الدعم الفني" srcset="imgs/supp-title.png 291w, imgs/supp-title.png 150w, imgs/supp-title.png 53w" sizes="(max-width: 291px) 100vw, 291px" /></i>
+            <i class="page_left-icon2"><img width="291" height="293" src="<?=base_url()?>imgs/supp-title.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="الدعم الفني" sizes="(max-width: 291px) 100vw, 291px" /></i>
             <div class="page_title">
                 <h2>الدعم الفني</h2>
               
@@ -182,17 +182,17 @@
     <div class="Grid1k">
         <!-- Contact Area -->
         <div class="ContactArea clear-after ViewPort">
-            <div class="Center"><img src="imgs/icon26.png" alt=""></div>
+            <div class="Center"><img src="<?=base_url()?>imgs/icon26.png" alt=""></div>
             <div class="Right clear-after">
-                <img src="imgs/icon24.png" alt="">
+                <img src="<?=base_url()?>imgs/icon24.png" alt="">
                 <div class="info">
-                    <div><h3 class="Mobile"><?=?></h3>
+                    <div><h3 class="Mobile"></h3>
                     <h5>متاح واتس اب - فايبر - لاين</h5></div>
                 </div>
             </div>
             <div class="Left clear-after">
-                <img src="imgs/icon25.png" alt="">
-                <div class="info"><h3 class="Email"><?=$contact['']?></h3></div>
+                <img src="<?=base_url()?>imgs/icon25.png" alt="">
+                <div class="info"><h3 class="Email"></h3></div>
             </div>
         </div>
         <!-- // Contact Area -->
@@ -251,8 +251,8 @@ window.newsletter_check = function (f) {
 //]]>
 </script>
 
-<div class="newsletter newsletter-subscription">
-<form class="clear-after" method="post" action="" onsubmit="return newsletter_check(this)">
+<div class="newsletter newsletter-subscription" id="subscribeMail">
+<form class="clear-after" method="post" action="" >
 
 <input class="newsletter-email" type="email" name="ne" size="30" placeholder="البريد الإلكتروني" required>
 
@@ -270,10 +270,10 @@ window.newsletter_check = function (f) {
             <a href="<?php echo base_url()?>" class="logo"><span>بروتك <span>لخدمات زيروكس المتكامله</span></span> </a>
             <a href="<?php echo base_url()?>index.php/Email/ViewMassage" class="OpenTicket">فتح تذكرة</a>
             <div class="Social">
-        <a target="_blank" href="<?=$contact['facebook']?>" class="Facebook" id="Facebook"><span></span></a>
-        <a target="_blank" href="<?=$contact['twitter']?>" class="Twitter" id="Twitter"><span></span></a>
-        <a target="_blank" href="<?=$contact['youtube']?>" class="Youtube" id="Youtube"><span></span></a>
-        <a target="_blank" href="<?=$contact['linkedin']?>" class="LinkedIn" id="Linkedin"><span></span></a>
+        <a target="_blank" href="" class="Facebook" id="Facebook"><span></span></a>
+        <a target="_blank" href="" class="Twitter" id="Twitter"><span></span></a>
+        <a target="_blank" href="" class="Youtube" id="Youtube"><span></span></a>
+        <a target="_blank" href="" class="LinkedIn" id="Linkedin"><span></span></a>
             </div>
         </div>
     </div>

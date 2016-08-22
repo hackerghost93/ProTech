@@ -1,0 +1,1 @@
+alter table plans add column type enum('1','2','3');
