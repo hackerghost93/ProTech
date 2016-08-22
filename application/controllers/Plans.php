@@ -44,6 +44,7 @@ public function GetAllData()
  		$ID = $this->input->get("ID");
  		$name = $this->Awd_Model->ChData('plans',$ID,'plane_id');
  		$plan_name = $name->plane_name;
+ 		$plan_type = $name->type;
  		$results = $this->Awd_Model->DataWhere('plan_item','plane_id',$ID,'item_id','ASC');
  		foreach ($results as $object)
  		{
@@ -51,6 +52,7 @@ public function GetAllData()
  		}
  		$data["state"]="success";
  		$data["name"] = $plan_name;
+ 		$data["type"] = $plan_type;
  		$data["plan_items"] = $items_text;
  		echo json_encode($data);
  	}
