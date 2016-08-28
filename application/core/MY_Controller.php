@@ -9,6 +9,7 @@ class MY_Controller extends CI_Controller
 	public $model ;
 	protected $condition ;
 	protected $myType ;
+	protected $target_dir ;
 	
 	function __construct($mod)
 	{
@@ -16,6 +17,7 @@ class MY_Controller extends CI_Controller
 		$this->load->helper('url');
 		$this->load->helper('security');
 		$this->load->model($mod , 'model');
+		$this->target_dir = 'imgs/';
 	}
 
 	function getAll()
@@ -39,6 +41,7 @@ class MY_Controller extends CI_Controller
 	function upload($name)
 	{
 	$ret = array();
+	var_dump($_FILES);
 	if(isset($_FILES[$name]))
 	{
 		for($i = 0  ; $i < count($_FILES[$name]['name']) ; $i++)
@@ -51,19 +54,19 @@ class MY_Controller extends CI_Controller
 				if(file_exists(image_url().$target_name)) {
 				    	unlink(image_url().$target_name); //remove the file
 				    }
-				    $target_dir = "imgs/";
-				    $target_file = $target_dir.$target_name;
+				    // $target_dir = "imgs/";
+				    $target_file = $this->target_dir.$target_name;
 				    $uploadok = 1 ;
-				    $check = getimagesize($_FILES[$name]["tmp_name"][$i]);
+				    // $check = getimagesize($_FILES[$name]["tmp_name"][$i]);
 				    if ($_FILES[$name]['size'][$i] > 500000) {
 				    	echo "Sorry, your file is too large.";
 				    	$uploadok = 0 ;
-				    	die();
+				    	// die();
 				    }
 				    else
 				    {		
 				    	if (move_uploaded_file($_FILES[$name]['tmp_name'][$i], $target_file)) {
-				    		echo "Upload Complete\n";
+				    		 echo "Upload Complete\n";
 				    		array_push($ret , $target_file) ;
 				    	}
 				    	else 
@@ -90,10 +93,10 @@ class MY_Controller extends CI_Controller
 			if(file_exists(image_url().$target_name)) {
 				    	unlink(image_url().$target_name); //remove the file
 				    }
-				    $target_dir = "imgs/";
-				    $target_file = $target_dir.$target_name;
+				    // $target_dir = "imgs/";
+				    $target_file = $this->target_dir.$target_name;
 				    $uploadok = 1 ;
-				    $check = getimagesize($_FILES[$name]["tmp_name"]);
+		//		    $check = getimagesize($_FILES[$name]["tmp_name"]);
 				    if ($_FILES[$name]['size'] > 500000) {
 				    	echo "Sorry, your file is too large.";
 				    	$uploadok = 0 ;
@@ -102,7 +105,7 @@ class MY_Controller extends CI_Controller
 				    else
 				    {		
 				    	if (move_uploaded_file($_FILES[$name]['tmp_name'], $target_file)) {
-				    		echo "Upload Complete\n";
+				    		// echo "Upload Complete\n";
 				    		return $target_file ;
 				    	}
 				    	else 
@@ -195,9 +198,14 @@ class MY_Controller extends CI_Controller
 	function create()
 	{
 		$post = $this->input->post();
-		var_dump($post) ;
-		var_dump($_FILES);
+		// var_dump($post) ;
+		// var_dump($_FILES);
 		$data['name'] = $post['printer_name'];
+		if($data['name'] === "")
+		{
+			echo 'no product name' ;
+			die();
+		} 
 		if($post['family'] != 0)
 			$data['family_id'] = $post['family'];
 		$data['driver'] = $post['ProductDriverLink']; 
@@ -210,11 +218,11 @@ class MY_Controller extends CI_Controller
 
 		$data['pdf'] = $pdf;
 
-		var_dump($data) ;
+		// var_dump($data) ;
 
 		$id = $this->model->insert($data);	
 
-		var_dump($id);	
+		// var_dump($id);	
 
 		if($id != 0 || $id != null)
 		{
@@ -222,7 +230,7 @@ class MY_Controller extends CI_Controller
 			if(isset($_FILES['image']))
 			{
 				$images = $this->upload('image');
-				var_dump($images);
+				// var_dump($images);
 				foreach ($images as $image) {
 					$this->model->addImage($id , $image);
 				}
@@ -250,7 +258,8 @@ class MY_Controller extends CI_Controller
 					$this->model->addTag($id,$tag,$this->myType);
 				}
 			}
-		header("Location: ".base_url()."index.php/".$this->myType."/add");
+		 header("Location: ".base_url()."index.php/".$this->myType."/add");
+		// $this->add();
 		}
 
 	function edit()
@@ -277,7 +286,7 @@ class MY_Controller extends CI_Controller
 		{
 			$pdf = $this->uploadFile('ProductPdf');
 			$id = 0 ;
-			var_dump($pdf);
+			// var_dump($pdf);
 			$data['pdf'] = $pdf;
 		}
 

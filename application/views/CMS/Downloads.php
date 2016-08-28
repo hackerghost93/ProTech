@@ -27,7 +27,11 @@
 						 <div class="SideBarContent ">
 							<div class="DataDiv">
 							   <div class="PageHaeder">
+							   <?php if($type == "pdf"): ?>
 								  <h2>PDF</h2>
+								  <?php else:?>
+								  <h2>Driver</h2>
+								  <?php endif;?>
 							   </div>
 								<div class="box-wider-text">
 								<div class="box-header">
@@ -41,7 +45,14 @@
                           </form> 
 									</div>
 									<div class="HeaderRight"> 
-										 <button class="btn btn-sucess" id="AddNewDownloadsShow"> Add New PDF</button>
+										 <button class="btn btn-sucess" id="AddNewDownloadsShow">
+										 <?php if($type =="pdf"): ?>
+										  Add New PDF
+										  <?php else:?>
+										  Add New Driver
+										  <?php endif;?>
+
+										 </button>
 									</div>
 									</div>
 								</div>
@@ -55,14 +66,15 @@
 													  <th>Delete</th>
 													</tr>
 												</thead>
+							
 												<tbody>
 <?php
 if(isset($results))
 {
 	////`PDF_ID``PDF_Title``PDF_URL`
    foreach ($results as $object) {
-   echo "<tr><td>$object->PDF_ID</td><td>$object->PDF_Title</td>
-   <td class='check-col tableAdmin'><a href='#' onclick='SetPDFID($object->PDF_ID)' class='deleteBtn'  data-target='#DeleteDownloadsModal' data-toggle='modal' title='delete' data-placement='right'><span class='fa fa-trash'></span></a></td></tr>";
+   echo "<tr><td>$object->id</td><td>$object->title</td>
+   <td class='check-col tableAdmin'><a href='#' onclick='SetPDFID($object->id)' class='deleteBtn'  data-target='#DeleteDownloadsModal' data-toggle='modal' title='delete' data-placement='right'><span class='fa fa-trash'></span></a></td></tr>";
  }
 }
 ?>
@@ -120,7 +132,11 @@ if(isset($results))
                    </div>
                </div>
           </div>
-          <form method="post" action="<?=base_url()?>index.php/Family/AddPDF" id="AddPDFForm">
+          <?php if($type == 'pdf'): ?>
+          <form method="post" action="<?=base_url()?>index.php/Downloads/createPDF" id="AddPDFForm">
+          <?php else: ?>
+          <form method="post" action="<?=base_url()?>index.php/Downloads/createDriver" id="AddPDFForm">
+          <?php endif; ?>
               <div class="container-fluid OverLayFormContent">
                    <div class="FormSection">
                        <div class="SectionHeader">
@@ -129,12 +145,16 @@ if(isset($results))
                        <div class="SectionContent row">
 							<div class="col-md-6" id="DownloadsNew">
 									<div class="form-group formLayout">
-									<label for="Producttitle" class="control-label ">Product Title : </label>
-									<input type="text" name="Producttitle" class="form-control" placeholder="Product Title" />
+									<label for="Producttitle" class="control-label ">Title : </label>
+									<input type="text" name="title" class="form-control" placeholder="Product Title" />
 								</div>
 								 <div class="form-group formLayout">
+								 	<?php if($type == 'pdf'): ?>
 									<label for="DownloadPdf" class="control-label ">Product Pdf: </label>
-									<input type="file" name="DownloadPdf" class="form-control InputProduct" />
+									<?php else: ?>
+									<label for="DownloadDriver" class="control-label ">Product Driver: </label>
+								 	<?php endif; ?>
+									<input type="text" name="url" class="form-control InputProduct" placeholder="Enter url" />
 								 </div>	
 							</div>
                       </div>
@@ -164,12 +184,13 @@ if(isset($results))
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
               </div>
-             <form id="ForgotPassForm" method="post" action="<?=base_url()?>index.php/Family/DeletePDF">
+             <form id="ForgotPassForm" method="post" action="<?=base_url()?>index.php/Downloads/delete">
                   <div class="modal-body">
                         <h1>Delete PDF</h1>
                         <p>Are you sure that you need to delete this Data ?</p>
                         <div class="form-group formLayout">
-		        		<input type="text" name="RecoredId" id="RecoredId" class="form-control" placeholder="RecoredId" readonly />
+		        		<input type="hidden" name="id" id="RecoredId" class="form-control" placeholder="RecoredId" readonly />
+		        		<input type="hidden" name="type" id="RecoredType" class="form-control" value="<?=$type?>"/>
 	       				</div>
                   </div>
                   <div class="modal-footer">

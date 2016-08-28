@@ -25,33 +25,32 @@ public function PartGetter()
 }
 public function AddProductTag()
 {
-	if($this->input->post('ChooseProduct') != null && $this->input->post('ProductTag') != null)
+	if( $this->input->post('ProductTag') != null)
 	{
-		$ProductName = $this->input->post('ChooseProduct');
+	//	$ProductName = $this->input->post('ChooseProduct');
 		$ProductTag  = $this->input->post('ProductTag');
-		$Product_ID  = $this->Awd_Model->GetOneValue('printers',$ProductName,'name','printer_id');
+	//	$Product_ID  = $this->Awd_Model->GetOneValue('printers',$ProductName,'name','printer_id');
 		$Tag_Data['tag_name'] = $ProductTag;
 		$this->Awd_Model->AddToDB('tags',$Tag_Data);
-		$Product_Tag_Data['printer_id'] = $Product_ID;
-		$Product_Tag_Data['tag_name'] = $ProductTag;
-		$this->Awd_Model->AddToDB('printer_tags',$Product_Tag_Data);
-		redirect('Tags');
+	//	$Product_Tag_Data['printer_id'] = $Product_ID;
+	//	$Product_Tag_Data['tag_name'] = $ProductTag;
+	//	$this->Awd_Model->AddToDB('printer_tags',$Product_Tag_Data);
 	}
 	redirect('Tags');
 }
 public function AddPartTag()
 {
-	if($this->input->post('ChooseSparePart') != null && $this->input->post('SparePartsTag') != null)
+	if($this->input->post('SparePartsTag') != null)
 	{
-		$PartName = $this->input->post('ChooseSparePart');
+		//$PartName = $this->input->post('ChooseSparePart');
 		$PartTag  = $this->input->post('SparePartsTag');
-		$Part_ID  = $this->Awd_Model->GetOneValue('parts',$PartName,'name','part_id');
+		//$Part_ID  = $this->Awd_Model->GetOneValue('parts',$PartName,'name','part_id');
 		$Tag_Data['tag_name'] = $PartTag;
 		$this->Awd_Model->AddToDB('tags',$Tag_Data);
-		$Part_Tag_Data['part_id'] = $Part_ID;
-		$Part_Tag_Data['tag_name'] = $PartTag;
-		$this->Awd_Model->AddToDB('part_tag',$Part_Tag_Data);
-		redirect('Tags/SparepartsTags');
+		//$Part_Tag_Data['part_id'] = $Part_ID;
+		//$Part_Tag_Data['tag_name'] = $PartTag;
+		//$this->Awd_Model->AddToDB('part_tag',$Part_Tag_Data);
+		//redirect('Tags/SparepartsTags');
 	}
 	redirect('Tags/SparepartsTags');
 }

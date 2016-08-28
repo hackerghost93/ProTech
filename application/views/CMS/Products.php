@@ -46,7 +46,11 @@
     <div class="DataDiv">
 <div class="PageHaeder">
 
+<?php if($type == 'printer'): ?>
  <h2>Products</h2>
+<?php else: ?>
+  <h2>Parts</h2>
+<?php endif; ?>
 </div>
      <div class="box-wider-text">
       <div class="box-header">
@@ -206,22 +210,32 @@
      <label for="description" class="control-label ">Description: </label>
      <input name="description" type="text" value="" placeholder="Write description" />
    </div>
-  <div class="dropdown open">
+  <div class="dropdown open" id="hackerTheDrop">
   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Choose tags
   </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+  <div class="dropdown-menu"  data-live-search="true" aria-labelledby="dropdownMenuButton">
   <style type="text/css">
     .hackerCheck{
       margin-left: 10px ;
     }
+
+    #dropdownMenuButton{
+      width: 50% ;
+    }
+   
   </style>
+    <input class="form-group formLayout"type="text" id="hackerDownSearch" placeholder="Search for tag">
     <?php foreach ($tags as $tag):?>
-       <h5 class="hackerCheck"> <?=$tag['tag_name']?>    <input value="<?=$tag['tag_name']?>" name="tags[]" type="checkbox"> </h5>
+     <h5 class="hackerCheck hackerSearchDrop"><span class="hackerTagValue"><?=$tag['tag_name']?></span>
+         <input value="<?=$tag['tag_name']?>" name="tags[]" type="checkbox"> 
+     </h5>
         <div class="dropdown-divider"></div>
       <?php endforeach;?>
   </div>
   </div>
+
+ 
 
  </div>
 </div>
@@ -554,6 +568,30 @@ var MyUrl = "<?=base_url()?>" ;
 </script>
 
 <script type="text/javascript" src="<?=base_url()?>js/hackerSearch.js"></script>
+
+ <script type="text/javascript">
+    $('#hackerDownSearch').keyup(function(){
+  //event.preventDefault();
+  $target = $(this);
+  $myValue = $('#hackerDownSearch').val();
+  $('.hackerSearchDrop').each(function(key,value){
+    if($myValue === "")
+    {
+      $(value).show();
+    }
+    else
+    {
+      var str = $(value).find('.hackerTagValue').html();
+      if(str.indexOf($myValue) > -1)
+      {
+        $(value).show();  
+      }
+      else
+        $(value).hide();
+    }
+  });
+});
+  </script>
 
 </body>
 </html>

@@ -100,7 +100,12 @@
 
 
                 <li class="dt-b3">
-                    <a class="imageToAppend" rel="imgs/hero-640x440.png" href="#">
+                 <?php if(isset($images)): ?>
+                     <?php foreach($images as $img): ?>
+                <a class="imageToAppend" rel="<?=base_url().$img['image_path']?>">
+                    <?php endforeach; ?>
+                <?php endif; ?>
+                    <!-- <a class="imageToAppend" rel="imgs/hero-640x440.png" href="#"> -->
                         <i></i>
                         <span>  شاهد صور اكثر </span>
                         <b>للطابعه</b>
@@ -194,10 +199,15 @@
 </div>
 
 
-
+<!-- the photos goes here -->
 
 <div class="big-img-work_box"><a href="#" class="close0">X</a>
-    <div class="appendHere"><div class="loader0"></div></div>
+    <div class="appendHere">
+        <div class="loader0">
+
+        
+        </div>
+    </div>
 </div><div class="overly_"></div>
 
 

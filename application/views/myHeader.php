@@ -125,9 +125,9 @@
                     <li id="menu-item-2507" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2507 ea-SubMenu">
                         <a href="#"> المنتجات</a>
                     </li>
-                  <!--   <li id="menu-item-2479" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2479">
+                     <li id="menu-item-2479" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2479">
                         <a href="#"> التحميلات</a>
-                    </li> -->
+                    </li>
                     <li id="menu-item-2508" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2508">
                         <a href="<?=base_url()?>#sec7">عملائنا</a>
                     </li>
@@ -175,13 +175,13 @@
             <a href="#" class="close-menu-2"><b class="fa fa-close"></b></a>
             <ul>
                 <li>
-                    <a href="<?=base_url()?>index.php/Download/getPDF">
+                    <a href="<?=base_url()?>index.php/Downloads/PDFGet">
                         <i><img src="<?=base_url()?>imgs/datasheet.png" alt=""></i>
                         <span>داتا شيت </span>
                     </a>
                 </li>
                 <li>
-                    <a href="<?=base_url()?>index.php/Download/getDRIVER">
+                    <a href="<?=base_url()?>index.php/Downloads/DriverGet">
                         <i><img src="<?=base_url()?>imgs/1287710488_folder_black_download512.png" alt=""></i>
                         <span>سوفتوير</span>
                     </a>

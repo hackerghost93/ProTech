@@ -21,7 +21,7 @@ public function Edit()
 		$Contact_Data['telephone']      = $this->input->post('ContactTelephone');
 		$Contact_Data['mobile']         = $this->input->post('ContactMobile');
 		$Contact_Data['email']          = $this->input->post('Email');
-		$Contact_Data['Email_Password'] = $this->input->post('Email_Password');
+		$Contact_Data['Email_Password'] = md5($this->input->post('Email_Password'));
 		$Contact_Data['whatsapp']       = $this->input->post('ContactWhatsApp');
 		$Contact_Data['skybe']          = $this->input->post('ContactSkypee');
 		$Contact_Data['youtube']        = $this->input->post('ContactYoutube');

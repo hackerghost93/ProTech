@@ -5,6 +5,7 @@
             padding-top: 39%;
         }
     </style>
+<?php if(isset($slides) && count($slides) > 0):?>
     <!-- Section 01 -->
 
     <div id="contentarea" style="position: relative; right: 200px;">
@@ -129,7 +130,7 @@
 
 </noscript></div></div></div>
 
-
+<?php endif; ?>
 <!-- // Section 01 -->
 
 <!-- Section 02 -->

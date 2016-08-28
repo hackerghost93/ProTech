@@ -167,7 +167,7 @@
 if (typeof newsletter_check !== "function") {
 window.newsletter_check = function (f) {
     var re = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-]{1,})+\.)+([a-zA-Z0-9]{2,})+$/;
-    if (!re.test(f.elements["ne"].value)) {
+    if (!re.test(f.elements["email"].value)) {
         alert("The email is not correct");
         return false;
     }
@@ -187,14 +187,15 @@ window.newsletter_check = function (f) {
 //]]>
 </script>
 
+
 <div class="newsletter newsletter-subscription">
-<form class="clear-after" method="post" action="" onsubmit="return newsletter_check(this)">
+    <form class="clear-after" id="subscribeMail" method="post" action="" onsubmit="return newsletter_check(this)">
 
-<input class="newsletter-email" type="email" name="ne" size="30" placeholder="البريد الإلكتروني" required>
+        <input class="newsletter-email" type="email" name="email" size="30" placeholder="البريد الإلكتروني" required>
 
-<input class="newsletter-submit" type="submit" value="اشترك"/>
+        <input class="newsletter-submit" type="submit" value="اشترك"/>
 
-</form>
+    </form>
 </div>
             
             

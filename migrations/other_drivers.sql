@@ -27,18 +27,14 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `other_drivers` (
-  `Driver_ID` int(11) NOT NULL,
-  `Driver_Title` varchar(32) NOT NULL,
-  `Driver_URL` varchar(200) DEFAULT NULL
+  `id` int(11) NOT NULL,
+  `title` varchar(32) NOT NULL,
+  `url` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `other_drivers`
 --
-
-INSERT INTO `other_drivers` (`Driver_ID`, `Driver_Title`, `Driver_URL`) VALUES
-(1, 'Driver', 'Driver.rar'),
-(3, 'DriverAwd', 'Awd.rar');
 
 --
 -- Indexes for dumped tables
@@ -48,7 +44,7 @@ INSERT INTO `other_drivers` (`Driver_ID`, `Driver_Title`, `Driver_URL`) VALUES
 -- Indexes for table `other_drivers`
 --
 ALTER TABLE `other_drivers`
-  ADD PRIMARY KEY (`Driver_ID`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -58,4 +54,4 @@ ALTER TABLE `other_drivers`
 -- AUTO_INCREMENT for table `other_drivers`
 --
 ALTER TABLE `other_drivers`
-  MODIFY `Driver_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;

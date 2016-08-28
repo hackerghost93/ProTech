@@ -17,13 +17,13 @@
 		</a>
 	</li>
 	 <li  class="subSideBarMenuItem BlogMenuItem">
-		<a href="<?=base_url()?>index.php/Family/DownloadsIndex" class="subSideBarPayrollMenuItemAnchor" id="SSMIBlog-Posts">
+		<a href="<?=base_url()?>index.php/Downloads/PdfAdd" class="subSideBarPayrollMenuItemAnchor" id="SSMIBlog-Posts">
 			<h4><span class="fa fa-download" aria-hidden="true"></span></h4>
 			<h4>PDF</h4>
 		</a>
 	</li>	
 	<li  class="subSideBarMenuItem BlogMenuItem">
-		<a href="<?=base_url()?>index.php/Family/DriverIndex" class="subSideBarPayrollMenuItemAnchor" id="SSMIBlog-Posts">
+		<a href="<?=base_url()?>index.php/Downloads/DriverAdd" class="subSideBarPayrollMenuItemAnchor" id="SSMIBlog-Posts">
 			<h4><span class="fa fa-hdd-o" aria-hidden="true"></span></h4>
 			<h4>Drivers</h4>
 		</a>

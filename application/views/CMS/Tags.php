@@ -21,13 +21,10 @@
         <!------------------------------------dataSection------>
         <div class="dataSection">
               <div class="DataDiv">
-                    <nav class="subSideBar">
-                         <?php require_once("TagsSideBar.php"); ?>
-                    </nav>
                     <div class="SideBarContent" id="SidBarContentDiv">
                           <div class="DataDiv">
                                <div class="PageHaeder">
-                                  <h2>Products Tags</h2>
+                                  <h2>All Tags</h2>
                                </div>
                                <div class="box-wider-text">
                                     <div class="box-header">
@@ -51,7 +48,7 @@
                                                    <thead>
                                                         <tr>
                                                           <th>Tag Name</th>
-                                                          <th>Product Name</th>
+                                                  
                                                           <th>Delete</th>
                                                         </tr>
                                                     </thead>
@@ -61,7 +58,7 @@
                                                     {
                                                       foreach ($results as $object) {
   $x="/".$object->tag_name."/";
-  echo "<tr><td>$object->tag_name</td><td>$object->name</td><td class='check-col tableAdmin'><a href='#' onclick='SetTagName($x)' class='deleteBtn'  data-target='#DeleteTagsModal' data-toggle='modal' title='delete' data-placement='right'><span class='fa fa-trash'></span></a></td></tr> ";
+  echo "<tr><td>$object->tag_name</td><td class='check-col tableAdmin'><a href='#' onclick='SetTagName($x)' class='deleteBtn'  data-target='#DeleteTagsModal' data-toggle='modal' title='delete' data-placement='right'><span class='fa fa-trash'></span></a></td></tr> ";
                                                       }
                                                     }
                                                     ?>
@@ -125,17 +122,10 @@
                             <h3>Tag Details</h3>
                        </div>
                        <div class="SectionContent">
-					   	<div class="form-group formLayout">
-									<label for="ChooseProduct" class="control-label ">Product : </label>
-									<select name="ChooseProduct" class="form-control InputProduct" id="SelectorP">
-										  <option class=""> Choose Product</option>
-									</select>
-								</div>
                           <div class="form-group formLayout">
-	        	                <label for="ProductTag" class="control-label ">Product Tag : </label>
+	        	                <label for="ProductTag" class="control-label ">Tag name</label>
 		                        <input type="text" name="ProductTag" class="form-control" placeholder="Product Tag" />
 	                        </div>
-                  
                         </div>
                    </div>
               
