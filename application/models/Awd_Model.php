@@ -91,6 +91,7 @@ class Awd_Model extends CI_Model{
         $res=$query->result();
         return $res[0];
     }
+
     public function Login($username, $password)
     {       
         $this->db->where('username',$username);
@@ -104,16 +105,19 @@ class Awd_Model extends CI_Model{
             return False;
         }
     }
+
     public function DelData($Tname,$var,$col)
     {
         $this->db->where($col,$var);
         $this->db->delete($Tname);
     }
+
      public function update($Tname,$data,$var,$col)
      {
         $this->db->where($col,$var);
         $this->db->update($Tname,$data);
      }
+
      public function PrinterTagsData()
      {
         $query = $this->db->query("SELECT * FROM tags");

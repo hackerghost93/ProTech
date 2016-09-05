@@ -70,15 +70,18 @@ class Customers extends CI_Controller {
 	{
 		if($this->input->post("EditCutomerID") != null)
 		{
-			$data['partner_id'] = $this->input->post("EditCutomerID");
+			$id = $this->input->post("EditCutomerID");
+			//$data['partner_id'] = $this->input->post("EditCutomerID");
 			$data['partner_name'] = $this->input->post("EditCutomerTitle");
 			if(count($_FILES) > 0)
 				$data['partner_image'] = $this->uploadFile("EditCutomerLogo");
-			$this->Awd_Model->update('partners',$data,$data['partner_id'],'partner_id');
+			$this->Awd_Model->update('partners',$data,$id,'partner_id');
 			redirect('Customers');
 		}
 		else{redirect('Customers');}
 	}
+
+
 	public function GetEditedData()
 	{
 		if($this->input->post("ID") != null)

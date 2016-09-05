@@ -170,7 +170,7 @@ if(isset($results))
                    </div>
                </div>
           </div>
-          <form method="post" action="<?=base_url()?>index.php/Customers/edit" id="EditCustomerForm">
+          <form method="post" action="<?=base_url()?>index.php/Customers/edit" id="EditCustomerForm" enctype="multipart/form-data">
 			<div class="container-fluid OverLayFormContent">
                    <div class="FormSection">
                        <div class="SectionHeader">
@@ -179,14 +179,17 @@ if(isset($results))
                         <div class="SectionContent ">
               <div class="form-group formLayout">
                 <label for="EditCutomerID" class="control-label ">Customers ID : </label>
-                <input type="text" name="EditCutomerID" id="EditCutomerID" class="form-control" readonly />
+                <input type="hidden" name="EditCutomerID" id="EditCutomerID" class="form-control" readonly />
               </div>
 							<div class="form-group formLayout">
 								<label for="EditCutomerTitle" class="control-label ">Customers Title : </label>
 								<input type="text" name="EditCutomerTitle" id="EditCutomerTitle" class="form-control" placeholder="Customers Title" />
 							</div>
 							 <div class="form-group formLayout">
-								<label for="EditCutomerLogo" class="control-label " >Upload Cutomer Logo: </label>
+                <h3>Current Image is</h2>
+                <h5 id="hackerImageEdit"></h3>
+                <hr/>
+								<label for="EditCutomerLogo" class="control-label " >Change Image upload another</label>
 								<input type="file" name="EditCutomerLogo" id="EditCutomerLogo" class="form-control " required />
 							 </div>	
 						</div>
@@ -231,7 +234,7 @@ if(isset($results))
           </div>
         </div>
 
-        <!----------------------------------------scripts------>
+        <!--scripts-->
  	<?php $this->load->view('CMS/Scripts');  ?>
   <script type="text/javascript">
    function SetCustomerID(id)
@@ -247,6 +250,7 @@ if(isset($results))
             console.log(data);
             $("#EditCutomerID").val(data.partner_id);
             $("#EditCutomerTitle").val(data.partner_name);
+            $('#hackerImageEdit').html(data.partner_image);
           },'json');
     }
   </script>
@@ -262,7 +266,7 @@ if(isset($results))
 		{
 	
 			CutomerTitle: "required",
-			CutomerLogo: {required: true,
+		//	CutomerLogo: {required: true,
 			accept: "audio/*"}
 	
 		},
@@ -270,7 +274,7 @@ if(isset($results))
 		{
 		
 			CutomerTitle:"This field is required",
-			CutomerLogo: {required: "This field is required",
+		//	CutomerLogo: {required: "This field is required",
 			accept: "audio/*"}
 		}
 	});	 
@@ -285,7 +289,7 @@ if(isset($results))
 		{
 	
 			EditCutomerTitle: "required",
-			EditCutomerLogo: {required: true,
+			//EditCutomerLogo: {required: true,
 			accept: "audio/*"}
 	
 		},
@@ -293,7 +297,7 @@ if(isset($results))
 		{
 		
 			EditCutomerTitle:"This field is required",
-			EditCutomerLogo: {required: "This field is required",
+			//EditCutomerLogo: {required: "This field is required",
 			accept: "audio/*"}
 		}
 	});
