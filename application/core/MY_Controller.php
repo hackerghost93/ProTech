@@ -20,6 +20,19 @@ class MY_Controller extends CI_Controller
 		$this->target_dir = 'imgs/';
 	}
 
+	function searchTag($tag_name)
+	{
+		if($this->myType == 'printer')
+			$data['type'] = 'printer';
+		else
+			$data['type'] =  'part';
+		$data['products'] = $this->getImages($this->model->getByTag($tag_name));
+		$this->load->model('partner_model');
+		$data['partners'] = $this->partner_model->getAll();
+		$data['tag_name'] = $tag_name ;
+		$this->load->view('products.php' , $data);
+	}
+
 	function getOffers()
 	{
 		return $this->model->getOffers();

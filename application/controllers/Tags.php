@@ -80,4 +80,5 @@ public function DeleteTagParts()
 		redirect('Tags/SparepartsTags');
 	}
 }
+
 }

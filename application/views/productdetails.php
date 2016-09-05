@@ -219,7 +219,7 @@
     <h5>كلمات دلالية</h5>
     <br>
     <?php foreach ($tags as $tag): ?>
-       <h4> <?=$tag['tag_name']?></h4>
+       <a href="<?=base_url().'index.php/'.$type.'/searchTag/'.$tag['tag_name']?>"><h4><?=$tag['tag_name']?></h4></a>
     <?php endforeach ?>
 
 </div>

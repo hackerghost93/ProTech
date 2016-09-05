@@ -36,6 +36,17 @@ class MY_Model extends CI_Model
 		return $this->db->get($this->table_name)->result_array();
 	}
 
+	function getByTag($tag_name)
+	{
+		// echo $this->table_name;
+		if($this->table_name == 'printers')
+			$this->db->join('printer_tags','printers.printer_id = printer_tags.printer_id');
+		else
+			$this->db->join('part_tag','parts.part_id = part_tag.part_id');
+		$this->db->where('tag_name',$tag_name);
+		return $this->db->get($this->table_name)->result_array();
+	}
+
 	function getProductTags($type,$id)
 	{
 		if($type == 'printer')

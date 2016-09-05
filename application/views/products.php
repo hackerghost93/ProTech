@@ -88,6 +88,11 @@ input.searchone {
       </div>
     </div>
     </form>
+
+    <?php if(isset($tag_name)): ?>
+    <
+        <h3>#<?=$tag_name?></h3>
+    <?php endif; ?>
     <div>
     <div class="row">
     <section class="works-box">
@@ -215,10 +220,10 @@ window.newsletter_check = function (f) {
             <a href="<?php echo base_url()?>" class="logo"><span>بروتك <span>لخدمات زيروكس المتكامله</span></span> </a>
             <a href="<?php echo base_url()?>index.php/Email/ViewMassage" class="OpenTicket">فتح تذكرة</a>
             <div class="Social">
-        <a target="_blank" href="<?=$contact['facebook']?>" class="Facebook" id="Facebook"><span></span></a>
-        <a target="_blank" href="<?=$contact['twitter']?>" class="Twitter" id="Twitter"><span></span></a>
-        <a target="_blank" href="<?=$contact['youtube']?>" class="Youtube" id="Youtube"><span></span></a>
-        <a target="_blank" href="<?=$contact['linkedin']?>" class="LinkedIn" id="Linkedin"><span></span></a>
+        <a target="_blank" href="" class="Facebook" id="Facebook"><span></span></a>
+        <a target="_blank" href="" class="Twitter" id="Twitter"><span></span></a>
+        <a target="_blank" href="" class="Youtube" id="Youtube"><span></span></a>
+        <a target="_blank" href="" class="LinkedIn" id="Linkedin"><span></span></a>
             </div>
         </div>
     </div>

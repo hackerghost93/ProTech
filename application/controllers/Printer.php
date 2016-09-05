@@ -31,7 +31,7 @@ class Printer extends MY_Controller
 		$data['products'] = $this->getImages($this->getAll());
 		$this->load->model('partner_model');
 		$data['partners'] = $this->partner_model->getAll();
-		$data['contact'] = $this->model->getContact();
+//		$data['contact'] = $this->model->getContact();
 		$this->load->view('products.php' , $data);
 	}
 
