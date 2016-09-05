@@ -20,6 +20,11 @@ class MY_Controller extends CI_Controller
 		$this->target_dir = 'imgs/';
 	}
 
+	function getOffers()
+	{
+		return $this->model->getOffers();
+	}
+
 	function getAll()
 	{
 		return $this->model->selectWithFamilies();
@@ -97,7 +102,7 @@ class MY_Controller extends CI_Controller
 				    $target_file = $this->target_dir.$target_name;
 				    $uploadok = 1 ;
 		//		    $check = getimagesize($_FILES[$name]["tmp_name"]);
-				    if ($_FILES[$name]['size'] > 500000) {
+				    if ($_FILES[$name]['size'] > 5000000) {
 				    	echo "Sorry, your file is too large.";
 				    	$uploadok = 0 ;
 				    	die();
@@ -198,19 +203,25 @@ class MY_Controller extends CI_Controller
 	function create()
 	{
 		$post = $this->input->post();
-		// var_dump($post) ;
 		// var_dump($_FILES);
 		$data['name'] = $post['printer_name'];
-		if($data['name'] === "")
+		if($data['name'] == "")
 		{
-			echo 'no product name' ;
+			echo 'name field is empty';
 			die();
-		} 
+		}
+
 		if($post['family'] != 0)
 			$data['family_id'] = $post['family'];
 		$data['driver'] = $post['ProductDriverLink']; 
 		$data['general_description'] = $post['description'];
 
+		if(isset($post['offer']))
+		{
+			$data['offer'] = true ;
+		}
+		else
+			$data['offer'] = false ;
 
 		$pdf = $this->uploadFile('PDF');
 
@@ -238,24 +249,28 @@ class MY_Controller extends CI_Controller
 			// general
 			if(isset($post['General']))
 				foreach ($post['General'] as $key) {
-					$this->model->addGeneral($id,$key);
+					if($key != "")
+						$this->model->addGeneral($id,$key);
 				}
 				// add printing 
 			if(isset($post['Printing']))
 				foreach ($post['Printing'] as $key) {
-					$this->model->addPrinting($id,$key);
+					if($key != "")
+						$this->model->addPrinting($id,$key);
 				}
 					// add guarantee
 			if(isset($post['Guarantee']))
 				foreach ($post['Guarantee'] as $key) {
-					$this->model->addGuarantee($id,$key);
+					if($key != "")
+						$this->model->addGuarantee($id,$key);
 				}
 			}
 			if(isset($post['tags']))
 			{
 				foreach($post['tags'] as $tag)
 				{
-					$this->model->addTag($id,$tag,$this->myType);
+					if($tag != "")
+						$this->model->addTag($id,$tag,$this->myType);
 				}
 			}
 		 header("Location: ".base_url()."index.php/".$this->myType."/add");
@@ -278,7 +293,11 @@ class MY_Controller extends CI_Controller
 		$data['name'] = $post['ProductTitle'];
 		if($post['ProductFamily'] != 0)
 			$data['family_id'] = $post['ProductFamily'];
-		$data['driver'] = $post['product_driver']; 
+		$data['driver'] = $post['product_driver'];
+		if(isset($post['offer'])) 
+			$data['offer'] = 1;
+		else
+			$data['offer'] = 0;
 		//$data['general_description'] = $post['description'];
 
 

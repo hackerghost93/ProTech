@@ -208,7 +208,7 @@
 <!-- // Section 04 -->
 
 <!-- Section 05 -->
-<?php if(isset($printers) && count($printers) > 0):?>
+<?php if(isset($offers) && count($offers) > 0):?>
     <div class="Section05" id="OurWorks">
         <div class="Grid1k">
             <!-- Section Head -->
@@ -225,7 +225,7 @@
                 <div class="ul-out">
                     <div class="ViewPort ul">
                         <!-- activeTab -->
-                        <?php foreach($printers as $key => $printer): ?>
+                        <?php foreach($offers as $key => $printer): ?>
                             <div class="item">
                                 <div class="li" id="tab<?=$key?>">
                                     <?php if(isset($printer['images'][0]['image_path'])): ?>
@@ -246,7 +246,7 @@
 
                 <!-- Tabs Content's -->
                 <div class="tab_blocks_">
-                    <?php foreach($printers as $key => $printer): ?>
+                    <?php foreach($offers as $key => $printer): ?>
                         <div class="tabs-content" id="tab<?=$key?>-content">
                             <div class="Offer-Block clear-after ViewPort">
                                 <div class="info">

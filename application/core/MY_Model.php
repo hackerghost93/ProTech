@@ -25,6 +25,12 @@ class MY_Model extends CI_Model
 		return $this->db->get('slide_show')->result_array();
 	}
 
+	function getOffers()
+	{
+		$this->db->where('offer = 1');
+		return $this->db->get($this->table_name)->result_array();
+	}
+
 	function getAll()
 	{
 		return $this->db->get($this->table_name)->result_array();

@@ -235,6 +235,11 @@
   </div>
   </div>
 
+  <h3>
+    Add as offer
+    <input type="checkbox" name="offer">
+  </h3>
+
  
 
  </div>
@@ -356,7 +361,7 @@
    </div>
    <div class="checkbox-inline">
      <label>
-       <input type="checkbox" id="checkbox2"><label class="offer"> Offer</label>
+       <input type="checkbox" id="hackerOffer" name="offer"><label class="offer">Offer Mark</label>
      </label>
    </div>
  </div>
@@ -375,7 +380,7 @@
   <div class="col-md-4 ">
    <div class="SectionHeader">
     <h3>General Specifications </h3>
-     <button type="button"class="btn btn-md id="AddNewSpecificationsbtn1"> 
+     <button type="button" class="btn btn-md" id="AddNewSpecificationsbtn1"> 
       <i class="fa fa-plus"></i></button>
   </div>
   <div class="SectionContent Specifications">
@@ -536,7 +541,8 @@ var MyUrl = "<?=base_url()?>" ;
    var newspan = document.createElement('div');
    newspan.innerHTML = '	<div class="form-group formLayout">	<input type="text" name="Printing[]" class="form-control overlayproduct" placeholder="Printing Specifications" /></div>';
    document.getElementById('AddPrintingSpecifications').appendChild(newspan);
- }	
+ }
+
  function add_generalspecification(){
    var newspan = document.createElement('div');
    newspan.innerHTML = '	<div class="form-group formLayout"><input type="text" name="General[]" class="form-control overlayproduct" placeholder="Product Specifications" /></div>';

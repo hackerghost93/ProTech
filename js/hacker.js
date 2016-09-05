@@ -63,6 +63,11 @@ $('.editeBtn').click(function(event)
         $('#hackerDescription').val(data.data.general_description);
         $('#hackerOldPDF').html(data.data.pdf);
 
+        if(data.data.offer == 1)
+          $('#hackerOffer').prop('checked',true);
+        else
+          $('#hackerOffer').prop('checked',false);
+
 
          var $x = $('<div>').addClass('prodImages');
         // image setting
