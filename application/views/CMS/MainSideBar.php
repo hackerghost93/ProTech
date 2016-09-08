@@ -10,9 +10,9 @@
                 <li class="sideMenuItem">
                     <a href="<?=base_url()?>index.php/part/add" data-toggle="tooltip" data-placement="right" class="SMenuItem " title="Spareparts" id="SMI-SpareParts">    <span class="fa fa-database" aria-hidden="true"></span></a>
                 </li> 
-                <li class="sideMenuItem">
+                <!--li class="sideMenuItem">
                     <a href="<?=base_url()?>index.php/printer/add" data-toggle="tooltip" data-placement="right" class="SMenuItem " title="Products" id="SMI-SpareParts">    <span class="fa fa-database" aria-hidden="true"></span></a>
-                </li>   
+                </li-->   
                 <li class="sideMenuItem">
                     <a href="<?php echo base_url()?>index.php/SlideShow" data-toggle="tooltip" data-placement="right" class="SMenuItem " title="SlideShow" id="SMI-SlideShow">   <span class="fa fa-film" aria-hidden="true"></span></a>
                 </li>   
@@ -39,8 +39,14 @@
                     <a href="<?php echo base_url()?>index.php/Login/Reg_index" data-toggle="tooltip" data-placement="right" class="SMenuItem" title="Users" id="SMI-Users"><span class="fa fa-user-plus" aria-hidden="true"></span>
 </a>
                 </li>
-                    <li class="sideMenuItem">
+                <li class="sideMenuItem">
                     <a href="<?php echo base_url()?>index.php/AccountSettings" data-toggle="tooltip" data-placement="right" class="Settings" title="Settings" id="SMI-Users"><span class="fa fa-gear" aria-hidden="true"></span>
+</a>
+                </li>
+    <!--------yassmin--------->
+                <li class="sideMenuItem">
+                    <a href="<?php echo base_url()?>index.php/AccountSettings/Evaluation" data-toggle="tooltip" data-placement="right" class="Chart" title="Charts" id="SMI-Users"><span class="fa fa-area-chart" aria-hidden="true"></span>
+
 </a>
                 </li>
                 <li class="sideMenuFooter">

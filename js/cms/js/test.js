@@ -1,5 +1,4 @@
-$(document).ready(function ()
-{
+$(document).ready(function (){
     //--------------------------------------------initFunctions-------
     $("[data-toggle=tooltip]").tooltip();
     //------------------------------------------------------------------
@@ -191,6 +190,16 @@ $(document).ready(function ()
     {
         $("#EditcutomersOverlayForm").removeClass("closed");
         $("#EditcutomersOverlayForm").addClass("show");
+    });
+    	//-------------------------------------------Evaluation-------------
+    {
+        $("#AddNewEvaluationOverlayForm").removeClass("closed");
+        $("#AddNewEvaluationOverlayForm").addClass("show");
+    });
+    $(document).on("click", "#EditEvaluationbtn", function ()
+    {
+        $("#EditEvaluationOverlayForm").removeClass("closed");
+        $("#EditEvaluationOverlayForm").addClass("show");
     });
 
     //-------------------------------------------------Chat----------

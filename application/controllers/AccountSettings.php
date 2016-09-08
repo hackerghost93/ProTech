@@ -35,6 +35,11 @@ if($this->input->post("ID") != null && $this->input->post("Username") != null &&
 			redirect('AccountSettings');
 	}
 }
+//    <-------yassmin--------->
+    public function Evaluation()
+{
+	$this->load->view('CMS/Evaluation');
+}
 
 
 }

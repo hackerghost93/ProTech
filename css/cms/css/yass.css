@@ -398,3 +398,27 @@ span.error {
 color: red;
 font-size: 10px;
 }
+div#AddNewEvaluationOverlayForm.chart {
+    direction: rtl;
+}
+div#EditEvaluationOverlayForm.chart {
+    direction: rtl;
+}
+
+.OverLayForm .OverLayFormContent .FormSection.chart .SectionContent .form-group input {
+    border: 1px solid rgba(230, 230, 230, 0.7);
+    border-radius: 0px;
+    padding: 10px;
+    min-height: 15px !important;
+    box-shadow: none;
+    background: none;
+    width: 50% ;
+}
+label.dataradio {
+    float: left;
+    margin-left: 54%;
+    font-size: 14px;
+}
+.radio.radiochart {
+    margin-left: 8%;
+}

@@ -12,7 +12,7 @@
         <!-- ---------------------------------sideBarLeft------ -->
         <div class="sideBarLeft">
             <?php $this->load->view('CMS/MainSideBar.php'); ?>
-        </div>
+</div>
         
         <!-- --------------------------------------Header----- -->
         <header>
@@ -20,7 +20,7 @@
         </header>
         <!------------------------------------dataSection------>
         <div class="dataSection">
-              <nav class="subTopBar">
+          <nav class="subTopBar">
                   <ul class="subTopBarList">
                       <li class="subTopBarItem">
                           <h1>SlideShow</h1>
@@ -35,7 +35,7 @@
                                         <div class="row CustomRow">
                                         <div class="HeaderLeft">
 							<form class="TopBarForm">
-                                <div class="form-group">
+                        <div class="form-group">
                                      <input type="search" class="form-control" name="Search" placeholder="Search By Gallery Name"/>
                                       <a href="#" type="submit" role="button"><span class="fa fa-search"></span></a>
                                 </div>
