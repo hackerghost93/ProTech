@@ -192,6 +192,7 @@ $(document).ready(function (){
         $("#EditcutomersOverlayForm").addClass("show");
     });
     	//-------------------------------------------Evaluation-------------
+    $(document).on("click", "#AddNewEvaluationbtn", function ()
     {
         $("#AddNewEvaluationOverlayForm").removeClass("closed");
         $("#AddNewEvaluationOverlayForm").addClass("show");
