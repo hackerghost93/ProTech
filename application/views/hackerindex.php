@@ -18,12 +18,15 @@
                 <?php foreach($slides as $slide):?>
                  <div>
                     <a href="<?=base_url()?>index.php/printer/showAll">
-                        <img class="rsImg" src="<?=base_url().$slide['Slide_image']?>" alt="Weekend Deals" data-mobile-src="<?=base_url().$slide['Slide_image']?>" />
+                        <img class="rsImg"  src="<?=base_url().$slide['Slide_image']?>" alt="Weekend Deals" data-mobile-src="<?=base_url().$slide['Slide_image']?>" 
+                        data-rstmb="<?=base_url()?>imgs/4375e42c-d6c7-4d7b-909c-5b5900a08344_A.jpeg"
+                        />
+                        <!-- <h4><?=$slide['Slide_Title']?></h4> -->
                     </a>
                 </div>
                 <?php endforeach; ?>
 				
-				
+				<!--  -->
 				
 
             </div>

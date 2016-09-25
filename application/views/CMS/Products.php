@@ -39,9 +39,18 @@
   <!--dataSection-->
   <div class="dataSection">
 	  <div class="DataDiv">
-		<nav class="subSideBar">
-			<?php require_once("ProductsSidebar.php"); ?>
-		</nav>
+    <?php if($type=="printer"): ?>
+  		<nav class="subSideBar">
+  			<?php require_once("ProductsSidebar.php"); ?>
+  		</nav>
+    <?php else: ?>
+      <style type="text/css">
+        .dataSection .SideBarContent{
+          left:10% !important;
+          width:90% !important;
+        }
+      </style>
+    <?php endif; ?>
 	 <div class="SideBarContent ">
     <div class="DataDiv">
 <div class="PageHaeder">
