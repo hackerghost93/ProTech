@@ -65,11 +65,14 @@ header .logo > span span{font-size:15px;color:#e5e1e1;display:block;margin-top:4
 header .logo.ActiveView:before{-webkit-animation:fadeInRight-animated 1s both;animation:fadeInRight-animated 1s both;}
 header .logo.ActiveView > span{-webkit-animation:fadeInDown-animated 1s both 0.5s;animation:fadeInDown-animated 1s both 0.5s;}
 header .logo.ActiveView > span span{-webkit-animation:fadeInUp-animated 1s both 1s;animation:fadeInUp-animated 1s both 1s;}
-header .OpenTicket{display:inline-block;float:left;height:68px;margin:19.5px 0;text-align:center;width:170px;background:#8e669f;font:19px/68px NeoSansR;color:#FFF;-webkit-transition:all 0.5s;transition:all 0.5s;}
+header .OpenTicket{display:inline-block;float:left;height:68px;margin:19.5px 4px;text-align:center;width:170px;background:#8e669f;font:19px/68px NeoSansR;color:#FFF;-webkit-transition:all 0.5s;transition:all 0.5s;}
 header .OpenTicket{-webkit-transform:translateZ(0);transform:translateZ(0);-webkit-backface-visibility:hidden;backface-visibility:hidden;position:relative;overflow:hidden;-webkit-transition:all 0.3s;transition:all 0.3s;}
 header .OpenTicket:before{background:#18aeb1;content:"";position:absolute;z-index:-1;top:0;left:0;right:0;bottom:0;-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1);-webkit-transition:all 0.3s ease-out;transition:all 0.3s ease-out;}
 header .OpenTicket:hover:before{-webkit-transform:scale(0);-ms-transform:scale(0);transform:scale(0)}  
-header .Grid1k > .primary-menu{float:left;margin-left:15px;}
+header .Grid1k > .primary-menu {
+    float: left;
+    margin-left: 14px;
+}
 header .Grid1k > .primary-menu > ul > li{float:right;padding:0 15px;font:16px/107px NeoSansR;height:107px;-webkit-transition:background 0.5s;transition:background 0.5s;/*position:relative;*/}
 header .Grid1k > .primary-menu > ul > li > a{color:#FFF;-webkit-transition:all 0.5s;transition:all 0.5s;}
 header .Grid1k > .primary-menu > ul > li:hover{background:#FFF;}
@@ -153,7 +156,7 @@ body{position:relative;left:0px;-webkit-transition:all 0.4s linear;transition:al
 .WorksSlider{margin:50px -10px;margin-right:-11px;}
 .WorksSlider .slick-slide{padding:0px 2px;}
 .WorksSlider .Work-Block{margin-bottom:4px;}
-.WorksSlider .Work-Block .img-fill{height:250px;}
+.WorksSlider .Work-Block .img-fill{height:250px; width:287px;}
 .WorksSlider .Work-Block .img-fill img{width:100%;}
 .WorksSlider .Work-Block .info{position:absolute;left:0px;top:0px;width:100%;height:100%;line-height:250px;-webkit-transform:translateZ(0);transform:translateZ(0);-webkit-backface-visibility:hidden;backface-visibility:hidden;-webkit-transition:all 0.3s;transition:all 0.3s;}
 .WorksSlider .Work-Block .info:before{background:#50376a;content:"";position:absolute;z-index:1;width:100%;height:100%;top:0px;left:0px;-webkit-transform:scaleX(0);-ms-transform:scaleX(0);transform:scaleX(0);-webkit-transform-origin:50%;-ms-transform-origin:50%;transform-origin:50%;-webkit-transition:all 0.3s ease-out;transition:all 0.3s ease-out;}
@@ -450,3 +453,50 @@ div.wpcf7-response-output {
 .des-box.des-14 h2{    margin-left: 0;
     text-align: right;
     margin-right: 40%;}
+/*********************yassmin**********************/
+.preOne {
+    position: relative;
+}
+.preOneCon {
+    margin: 0 0 35px 0;
+}
+.note {
+    position: relative;
+    min-height: 165px;
+    padding: 30px;
+    overflow: visible;
+}
+.wid {
+    position: relative;
+    text-align: right;
+    height: auto;
+    background: rgba(196, 60, 99, 0.32);
+    border-radius: 3px;
+    overflow: hidden;
+    padding: 0 125px;
+    border-bottom: 1px solid #e2e2e2;
+    margin-left: 24px;
+    margin-right: 28px;
+}
+
+.note p {
+    font-size: 11px;
+    margin: 0;
+    direction: rtl;
+    text-align: right;
+}
+
+
+.noteArr {
+    position: absolute;
+    background: url(images/tr.png) center top no-repeat;
+    width: 33px;
+    height: 18px;
+    bottom: -18px;
+    right: 17px;
+}
+
+ul.Reviews li {
+    width: 50%;
+    float: left;
+}

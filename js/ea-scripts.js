@@ -83,6 +83,7 @@ $("header .primary-menu > ul > li ul li a span").addClass("hvr-underline-from-ri
 //$(".menu").append('<li class="ea-SubMenu ds_item"><a href="#" class="open-cat-menu">Ø§Ù‚Ø³Ø§Ù… Ø§Ù„ØªØµÙ…ÙŠÙ…</a></li>');
 //$('.primary-menu #menu-item-2479').addClass('open-cat-menu');
 $(".primary-menu #menu-item-2479,.primary-menu #menu-item-2476").addClass("ea-SubMenu");
+$(".primary-menu #menu-item-2508,.primary-menu #menu-item-2508").addClass("ea-SubMenu");
 
 
 $('#menu-item-2479 a').click(function() {
@@ -98,6 +99,14 @@ $('#menu-item-2507 a').click(function() {
 	//$('.big-menu-overly').fadeIn(300);
 $('.big-menu-overly').fadeToggle(300);
 });
+//************yassmin**********
+$('#menu-item-2508 a').click(function() {
+	$('.ds_item').toggleClass('hi_');
+	$('.big-menu5').toggleClass('show_menu_');
+	//$('.big-menu-overly').fadeIn(300);
+$('.big-menu-overly').fadeToggle(300);
+});
+//************yassmin**********
 
 $('#menu-item-2476 a').click(function(e) {
 e.preventDefault();

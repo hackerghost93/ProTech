@@ -12,6 +12,9 @@
     <link rel="stylesheet" type="text/css" href="<?=base_url()?>css/responsive.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="<?=base_url()?>css/theme.css">
+    <link rel="stylesheet" type="text/css" href="<?=base_url()?>css/jquerysctipttop.css">
+    <link rel="stylesheet" type="text/css" href="<?=base_url()?>css/labs.css">
+    <link rel="stylesheet" type="text/css" href="<?=base_url()?>css/jquery.raty.css">
 
 
 
@@ -128,12 +131,13 @@
                      <li id="menu-item-2479" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2479">
                         <a href="#"> التحميلات</a>
                     </li>
-                    <li id="menu-item-2508" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2508">
-                        <a href="<?=base_url()?>#sec7">عملائنا</a>
+                    <li id="menu-item-2508" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2508 ea-SubMenu">
+                        <a href="#">عملائنا</a>
                     </li>
                     <li id="#" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2508">
                         <a href="<?php echo base_url()?>index.php/About">عن الشركه</a>
                     </li>
+			
 
                     <li id="menu-item-2474" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2474"><a href="<?php echo base_url()?>index.php/Email/ViewMassage">تواصل معنا</a></li>
                 </ul></div>
@@ -167,6 +171,7 @@
 
             </ul>
         </div></section></div>
+
 
 
 
@@ -208,6 +213,25 @@
 
             </ul>
         </div></section></div>
-    </div>
+		<div class="big-menu big-menu5"><section class="w_items"><div class="Grid1k clfx">
+					<a href="#" class="close-menu-2"><b class="fa fa-close"></b></a>
+					<ul>
+						<li>
+							<a href="<?php echo base_url()?>#sec7">
+								<i><img src="<?=base_url()?>imgs/tech-support-grey.png" alt=""></i>
+								<span>عملائنا</span>
+							</a>
+						</li>
+						<li>
+							<a href="<?php echo base_url()?>index.php/CustomerReviews/CustomerReviews">
+								<i><img src="<?=base_url()?>imgs/customer.png" alt=""></i>
+								<span>آراء العملاء </span>
+							</a>
+						</li>
+				 
+
+					</ul>
+				</div></section></div>   
+   </div>
 
     <!-- // Header -->  

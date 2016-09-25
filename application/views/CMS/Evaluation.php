@@ -146,15 +146,15 @@
                         <div class="radio radiochart">
                             <label>     سهولة الاتصال بالشركة عبر الهاتف وعبر البريد الالكتروني </label><br>
                          
-                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="Excellent" >
+                            <input type="radio" name="optionsRadios1" id="optionsRadios2" value="Excellent" >
                                <label class="dataradio">  ممتاز   </label><br>
-                               <input type="radio" name="optionsRadios" id="optionsRadios3" value="verygood" >
+                               <input type="radio" name="optionsRadios1" id="optionsRadios3" value="verygood" >
                                <label class="dataradio">  جيد جدا   </label><br>
-                             <input type="radio" name="optionsRadios" id="optionsRadios4" value="good" >
+                             <input type="radio" name="optionsRadios1" id="optionsRadios4" value="good" >
                                <label class="dataradio">  جيد </label><br>
-                              <input type="radio" name="optionsRadios" id="optionsRadios5" value="accepted" >
+                              <input type="radio" name="optionsRadios1" id="optionsRadios5" value="accepted" >
                                <label class="dataradio">  مقبول </label><br>
-                               <input type="radio" name="optionsRadios" id="optionsRadios6" value="bad" >
+                               <input type="radio" name="optionsRadios1" id="optionsRadios6" value="bad" >
                                <label class="dataradio">  سئ </label><br>
                         </div>
                            
@@ -163,15 +163,15 @@
                         <div class="radio radiochart">
                             <label>     المرونة في التعامل وفي اوقات تقديم الخدمات </label><br>
                          
-                            <input type="radio" name="optionsRadios" id="optionsRadios7" value="Excellent" >
+                            <input type="radio" name="optionsRadios2" id="optionsRadios7" value="Excellent" >
                                <label class="dataradio">  ممتاز   </label><br>
-                               <input type="radio" name="optionsRadios" id="optionsRadios8" value="verygood" >
+                               <input type="radio" name="optionsRadios2" id="optionsRadios8" value="verygood" >
                                <label class="dataradio">  جيد جدا   </label><br>
-                             <input type="radio" name="optionsRadios" id="optionsRadios9" value="good" >
+                             <input type="radio" name="optionsRadios2" id="optionsRadios9" value="good" >
                                <label class="dataradio">  جيد </label><br>
-                              <input type="radio" name="optionsRadios" id="optionsRadios10" value="accepted" >
+                              <input type="radio" name="optionsRadios2" id="optionsRadios10" value="accepted" >
                                <label class="dataradio">  مقبول </label><br>
-                               <input type="radio" name="optionsRadios" id="optionsRadios11" value="bad" >
+                               <input type="radio" name="optionsRadios2" id="optionsRadios11" value="bad" >
                                <label class="dataradio">  سئ </label><br>
                         </div>
                            
@@ -180,15 +180,15 @@
                         <div class="radio radiochart">
                             <label> الآهتمام والتفهم الذي يبدية موظفو الشركة تجاه العملاء </label><br>
                          
-                            <input type="radio" name="optionsRadios" id="optionsRadios12" value="Excellent" >
+                            <input type="radio" name="optionsRadios3" id="optionsRadios12" value="Excellent" >
                                <label class="dataradio">  ممتاز   </label><br>
-                               <input type="radio" name="optionsRadios" id="optionsRadios13" value="verygood" >
+                               <input type="radio" name="optionsRadios3" id="optionsRadios13" value="verygood" >
                                <label class="dataradio">  جيد جدا   </label><br>
-                             <input type="radio" name="optionsRadios" id="optionsRadios14" value="good" >
+                             <input type="radio" name="optionsRadios3" id="optionsRadios14" value="good" >
                                <label class="dataradio">  جيد </label><br>
-                              <input type="radio" name="optionsRadios" id="optionsRadios15" value="accepted" >
+                              <input type="radio" name="optionsRadios3" id="optionsRadios15" value="accepted" >
                                <label class="dataradio">  مقبول </label><br>
-                               <input type="radio" name="optionsRadios" id="optionsRadios16" value="bad" >
+                               <input type="radio" name="optionsRadios3" id="optionsRadios16" value="bad" >
                                <label class="dataradio">  سئ </label><br>
                         </div>
                            
@@ -205,15 +205,15 @@
                         <div class="radio radiochart">
                             <label>      الآهتمام بالمظهر الشخصي  </label><br>
                          
-                            <input type="radio" name="optionsRadios" id="optionsRadios17" value="Excellent" >
+                            <input type="radio" name="optionsRadios4" id="optionsRadios17" value="Excellent" >
                                <label class="dataradio">  ممتاز   </label><br>
-                               <input type="radio" name="optionsRadios" id="optionsRadios18" value="verygood" >
+                               <input type="radio" name="optionsRadios4" id="optionsRadios18" value="verygood" >
                                <label class="dataradio">  جيد جدا   </label><br>
-                             <input type="radio" name="optionsRadios" id="optionsRadios19" value="good" >
+                             <input type="radio" name="optionsRadios4" id="optionsRadios19" value="good" >
                                <label class="dataradio">  جيد </label><br>
-                              <input type="radio" name="optionsRadios" id="optionsRadios20" value="accepted" >
+                              <input type="radio" name="optionsRadios4" id="optionsRadios20" value="accepted" >
                                <label class="dataradio">  مقبول </label><br>
-                               <input type="radio" name="optionsRadios" id="optionsRadios21" value="bad" >
+                               <input type="radio" name="optionsRadios4" id="optionsRadios21" value="bad" >
                                <label class="dataradio">  سئ </label><br>
                         </div>
                            
@@ -222,15 +222,15 @@
                         <div class="radio radiochart">
                             <label>  حسن الخلق والتصرف في التعامل مع العميل</label><br>
                          
-                            <input type="radio" name="optionsRadios" id="optionsRadios22" value="Excellent" >
+                            <input type="radio" name="optionsRadios5" id="optionsRadios22" value="Excellent" >
                                <label class="dataradio">  ممتاز   </label><br>
-                               <input type="radio" name="optionsRadios" id="optionsRadios23" value="verygood" >
+                               <input type="radio" name="optionsRadios5" id="optionsRadios23" value="verygood" >
                                <label class="dataradio">  جيد جدا   </label><br>
-                             <input type="radio" name="optionsRadios" id="optionsRadios24" value="good" >
+                             <input type="radio" name="optionsRadios5" id="optionsRadios24" value="good" >
                                <label class="dataradio">  جيد </label><br>
-                              <input type="radio" name="optionsRadios" id="optionsRadios25" value="accepted" >
+                              <input type="radio" name="optionsRadios5" id="optionsRadios25" value="accepted" >
                                <label class="dataradio">  مقبول </label><br>
-                               <input type="radio" name="optionsRadios" id="optionsRadios26" value="bad" >
+                               <input type="radio" name="optionsRadios5" id="optionsRadios26" value="bad" >
                                <label class="dataradio">  سئ </label><br>
                         </div>
                            
@@ -247,15 +247,15 @@
                         <div class="radio radiochart">
                             <label>  سرعة التلبية للمهندس والاستجابة للبلاغ </label><br>
                          
-                            <input type="radio" name="optionsRadios" id="optionsRadios27" value="Excellent" >
+                            <input type="radio" name="optionsRadios6" id="optionsRadios27" value="Excellent" >
                                <label class="dataradio">  ممتاز   </label><br>
-                               <input type="radio" name="optionsRadios" id="optionsRadios28" value="verygood" >
+                               <input type="radio" name="optionsRadios6" id="optionsRadios28" value="verygood" >
                                <label class="dataradio">  جيد جدا   </label><br>
-                             <input type="radio" name="optionsRadios" id="optionsRadios29" value="good" >
+                             <input type="radio" name="optionsRadios6" id="optionsRadios29" value="good" >
                                <label class="dataradio">  جيد </label><br>
-                              <input type="radio" name="optionsRadios" id="optionsRadios30" value="accepted" >
+                              <input type="radio" name="optionsRadios6" id="optionsRadios30" value="accepted" >
                                <label class="dataradio">  مقبول </label><br>
-                               <input type="radio" name="optionsRadios" id="optionsRadios31" value="bad" >
+                               <input type="radio" name="optionsRadios6" id="optionsRadios31" value="bad" >
                                <label class="dataradio">  سئ </label><br>
                         </div>
                            
@@ -264,15 +264,15 @@
                         <div class="radio radiochart">
                             <label>   كفاءة المهندس وقدرته علي انجاز المهمة</label><br>
                          
-                            <input type="radio" name="optionsRadios" id="optionsRadios32" value="Excellent" >
+                            <input type="radio" name="optionsRadios7" id="optionsRadios32" value="Excellent" >
                                <label class="dataradio">  ممتاز   </label><br>
-                               <input type="radio" name="optionsRadios" id="optionsRadios33" value="verygood" >
+                               <input type="radio" name="optionsRadios7" id="optionsRadios33" value="verygood" >
                                <label class="dataradio">  جيد جدا   </label><br>
-                             <input type="radio" name="optionsRadios" id="optionsRadios34" value="good" >
+                             <input type="radio" name="optionsRadios7" id="optionsRadios34" value="good" >
                                <label class="dataradio">  جيد </label><br>
-                              <input type="radio" name="optionsRadios" id="optionsRadios35" value="accepted" >
+                              <input type="radio" name="optionsRadios7" id="optionsRadios35" value="accepted" >
                                <label class="dataradio">  مقبول </label><br>
-                               <input type="radio" name="optionsRadios" id="optionsRadios36" value="bad" >
+                               <input type="radio" name="optionsRadios7" id="optionsRadios36" value="bad" >
                                <label class="dataradio">  سئ </label><br>
                         </div>
                            
@@ -281,15 +281,15 @@
                         <div class="radio radiochart">
                             <label>   الآلتزام بتوفير قطع الغيار اللازمة في اسرع وقت </label><br>
                          
-                            <input type="radio" name="optionsRadios" id="optionsRadios37" value="Excellent" >
+                            <input type="radio" name="optionsRadios8" id="optionsRadios37" value="Excellent" >
                                <label class="dataradio">  ممتاز   </label><br>
-                               <input type="radio" name="optionsRadios" id="optionsRadios38" value="verygood" >
+                               <input type="radio" name="optionsRadios8" id="optionsRadios38" value="verygood" >
                                <label class="dataradio">  جيد جدا   </label><br>
-                             <input type="radio" name="optionsRadios" id="optionsRadios39" value="good" >
+                             <input type="radio" name="optionsRadios8" id="optionsRadios39" value="good" >
                                <label class="dataradio">  جيد </label><br>
-                              <input type="radio" name="optionsRadios" id="optionsRadios40" value="accepted" >
+                              <input type="radio" name="optionsRadios8" id="optionsRadios40" value="accepted" >
                                <label class="dataradio">  مقبول </label><br>
-                               <input type="radio" name="optionsRadios" id="optionsRadios41" value="bad" >
+                               <input type="radio" name="optionsRadios8" id="optionsRadios41" value="bad" >
                                <label class="dataradio">  سئ </label><br>
                         </div>
                            
@@ -326,7 +326,7 @@
               <div class="container-fluid OverLayFormFooter">
                    <div class="row CustomRow">
                        <div class="OverLayFormFooterItem right">
-                            <button type="submit"class="btn btn-md "> Create</button>
+                            <button type="submit"class="btn btn-md ">أضف</button>
                        </div>
                        <div class="OverLayFormFooterItem left">
                        
@@ -555,7 +555,7 @@
               <div class="container-fluid OverLayFormFooter">
                    <div class="row CustomRow">
                        <div class="OverLayFormFooterItem right">
-                            <button type="submit"class="btn btn-md "> Create</button>
+                            <button type="submit"class="btn btn-md "> تعديل</button>
                        </div>
                        <div class="OverLayFormFooterItem left">
                        
