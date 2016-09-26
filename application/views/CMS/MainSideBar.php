@@ -45,7 +45,7 @@
                 </li>
     <!--------yassmin--------->
                 <li class="sideMenuItem">
-                    <a href="<?php echo base_url()?>index.php/AccountSettings/Evaluation" data-toggle="tooltip" data-placement="right" class="Chart" title="Charts" id="SMI-Users"><span class="fa fa-area-chart" aria-hidden="true"></span>
+                    <a href="<?php echo base_url()?>index.php/EvaluationCMS" data-toggle="tooltip" data-placement="right" class="Chart" title="Charts" id="SMI-Users"><span class="fa fa-area-chart" aria-hidden="true"></span>
 
 </a>
                 </li>
