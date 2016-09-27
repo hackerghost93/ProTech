@@ -1,6 +1,6 @@
 <?php
 class Awd_Model extends CI_Model{
-
+//this model made by @Ahmed Awd
     public function AddToDBKey($Tname,$data)
     {
         $this->db->insert($Tname,$data);
@@ -150,5 +150,5 @@ class Awd_Model extends CI_Model{
             return $res[0];
         }
 }
-
+//this model made by @Ahmed Awd #TheImaginaryKing
 ?>
