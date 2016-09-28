@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="<?=base_url()?>css/theme.css">
     <link rel="stylesheet" type="text/css" href="<?=base_url()?>css/jquerysctipttop.css">
-    <link rel="stylesheet" type="text/css" href="<?=base_url()?>css/labs.css">
-    <link rel="stylesheet" type="text/css" href="<?=base_url()?>css/jquery.raty.css">
+    <!--link rel="stylesheet" type="text/css" href="<?=base_url()?>css/labs.css">
+    <link rel="stylesheet" type="text/css" href="<?=base_url()?>css/jquery.raty.css"-->
 
 
 

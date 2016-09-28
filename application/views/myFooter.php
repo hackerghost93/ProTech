@@ -12,8 +12,8 @@
 <script src="<?=base_url()?>js/jquery.min.js"></script>
 <script src="<?=base_url()?>js/scripts.js"></script>
 <script src="<?=base_url()?>js/ea-scripts.js"></script>
-<script src="<?//=base_url()?>js/jquery.raty.js"></script>
-<script src="<?//=base_url()?>js/labs.js"></script>
+<!--script src="<?//=base_url()?>js/jquery.raty.js"></script-->
+<!--script src="<?//=base_url()?>js/labs.js"></script>
 <!--script src="<?=//base_url()?>js/jquery.star.rating.js"></script-->
 
 <script>
