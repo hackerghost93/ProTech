@@ -12,9 +12,6 @@
 <script src="<?=base_url()?>js/jquery.min.js"></script>
 <script src="<?=base_url()?>js/scripts.js"></script>
 <script src="<?=base_url()?>js/ea-scripts.js"></script>
-<!--script src="<?//=base_url()?>js/jquery.raty.js"></script-->
-<!--script src="<?//=base_url()?>js/labs.js"></script>
-<!--script src="<?=//base_url()?>js/jquery.star.rating.js"></script-->
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
