@@ -63,47 +63,389 @@ div.hint {
     
     
     <br><br>
+<div class="Section09 row">
+    <div class="Rating">
+			<div class="col-md-6">
+				<div class="CompanyDetails">
+					<div class="CompanyLogo">
+						<img src="<?=base_url()?>imgs/xeroex.png" alt="">
+						<div class="CompanyName">Office Company</div>
+					</div>
+					
+					
+				</div>
+				<div class="CompanyRate">
+ <div class="inner">
+ <div class="total">
+       <span class="rating-num">4.0</span>
+     <div class="rating-stars">
+        <span><i class="fa fa-star" aria-hidden="true"></i></span>
+        <span><i class="fa fa-star" aria-hidden="true"></i></span>
+        <span><i class="fa fa-star" aria-hidden="true"></i></span>
+        <span><i class="fa fa-star" aria-hidden="true"></i></span>
+        <span><i class="fa fa-star" aria-hidden="true"></i></span>
+        <span><i class="fa fa-star" aria-hidden="true"></i></span>
 
-    <div class="Grid1k">
-        <ul class="contact-it">
-            <li class="c_it1" ><i></i>الجوال <span class="Mobile"></span></li>
-            <li class="c_it2"><i></i>الايميل <span  class="Email"></span></li>
-            <li class="c_it3" ><i></i>سكايب <span class="Skypee"></span></li>
-            <li class="c_it4" ><i></i>واتس اب <span class="WhatsApp"></span></li>
-        </ul>
-<div id="default"></div>
-</div>
-
-
-
-
-
-
-
-<!-- Section 09 -->
-<div class="Section09">
-    <div class="Grid1k">
-        <!-- Contact Area -->
-        <div class="ContactArea clear-after ViewPort">
-            <div class="Center"><img src="<?=image_url()?>icon26.png" alt=""></div>
-            <div class="Right clear-after">
-                <img src="<?=image_url()?>icon24.png" alt="">
-                <div class="info">
-                    <div><h3 class="Mobile"></h3>
-                        <h5>متاح واتس اب - فايبر - لاين</h5></div>
-                    </div>
-                </div>
-                <div class="Left clear-after">
-                    <img src="<?=image_url()?>icon25.png" alt="">
-                    <div class="info"><h3 class="Email"></h3></div>
-                </div>
-            </div>
-            <!-- // Contact Area -->
-        </div>
+      </div>
+      </div>
+    
+    <div class="histo">
+      <div class="five histo-rate">
+        <span class="histo-star">
+		<i class="fa fa-star" aria-hidden="true"></i>5
+		</span>
+        <span class="bar-block">
+          <span id="bar-five" class="bar">
+            <span>1000000</span>&nbsp;
+          </span> 
+        </span>
+      </div>
+      
+      <div class="four histo-rate">
+        <span class="histo-star">
+			<i class="fa fa-star" aria-hidden="true"></i>4
+		</span>
+        <span class="bar-block">
+          <span id="bar-four" class="bar">
+            <span>171,298</span>&nbsp;
+          </span> 
+        </span>
+      </div> 
+      
+      <div class="three histo-rate">
+        <span class="histo-star">
+<i class="fa fa-star" aria-hidden="true"></i>3
+		</span>
+        <span class="bar-block">
+          <span id="bar-three" class="bar">
+            <span>94,940</span>&nbsp;
+          </span> 
+        </span>
+      </div>
+      
+      <div class="two histo-rate">
+        <span class="histo-star">
+<i class="fa fa-star" aria-hidden="true"></i>2
+		</span>
+        <span class="bar-block">
+          <span id="bar-two" class="bar">
+            <span>44,525</span>&nbsp;
+          </span> 
+        </span>
+      </div>
+      
+      <div class="one histo-rate">
+        <span class="histo-star">
+<i class="fa fa-star" aria-hidden="true"></i>1
+		</span>
+        <span class="bar-block">
+          <span id="bar-one" class="bar">
+            <span>136,457</span>&nbsp;
+          </span> 
+        </span>
+      </div>   
+	  <div class="one histo-rate">
+         <span class="histo-star">
+<i class="fa fa-star" aria-hidden="true"></i>1
+		</span>
+        <span class="bar-block">
+          <span id="bar-one" class="bar">
+            <span>136,457</span>&nbsp;
+          </span> 
+        </span>
+      </div>   
+	  <div class="one histo-rate">
+         <span class="histo-star">
+<i class="fa fa-star" aria-hidden="true"></i>1
+		</span>
+        <span class="bar-block">
+          <span id="bar-one" class="bar">
+            <span>136,457</span>&nbsp;
+          </span> 
+        </span>
+      </div>  
+	  <div class="one histo-rate">
+        <span class="histo-star">
+<i class="fa fa-star" aria-hidden="true"></i>1
+		</span>
+        <span class="bar-block">
+          <span id="bar-one" class="bar">
+            <span>136,457</span>&nbsp;
+          </span> 
+        </span>
+      </div>
     </div>
-    <!-- // Section 09 -->
+	 <div class="rating">
+		<h4>  سهولة الاتصال بالشركة عبر الهاتف وعبر البريد الالكتروني </h4>
+		<h4>   المرونة في التعامل وفي اوقات تقديم الخدمات </h4>
+		<h4>   الآهتمام والتفهم الذي يبدية موظفو الشركة تجاه العملاء  </h4>
+		<h4>    الآهتمام بالمظهر الشخصي </h4>
+		<h4>      حسن الخلق والتصرف في التعامل مع العميل </h4>
+		<h4>      سرعة التلبية للمهندس والاستجابة للبلاغ  </h4>
+		<h4>    كفاءة المهندس وقدرته علي انجاز المهمة </h4>
+		<h4>     الآلتزام بتوفير قطع الغيار اللازمة في اسرع وقت  </h4>
+  
+     
+    </div>
+  </div>
+				</div>
+		</div>
+		<div class="col-md-6">
+				<div class="CompanyDetails">
+					<div class="CompanyLogo">
+						<img src="<?=base_url()?>imgs/xeroex.png" alt="">
+						<div class="CompanyName">Office Company</div>
+					</div>
+					
+					
+				</div>
+				<div class="CompanyRate">
+ <div class="inner">
+ <div class="total">
+       <span class="rating-num">4.0</span>
+     <div class="rating-stars">
+        <span><i class="fa fa-star" aria-hidden="true"></i></span>
+        <span><i class="fa fa-star" aria-hidden="true"></i></span>
+        <span><i class="fa fa-star" aria-hidden="true"></i></span>
+        <span><i class="fa fa-star" aria-hidden="true"></i></span>
+        <span><i class="fa fa-star" aria-hidden="true"></i></span>
+        <span><i class="fa fa-star" aria-hidden="true"></i></span>
 
-    <footer>
+      </div>
+      </div>
+    
+    <div class="histo">
+      <div class="five histo-rate">
+        <span class="histo-star">
+		<i class="fa fa-star" aria-hidden="true"></i>5
+		</span>
+        <span class="bar-block">
+          <span id="bar-five" class="bar">
+            <span>1000000</span>&nbsp;
+          </span> 
+        </span>
+      </div>
+      
+      <div class="four histo-rate">
+        <span class="histo-star">
+			<i class="fa fa-star" aria-hidden="true"></i>4
+		</span>
+        <span class="bar-block">
+          <span id="bar-four" class="bar">
+            <span>171,298</span>&nbsp;
+          </span> 
+        </span>
+      </div> 
+      
+      <div class="three histo-rate">
+        <span class="histo-star">
+<i class="fa fa-star" aria-hidden="true"></i>3
+		</span>
+        <span class="bar-block">
+          <span id="bar-three" class="bar">
+            <span>94,940</span>&nbsp;
+          </span> 
+        </span>
+      </div>
+      
+      <div class="two histo-rate">
+        <span class="histo-star">
+<i class="fa fa-star" aria-hidden="true"></i>2
+		</span>
+        <span class="bar-block">
+          <span id="bar-two" class="bar">
+            <span>44,525</span>&nbsp;
+          </span> 
+        </span>
+      </div>
+      
+      <div class="one histo-rate">
+        <span class="histo-star">
+<i class="fa fa-star" aria-hidden="true"></i>1
+		</span>
+        <span class="bar-block">
+          <span id="bar-one" class="bar">
+            <span>136,457</span>&nbsp;
+          </span> 
+        </span>
+      </div>   
+	  <div class="one histo-rate">
+         <span class="histo-star">
+<i class="fa fa-star" aria-hidden="true"></i>1
+		</span>
+        <span class="bar-block">
+          <span id="bar-one" class="bar">
+            <span>136,457</span>&nbsp;
+          </span> 
+        </span>
+      </div>   
+	  <div class="one histo-rate">
+         <span class="histo-star">
+<i class="fa fa-star" aria-hidden="true"></i>1
+		</span>
+        <span class="bar-block">
+          <span id="bar-one" class="bar">
+            <span>136,457</span>&nbsp;
+          </span> 
+        </span>
+      </div>  
+	  <div class="one histo-rate">
+        <span class="histo-star">
+<i class="fa fa-star" aria-hidden="true"></i>1
+		</span>
+        <span class="bar-block">
+          <span id="bar-one" class="bar">
+            <span>136,457</span>&nbsp;
+          </span> 
+        </span>
+      </div>
+    </div>
+	 <div class="rating">
+		<h4>  سهولة الاتصال بالشركة عبر الهاتف وعبر البريد الالكتروني </h4>
+		<h4>   المرونة في التعامل وفي اوقات تقديم الخدمات </h4>
+		<h4>   الآهتمام والتفهم الذي يبدية موظفو الشركة تجاه العملاء  </h4>
+		<h4>    الآهتمام بالمظهر الشخصي </h4>
+		<h4>      حسن الخلق والتصرف في التعامل مع العميل </h4>
+		<h4>      سرعة التلبية للمهندس والاستجابة للبلاغ  </h4>
+		<h4>    كفاءة المهندس وقدرته علي انجاز المهمة </h4>
+		<h4>     الآلتزام بتوفير قطع الغيار اللازمة في اسرع وقت  </h4>
+  
+     
+    </div>
+  </div>
+				</div>
+		</div>
+	<div id="default"></div>
+	</div>
+	</div>
+
+<style>
+
+.inner {
+    padding: 50px 20px 10px 10px;
+    background-color: white;
+    overflow: hidden;
+    position: relative;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.rating {
+    float: right;
+    padding-top: 6px;
+    width: 45%;
+    margin-right: 0%;
+    text-align: right;
+}
+
+.rating-num {
+    color: #333333;
+    font-size: 68px;
+    font-weight: 100;
+    line-height: 1em;
+    width: 14%;
+}
+
+.rating-stars {
+    font-size: 17px;
+    color: #E3E3E3;
+    margin-bottom: 2.5em;
+}
+.rating-stars .active {
+  color: #737373;
+}
+
+.rating-users {
+  font-size: 14px;
+}
+
+.histo {
+    float: left;
+    width: 29%;
+    font-size: 13px;
+}
+.histo-star {
+    float: right;
+    padding: 3px;
+}
+.histo-rate {
+  width: 100%;
+  display: block;
+  clear: both;
+}
+
+.bar-block {
+    margin-left: 5px;
+    color: black;
+    display: inline-block;
+    float: right;
+    width: 81%;
+    position: relative;
+    font-size: 9px;
+}
+.bar {
+  padding: 4px;
+  /* display: block; */
+}
+
+#bar-five {
+  width: 0;
+  background-color: #9FC05A;
+}
+
+#bar-four {
+  width: 0;
+  background-color: #ADD633;
+}
+
+#bar-three {
+  width: 0;
+  background-color: #FFD834;
+}
+
+#bar-two {
+  width: 0;
+  background-color: #FFB234;
+}
+
+#bar-one {
+  width: 0;
+  background-color: #FF8B5A;
+}
+
+<script>
+/*
+For stackoverflow question: http://stackoverflow.com/questions/17859134/how-do-i-create-rating-histogram-in-jquery-mobile-just-like-rating-bar-in-google#17859134
+*/
+
+$(document).ready(function() {
+  $('.bar span').hide();
+  $('#bar-five').animate({
+     width: '75%'}, 1000);
+  $('#bar-four').animate({
+     width: '35%'}, 1000);
+  $('#bar-three').animate({
+     width: '20%'}, 1000);
+  $('#bar-two').animate({
+     width: '15%'}, 1000);
+  $('#bar-one').animate({
+     width: '30%'}, 1000);
+  
+  setTimeout(function() {
+    $('.bar span').fadeIn('slow');
+  }, 1000);
+  
+});
+</script>
+</style>
+
+
+
+
+
+    <div class="row">
+	<footer>
         <div class="News-Slider">
             <div class="Grid1k clear-after">
                 <div class="Title"> احدث العروض</div>
@@ -181,6 +523,7 @@ if (typeof newsletter_check !== "function") {
 </div>
 </div>
 </footer>
+</div>
 <div class="Copyright clfx">
     <div class="Grid1k">
         <span>جميع الحقوق محفوظة لشركة بروتك </span>

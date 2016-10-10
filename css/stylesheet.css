@@ -118,7 +118,7 @@ table{border-collapse:collapse;border-spacing:0;}td,th{padding:0;}i{font-style:n
 @media(max-width:480px) {.block3i{width:100%;}.block4i{width:100%;}.block6i{width:33.33333333%;}.block7i{width:25%;}.block8i{width:25%;}.block9i{width:25%;}.block10i{width:25%;}.block11i{width:20%;}.block12i{width:20%;}}
 @media(max-width:360px) {.block5i{width:50%;}.block6i{width:50%;}.block7i{width:50%;}.block8i{width:33.33333333%;}.block9i{width:33.33333333%;}.block10i{width:33.33333333%;}.block11i{width:33.33333333%;}.block12i{width:33.33333333%;}}
 /* ==================================== Eng.Abdallah Main CSS =============================== */
-.Grid1k{padding:0 15px;margin:auto;display:block;position:relative;max-width:1170px;}
+.Grid1k{padding:0 15px;margin:auto;display:block;position:relative;max-width:1200px;}
 @media(max-width:1024px){.Grid1k{max-width:1000px;}}
 hr{margin:20px auto;display:block;border:0 none;border-top:1px solid rgba(0,0,0,.15);}
 .clear{display:block;clear:both;margin:0;padding:0;}

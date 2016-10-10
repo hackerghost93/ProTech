@@ -57,17 +57,33 @@ margin-top: 3px;}
 .top-nav .Social a.Dribbble span:before{background:url(../imgs/spirtes.png) -67px -37px;}
 .top-nav .Social a:after{content:attr(data-tip);}
 /* Header */
-header{min-height:107px;background:#332245/*#44395A*/;}
+header {
+    min-height: 107px;
+    background: #18aeb1/*#44395A*/;
+}
 header .logo{height:107px;line-height:107px;color:#FFF;display:inline-block;}
-header .logo:before{content:'';display:inline-block;vertical-align:middle;background:url(../imgs/logo.png);width:68px;height:75px;margin-left:10px;}
-header .logo > span{font:20px NeoSansR;color:#f3ce0e;display:inline-block;vertical-align:middle;}
-header .logo > span span{font-size:15px;color:#e5e1e1;display:block;margin-top:4px;}
+header .logo:before{content:'';display:inline-block;vertical-align:middle;background:url(../imgs/Logo.png)no-repeat;width:147px;height:84px;margin-left:-11px;}
+footer .logo:before{content:'';display:inline-block;vertical-align:middle;background:url(../imgs/Logo.png);width:68px;height:75px;margin-left:10px;}
+header .logo > span {
+    font: 18px NeoSansR;
+    color: #f3ce0e;
+    display: inline-block;
+    vertical-align: middle;
+    width: 31px;
+}
+header .logo > span span {
+    font-size: 12px;
+    color: #e5e1e1;
+    display: block;
+    margin-top: 4px;
+    white-space: nowrap;
+}
 header .logo.ActiveView:before{-webkit-animation:fadeInRight-animated 1s both;animation:fadeInRight-animated 1s both;}
 header .logo.ActiveView > span{-webkit-animation:fadeInDown-animated 1s both 0.5s;animation:fadeInDown-animated 1s both 0.5s;}
 header .logo.ActiveView > span span{-webkit-animation:fadeInUp-animated 1s both 1s;animation:fadeInUp-animated 1s both 1s;}
 header .OpenTicket{display:inline-block;float:left;height:68px;margin:19.5px 4px;text-align:center;width:170px;background:#8e669f;font:19px/68px NeoSansR;color:#FFF;-webkit-transition:all 0.5s;transition:all 0.5s;}
 header .OpenTicket{-webkit-transform:translateZ(0);transform:translateZ(0);-webkit-backface-visibility:hidden;backface-visibility:hidden;position:relative;overflow:hidden;-webkit-transition:all 0.3s;transition:all 0.3s;}
-header .OpenTicket:before{background:#18aeb1;content:"";position:absolute;z-index:-1;top:0;left:0;right:0;bottom:0;-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1);-webkit-transition:all 0.3s ease-out;transition:all 0.3s ease-out;}
+header .OpenTicket:before{background:#8e669f;content:"";position:absolute;z-index:-1;top:0;left:0;right:0;bottom:0;-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1);-webkit-transition:all 0.3s ease-out;transition:all 0.3s ease-out;}
 header .OpenTicket:hover:before{-webkit-transform:scale(0);-ms-transform:scale(0);transform:scale(0)}  
 header .Grid1k > .primary-menu {
     float: left;
@@ -317,7 +333,7 @@ body{position:relative;left:0px;-webkit-transition:all 0.4s linear;transition:al
 .ContactArea .Left:after{position:absolute;content:'';display:block;left:100%;top:100%;margin-left:10px;width:81px;height:37px;background:url(../imgs/spirtes.png) -1px -173px;}
 .ContactArea .Left img{float:right;margin-left:10px;}
 .ContactArea .Left .info{float:right;max-width:160px;height:137px;line-height:137px;text-align:center;}
-.ContactArea .Left .info h3{font:20px Arial;color:#ffffff;display:inline-block;vertical-align:middle;}
+.ContactArea .Left .info h3{font:14px Arial;color:#ffffff;display:inline-block;vertical-align:middle;}
 .ContactArea .Left .info h3 span{color:#faaf3b;}
 .ContactArea.ActiveView .Center{-webkit-animation:fadeInDown-animated 1s both;animation:fadeInDown-animated 1s both;}
 .ContactArea.ActiveView .Right:after{-webkit-animation:fadeInLeft-animated 1s both 0.5s;animation:fadeInLeft-animated 1s both 0.5s;}
@@ -373,7 +389,7 @@ footer .Social a.Behance span:before{background:url(../imgs/spirtes.png) -198px 
 footer .Social a.Youtube span:before{background:url(../imgs/spirtes.png) -166px -37px;}
 footer .Social a.LinkedIn span:before{background:url(../imgs/spirtes.png) -134px -37px;}
 footer .logo{height:107px;line-height:107px;color:#FFF;display:inline-block;text-align:right;}
-footer .logo:before{content:'';display:inline-block;vertical-align:middle;background:url(../imgs/Logo.png);width:68px;height:75px;margin-left:10px;}
+
 footer .logo > span{font:20px NeoSansR;color:#f3ce0e;display:inline-block;vertical-align:middle;}
 footer .logo > span span{font-size:15px;color:#e5e1e1;display:block;margin-top:4px;}
 footer .OpenTicket{display:inline-block;height:68px;margin:12px 0;text-align:center;width:70%;background:#8e669f;font:19px/68px NeoSansR;color:#FFF;-webkit-transition:all 0.5s;transition:all 0.5s;}
@@ -499,4 +515,63 @@ div.wpcf7-response-output {
 ul.Reviews li {
     width: 50%;
     float: left;
+}
+/*************************************Rate************/
+.CompanyLogo img {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    padding: 11px;
+    background: #fff;
+}
+.CompanyLogo {
+    padding-right: 57px;
+    position: absolute;
+    z-index: 9;
+    top: -47px;
+}
+/* .Rating ul li {
+    width: 50%;
+    padding: 15px 90px 10px 10px;
+} */
+.CompanyName {
+    margin-top: 23px;
+    float: left;
+    margin-left: -12%;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+.CompanyRate {
+    background: #fff;
+    width: 89%;
+    height: 321px;
+    margin: 10px 46px 10px 0px;
+    border-radius: 1px;
+}
+.CompanyDetails {
+    padding-right: 11px;
+}
+.rating h4 {
+    font-size: 10px;
+    padding-bottom: 17px;
+}
+.total {
+    width: 23%;
+    float: left;
+    margin-top: 31px;
+}
+.Rating {
+    margin-top: 56px;
+}
+.sp-bottom-thumbnails.sp-has-pointer {
+    margin-top: -100px !important;
+    margin-bottom: 15px;
+}
+.slider-pro {
+    position: relative;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    margin: 26px auto !important;
 }

@@ -5,43 +5,138 @@
             padding-top: 39%;
         }
     </style>
-	    <link rel="stylesheet" type="text/css" href="<?=base_url()?>css/slider-pro.min.css">
-	    <link rel="stylesheet" type="text/css" href="<?=base_url()?>css/examples.css">
+<?php if(isset($slides) && count($slides) > 0):?>
+    <!-- Section 01 -->
+
+    <div id="contentarea" style="position: relative; right: 200px;">
+        <div class="maincontainer">
+            <div class="main">
 
 
-	<div id="example1" class="slider-pro">
-		<div class="sp-slides">
-			<div class="sp-slide">
-				<img class="sp-image" src="imgs/blank.gif"
-					data-src="<?=base_url()?>imgs/thumbnail1-300x300.png"
-					data-retina="<?=base_url()?>imgs/thumbnail1-300x300.png"/>
-			</div>
 
-			<div class="sp-slide">
-				<img class="sp-image" src="imgs/blank.gif"
-					data-src="<?=base_url()?>"
-					data-retina="<?=base_url()?>"/>
-			</div>
+                <div id="slider1" class="royalSlider rsDefault js-content">
+                <?php foreach($slides as $slide):?>
+                 <div>
+                    <a href="<?=base_url()?>index.php/printer/showAll">
+                        <img class="rsImg"  src="<?=base_url().$slide['Slide_image']?>" alt="Weekend Deals" data-mobile-src="<?=base_url().$slide['Slide_image']?>" 
+                        data-rstmb="<?=base_url()?>imgs/4375e42c-d6c7-4d7b-909c-5b5900a08344_A.jpeg"
+                        />
+                        <!-- <h4><?=$slide['Slide_Title']?></h4> -->
+                    </a>
+                </div>
+                <?php endforeach; ?>
+				
+				<!--  -->
+				
 
-			
-		</div>
+            </div>
 
-		<div class="sp-thumbnails">
-			<div class="sp-thumbnail">
-				<div class="sp-thumbnail-title">Do eiusmod</div>
-				<div class="sp-thumbnail-description">Tempor incididunt ut labore et dolore magna aliqua</div>
-			</div>
 
-			<div class="sp-thumbnail">
-				<div class="sp-thumbnail-title">Do eiusmod</div>
-				<div class="sp-thumbnail-description">Tempor incididunt ut labore et dolore magna aliqua</div>
-			</div>
+        <script src='<?=base_url()?>js/p13n.js'></script>
 
-		
-		</div>
+<script>
+
+    jQuery(document).ready(function ($) {
+        $(".royalSlider2").each(function (i, e) {
+            $(e).royalSlider({
+                keyboardNavEnabled: true,
+                controlNavigation: "none",
+                arrowsNavAutoHide: false,
+                loop: true
+
+            });
+        });
+
+        
+
+        $(".royalSlider2").css("visibility", "visible");
+    });
+</script>
+
+
+<noscript>
+
+
+
+    <!--Brands Slider-->
+    <div class="prodslidercont js-content">
+        <script>
+            jQuery(document).ready(function ($) {
+                $("#slider3").royalSlider({
+                    keyboardNavEnabled: true,
+                    controlNavigation: 'none',
+                    arrowsNavAutoHide: false,
+                });
+                $('.royalSlider3').css('visibility', 'visible');
+            });
+        </script>
+
     </div>
 
 
+
+
+    <noscript>
+
+
+
+
+
+    </noscript>
+
+
+
+
+
+    <script>
+        //jQuery(document).ready(function ($) {
+        //    debugger;
+        //    $("#slider1").royalSlider({
+        //        keyboardNavEnabled: true,
+        //        autoPlay: {
+        //            enabled: true,
+        //            pauseOnHover: true,
+        //        }
+        //    });
+        //    $('.royalSlider').css('visibility', 'visible');
+        //});
+        jQuery(document).ready(function ($) {
+
+            $("#slider1").royalSlider({
+                keyboardNavEnabled: true,
+                autoPlay: {
+                    enabled: true,
+                    pauseOnHover: true,
+                },
+
+                video: {
+                    // video options go gere
+                    autoHideBlocks: true,
+                    autoHideArrows: false
+                }//,
+                //fullscreen: {
+                //    // fullscreen options go gere
+                //    enabled: true,
+                //    buttonFS: true,
+                //    //nativeFS: false
+                //}
+            });
+            $('.royalSlider').css('visibility', 'visible');
+
+
+        });
+
+
+
+
+    </script>
+
+
+
+
+</noscript></div></div></div>
+
+<?php endif; ?>
 <!-- // Section 01 -->
 
 <!-- Section 02 -->

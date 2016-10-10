@@ -76,30 +76,7 @@
 
 <script src="<?=base_url()?>js/royalslider.min.js"></script>
 <script src="<?=base_url()?>js/jquery.slider.min.js"></script>
-<script src="<?=base_url()?>js/jquery-1.11.0.min.js"></script>
-<script src="<?=base_url()?>js/jquery.sliderPro.min.js"></script>
-<script type="text/javascript">
-	$( document ).ready(function( $ ) {
-		$( '#example1' ).sliderPro({
-			width: 960,
-			height: 500,
-			arrows: true,
-			buttons: false,
-			waitForLayers: true,
-			thumbnailWidth: 200,
-			thumbnailHeight: 100,
-			thumbnailPointer: true,
-			autoplay: false,
-			autoScaleLayers: false,
-			breakpoints: {
-				500: {
-					thumbnailWidth: 120,
-					thumbnailHeight: 50
-				}
-			}
-		});
-	});
-</script>
+
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
