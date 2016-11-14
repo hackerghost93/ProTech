@@ -50,6 +50,7 @@ $('.editeBtn').click(function(event)
 
     $.get(path,
       function(data){
+        console.log(data);
         console.log(JSON.stringify(data,null,2));
         /// iterate on images
         $("#hackerSelect option[value='"+data.data.family_id+"']").attr('selected','selected');
@@ -60,7 +61,13 @@ $('.editeBtn').click(function(event)
           $('#hackerID').val(data.data.part_id);
         //$('#hackerPDF').val(data.data.pdf);
         $('#hackerDRIVER').val(data.data.driver);
-        $('#hackerDescription').val(data.data.general_description);
+        if(MyType == 'printer')
+        {
+          $('#hackerDescription').val(data.data.general_description);
+          console.log('printer description');
+        }
+        else
+          $('#hackerDescription').val(data.data.description);
         $('#hackerOldPDF').html(data.data.pdf);
 
         if(data.data.offer == 1)

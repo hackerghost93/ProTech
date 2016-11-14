@@ -111,7 +111,7 @@ input.searchone {
                                 <?php if($type == 'printer'):?>                         
                                     <a href="<?=base_url().'index.php/printer/show/'.$product['printer_id']?>" class="info"><h3 class="hackerSearchAttr"><?=$product['name']?></h3></a>
                                 <?php else:?>
-                                    <a href="<?=base_url().'index.php/part/show/'.$product['part_id']?>" class="info"><h3><?=$product['name']?></h3></a>
+                                    <a href="<?=base_url().'index.php/part/show/'.$product['part_id']?>" class="info"><h3 class="hackerSearchAttr"><?=$product['name']?></h3></a>
                                 <?php endif; ?>
                                     
                             </div>

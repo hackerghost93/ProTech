@@ -94,8 +94,11 @@
         </div>
         <div class="work-dtls">
             <strong><?=$product['name']?></strong>
-
+        <?php if($type == "printer"):?>
             <p><?=$product['general_description']?></p>
+        <?php else: ?>
+            <p><?=$product['description']?></p>
+        <?php endif; ?>
             <ul class="dtls-butt">
 
 

@@ -120,7 +120,7 @@
                    </div>
                </div>
           </div>
-          <form id="AddSparePartForm">
+          <form id="AddSparePartForm" method="POST">
               <div class="container-fluid OverLayFormContent">
                    <div class="FormSection">
                        <div class="SectionHeader">

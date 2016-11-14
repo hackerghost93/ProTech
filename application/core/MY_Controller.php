@@ -216,7 +216,6 @@ class MY_Controller extends CI_Controller
 	function create()
 	{
 		$post = $this->input->post();
-		// var_dump($_FILES);
 		$data['name'] = $post['printer_name'];
 		if($data['name'] == "")
 		{
@@ -300,9 +299,13 @@ class MY_Controller extends CI_Controller
 		if($this->myType == 'printer')
 		{
 			$data['printer_id'] = $post['id'];
+			$data['general_description'] = $post['description'];
 		}
 		else
+		{
 			$data['part_id'] = $post['id'];
+			$data['description'] = $post['description'];
+		}
 		$data['name'] = $post['ProductTitle'];
 		if($post['ProductFamily'] != 0)
 			$data['family_id'] = $post['ProductFamily'];

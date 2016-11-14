@@ -13,7 +13,9 @@ $('#hackerSearchBar').keyup(function(){
 		}
 		else
 		{
-			var str = $(value).find('.hackerSearchAttr').html();
+			var str = $(value).find('.hackerSearchAttr').html().toLowerCase();
+			// console.log(str);
+			// console.log($myValue);
 			if(str.indexOf($myValue) > -1)
 			{
 				$(value).show();	
