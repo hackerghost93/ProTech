@@ -32,7 +32,7 @@
                                         <div class="HeaderLeft"> 
                                              <form class="SubHeader">
                                                     <div class="form-group">
-                                                         <input type="search" class="form-control" name="Search" placeholder="Search By Tag"/>
+                                                         <input type="search" class="form-control" name="Search" placeholder="Search By Tag" id="hackerSearchBar"/>
                                                          <a href="#" type="submit" role="button"><span class="fa fa-search"></span></a>
                                                     </div>
                                              </form>    
@@ -58,7 +58,7 @@
                                                     {
                                                       foreach ($results as $object) {
   $x="/".$object->tag_name."/";
-  echo "<tr><td>$object->tag_name</td><td class='check-col tableAdmin'><a href='#' onclick='SetTagName($x)' class='deleteBtn'  data-target='#DeleteTagsModal' data-toggle='modal' title='delete' data-placement='right'><span class='fa fa-trash'></span></a></td></tr> ";
+  echo "<tr class=\"hackerSearch\"><td class=\"hackerSearchAttr\">$object->tag_name</td><td class='check-col tableAdmin'><a href='#' onclick='SetTagName($x)' class='deleteBtn'  data-target='#DeleteTagsModal' data-toggle='modal' title='delete' data-placement='right'><span class='fa fa-trash'></span></a></td></tr> ";
                                                       }
                                                     }
                                                     ?>
@@ -231,10 +231,11 @@
           var re = new RegExp(find, 'g');
           ID = String(ID);
           ID = ID.replace(re,"");
-          console.log(ID);
+          //console.log(ID);
           document.getElementById("RecoredId").value=ID;
         }
         </script>
+        <script src="<?=base_url()?>js/hackerSearch.js"></script>
         <!-- <script src="_/js/bootstrap.min.js"></script>
         <script src="_/js/test.js"></script>
         <script src="_/js/ProjectScripts.js"></script>
