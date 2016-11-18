@@ -20,8 +20,8 @@ $('.deleteBtn').click(function(event){
 // delete specification
 $('.editimgproduct').click(function(event){
   $target = $(this);
-  console.log($target.parent());
-  $target.parent().remove();
+ // console.log($target.parent());
+  //$target.parent().remove();
 });
 
 
@@ -39,9 +39,9 @@ $('.editeBtn').click(function(event)
     //console.log(familyPath);
     $.get(familyPath,function(data){
       /// iterate families available
-      console.log(JSON.stringify(data,null,2));
+     // console.log(JSON.stringify(data,null,2));
       $.each(data.families , function(key,value){
-        console.log(value);
+        //console.log(value);
         $('#hackerSelect').append($('<option></option>').val(value.family_id).html(value.family_name));
       });
     },'json');
@@ -50,11 +50,12 @@ $('.editeBtn').click(function(event)
 
     $.get(path,
       function(data){
-        console.log(data);
         console.log(JSON.stringify(data,null,2));
         /// iterate on images
         $("#hackerSelect option[value='"+data.data.family_id+"']").attr('selected','selected');
         $('#hackerTitle').val(data.data.name);
+        $('#hackerSelectDiv').val(data.data.family_id);
+        //console.log(data.data.family_id);
         if(MyType == 'printer')
           $('#hackerID').val(data.data.printer_id);
         else
@@ -89,10 +90,10 @@ $('.editeBtn').click(function(event)
         /// set specification
         var $element = $('#hackerGuarantee');
         $element.empty();
-        console.log('looping');
+       // console.log('looping');
         $.each(data.guarantee , function(key,value)
         {
-          console.log(value.guarantee_text);
+        //  console.log(value.guarantee_text);
          $element.append(
            '<p data-id="'+value.guarantee_id+'"><input type="text" value="'+value.guarantee_text+'" name="guarantee[]" id="p_scents" class="form-control overlayproduct"/><a href="#" id="remScnt" class="removespecification  CloseBtn" ><i class="fa fa-close"></i></a></p>'
            );
@@ -102,7 +103,7 @@ $('.editeBtn').click(function(event)
         $element.empty();
         $.each(data.general , function(key,value)
         {
-          console.log(value.general_text);
+          //console.log(value.general_text);
          $element.append(
           '<p><input type="text" value="'+value.general_text+'" name="general[]" id="p_scents" class="form-control overlayproduct" placeholder="Printing Specifications3" /><a href="#" id="remScnt" class="removespecification CloseBtn" ><i class="fa fa-close"></i></a></p>'
           );
@@ -113,7 +114,7 @@ $('.editeBtn').click(function(event)
         $element.empty();
         $.each(data.typing , function(key,value)
         {
-          console.log(value.typing_text);
+         // console.log(value.typing_text);
           $element.append(
           '<p><input type="text" value="'+value.typing_text+'" name="typing[]" id="p_scents" class="form-control overlayproduct" placeholder="Printing Specifications3" /><a href="#" id="remScnt" class="removespecification CloseBtn" ><i class="fa fa-close"></i></a></p>'
           );

@@ -340,17 +340,17 @@
        <label for="ProductTitle" class="control-label ">Product Title : </label>
        <input type="text" name="ProductTitle" class="form-control InputProduct" placeholder="Product Title" id="hackerTitle"/>
      </div>
-     <div class="form-group formLayout">
+     <div class="">
        <label for="ProductPdf" class="control-label ">Product Pdf: </label>
        <input type="file" name="ProductPdf" class="form-control InputProduct" id="hackerPDF" />
        <h4>The existant pdf:
        <h5 id="hackerOldPDF"></h5></h4>
      </div> 
 
-     <div class="form-group formLayout">
        <label for="ProductFamily" class="control-label ">Product Product Family: </label>
+     <div class="form-group formLayout" id="hackerSelectDiv">
        <select name="ProductFamily" class="form-control InputProduct" id="hackerSelect">
-        <option class="" > Choose Product Family</option>
+        <option value="0"> Choose Product Family</option>
       </select>
     </div>
     <button type="button" class="btn btn-md" id="incrementAdd1">Add Image</button>
