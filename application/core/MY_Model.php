@@ -104,7 +104,7 @@ class MY_Model extends CI_Model
 	function update($id,$myType,$arr)
 	{
 		$this->db->set($arr);
-		var_dump($arr);
+		//var_dump($arr);
 		if($myType == 'printer')
 			$this->db->where('printer_id = ' , $id);
 		else

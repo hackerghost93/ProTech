@@ -35,10 +35,19 @@ class Downloads extends CI_Controller
 
 	function createDriver()
 	{
-		$data['url'] = $this->input->post('url');
-		$data['title'] = $this->input->post('title');
-		if($data['url'] != "" && $data['title']!="")
-			$this->model->create('other_drivers' , $data);
+        $url = $this->input->post('url');
+        $title = $this->input->post('title');
+//		$data['url'] = $this->input->post('url');
+//		$data['title'] = $this->input->post('title');
+        if(isset($url) && isset($title) && !empty($url) && !empty($title)){
+            $data = array('Driver_URL' => $url,
+                          'Driver_Title' => $title
+                            );
+            $this->model->create('other_drivers' , $data);
+        }
+//		if($data['url'] != "" && $data['title']!=""
+//          && )
+//			$this->model->create('other_drivers' , $data);
 		redirect('Downloads/DriverAdd');
 	}
 
@@ -52,9 +61,9 @@ class Downloads extends CI_Controller
 
 	function createPDF()
 	{
-		$data['url'] = $this->input->post('url');
-		$data['title'] = $this->input->post('title');
-			if($data['url'] != "" && $data['title']!="")
+		$data['PDF_URL'] = $this->input->post('url');
+		$data['PDF_Title'] = $this->input->post('title');
+			if($data['PDF_URL'] != "" && $data['PDF_Title']!="")
 		$this->model->create('other_pdf' , $data);
 		redirect('Downloads/PdfAdd');
 	}

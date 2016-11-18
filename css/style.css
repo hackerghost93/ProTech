@@ -1,4 +1,3 @@
-
 /* Main Css */
 body{direction:rtl;background:#fff;}
 .blocks-box,.slick-slider{margin:0 -7.5px;}
@@ -34,7 +33,7 @@ background:#c43c63;
 display: inline-block;
 float: right;
 margin-top: 3px;}
-.top-nav .MSG-Btn:hover span{width:140px;visibility:visible;opacity:1;margin-right: 10px;}
+.top-nav .MSG-Btn:hover span{width:213px;visibility:visible;opacity:1;margin-right: 10px;}
 .top-nav .Social{float:left;height:48px;line-height:48px;}
 .top-nav .Social a{width:30px;height:30px;position:relative;display:inline-block;margin-top:-3px;vertical-align:middle;}
 .top-nav .Social a span:before{z-index:1;content:'';display:inline-block;width:100%;height:100%;position:absolute;left:0px;top:-1px;-webkit-transition:all 0.5s;transition:all 0.5s;-webkit-transform:scale(0);-ms-transform:scale(0);transform:scale(0);opacity:0;}
@@ -397,8 +396,12 @@ footer .OpenTicket{-webkit-transform:translateZ(0);transform:translateZ(0);-webk
 footer .OpenTicket:before{background:#18aeb1;content:"";position:absolute;z-index:-1;top:0;left:0;right:0;bottom:0;-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1);-webkit-transition:all 0.3s ease-out;transition:all 0.3s ease-out;}
 footer .OpenTicket:hover:before{-webkit-transform:scale(0);-ms-transform:scale(0);transform:scale(0)} 
 .Copyright{min-height:58px;font:14px/58px NeoSansR;color:#FFF;background:#342b47;}
-.Copyright a{color:#FFF;}
-.Copyright ul{float:left;}
+.Copyright a {
+    color: #c43f63;
+    text-decoration: none;
+}
+.Copyright ul{float:right;}
+
 .Copyright li{float:right;padding:0 15px;}
 .SooN02 .social a.ViewActive:nth-child(odd){-webkit-animation:fadeInDown 1.5s both 1.8s;animation:fadeInDown 1.5s both 1.8s;}
 .SooN02 .social a.ViewActive:nth-child(even){-webkit-animation:fadeInUp 1.5s both 2s;animation:fadeInUp 1.5s both 2s;}
@@ -566,7 +569,7 @@ ul.Reviews li {
     margin-top: 56px;
 }
 .sp-bottom-thumbnails.sp-has-pointer {
-    margin-top: -100px !important;
+    margin-top: -58px !important;
     margin-bottom: 15px;
 }
 .slider-pro {
@@ -574,4 +577,14 @@ ul.Reviews li {
     -moz-box-sizing: content-box;
     box-sizing: content-box;
     margin: 26px auto !important;
+}
+.sp-image-container>img{
+    height: 395px !important;
+    margin-left: 0px;
+    margin-top: 60.5px !important;
+    margin-right: 14.5% !important;
+	width:70% !important;
+}
+.Copyright.clfx span {
+    float: left;
 }

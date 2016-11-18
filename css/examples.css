@@ -19,8 +19,9 @@
 }
 
 #example1 .sp-thumbnail-description {
-	font-size: 14px;
-	color: #333;
+    font-size: 14px;
+    color: #333;
+    text-align: right;
 }
 
 @media (max-width: 860px) {

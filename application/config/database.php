@@ -74,10 +74,14 @@ $active_group = 'default';
 $query_builder = TRUE;
 
 $db['default'] = array(
-	'dsn'	=> 'mysql:dbname=protech;host=localhost',
+//	'dsn'	=> 'mysql:dbname=MyProtech;host=localhost', Server
+    'dsn'	=> 'mysql:dbname=protech;host=localhost',
 	'hostname' => 'localhost',
+	//'username' => 'ProtechUser',server
 	'username' => 'root',
+	//'password' => '#%yH30g*#z~G', server
 	'password' => '',
+	//'database' => 'MyProtech', server
 	'database' => 'protech',
 	'dbdriver' => 'pdo',
 	'dbprefix' => '',

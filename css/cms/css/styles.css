@@ -298,7 +298,7 @@ header {
               width: 38px;
               margin-top: 7px;
               margin-bottom: 5px;
-              display: inline-block; }
+              display: none; }
             /* line 244, ../components/sass/_Layout.scss */
             header .navbar .navbar-right .ProfileHeader a .ProfileHeaderAnchor h4 {
               display: inline-block;

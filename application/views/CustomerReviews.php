@@ -47,12 +47,11 @@ div.hint {
 <div class="page_nav contact-page">
     <div class="Grid1k">
         <i class="page_left-icon2">
-            <img width="414" height="289" src="<?=image_url()?>contct.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt=""  sizes="(max-width: 414px) 100vw, 414px" /></i>
+            <img width="300" height="200" src="<?=image_url()?>premium.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt=""  sizes="(max-width: 414px) 100vw, 414px" /></i>
             <div class="page_title">
-                <h2>تواصل معنا</h2>
+                <h2>آراء العملاء</h2>
                 
-                <p>تواصل معنا من خلال الايميل . سكايب .</p>
-                <p>او من خلال ارقامنا المتوفرة &#8211; ومتوفر بها ( واتس اب &#8211; فايبر &#8211; لاين )</p>
+                <p>هدفنا الوحيد هو توفير الراحه لعملائنا وتجاوز توقعاتهم وفيما يلي بعض آراء عملائنا</p>
                 
                 <u class="arrow_"></u>
             </div>
@@ -65,18 +64,22 @@ div.hint {
     <br><br>
 <div class="Section09 row">
     <div class="Rating">
-			<div class="col-md-6">
+	<?php 
+
+	foreach($CustomerReviews as $key){
+		?>
+			<div class="col-md-6"> <!-- -srart- -->
 				<div class="CompanyDetails">
 					<div class="CompanyLogo">
-						<img src="<?=base_url()?>imgs/xeroex.png" alt="">
-						<div class="CompanyName">Office Company</div>
+						<!--img src="<?//=base_url()?>imgs/xeroex.png" alt=""-->
+						<div class="CompanyName"><?php  echo $key->client_name; ?></div>
 					</div>
 					
 					
 				</div>
 				<div class="CompanyRate">
  <div class="inner">
- <div class="total">
+ <!--div class="total">
        <span class="rating-num">4.0</span>
      <div class="rating-stars">
         <span><i class="fa fa-star" aria-hidden="true"></i></span>
@@ -87,90 +90,158 @@ div.hint {
         <span><i class="fa fa-star" aria-hidden="true"></i></span>
 
       </div>
-      </div>
+      </div-->
     
     <div class="histo">
       <div class="five histo-rate">
         <span class="histo-star">
-		<i class="fa fa-star" aria-hidden="true"></i>5
+		<i class="fa fa-star" aria-hidden="true"></i>
 		</span>
         <span class="bar-block">
           <span id="bar-five" class="bar">
-            <span>1000000</span>&nbsp;
+            <span><?php 
+			
+			     
+                       if($key->general_contact =="Excellent") {echo"ممتاز";}
+                       elseif($key->general_contact=="verygood"){echo"جيد جدا";}  
+                       elseif($key->general_contact=="good") {echo "جيد";}  
+                       elseif($key->general_contact=="accepted"){echo "مقبول";}
+                       elseif($key->general_contact=="bad"){echo"سىء";}
+			
+			?></span>&nbsp;
           </span> 
         </span>
       </div>
       
       <div class="four histo-rate">
         <span class="histo-star">
-			<i class="fa fa-star" aria-hidden="true"></i>4
+			<i class="fa fa-star" aria-hidden="true"></i>
 		</span>
         <span class="bar-block">
           <span id="bar-four" class="bar">
-            <span>171,298</span>&nbsp;
+            <span><?php  
+               
+                       if($key->general_elasticity =="Excellent") {echo"ممتاز";}
+                       elseif($key->general_elasticity=="verygood"){echo"جيد جدا";}  
+                       elseif($key->general_elasticity=="good") {echo "جيد";}  
+                       elseif($key->general_elasticity=="accepted"){echo "مقبول";}
+                       elseif($key->general_elasticity=="bad"){echo"سىء";}
+
+
+			?></span>&nbsp;
           </span> 
         </span>
       </div> 
       
       <div class="three histo-rate">
         <span class="histo-star">
-<i class="fa fa-star" aria-hidden="true"></i>3
+<i class="fa fa-star" aria-hidden="true"></i>
 		</span>
         <span class="bar-block">
           <span id="bar-three" class="bar">
-            <span>94,940</span>&nbsp;
+            <span><?php  
+			
+                       if($key->general_care=="Excellent") {echo"ممتاز";}
+                       elseif($key->general_care=="verygood"){echo"جيد جدا";}  
+                       elseif($key->general_care=="good") {echo "جيد";}  
+                       elseif($key->general_care=="accepted"){echo "مقبول";}
+                       elseif($key->general_care=="bad"){echo"سىء";}
+			
+			
+			?></span>&nbsp;
           </span> 
         </span>
       </div>
       
       <div class="two histo-rate">
         <span class="histo-star">
-<i class="fa fa-star" aria-hidden="true"></i>2
+<i class="fa fa-star" aria-hidden="true"></i>
 		</span>
         <span class="bar-block">
           <span id="bar-two" class="bar">
-            <span>44,525</span>&nbsp;
+            <span><?php  
+			  
+                       if($key->engineer_look=="Excellent") {echo"ممتاز";}
+                       elseif($key->engineer_look=="verygood"){echo"جيد جدا";}  
+                       elseif($key->engineer_look=="good") {echo "جيد";}  
+                       elseif($key->engineer_look=="accepted"){echo "مقبول";}
+                       elseif($key->engineer_look=="bad"){echo"سىء";}
+			  
+			  
+			  ?></span>&nbsp;
           </span> 
         </span>
       </div>
       
       <div class="one histo-rate">
         <span class="histo-star">
-<i class="fa fa-star" aria-hidden="true"></i>1
+<i class="fa fa-star" aria-hidden="true"></i>
 		</span>
         <span class="bar-block">
           <span id="bar-one" class="bar">
-            <span>136,457</span>&nbsp;
+            <span><?php  
+			
+                       if($key->engineer_behavior=="Excellent") {echo"ممتاز";}
+                       elseif($key->engineer_behavior=="verygood"){echo"جيد جدا";}  
+                       elseif($key->engineer_behavior=="good") {echo "جيد";}  
+                       elseif($key->engineer_behavior=="accepted"){echo "مقبول";}
+                       elseif($key->engineer_behavior=="bad"){echo"سىء";}
+			
+			?></span>&nbsp;
           </span> 
         </span>
       </div>   
 	  <div class="one histo-rate">
          <span class="histo-star">
-<i class="fa fa-star" aria-hidden="true"></i>1
+<i class="fa fa-star" aria-hidden="true"></i>
 		</span>
         <span class="bar-block">
           <span id="bar-one" class="bar">
-            <span>136,457</span>&nbsp;
+            <span><?php  
+                    
+                       if($key->service_speed=="Excellent") {echo"ممتاز";}
+                       elseif($key->service_speed=="verygood"){echo"جيد جدا";}  
+                       elseif($key->service_speed=="good") {echo "جيد";}  
+                       elseif($key->service_speed=="accepted"){echo "مقبول";}
+                       elseif($key->service_speed=="bad"){echo"سىء";}
+
+			?></span>&nbsp;
           </span> 
         </span>
       </div>   
 	  <div class="one histo-rate">
          <span class="histo-star">
-<i class="fa fa-star" aria-hidden="true"></i>1
+<i class="fa fa-star" aria-hidden="true"></i>
 		</span>
         <span class="bar-block">
           <span id="bar-one" class="bar">
-            <span>136,457</span>&nbsp;
+            <span><?php  
+			
+                       if($key->service_quality=="Excellent") {echo"ممتاز";}
+                       elseif($key->service_quality=="verygood"){echo"جيد جدا";}  
+                       elseif($key->service_quality=="good") {echo "جيد";}  
+                       elseif($key->service_quality=="accepted"){echo "مقبول";}
+                       elseif($key->service_quality=="bad"){echo"سىء";}
+			
+			?></span>&nbsp;
           </span> 
         </span>
       </div>  
 	  <div class="one histo-rate">
         <span class="histo-star">
-<i class="fa fa-star" aria-hidden="true"></i>1
+<i class="fa fa-star" aria-hidden="true"></i>
 		</span>
         <span class="bar-block">
           <span id="bar-one" class="bar">
-            <span>136,457</span>&nbsp;
+            <span><?php   
+			       
+                       if($key->service_parts=="Excellent") {echo"ممتاز";}
+                       elseif($key->service_parts=="verygood"){echo"جيد جدا";}  
+                       elseif($key->service_parts=="good") {echo "جيد";}  
+                       elseif($key->service_parts=="accepted"){echo "مقبول";}
+                       elseif($key->service_parts=="bad"){echo"سىء";}
+			
+			?></span>&nbsp;
           </span> 
         </span>
       </div>
@@ -187,134 +258,11 @@ div.hint {
   
      
     </div>
-  </div>
-				</div>
-		</div>
-		<div class="col-md-6">
-				<div class="CompanyDetails">
-					<div class="CompanyLogo">
-						<img src="<?=base_url()?>imgs/xeroex.png" alt="">
-						<div class="CompanyName">Office Company</div>
-					</div>
-					
-					
-				</div>
-				<div class="CompanyRate">
- <div class="inner">
- <div class="total">
-       <span class="rating-num">4.0</span>
-     <div class="rating-stars">
-        <span><i class="fa fa-star" aria-hidden="true"></i></span>
-        <span><i class="fa fa-star" aria-hidden="true"></i></span>
-        <span><i class="fa fa-star" aria-hidden="true"></i></span>
-        <span><i class="fa fa-star" aria-hidden="true"></i></span>
-        <span><i class="fa fa-star" aria-hidden="true"></i></span>
-        <span><i class="fa fa-star" aria-hidden="true"></i></span>
 
-      </div>
-      </div>
-    
-    <div class="histo">
-      <div class="five histo-rate">
-        <span class="histo-star">
-		<i class="fa fa-star" aria-hidden="true"></i>5
-		</span>
-        <span class="bar-block">
-          <span id="bar-five" class="bar">
-            <span>1000000</span>&nbsp;
-          </span> 
-        </span>
-      </div>
-      
-      <div class="four histo-rate">
-        <span class="histo-star">
-			<i class="fa fa-star" aria-hidden="true"></i>4
-		</span>
-        <span class="bar-block">
-          <span id="bar-four" class="bar">
-            <span>171,298</span>&nbsp;
-          </span> 
-        </span>
-      </div> 
-      
-      <div class="three histo-rate">
-        <span class="histo-star">
-<i class="fa fa-star" aria-hidden="true"></i>3
-		</span>
-        <span class="bar-block">
-          <span id="bar-three" class="bar">
-            <span>94,940</span>&nbsp;
-          </span> 
-        </span>
-      </div>
-      
-      <div class="two histo-rate">
-        <span class="histo-star">
-<i class="fa fa-star" aria-hidden="true"></i>2
-		</span>
-        <span class="bar-block">
-          <span id="bar-two" class="bar">
-            <span>44,525</span>&nbsp;
-          </span> 
-        </span>
-      </div>
-      
-      <div class="one histo-rate">
-        <span class="histo-star">
-<i class="fa fa-star" aria-hidden="true"></i>1
-		</span>
-        <span class="bar-block">
-          <span id="bar-one" class="bar">
-            <span>136,457</span>&nbsp;
-          </span> 
-        </span>
-      </div>   
-	  <div class="one histo-rate">
-         <span class="histo-star">
-<i class="fa fa-star" aria-hidden="true"></i>1
-		</span>
-        <span class="bar-block">
-          <span id="bar-one" class="bar">
-            <span>136,457</span>&nbsp;
-          </span> 
-        </span>
-      </div>   
-	  <div class="one histo-rate">
-         <span class="histo-star">
-<i class="fa fa-star" aria-hidden="true"></i>1
-		</span>
-        <span class="bar-block">
-          <span id="bar-one" class="bar">
-            <span>136,457</span>&nbsp;
-          </span> 
-        </span>
-      </div>  
-	  <div class="one histo-rate">
-        <span class="histo-star">
-<i class="fa fa-star" aria-hidden="true"></i>1
-		</span>
-        <span class="bar-block">
-          <span id="bar-one" class="bar">
-            <span>136,457</span>&nbsp;
-          </span> 
-        </span>
-      </div>
-    </div>
-	 <div class="rating">
-		<h4>  سهولة الاتصال بالشركة عبر الهاتف وعبر البريد الالكتروني </h4>
-		<h4>   المرونة في التعامل وفي اوقات تقديم الخدمات </h4>
-		<h4>   الآهتمام والتفهم الذي يبدية موظفو الشركة تجاه العملاء  </h4>
-		<h4>    الآهتمام بالمظهر الشخصي </h4>
-		<h4>      حسن الخلق والتصرف في التعامل مع العميل </h4>
-		<h4>      سرعة التلبية للمهندس والاستجابة للبلاغ  </h4>
-		<h4>    كفاءة المهندس وقدرته علي انجاز المهمة </h4>
-		<h4>     الآلتزام بتوفير قطع الغيار اللازمة في اسرع وقت  </h4>
-  
-     
-    </div>
   </div>
 				</div>
-		</div>
+		</div><!--end--->
+<?php } ?>
 	<div id="default"></div>
 	</div>
 	</div>
