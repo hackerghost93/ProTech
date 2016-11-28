@@ -29,11 +29,12 @@ $('.editeBtn').click(function(event)
 {
   var $target = $(this);
   var value  = $target.attr('data-id');
+  var type  = $target.attr('data-type');
   console.log("Myid " +value);
   var path = MyUrl+"index.php/"+MyType+"/get/"+value ;
   // console.log(path);
 
-
+	if(type == 'printer'){
     // for families 
     var familyPath = MyUrl+"index.php/family/getAll"
     //console.log(familyPath);
@@ -45,6 +46,22 @@ $('.editeBtn').click(function(event)
         $('#hackerSelect').append($('<option></option>').val(value.family_id).html(value.family_name));
       });
     },'json');
+	
+	} else {
+		
+    var familyPath = MyUrl+"index.php/family/getAllp"
+    //console.log(familyPath);
+    $.get(familyPath,function(data){
+      /// iterate families available
+     // console.log(JSON.stringify(data,null,2));
+      $.each(data.families , function(key,value){
+        //console.log(value);
+        $('#hackerSelect').append($('<option></option>').val(value.printer_id).html(value.name));
+      });
+    },'json');
+	
+	
+	}
     /// adjust edit form 
 
 

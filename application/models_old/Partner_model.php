@@ -16,5 +16,27 @@ class Partner_model extends CI_Model
 	{
 		return $this->db->get($this->table_name)->result_array() ;
 	}
+	
+	
+	function get_printer() 
+	{
+		$SQL = "select * FROM printers ";
+		$query = $this->db->query($SQL);
+		return $query;
+	}
+	
+	
+	
+	public function select_all_printers()
+	{
+		$query=$this->db->get('printers');
+		if($query->num_rows()>=1)
+		    return $query->result_array();
+        else
+            return array();
+	}
+	
+	
+	
 }
  ?>

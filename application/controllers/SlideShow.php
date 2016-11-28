@@ -36,13 +36,13 @@ if(isset($_FILES[$name]) && $_FILES[$name]['tmp_name'] != "")
 			    $target_file = $target_dir.$target_name;
 			    $uploadok = 1 ;
 			    $check = getimagesize($_FILES[$name]["tmp_name"]);
-			    if ($_FILES[$name]['size'] > 500000) {
+			    /*if ($_FILES[$name]['size'] > 500000) {
 			    	echo "Sorry, your file is too large.";
 			    	$uploadok = 0 ;
 			    	die();
 			    }
 			    else
-			    {		
+			    {*/	
 			    	if (move_uploaded_file($_FILES[$name]['tmp_name'], $target_file)) {
 			    		echo "Upload Complete\n";
 			    		return $target_file ;
@@ -52,7 +52,7 @@ if(isset($_FILES[$name]) && $_FILES[$name]['tmp_name'] != "")
 			    		echo 'something went wrong';
 			    		return FALSE ;
 			    	}
-			    }
+			    //}
 			}		
 		}
 	}

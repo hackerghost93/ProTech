@@ -52,9 +52,9 @@ class Customers extends CI_Controller {
 			$data['partner_name'] = $this->input->post("CutomerTitle");
 			$data['partner_image'] = $this->uploadFile("CutomerLogo");
 			$this->Awd_Model->AddToDB('partners',$data);
-			redirect('Customers');
+			redirect('Customers', 'refresh');
 		}
-		else{redirect('Customers');}
+		else{redirect('Customers', 'refresh');}
 	}
 	public function Delete()
 	{
@@ -62,9 +62,9 @@ class Customers extends CI_Controller {
 		{
 			$Customer_ID=$this->input->post('RecoredId');
 			$this->Awd_Model->DelData('partners',$Customer_ID,'partner_id');
-			redirect('Customers');
+			redirect('Customers', 'refresh');
 		}
-		else{redirect('Customers');}
+		else{redirect('Customers', 'refresh');}
 	}
 	public function edit()
 	{
@@ -76,9 +76,9 @@ class Customers extends CI_Controller {
 			if(count($_FILES) > 0)
 				$data['partner_image'] = $this->uploadFile("EditCutomerLogo");
 			$this->Awd_Model->update('partners',$data,$id,'partner_id');
-			redirect('Customers');
+			redirect('Customers', 'refresh');
 		}
-		else{redirect('Customers');}
+		else{redirect('Customers', 'refresh');}
 	}
 
 

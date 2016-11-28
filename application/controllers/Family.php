@@ -6,7 +6,7 @@ class Family extends CI_Controller
   {
    parent::__construct();
    $this->load->model('Family_model');
-
+ $this->load->model('partner_model');
  } 
      public function index() //Show all branches 
      {
@@ -81,6 +81,16 @@ class Family extends CI_Controller
       $data['state'] = 'success';
       echo json_encode($data);
    }
+   
+   
+     function getAllp()
+   {
+      $data['families'] = $this->partner_model->select_all_printers(); 
+      $data['state'] = 'success';
+      echo json_encode($data);
+   }
+   
+   
    public function DownloadsIndex()
    {
     //`PDF_ID``PDF_Title``PDF_URL`

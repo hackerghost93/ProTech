@@ -121,7 +121,7 @@
                   <?=$product['family_name']?>
                 <?php endif; ?>
               </td>
-              <td class='check-col tableAdmin'><a href='#' class='editeBtn' id="EditProductOverlayFormShow" data-placement='right' data-id="<?=$product[$the_id]?>"><span class='fa fa-gear'></span></a></td>
+              <td class='check-col tableAdmin'><a href='#' class='editeBtn' id="EditProductOverlayFormShow" data-placement='right' data-type="<?=$type;?>" data-id="<?=$product[$the_id]?>"><span class='fa fa-gear'></span></a></td>
               <td class='check-col tableAdmin'><a href='#' class='deleteBtn'  data-target='#DeleteProductModal' data-toggle='modal' title='delete' data-id="<?=$product[$the_id]?>" data-placement='right'><span class='fa fa-trash'></span></a></td>
             </tr> 
           <?php endforeach; ?>
@@ -195,15 +195,29 @@
        <label for="Pdf" class="control-label ">Product Pdf: </label>
        <input type="file" name="PDF" class="form-control InputProduct"/>
      </div> 
+	<?php if($type == 'printer'): ?>
      <div class="form-group formLayout">
-       <label for="ProductFamily" class="control-label ">Product Product Family: </label>
+       <label for="ProductFamily" class="control-label ">Product Family: </label>
        <select name="family" class="form-control InputProduct">
-        <option value="0">Choose Product Family</option>
+        <option value="0">Choose Family</option>
         <?php foreach ($families as $family):?>
           <option value="<?=$family['family_id']?>"><?=$family['family_name']?></option>
         <?php endforeach;?>
       </select>
     </div>
+	<?php else: ?>
+     <div class="form-group formLayout">
+       <label for="ProductFamily" class="control-label ">Product ID: </label>
+       <select name="family" class="form-control InputProduct">
+        <option value="0">Choose Product ID</option>
+		<?php if(isset($results_printer)):?>
+		<?php foreach($results_printer as $key_view => $row_view) : ?>
+			<option value="<?= $row_view['printer_id'];?>"><?= $row_view['name'];?></option>
+		<?php endforeach;?>
+		<?php endif;?>
+      </select>
+    </div>
+	<?php endif;?>
    <button type="button" class="btn btn-md" id="incrementAdd">Add Image</button>
      <div class="form-group formLayout" id="hackerAddImages">
        <label for="ProductImage" class="control-label ">Product Image: </label>
@@ -244,10 +258,12 @@
   </div>
   </div>
 
-  <h3>
+<!--
+ <h3>
     Add as offer
     <input type="checkbox" name="offer">
   </h3>
+-->
 
  
 
@@ -270,7 +286,7 @@
     </div>
   </div>
 </div>
-<div class="col-md-4">
+<div class="col-md-4" <?php if($type == 'printer'):?><?php else:?>style="display:none;"<?php endif;?>>
  <div class="SectionHeader">
   <h3>Printing Specifications </h3>
 </div>
@@ -347,12 +363,24 @@
        <h5 id="hackerOldPDF"></h5></h4>
      </div> 
 
-       <label for="ProductFamily" class="control-label ">Product Product Family: </label>
-     <div class="form-group formLayout" id="hackerSelectDiv">
+	
+	<?php if($type == 'printer'): ?>
+      <label for="ProductFamily" class="control-label ">Product Family: </label>
+	  <div class="form-group formLayout" id="hackerSelectDiv">
        <select name="ProductFamily" class="form-control InputProduct" id="hackerSelect">
-        <option value="0"> Choose Product Family</option>
+        <option value="0">Choose Family</option>
       </select>
-    </div>
+	  </div>
+	<?php else: ?>
+      <label for="ProductFamily" class="control-label ">Product ID: </label>
+	  <div class="form-group formLayout" id="hackerSelectDiv">
+       <select name="ProductFamily" class="form-control InputProduct" id="hackerSelect">
+        <option value="0">Choose Product ID</option>
+      </select>
+	  </div>
+	<?php endif;?>
+	
+	
     <button type="button" class="btn btn-md" id="incrementAdd1">Add Image</button>
      <div class="form-group formLayout" id="hackerAddImages1">
        <label for="ProductImage" class="control-label ">Product Image: </label>
@@ -368,11 +396,14 @@
      <label for="description" class="control-label ">Description: </label>
      <input type="text" name="description" id="hackerDescription"/>
    </div>
+<!--
    <div class="checkbox-inline">
-     <label>
-       <input type="checkbox" id="hackerOffer" name="offer"><label class="offer">Offer Mark</label>
-     </label>
-   </div>
+    <label>
+        <input type="checkbox" id="hackerOffer" name="offer">
+        <label class="offer">Offer Mark</label>
+    </label>
+</div>
+-->
  </div>
 </div>
 </div>
@@ -399,7 +430,7 @@
     </div>
       </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4" <?php if($type == 'printer'):?><?php else:?>style="display:none;"<?php endif;?>>
      <div class="SectionHeader">
       <h3>Printing Specifications </h3>
        <button type="button"class="btn btn-md" id="AddNewSpecificationsbtn2"> 

@@ -8,7 +8,7 @@
                     <?php else: ?>
                         <h2>قسم التحميلات | سوفتوير</h2>
                         <?php endif; ?>
-                            <p>لورم ایپسوم أبجد هوز هو مجرد دمية النص من التنضيد والطباعة والصناعة من مصممي الغرافيك. الطابعات والنصوص، ولكن أيضا أعمدة الصحف والمجلات و ما هو ضروري للحالة </p>
+                            <p>تعرف علي أحدث منتجاتنا من طابعات و ماكينات تصوير و قطع غيار ...حيث تتوافر لدينا مجموعة من أحدث المنتجات و التي تنافس السوق العالمية </p>
                             <u class="arrow_"></u>
             </div>
             <span class="clear"><!--  --></span>
@@ -146,7 +146,7 @@
             </div>
             <div class="SiteInfo">
 
-                <a href="<?php echo base_url()?>index.php/Email/addMsg" class="OpenTicket">فتح تذكرة</a>
+<!--                <a href="<?php echo base_url()?>index.php/Email/addMsg" class="OpenTicket">فتح تذكرة</a>-->
                 <div class="Social">
                     <a target="_blank" href="#" class="Facebook" id="Facebook"><span></span></a>
                     <a target="_blank" href="#" class="Twitter" id="Twitter"><span></span></a>

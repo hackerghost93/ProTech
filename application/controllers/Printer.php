@@ -11,6 +11,7 @@ class Printer extends MY_Controller
 		parent::__construct('printer_model');
 		$this->condition = "printer_id" ;
 		$this->myType = 'printer' ;
+		$this->load->model('partner_model');
 	}
 
 	function index()
@@ -27,6 +28,17 @@ class Printer extends MY_Controller
 
 	function showAll()
 	{
+		
+		
+	$q_printer = $this->partner_model->get_printer();
+	foreach($q_printer->result() as $key => $row)
+	{
+		$data['results_printer'][$row->printer_id]['printer_id'] = $row->printer_id;
+		$data['results_printer'][$row->printer_id]['family_id'] = $row->family_id;
+		$data['results_printer'][$row->printer_id]['name'] = $row->name;
+	}
+		
+		
 		$data['type'] = 'printer';
 		$data['products'] = $this->getImages($this->getAll());
 		$this->load->model('partner_model');
@@ -39,6 +51,15 @@ class Printer extends MY_Controller
 	{
 		$data['type'] = 'printer' ;
 		$this->load->model('family_model');
+		
+	$q_printer = $this->partner_model->get_printer();
+	foreach($q_printer->result() as $key => $row)
+	{
+		$data['results_printer'][$row->printer_id]['printer_id'] = $row->printer_id;
+		$data['results_printer'][$row->printer_id]['family_id'] = $row->family_id;
+		$data['results_printer'][$row->printer_id]['name'] = $row->name;
+	}
+	
 		$data['families'] = $this->family_model->select_all_families();
 		$data['products'] = $this->getImages($this->getAll());
 		$data['tags'] = $this->model->getTags();

@@ -27,7 +27,7 @@ class Part_model extends MY_Model
 	function get($id)
 	{
 		$this->db->from($this->table_name);
-		$this->db->join('families' , 'families.family_id = printers.family_id','left');
+		$this->db->join('families' , 'families.family_id = parts.family_id','left');
 		$this->db->where('parts.part_id =' , $id );
 		$ret =  $this->db->get()->row_array();
 		return $ret ;

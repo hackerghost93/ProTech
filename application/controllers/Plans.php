@@ -78,7 +78,7 @@ public function GetAllData()
  }
 public function EditPlan()
  {
- if($this->input->post('PlaneName') != null && $this->input->post('NewData_items') != null && $this->input->post('PlaneID') != null && $this->input->post('EditedType') != null)
+ if($this->input->post('PlaneName',true))
  	{
  		$New_Plan_Data['plane_name'] = $this->input->post('PlaneName');
  		$New_Plan_Data['type']       = $this->input->post('EditedType');

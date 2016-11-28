@@ -7,6 +7,12 @@ public function index()
 {
 	$this->load->view('CMS/Settings');
 }
+    //yassmin
+    public function NavBar()
+{
+	$this->load->view('CMS/WebSite_MenuBar');
+}
+    //yassmin
 public function GetMail()
 {
 	if($this->input->post('ID') != null)

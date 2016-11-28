@@ -2,7 +2,7 @@
                  <div class="container-fluid">
                       <div class="navbar-left">
                           <div class="HeaderLogo">
-                            <img src="<?php echo base_url(); ?>imgs/logo.png"></img>
+                            <img src="<?php echo base_url(); ?>imgs/Logo.png"></img>
                           </div>
                           <!--div class="HeaderLogo">
                             <img src="../_/images/logo.png"></img>

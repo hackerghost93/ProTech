@@ -177,8 +177,8 @@ button.btn.btn-md.OverLayFormBtn.Sendus {
     font-size: 18px;
 }
 .SubjectSubscribe span {
-    padding-left: 25px;
-    padding-right: 24px;
+      padding-left: 38px;
+    padding-right: 25px;
     font-size: 18px;
 }
 button.btn.btn-md.OverLayFormBtn.submitReply {
@@ -341,6 +341,7 @@ input.form-control {
 .col-md-6.titleLogo {
     text-align: right;
 	padding:0px;
+width:40%;
 }
 .titleLogo h4 {
     font-size: 15px;
@@ -393,7 +394,7 @@ label.loginform {
     color: #fff;
 }
 .col-md-6.LogoImg {
-    padding: 1px 9px 0px 0px;
+    padding: 1px 9px 0px 9px;
 }
 .fa.fa-search {
     position: absolute;

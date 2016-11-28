@@ -54,7 +54,7 @@
             <div class="info">
                 <h3>   ليه تختار بروتك ؟</h3>
                 <p> حيث تتوفر لدينا اكبر تشكيلة متنوعة من ماكينات التصوير زيروكس بمختلف الاحجام والامكانيات استيراد الخارج وبطرق سداد متنوعة وتوريد جيع مستلزمات التشغيل وقطع الغيار </p>
-                <a href="#OurWorks" data-scroll>شاهد اعمالنا</a>
+                <a href="#OurWorks" data-scroll>شاهد منتجاتنا</a>
                 <a href="<?=base_url()?>index.php/Email/addMsg">اطلب الخدمة الان</a>
             </div>
         </div>
@@ -390,7 +390,7 @@
                                     </div>
                                     <div class="SiteInfo">
 
-                                        <a href="<?php echo base_url()?>index.php/Email/ViewMassage" class="OpenTicket">فتح تذكرة</a>
+<!--                                        <a href="<?php echo base_url()?>index.php/Email/ViewMassage" class="OpenTicket">فتح تذكرة</a>-->
                                         <div class="Social">
                                             <a target="_blank" href="<?=$contact['facebook']?>" class="Facebook" id="Facebook"><span></span></a>
                                             <a target="_blank" href="<?=$contact['twitter']?>" class="Twitter" id="Twitter"><span></span></a>
@@ -402,7 +402,7 @@
                             </footer>
                             <div class="Copyright clfx">
                                 <div class="Grid1k">
-            <span>All Copyright©<a href="http://agedsystems.com/" target="_blank">AGEDSYSTEMS.com</a></span>
+                                    <span>All Copyright©<a href="http://agedsystems.com/" target="_blank">AGEDSYSTEMS.com</a></span>
                                     <ul>
                                         <div class="menu-%d8%a8%d8%a8%d8%a8-container">
                                             <ul id="menu-%d8%a8%d8%a8%d8%a8" class="menu">
