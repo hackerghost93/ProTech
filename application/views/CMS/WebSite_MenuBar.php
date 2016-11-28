@@ -73,7 +73,7 @@
      min-height: 50px ;
      box-shadow: none ;
      background: none ;
-     width: 50% ;" >
+     width: 50% ;">
                                             <option>خدماتنا</option>
                                             <option>المنتجات</option>
                                             <option>التحميلات</option>
@@ -82,7 +82,22 @@
 
                                     </div>
                                     <div class="form-group formLayout">
-                                        <label for="Icon Name" class="control-label ">Icon Name :</label>
+                                        <label for="Username" class="control-label ">Icons :</label>
+                                        <br>
+
+
+                                        <p>
+                                            <input type="text" name="PrintingSpecifications" id="p_scents" class="form-control overlayproduct" placeholder="الدعم الفني" />
+                                            <a href="#" id="remScnt" class="removespecification  CloseBtn"><i class="fa fa-close"></i></a></p>
+                                        <p>
+                                            <input type="text" name="PrintingSpecifications" id="p_scents" class="form-control overlayproduct" placeholder="بيع و إستبدال" />
+                                            <a href="#" id="remScnt" class="removespecification  CloseBtn"><i class="fa fa-close"></i></a></p>
+                                        <p>
+                                            <input type="text" name="PrintingSpecifications" id="p_scents" class="form-control overlayproduct" placeholder="قطع غيار" />
+                                            <a href="#" id="remScnt" class="removespecification  CloseBtn"><i class="fa fa-close"></i></a></p>
+                                    </div>
+                                    <div class="form-group formLayout">
+                                        <label for="Icon Name" class="control-label ">New Icon Name :</label>
                                         <input type="text" name="IconName" id="IconName" class="form-control" />
                                     </div>
 
@@ -114,7 +129,12 @@
 
         <!----------------------------------------scripts------>
         <?php require_once("Scripts.php"); ?>
+            <script>
+                $(document).on("click", ".CloseBtn", function () {
+                    $(this).closest("p").css("display", "none");
 
+                });
+            </script>
     </body>
 
 </html>
