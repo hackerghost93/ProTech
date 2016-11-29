@@ -8,6 +8,14 @@ class Plan extends CI_Controller {
 		parent::__construct();
 		$this->load->model('plan_model','model');
 	}
+    
+    //yassmin
+    public function Rent(){
+        
+        $this->load->view('Rent');
+    }
+    
+    //yassmin
 
 	public function showPlans($type)
 	{

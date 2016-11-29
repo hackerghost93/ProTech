@@ -258,6 +258,13 @@
                                     <span>قطع غيار </span>
                                 </a>
                             </li>
+                            <li>
+                                <a href="<?php echo base_url()?>index.php/Plan/Rent/Rent.php">
+                                    <i><img src="<?=base_url()?>imgs/Icon_49-512.png" alt=""></i>
+                                    <span>صيانة و إيجار </span>
+                                </a>
+                            </li>
+
 
                         </ul>
                     </div>
